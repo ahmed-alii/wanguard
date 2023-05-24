@@ -4,44 +4,548 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cb8abc8-bdcc-471f-9303-40e25c2c7bae" name="Changes" comment="" />
+    <list default="true" id="3cb8abc8-bdcc-471f-9303-40e25c2c7bae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Frontend/css/multi-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Frontend/js/multi-select.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Vanguard Wealth Builder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Vanguard Wealth Builder.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/card.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/messages-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/messages-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/messages-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/news-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/news-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/news-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/news-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/news-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/not-found.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/product-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/product-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/product-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/product-4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/product-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/profile-img.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/slides-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/slides-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/img/slides-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/scss/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/apexcharts.amd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/apexcharts.common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/apexcharts.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/apexcharts.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/apexcharts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/apexcharts.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/ar.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/ca.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/cs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/de.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/el.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/es.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/et.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/fa.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/fi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/fr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/he.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/hi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/hr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/hu.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/hy.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/id.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/it.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/ja.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/ka.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/ko.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/lt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/lv.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/nb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/nl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/pl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/pt-br.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/pt.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/rs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/ru.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/se.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/sk.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/sl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/sq.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/th.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/tr.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/ua.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/zh-cn.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/apexcharts/locales/zh-tw.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap-icons/bootstrap-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap-icons/bootstrap-icons.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap-icons/bootstrap-icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/boxicons/css/animations.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/boxicons/css/boxicons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/boxicons/css/boxicons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/boxicons/css/transformations.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/boxicons/fonts/boxicons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/boxicons/fonts/boxicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/boxicons/fonts/boxicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/boxicons/fonts/boxicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/boxicons/fonts/boxicons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/chart.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/chart.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/chart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/chart.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/chart.umd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/chart.umd.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/chunks/helpers.segment.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/chunks/helpers.segment.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/chunks/helpers.segment.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/chunks/helpers.segment.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/controllers/controller.bar.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/controllers/controller.bubble.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/controllers/controller.doughnut.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/controllers/controller.line.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/controllers/controller.pie.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/controllers/controller.polarArea.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/controllers/controller.radar.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/controllers/controller.scatter.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/controllers/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.adapters.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.animation.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.animations.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.animations.defaults.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.animator.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.config.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.controller.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.datasetController.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.defaults.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.element.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.interaction.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.layouts.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.layouts.defaults.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.plugins.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.registry.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.scale.autoskip.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.scale.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.scale.defaults.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.ticks.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/core.typedRegistry.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/core/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/elements/element.arc.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/elements/element.bar.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/elements/element.line.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/elements/element.point.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/elements/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers.cjs.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.canvas.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.collection.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.color.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.config.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.core.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.curve.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.dom.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.easing.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.extras.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.interpolation.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.intl.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.math.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.options.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.rtl.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/helpers.segment.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/helpers/types.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/index.umd.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/platform/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/platform/platform.base.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/platform/platform.basic.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/platform/platform.dom.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.colors.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.decimation.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.filler/filler.drawing.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.filler/filler.helper.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.filler/filler.options.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.filler/filler.segment.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.filler/filler.target.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.filler/filler.target.stack.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.filler/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.filler/simpleArc.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.legend.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.subtitle.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.title.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/plugins/plugin.tooltip.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/scales/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/scales/scale.category.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/scales/scale.linear.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/scales/scale.linearbase.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/scales/scale.logarithmic.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/scales/scale.radialLinear.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/scales/scale.time.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/scales/scale.timeseries.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/types.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/types/animation.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/types/basic.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/types/color.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/types/geometric.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/types/helpers/helpers.canvas.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/types/helpers/helpers.segment.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/types/helpers/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/types/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/types/layout.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/chart.js/types/utils.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.common.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.common.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.common.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.simple.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.simple.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/echarts.simple.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/extension/bmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/extension/bmap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/extension/bmap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/extension/dataTool.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/extension/dataTool.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/echarts/extension/dataTool.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/php-email-form/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/quill/quill.bubble.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/quill/quill.core.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/quill/quill.core.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/quill/quill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/quill/quill.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/quill/quill.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/quill/quill.snow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/remixicon/remixicon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/remixicon/remixicon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/remixicon/remixicon.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/remixicon/remixicon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/remixicon/remixicon.symbol.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/remixicon/remixicon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/remixicon/remixicon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/remixicon/remixicon.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/simple-datatables/simple-datatables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/simple-datatables/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/icons/default/icons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/icons/default/icons.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/icons/default/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/license.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/models/dom/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/models/dom/model.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/models/dom/model.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/advlist/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/advlist/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/advlist/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/anchor/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/anchor/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/anchor/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/autolink/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/autolink/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/autolink/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/autoresize/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/autoresize/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/autoresize/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/autosave/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/autosave/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/autosave/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/charmap/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/charmap/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/charmap/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/code/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/code/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/code/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/codesample/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/codesample/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/codesample/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/directionality/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/directionality/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/directionality/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/emoticons/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/emoticons/js/emojiimages.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/emoticons/js/emojiimages.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/emoticons/js/emojis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/emoticons/js/emojis.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/emoticons/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/emoticons/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/fullscreen/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/fullscreen/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/fullscreen/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/help/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/help/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/help/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/image/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/image/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/image/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/importcss/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/importcss/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/importcss/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/insertdatetime/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/insertdatetime/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/insertdatetime/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/link/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/link/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/link/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/lists/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/lists/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/lists/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/media/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/media/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/media/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/nonbreaking/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/nonbreaking/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/nonbreaking/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/pagebreak/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/pagebreak/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/pagebreak/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/preview/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/preview/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/preview/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/quickbars/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/quickbars/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/quickbars/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/save/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/save/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/save/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/searchreplace/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/searchreplace/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/searchreplace/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/table/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/table/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/table/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/template/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/template/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/template/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/visualblocks/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/visualblocks/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/visualblocks/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/visualchars/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/visualchars/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/visualchars/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/wordcount/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/wordcount/plugin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/plugins/wordcount/plugin.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/dark/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/dark/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/default/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/default/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/document/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/document/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/tinymce-5-dark/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/tinymce-5-dark/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/tinymce-5/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/tinymce-5/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/writer/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/content/writer/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide-dark/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide-dark/content.inline.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide-dark/content.inline.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide-dark/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide-dark/skin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide-dark/skin.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide-dark/skin.shadowdom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide-dark/skin.shadowdom.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide/content.inline.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide/content.inline.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide/skin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide/skin.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide/skin.shadowdom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/oxide/skin.shadowdom.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5-dark/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5-dark/content.inline.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5-dark/content.inline.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5-dark/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5-dark/skin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5-dark/skin.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5-dark/skin.shadowdom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5-dark/skin.shadowdom.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5/content.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5/content.inline.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5/content.inline.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5/content.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5/skin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5/skin.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5/skin.shadowdom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/skins/ui/tinymce-5/skin.shadowdom.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/themes/silver/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/themes/silver/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/themes/silver/theme.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/tinymce.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/tinymce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/assets/vendor/tinymce/tinymce.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/events.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/forms/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/forms/contact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/includes/dashboard-footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/includes/dashboard-header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/pages-login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/pages-register.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/teams.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/dashboard/users-profile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10002.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10002.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10003.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10004.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10004.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10005.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10006.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10006.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10007.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10008.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10008.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10009.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10009.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10010.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10010.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10011.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10011.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10012.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10012.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10013.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10013.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10014.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10014.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10015.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10015.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/10016.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/10016.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/Logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/Logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/Logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/Logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/image.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/image2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/image2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/image3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/image3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/image4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/image4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/image5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/image5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img-not-available.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img-not-available.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img12.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img13.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img14.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/img9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/img9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/logo2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/logo2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/logo3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/logo3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/assets/images/logo4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/assets/images/logo4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/compensation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/compensation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/css/.sass-cache/199e01c84f9f0c627901eebb33dc54c99e936d94/main.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/css/.sass-cache/199e01c84f9f0c627901eebb33dc54c99e936d94/main.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/css/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/includes/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/includes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/js/jquery-3.6.3.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js/jquery-3.6.3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/js/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/js/popper.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/next-steps.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/next-steps.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/overview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/trainers-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/trainers-page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-end/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/welcome.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/phpmailer/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/phpmailer/vendor/composer" />
+      <path value="$PROJECT_DIR$/phpmailer/vendor/phpmailer/phpmailer" />
+    </include_path>
   </component>
   <component name="ProjectId" id="2PXwuhaRuba7JOmP3M5DTbw0jdA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs/spa_finder_new",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/spa_finder_new&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -57,10 +561,22 @@
       <workItem from="1684165179333" duration="5322000" />
       <workItem from="1684231787550" duration="30833000" />
       <workItem from="1684406579798" duration="65025000" />
+      <workItem from="1684912636131" duration="1896000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
