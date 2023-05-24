@@ -1,6 +1,6 @@
 <?php
 include_once "includes/dashboard-header.php";
-
+$events=$func->getAllEvents();
 
 ?>
     <main id="main" class="main">
@@ -21,7 +21,7 @@ include_once "includes/dashboard-header.php";
                 <div class="row">
                     <div class="col-lg-5">
                         <div class="card">
-                            <div class="card-body">
+                            <div id="add_event_div" class="card-body">
                                 <h5 class="card-title">Add Event</h5>
                                 <!-- General Form Elements -->
                                 <form id="add_event">
@@ -54,7 +54,53 @@ include_once "includes/dashboard-header.php";
                                     <div class="row mb-3">
                                         <label for="inputText" class="col-sm-12 col-form-label">Event Description</label>
                                         <div class="col-sm-12">
-                                          <textarea class="form-control" rows="3" required id="description"></textarea>
+                                            <textarea class="form-control" rows="3" required id="description"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-12 text-center">
+                                            <button type="submit" id="sub_btn" class="btn btn-primary">Submit Form</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                                <!-- End General Form Elements -->
+                            </div>
+                            <div id="edit_event_div" style="display: none" class="card-body">
+                                <h5 class="card-title">Edit Event</h5>
+                                <!-- General Form Elements -->
+                                <form id="edit_event">
+                                    <input type="hidden" id="event_id" >
+                                    <div class="row mb-3">
+                                        <label for="inputText"  class="col-sm-12 col-form-label">Event Name</label>
+                                        <div class="col-sm-12">
+                                            <input type="text"  id="edit_name" required class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label for="inputText" class="col-sm-12 col-form-label">Location</label>
+                                        <div class="col-sm-12">
+                                            <input type="text" id="edit_location" required class="form-control">
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <label for="inputDate" class="col-sm-12 col-form-label">Date</label>
+                                        <div class="col-sm-12">
+                                            <input type="date" id="edit_date" required class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputTime" class="col-sm-12 col-form-label">Time</label>
+                                        <div class="col-sm-12">
+                                            <input type="time" id="edit_time" required class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="inputText" class="col-sm-12 col-form-label">Event Description</label>
+                                        <div class="col-sm-12">
+                                            <textarea class="form-control" rows="3" required id="edit_description"></textarea>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -78,54 +124,37 @@ include_once "includes/dashboard-header.php";
                                     <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Event Name</th>
-                                        <th scope="col">Event Description</th>
+                                        <th scope="col">Name</th>
                                         <th scope="col">Location</th>
-                                        <th scope="col">Time</th>
                                         <th scope="col">Date</th>
+                                        <th scope="col">Time</th>
+                                        <th scope="col">Description</th>
+                                        <th scope="col">Actions</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Brandon Jacob</td>
-                                        <td>Brandon Jacob</td>
-                                        <td>Designer</td>
-                                        <td>28</td>
-                                        <td>2016-05-25</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Bridie Kessler</td>
-                                        <td>Bridie Kessler</td>
-                                        <td>Developer</td>
-                                        <td>35</td>
-                                        <td>2014-12-05</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Ashleigh Langosh</td>
-                                        <td>Ashleigh Langosh</td>
-                                        <td>Finance</td>
-                                        <td>45</td>
-                                        <td>2011-08-12</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">4</th>
-                                        <td>Angus Grady</td>
-                                        <td>Angus Grady</td>
-                                        <td>HR</td>
-                                        <td>34</td>
-                                        <td>2012-06-11</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">5</th>
-                                        <td>Raheem Lehner</td>
-                                        <td>Raheem Lehner</td>
-                                        <td>Dynamic Division Officer</td>
-                                        <td>47</td>
-                                        <td>2011-04-19</td>
-                                    </tr>
+                                    <?php
+                                    foreach ($events as $event){
+                                        ?>
+                                        <tr>
+                                            <th scope="row"><?=$event['id']?></th>
+                                            <td><?=$event['name']?></td>
+                                            <td><?=$event['location']?></td>
+                                            <td><?=$event['date']?></td>
+                                            <td><?=$event['time']?></td>
+                                            <td><?=$event['description']?></td>
+                                            <td>
+                                                <i class="fa fa-trash p-2 btn btn-danger" onclick="deleteEvent(`<?=$event['id']?>`)"></i>
+                                                <i class="fa fa-edit p-2 btn btn-primary"
+                                                   onclick="editEvent(`<?=$event['id']?>`,`<?=$event['name']?>`,`<?=$event['location']?>`,`<?=$event['date']?>`,`<?=$event['time']?>`,`<?=$event['description']?>`)"></i>
+
+                                            </td>
+                                        </tr>
+                                        <?php
+                                    }
+                                    ?>
+
+
                                     </tbody>
                                 </table>
                                 <!-- End Event Table rows -->
@@ -143,3 +172,18 @@ include_once "includes/dashboard-header.php";
 
 
 <?php include_once "includes/dashboard-footer.php" ?>
+
+<script>
+    function editEvent(id,name,location,date,time,description){
+
+        $("#event_id").val(id);
+        $("#edit_name").val(name);
+        $("#edit_location").val(location);
+        $("#edit_date").val(date);
+        $("#edit_time").val(time);
+        $("#edit_description").val(description);
+        $("#add_event_div").hide();
+        $("#edit_event_div").show();
+
+    }
+</script>

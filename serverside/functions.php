@@ -111,146 +111,39 @@ class Functions
             return $this->db->getResult();
         }
     }
-    function getSingleSportCenters($id)
-    {
 
-        $sql = "select * from sport_centers where sid='$id' ";
+    function getAllEvents(){
+        $sql = "select * from events order by id desc ";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
-//        echo $this->db->getSql();
-    }//getSingleSportCenters
-
-    function getAllSportCenters()
-    {
-        $sql = "select * from sport_centers order by sid desc  ";
+    }
+    function getSingleEvent($id){
+        $sql = "select * from events where id='$id'";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
-    }//getAllSportCenters
-    function getMySportCenters($user_id)
-    {
-        $sql = "select * from sport_centers where `user_id`='$user_id' order by sid desc  ";
+    }
+
+    function getAllTeamMembers(){
+        $sql = "select * from team_members order by id desc ";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
-    }//getMySportCenters
-
-    function getSearchedSportCenters($where)
-    {
-        $sql = "select * from sport_centers where $where order by sid desc  ";
+    }
+    function getSingleTeamMember($id){
+        $sql = "select * from team_members where id='$id'";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
-    }//getSearchedSportCenters
-
-    function getAllGroundsBySportCenter($id)
-    {
-        $sql = "select * from grounds where sport_center_id='$id' order by gid desc ";
+    }
+    function getTeamMemberByLevel($level){
+        $sql = "select * from team_members where `level`='$level'";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
-    }//getAllGroundsBySportCenter
-    function getSearchedGroundsBySportCenter($where)
-    {
-        $sql = "select * from grounds where $where order by gid desc ";
-        if ($this->db->sql($sql)) {
-            return $this->db->getResult();
-        }
-    }//getSearchedGroundsBySportCenter
-    function getSingleGrounds($ground_id)
-    {
-        $sql = "select * from grounds where gid='$ground_id'";
-        if ($this->db->sql($sql)) {
-            return $this->db->getResult();
-        }
-    }//getSingleGrounds
-    function getAllGrounds()
-    {
-        $sql = "select * from grounds order by gid desc ";
-        if ($this->db->sql($sql)) {
-            return $this->db->getResult();
-        }
-    }//getAllGrounds
+    }
 
-    function getAllBookings()
-    {
-        $sql = "SELECT u.name as name, u.email as email,u.phone as phone, u.image_path as image, g.photo as ground_image, g.name as ground_name, g.location as ground_location, g.gid as gid, s.name as sport_center_name , b.* FROM users u INNER JOIN bookings b ON u.id = b.customer_id INNER JOIN grounds g ON g.gid = b.ground_id INNER JOIN sport_centers s ON s.sid = b.sport_center_id ORDER BY b.bid desc ";
 
-        if ($this->db->sql($sql)) {
-            return $this->db->getResult();
-        }
-    }//getAllBookings
-    function getAllBookingsByStatus($status)
-    {
-        $sql = "SELECT u.name as name, u.email as email,u.phone as phone, u.image_path as image, g.photo as ground_image, g.name as ground_name, g.location as ground_location, g.gid as gid, s.name as sport_center_name , b.* FROM users u INNER JOIN bookings b ON u.id = b.customer_id INNER JOIN grounds g ON g.gid = b.ground_id INNER JOIN sport_centers s ON s.sid = b.sport_center_id where b.status='$status' ORDER BY b.bid desc ";
-
-        if ($this->db->sql($sql)) {
-            return $this->db->getResult();
-        }
-    }//getAllBookingsByStatus
-
-    function getMyBookingsByStatus($status,$user_id,$user_type)
-    {
-        if($user_type==2){
-            $column_name='s.user_id';
-        }else{
-            $column_name='b.customer_id';
-        }
-        $sql = "SELECT u.name as name, u.email as email,u.phone as phone, u.image_path as image, g.photo as ground_image, g.name as ground_name, g.location as ground_location, g.gid as gid, s.name as sport_center_name , b.* FROM users u INNER JOIN bookings b ON u.id = b.customer_id INNER JOIN grounds g ON g.gid = b.ground_id INNER JOIN sport_centers s ON s.sid = b.sport_center_id where b.status='$status' and $column_name='$user_id' ORDER BY b.bid desc ";
-
-        if ($this->db->sql($sql)) {
-            return $this->db->getResult();
-        }
-    }//getMyBookingsByStatus
-
-    function getAllMyBookings($user_id,$user_type)
-    {
-        if($user_type==2){
-            $column_name='s.user_id';
-        }else{
-            $column_name='b.customer_id';
-        }
-        $sql = "SELECT u.name as name, u.email as email,u.phone as phone, u.image_path as image, g.photo as ground_image, g.name as ground_name, g.location as ground_location, g.gid as gid, s.name as sport_center_name , b.* FROM users u INNER JOIN bookings b ON u.id = b.customer_id INNER JOIN grounds g ON g.gid = b.ground_id INNER JOIN sport_centers s ON s.sid = b.sport_center_id where  $column_name='$user_id' ORDER BY b.bid desc ";
-
-        if ($this->db->sql($sql)) {
-            return $this->db->getResult();
-        }
-//        echo $this->db->getSql();
-
-    }//getAllMyBookings
-
-    function getBookingsByStatus($status)
-    {
-        $sql = "SELECT u.name as name, u.email as email,u.phone as phone, u.image_path as image, g.photo as ground_image, g.name as ground_name, g.location as ground_location, g.gid as gid, s.name as sport_center_name , b.* FROM users u INNER JOIN bookings b ON u.id = b.customer_id INNER JOIN grounds g ON g.gid = b.ground_id INNER JOIN sport_centers s ON s.sid = b.sport_center_id where b.status='$status'ORDER BY b.bid desc ";
-
-        if ($this->db->sql($sql)) {
-            return $this->db->getResult();
-        }
-    }//getBookingsByStatus
-    function getSingleBooking($booking_id)
-    {
-        $sql = "SELECT u.name as name, u.email as email,u.phone as phone, u.image_path as image, g.photo as ground_image, g.name as ground_name, g.location as ground_location, g.gid as gid, s.name as sport_center_name , b.* FROM users u INNER JOIN bookings b ON u.id = b.customer_id INNER JOIN grounds g ON g.gid = b.ground_id INNER JOIN sport_centers s ON s.sid = b.sport_center_id where `bid`='$booking_id' ORDER BY b.bid desc ";
-
-        if ($this->db->sql($sql)) {
-            return $this->db->getResult();
-        }
-    }//getSingleBooking
-    function getAllBookingsOfGround($ground_id)
-    {
-        $sql = "SELECT u.name as name, u.email as email,u.phone as phone, u.image_path as image, g.name as ground_name, g.gid as gid, s.name as sport_center_name , b.* FROM users u INNER JOIN bookings b ON u.id = b.customer_id INNER JOIN grounds g ON g.gid = b.ground_id INNER JOIN sport_centers s ON s.sid = b.sport_center_id where `ground_id`='$ground_id' ORDER BY b.bid desc ";
-
-        if ($this->db->sql($sql)) {
-            return $this->db->getResult();
-        }
-    }//getAllBookingsOfGround
-
-    function checkBookingSlots($date){
-        $sql = "select * from booking_slots where booking_date='$date'";
-        if($this->db->sql($sql)){
-            return $this->db->getResult();
-        }
-//        echo $this->db->getSql();
-    }//checkBookingSlots
 
 }//class

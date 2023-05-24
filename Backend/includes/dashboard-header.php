@@ -1,3 +1,37 @@
+<?php
+if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE) {
+    // session isn't started
+    session_start();
+}
+
+include_once "../serverside/functions.php";
+
+if(isset($_SESSION['user_id'])){
+
+}else{
+    //header('Location: sign-in');
+    ?>
+    <script type="text/javascript">
+        window.location.href="logout";
+    </script>
+    <?php
+    exit();
+}
+
+$func=new Functions();
+$users1=$func->getSingleUser($_SESSION['user_id']);
+if(!empty($users1)){
+    $user1=$users1[0];
+
+}else{
+    ?>
+    <script type="text/javascript">
+        window.location.href="logout";
+    </script>
+    <?php
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,25 +79,39 @@
     <nav class="header-nav ms-auto">
         <ul class="d-flex align-items-center">
             <li class="nav-item dropdown pe-3">
+
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                    <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                    <?php
+                    if ($user1['image_path'] !=""){
+                        ?>
+                        <img src="<?=$user1['image_path']?>" class=" myImage rounded-circle" alt="Profile">
+                        <?php
+                    }else{
+                        ?>
+                        <img src="assets/img/profile-img.jpg" alt="Profile" class="myImage rounded-circle">
+                        <?php
+                    }
+                    ?>
+
+
+                    <span class="d-none d-md-block dropdown-toggle ps-2"><?=$user1['name']?></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                        <h6>Kevin Anderson</h6>
-                        <span>Web Designer</span>
+                        <h6><?=$user1['name']?></h6>
+
                     </li>
                     <li>
                         <hr class="dropdown-divider">
                     </li>
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="users-profile">
+                        <a class="dropdown-item d-flex align-items-center" href="profile">
                             <i class="bi bi-person"></i>
                             <span>My Profile</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item d-flex align-items-center" href="#">
+                        <a class="dropdown-item d-flex align-items-center" href="logout">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Sign Out</span>
                         </a>
@@ -79,19 +127,19 @@
 <aside id="sidebar" class="sidebar">
     <ul class="sidebar-nav" id="sidebar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="./index">
+            <a class="nav-link" href="index">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./events">
+            <a class="nav-link" href="events">
                 <i class="bi bi-menu-button-wide"></i>
                 <span>Events</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link"  href="./teams.php">
+            <a class="nav-link"  href="teams.php">
                 <i class="bi bi-bar-chart"></i>
                 <span>Team</span>
             </a>

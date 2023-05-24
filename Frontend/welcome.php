@@ -1,4 +1,12 @@
-<?php include_once "includes/header.php" ?>
+<?php
+include_once "includes/header.php";
+include_once "../serverside/functions.php";
+$func=new Functions();
+$level1=$func->getTeamMemberByLevel(1);
+$level2=$func->getTeamMemberByLevel(2);
+$level3=$func->getTeamMemberByLevel(3);
+
+?>
 
 <section class="bg-black hero-section triangle-black">
     <div class="container py-5">
@@ -119,48 +127,72 @@
                 <p class="text-primary">ALONE WE CAN DO SO LITTLE,
                 <p>
                 <p class="text-primary pb-5">TOGETHER WE CAN DO SO MUCH</p>
-                <img src="assets/images/img8.png" class="img-fluid" style="max-height: 350px; min-height: 250px">
-                <h1 class="fw-bolder pt-3">FRANK & AMY</h1>
-                <h3 class="fw-bolder text-gray">EXECUTIVE</h3>
-                <h3 class="fw-bolder text-gray">MARKETING DIRECTORS</h3>
-                <h3 class="fw-bolder text-green">$250,000 + EARNERS </h3>
-                <div class="btn-1 py-3">
-                    <button class="btn px-5 my-2 my-lg-0">BIO
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="50px">
+
+                <?php
+                foreach ($level1 as $l1){
+                    ?>
+                    <?php
+                    if($l1['image_path']!=""){
+                        ?>
+                        <img src="<?=$l1['image_path']?>" style="height: 350px; width: 350px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <?php
+                    }else{
+                        ?>
+                        <img src="assets/images/img8.png" style="height: 350px; width: 350px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <?php
+                    }
+                    ?>
+
+                    <h1 class="fw-bolder pt-3"><?=$l1['name']?></h1>
+                    <h3 class="fw-bolder text-gray"><?=$l1['rank']?></h3>
+                    <h3 class="fw-bolder text-gray"><?=$l1['department']?></h3>
+                    <h3 class="fw-bolder text-green">$<?=number_format($l1['earning'])?> + EARNERS </h3>
+                    <div class="btn-1 py-3">
+                        <button class="btn px-5 my-2 my-lg-0">BIO
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                                 xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
+                                 width="15px" height="50px">
                                 <g>
                                     <path
                                             d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
                                 </g>
                             </svg>
-                    </button>
-                    <button class="btn px-5">FRANK'S YOUTUBE
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="50px">
+                        </button>
+                        <a target="_blank" href="<?=$l1['youtube_link']?>">
+                            <button  class="btn px-5"><?=$l1['name']?> YOUTUBE
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                                     xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
+                                     width="15px" height="50px">
                                 <g>
                                     <path
                                             d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
                                 </g>
                             </svg>
-                    </button>
-                </div>
-                <div class="btn-2">
-                    <button class="btn px-3 fw-bolder">SET A PERSONAL APPOINTMENT WITH FRANK'S
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="50px">
+                            </button>
+                        </a>
+                    </div>
+                    <div class="btn-2">
+                        <a href="<?=$l1['appointment_link']?>" target="_blank">
+                            <button  class="btn px-3 fw-bolder">SET A PERSONAL APPOINTMENT WITH FRANK'S
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                                     xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
+                                     width="15px" height="50px">
                                 <g>
                                     <path
                                             d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
                                 </g>
                             </svg>
-                    </button>
-                </div>
+                            </button>
+                        </a>
+                    </div>
+<br><br>
+                    <?php
+                }
+                ?>
+
             </div>
         </div>
     </div>
@@ -169,112 +201,61 @@
 <section>
     <div class="container py-5">
         <div class="row mx-auto justify-content-center">
-            <div class="col-12 col-lg-6 col-text-center py-3">
-                <img src="assets/images/img8.png" class="img-fluid" style="max-height: 350px; min-height: 250px">
-                <h6 class="fw-bolder pt-3">FRANK & AMY</h6>
-                <p class="fw-bolder text-gray">EXECUTIVE</p>
-                <p class="fw-bolder text-gray">MARKETING DIRECTORS</p>
-                <p class="fw-bolder text-green">$250,000 + EARNERS </p>
-                <div class="btn-3 py-3">
-                    <button class="btn px-4 my-2 my-lg-0">BIO
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="30px">
+            <?php
+            foreach ($level2 as $l2){
+                ?>
+                <div class="col-12 col-lg-6 col-text-center py-3">
+
+                    <?php
+                    if($l2['image_path']!=""){
+                        ?>
+                        <img src="<?=$l2['image_path']?>" style="height: 300px; width: 300px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <?php
+                    }else{
+                        ?>
+                        <img src="assets/images/img8.png" style="height: 300px; width: 300px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <?php
+                    }
+                    ?>
+
+                    <h6 class="fw-bolder pt-3"><?=$l2['name']?></h6>
+                    <p class="fw-bolder text-gray"><?=$l2['rank']?></p>
+                    <p class="fw-bolder text-gray"><?=$l2['department']?></p>
+                    <p class="fw-bolder text-green">$<?=number_format($l2['earning'])?> + EARNERS </p>
+                    <div class="btn-3 py-3">
+                        <button class="btn px-4 my-2 my-lg-0">BIO
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                                 xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
+                                 width="15px" height="30px">
                                 <g>
                                     <path
                                             d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
                                 </g>
                             </svg>
-                    </button>
-                </div>
-                <div class="btn-2">
-                    <button class="btn px-5 fw-bolder">SET AN APPOINTMENT
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="40px">
+                        </button>
+                    </div>
+                    <div class="btn-2">
+                        <a target="_blank" href="<?=$l2['appointment_link']?>">
+                            <button class="btn px-5 fw-bolder">SET AN APPOINTMENT
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                                     xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
+                                     width="15px" height="40px">
                                 <g>
                                     <path
                                             d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
                                 </g>
                             </svg>
-                    </button>
+                            </button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-6 col-text-center py-3">
-                <img src="assets/images/img8.png" class="img-fluid" style="max-height: 350px; min-height: 250px">
-                <h6 class="fw-bolder pt-3">FRANK & AMY</h6>
-                <p class="fw-bolder text-gray">EXECUTIVE</p>
-                <p class="fw-bolder text-gray">MARKETING DIRECTORS</p>
-                <p class="fw-bolder text-green">$250,000 + EARNERS </p>
-                <div class="btn-3 py-3">
-                    <button class="btn px-4 my-2 my-lg-0">BIO
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="30px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
-                    </button>
-                </div>
-                <div class="btn-2">
-                    <button class="btn px-5 fw-bolder">SET AN APPOINTMENT
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="40px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6 col-text-center py-3">
-                <img src="assets/images/img8.png" class="img-fluid" style="max-height: 350px; min-height: 250px">
-                <h6 class="fw-bolder pt-3">FRANK & AMY</h6>
-                <p class="fw-bolder text-gray">EXECUTIVE</p>
-                <p class="fw-bolder text-gray">MARKETING DIRECTORS</p>
-                <p class="fw-bolder text-green">$250,000 + EARNERS </p>
-                <div class="btn-3 py-3">
-                    <button class="btn px-4 my-2 my-lg-0">BIO
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="30px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6 col-text-center py-3">
-                <img src="assets/images/img8.png" class="img-fluid" style="max-height: 350px; min-height: 250px">
-                <h6 class="fw-bolder pt-3">FRANK & AMY</h6>
-                <p class="fw-bolder text-gray">EXECUTIVE</p>
-                <p class="fw-bolder text-gray">MARKETING DIRECTORS</p>
-                <p class="fw-bolder text-green">$250,000 + EARNERS </p>
-                <div class="btn-3 py-3">
-                    <button class="btn px-4 my-2 my-lg-0">BIO
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="30px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
-                    </button>
-                </div>
-            </div>
+
+                <?php
+            }
+            ?>
+
         </div>
     </div>
 </section>
@@ -282,126 +263,47 @@
 <section>
     <div class="container py-5">
         <div class="row mx-auto justify-content-center">
-            <div class="col-12 col-lg-4 col-md-6 col-text-center py-3">
-                <img src="assets/images/img7.png" class="img-fluid" style="max-height: 200px; min-height: 200px">
-                <h6 class="fw-bolder pt-3">FRANK & AMY</h6>
-                <p class="fw-bolder text-gray">EXECUTIVE</p>
-                <p class="fw-bolder text-gray">MARKETING DIRECTORS</p>
-                <p class="fw-bolder text-green">$250,000 + EARNERS </p>
-                <div class="btn-3 py-3">
-                    <button class="btn px-4 my-2 my-lg-0">BIO
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="30px">
+            <?php
+            foreach ($level3 as $l3){
+                ?>
+                <div class="col-12 col-lg-4 col-md-6 col-text-center py-3">
+
+                    <?php
+                    if($l3['image_path']!=""){
+                        ?>
+                        <img src="<?=$l3['image_path']?>" style="height: 200px; width: 200px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <?php
+                    }else{
+                        ?>
+                        <img src="assets/images/img8.png" style="height: 200px; width: 200px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <?php
+                    }
+                    ?>
+
+
+                    <h6 class="fw-bolder pt-3"><?=$l3['name']?></h6>
+                    <p class="fw-bolder text-gray"><?=$l3['rank']?></p>
+                    <p class="fw-bolder text-gray"><?=$l3['department']?></p>
+                    <p class="fw-bolder text-green">$<?=number_format($l3['earning'])?> + EARNERS </p>
+                    <div class="btn-3 py-3">
+                        <button class="btn px-4 my-2 my-lg-0">BIO
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                                 xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
+                                 width="15px" height="30px">
                                 <g>
                                     <path
                                             d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
                                 </g>
                             </svg>
-                    </button>
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-lg-4 col-md-6 col-text-center py-3">
-                <img src="assets/images/img7.png" class="img-fluid" style="max-height: 200px; min-height: 200px">
-                <h6 class="fw-bolder pt-3">FRANK & AMY</h6>
-                <p class="fw-bolder text-gray">EXECUTIVE</p>
-                <p class="fw-bolder text-gray">MARKETING DIRECTORS</p>
-                <p class="fw-bolder text-green">$250,000 + EARNERS </p>
-                <div class="btn-3 py-3">
-                    <button class="btn px-4 my-2 my-lg-0">BIO
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="30px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 col-md-6 col-text-center py-3">
-                <img src="assets/images/img7.png" class="img-fluid" style="max-height: 200px; min-height: 200px">
-                <h6 class="fw-bolder pt-3">FRANK & AMY</h6>
-                <p class="fw-bolder text-gray">EXECUTIVE</p>
-                <p class="fw-bolder text-gray">MARKETING DIRECTORS</p>
-                <p class="fw-bolder text-green">$250,000 + EARNERS </p>
-                <div class="btn-3 py-3">
-                    <button class="btn px-4 my-2 my-lg-0">BIO
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="30px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 col-md-6 col-text-center py-3">
-                <img src="assets/images/img7.png" class="img-fluid" style="max-height: 200px; min-height: 200px">
-                <h6 class="fw-bolder pt-3">FRANK & AMY</h6>
-                <p class="fw-bolder text-gray">EXECUTIVE</p>
-                <p class="fw-bolder text-gray">MARKETING DIRECTORS</p>
-                <p class="fw-bolder text-green">$250,000 + EARNERS </p>
-                <div class="btn-3 py-3">
-                    <button class="btn px-4 my-2 my-lg-0">BIO
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="30px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 col-md-6 col-text-center py-3">
-                <img src="assets/images/img7.png" class="img-fluid" style="max-height: 200px; min-height: 200px">
-                <h6 class="fw-bolder pt-3">FRANK & AMY</h6>
-                <p class="fw-bolder text-gray">EXECUTIVE</p>
-                <p class="fw-bolder text-gray">MARKETING DIRECTORS</p>
-                <p class="fw-bolder text-green">$250,000 + EARNERS </p>
-                <div class="btn-3 py-3">
-                    <button class="btn px-4 my-2 my-lg-0">BIO
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="30px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
-                    </button>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 col-md-6 col-text-center py-3">
-                <img src="assets/images/img7.png" class="img-fluid" style="max-height: 200px; min-height: 200px">
-                <h6 class="fw-bolder pt-3">FRANK & AMY</h6>
-                <p class="fw-bolder text-gray">EXECUTIVE</p>
-                <p class="fw-bolder text-gray">MARKETING DIRECTORS</p>
-                <p class="fw-bolder text-green">$250,000 + EARNERS </p>
-                <div class="btn-3 py-3">
-                    <button class="btn px-4 my-2 my-lg-0">BIO
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                             xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                             width="15px" height="30px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
-                    </button>
-                </div>
-            </div>
+                <?php
+            }
+            ?>
+
+
         </div>
     </div>
 </section>
@@ -813,22 +715,22 @@
                     </div>
                     <div class="next-step-btn py-5 ">
                         <a href="next-steps">
-                        <button class="btn px-5 py-3 fw-bold btn-primary">
-                            <svg x="0px" y="0px" viewBox="0 0 24 24" data-type="outline" data-name="circle-right-37"
-                                 fill="none" stroke="white" height="30" width="30" class="mx-2">
-                                <g transform="translate(0, 0)">
-                                    <circle vector-effect="non-scaling-stroke"
-                                            stroke-linecap="square" stroke-miterlimit="10" cx="12" cy="12" r="11"
-                                            stroke-linejoin="miter"></circle>
-                                    <polyline data-color="color-2"
-                                              vector-effect="non-scaling-stroke" stroke-linecap="square"
-                                              stroke-miterlimit="10" points=" 10,8 14,12 10,16 "
-                                              stroke-linejoin="miter">
-                                    </polyline>
-                                </g>
-                            </svg>
-                            GO TO NEXT STEP
-                        </button></a>
+                            <button class="btn px-5 py-3 fw-bold btn-primary">
+                                <svg x="0px" y="0px" viewBox="0 0 24 24" data-type="outline" data-name="circle-right-37"
+                                     fill="none" stroke="white" height="30" width="30" class="mx-2">
+                                    <g transform="translate(0, 0)">
+                                        <circle vector-effect="non-scaling-stroke"
+                                                stroke-linecap="square" stroke-miterlimit="10" cx="12" cy="12" r="11"
+                                                stroke-linejoin="miter"></circle>
+                                        <polyline data-color="color-2"
+                                                  vector-effect="non-scaling-stroke" stroke-linecap="square"
+                                                  stroke-miterlimit="10" points=" 10,8 14,12 10,16 "
+                                                  stroke-linejoin="miter">
+                                        </polyline>
+                                    </g>
+                                </svg>
+                                GO TO NEXT STEP
+                            </button></a>
                     </div>
                     <div class="position-absolute dropdown-wrapper justify-content-center align-items-center mx-auto ">
                         <div class="dropdown-inner text-center my-auto">
