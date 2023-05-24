@@ -100,7 +100,8 @@
         <div class="row justify-content-center m-auto">
             <div class="col-8">
                 <h1 class="text-center fw-bold">OUR VISION</h1>
-                <p class="text-center">Since our founding in 2001, every decision has been guided by our mission to help individuals
+                <p class="text-center">Since our founding in 2001, every decision has been guided by our mission to help
+                    individuals
                     create the life they want to live, while protecting their loved ones and planning their
                     financial legacy. Offering access to a diverse portfolio of insurance, retirement, savings, and
                     wealth-building strategies, our licensed agents across North America help guide individuals from
@@ -791,7 +792,10 @@
                     especially when compared to others in the industry.
                 </p>
                 <div class="w-100 expense-btn text-center text-lg-start">
-                    <button class="btn btn-primary w-75 py-3">EXPENSE BREAKDOWN</button>
+
+                    <button class="btn btn-primary w-75 py-3" data-bs-toggle="modal"
+                            data-bs-target="#expense-breakdown-modal">EXPENSE BREAKDOWN
+                    </button>
                 </div>
             </div>
         </div>
@@ -808,6 +812,7 @@
                         <h4 class="fw-bolder text-white"> WELCOME TO THE TEAM! </h4>
                     </div>
                     <div class="next-step-btn py-5 ">
+                        <a href="next-steps">
                         <button class="btn px-5 py-3 fw-bold btn-primary">
                             <svg x="0px" y="0px" viewBox="0 0 24 24" data-type="outline" data-name="circle-right-37"
                                  fill="none" stroke="white" height="30" width="30" class="mx-2">
@@ -823,7 +828,7 @@
                                 </g>
                             </svg>
                             GO TO NEXT STEP
-                        </button>
+                        </button></a>
                     </div>
                     <div class="position-absolute dropdown-wrapper justify-content-center align-items-center mx-auto ">
                         <div class="dropdown-inner text-center my-auto">
@@ -843,6 +848,50 @@
 
     </div>
 </section>
+
+
+<!--expense-breakdown Modal -->
+<div class="modal fade" id="expense-breakdown-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body map text-center">
+                <div>
+                    <p class="fw-bolder">Initial Fee to Non Licensed Associate</p>
+                    <p>$125 </p>
+                </div>
+                <div>
+                    <p class="fw-bolder">Initial Fee to Licensed Associate</p>
+                    <p>$165 </p>
+                </div>
+                <div>
+                    <p class="fw-bolder">Pre-Licensing Education Fee</p>
+                    <p>$29 - $99 (Costs range based on provider and state)</p>
+                </div><div>
+                    <p class="fw-bolder">Exam Fee</p>
+                    <p>$100 (approximate cost – varies by state)</p>
+                </div>
+                <div>
+                    <p class="fw-bolder">Cost of State License</p>
+                    <p>$60 - $300 (approximate cost – varies by state)</p>
+                </div>
+                <div>
+                    <p class="fw-bolder">E&O Costs for Life Licensed Agents</p>
+                    <p>$520 Annually </p>
+                </div>
+                <div>
+                    <p class="fw-bolder">Platform Fee for Licensed Agents</p>
+                    <p>$15 Monthly</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php include_once "includes/footer.php" ?>
 

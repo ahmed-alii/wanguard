@@ -207,6 +207,27 @@
                 <div class="mx-3 map-item">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" class="brz-icon-svg align-[initial]"
+                         data-type="glyph" data-name="player-19"><g class="nc-icon-wrapper" fill="inherit">
+                            <path data-color="color-2" fill="inherit"
+                                  d="M18,23H6c-0.553,0-1-0.448-1-1s0.447-1,1-1h12c0.553,0,1,0.448,1,1S18.553,23,18,23z"></path>
+                            <path fill="inherit"
+                                  d="M23,1H1C0.447,1,0,1.448,0,2v16c0,0.552,0.447,1,1,1h22c0.553,0,1-0.448,1-1V2C24,1.448,23.553,1,23,1z M15.515,10.857l-5,3C10.356,13.953,10.178,14,10,14c-0.17,0-0.34-0.043-0.493-0.13C9.193,13.693,9,13.36,9,13V7 c0-0.36,0.193-0.693,0.507-0.87c0.313-0.178,0.698-0.174,1.008,0.013l5,3C15.815,9.323,16,9.649,16,10S15.815,10.677,15.515,10.857z "></path>
+                        </g></svg>
+                </div>
+                <div>
+                    <h5 class="fw-bolder">WATCH OUR WELCOME VIDEO</h5>
+                </div>
+            </div>
+            <div class="py-3 ">
+                <video width="520" height="300" controls class="mw-100">
+                    <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"
+                            type="video/mp4">
+                </video>
+            </div>
+            <div class="d-flex">
+                <div class="mx-3 map-item">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" class="brz-icon-svg align-[initial]"
                          data-type="glyph" data-name="comment-add"><g class="nc-icon-wrapper" fill="inherit">
                             <path d="M23,3H10V7H7v3H3V22a1,1,0,0,0,1.64.769L10.362,18H23a1,1,0,0,0,1-1V4A1,1,0,0,0,23,3Z"
                                   fill="inherit"></path>
@@ -215,10 +236,10 @@
                         </g></svg>
                 </div>
                 <div>
-                    <h5 class="fw-bolder">JOIN TEAM GROUP ME</h5>
+                    <h5 class="fw-bolder">JOIN TEAM TELEGRAM</h5>
                     <p>
-                        We use GroupMe for announcements, recognition, events and anything else we need to
-                        communicate with our agents.
+                        We use TELEGRAM for announcements, recognition, events and anything else we need to communicate
+                        with our agents.
                     </p>
                 </div>
             </div>
@@ -237,7 +258,7 @@
                 </div>
                 <div>
                     <h5 class="fw-bolder">SUBSCRIBE TO TEAM CALENDAR</h5>
-                    <p> Don't miss any agent training, provider events or product trainings. </p>
+                    <p>Don't miss any agent training, provider events or product trainings. </p>
                     <a href="https://calendar.google.com/calendar/u/2/r?cid=dGhlZm9yY2V3ZmdAZ21haWwuY29t">
                         <button class="btn btn-primary mb-4 px-3 py-2"> SUBSCRIBE TO CALENDAR</button>
                     </a>
@@ -245,30 +266,29 @@
             </div>
             <div class="d-flex">
                 <div class="mx-3 map-item">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                         x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" class="brz-icon-svg align-[initial]"
-                         data-type="glyph" data-name="player-19"><g class="nc-icon-wrapper" fill="inherit">
-                            <path data-color="color-2" fill="inherit"
-                                  d="M18,23H6c-0.553,0-1-0.448-1-1s0.447-1,1-1h12c0.553,0,1,0.448,1,1S18.553,23,18,23z"></path>
-                            <path fill="inherit"
-                                  d="M23,1H1C0.447,1,0,1.448,0,2v16c0,0.552,0.447,1,1,1h22c0.553,0,1-0.448,1-1V2C24,1.448,23.553,1,23,1z M15.515,10.857l-5,3C10.356,13.953,10.178,14,10,14c-0.17,0-0.34-0.043-0.493-0.13C9.193,13.693,9,13.36,9,13V7 c0-0.36,0.193-0.693,0.507-0.87c0.313-0.178,0.698-0.174,1.008,0.013l5,3C15.815,9.323,16,9.649,16,10S15.815,10.677,15.515,10.857z "></path>
-                        </g></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 24 24" class="brz-icon-svg align-[initial]" data-type="glyph"
+                         data-name="event-create">
+                        <g class="nc-icon-wrapper" fill="inherit">
+                            <path d="M11,22H2V8H22v3h2V3a1,1,0,0,0-1-1H19V0H17V2H13V0H11V2H7V0H5V2H1A1,1,0,0,0,0,3V23a1,1,0,0,0,1,1H11Z"
+                                  fill="inherit"></path>
+                            <path d="M18,12a6,6,0,1,0,6,6A6,6,0,0,0,18,12Zm3,7H19v2H17V19H15V17h2V15h2v2h2Z"
+                                  fill="inherit" data-color="color-2"></path>
+                        </g>
+                    </svg>
                 </div>
                 <div>
-                    <h5 class="fw-bolder">WATCH THE FORCE ORIENTATION VIDEO BELOW</h5>
-                    <p>
-                        Click play, below, to launch this 28 minute video
-                    </p>
-
+                    <h5 class="fw-bolder">REGISTER FOR I AM A WEALTH BUILDER (IF NOT ALREADY ACTIVE)</h5>
+                    <p>There is so much valuable information on this site and it was built to help you master the system
+                        fast and build wealth fast! </p>
+                    <ul>
+                        <li>Start you Wealth Quest</li>
+                        <li>Watch Endorsements</li>
+                        <li>Track Your License</li>
+                    </ul>
                 </div>
             </div>
-            <div class="pt-2 ">
-                <video width="520" height="300" controls class="mw-100">
-                    <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"
-                            type="video/mp4">
-                </video>
-            </div>
-            <div class="d-flex py-4">
+            <div class="d-flex pt-3">
                 <div class="mx-3 map-item">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                          x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" class="brz-icon-svg align-[initial]"
@@ -279,15 +299,17 @@
                         </g></svg>
                 </div>
                 <div>
-                    <h5 class="fw-bolder">Have TRAINER go through LAUNCH PPT with you to set up your next ACTION
-                        ITEMS</h5>
+                    <h5 class="fw-bolder">ATTEND VANGUARD ORIENTATION MONDAYS AT 5:30PM</h5>
+                    <p>(REGISTRATION IS REQUIRED)</p>
                 </div>
             </div>
-            <div class="pt-2 ">
+            <div>
                 <video width="520" height="300" controls class="mw-100">
                     <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"
                             type="video/mp4">
                 </video>
+                <p>SCHEDULE LAUNCH TO SUCCESS WITH TRAINER, SET UP your next ACTION ITEMS
+                </p>
             </div>
         </div>
     </div>
@@ -300,8 +322,7 @@
                 <h1 class="fw-bolder text-primary">PHASE 2.</h1>
                 <h1 class="fw-bolder">START LICENSING (IF NOT ALREADY DONE)</h1>
                 <p>Without a license, you can't be properly and fully compensated. Make sure we take care of this step
-                    ASAP. <a href="#" class="text-decoration-none text-primary">Choose from one of the options below for
-                        instructions.</a></p>
+                    ASAP. Choose from one of the options below for instructions. </p>
             </div>
         </div>
         <div class="row justify-content-center py-3">
@@ -367,32 +388,11 @@
         <div class="row justify-content-center mx-auto map">
             <div class="col-12 text-center">
                 <h1 class="fw-bolder text-primary"> PHASE 3.</h1>
-                <h1 class="fw-bolder">PLAN IT OUT</h1>
+                <h1 class="fw-bolder">PLAN FOR SUCCESS</h1>
                 <p>Our goal is to help you learn and earn income as soon as possible, The TOP PRIORITY is for you to
-                    COMPLETE YOUR 1 / 1 / 7 then GET LICENSED and start EARNING.
-                    <a href="#" class="text-decoration-none text-primary">
-                        Set a time with your trainer to plan things out.
-                    </a>
+                    <strong class="text-decoration-underline">COMPLETE YOUR 1 / 1 / 7</strong> and start EARNING. Set a
+                    time with your trainer to plan things out.
                 </p>
-            </div>
-            <div class="d-flex">
-                <div class="mx-3 map-item">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                         x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" class="brz-icon-svg align-[initial]"
-                         data-type="glyph" data-name="home-search"><g class="nc-icon-wrapper" fill="inherit">
-                            <path fill="inherit"
-                                  d="M12,18c0-3.309,2.691-6,6-6c1.093,0,2.116,0.299,3,0.812V9c0-0.285-0.122-0.558-0.335-0.747l-9-8 c-0.379-0.338-0.95-0.338-1.329,0l-9,8C1.122,8.442,1,8.715,1,9v13c0,0.553,0.448,1,1,1h12.69C13.071,21.924,12,20.086,12,18z"></path>
-                            <path data-color="color-2" fill="inherit"
-                                  d="M23.707,22.293l-2.274-2.274C21.785,19.424,22,18.74,22,18c0-2.206-1.794-4-4-4s-4,1.794-4,4 s1.794,4,4,4c0.74,0,1.424-0.215,2.019-0.567l2.274,2.274L23.707,22.293z M18,20c-1.103,0-2-0.897-2-2s0.897-2,2-2s2,0.897,2,2 S19.103,20,18,20z"></path>
-                        </g></svg>
-                </div>
-                <div>
-                    <h5 class="fw-bolder">COMPLETE YOUR OWN FNA (FINANCIAL NEEDS ANALYSIS & BECOME A CLIENT)</h5>
-                    <p class="text-secondary">
-                        Before you start telling people to get their house in order, start with yours. If your goal is
-                        to improve your financial situation, begin by learning and implementing.
-                    </p>
-                </div>
             </div>
             <div class="d-flex">
                 <div class="mx-3 map-item">
@@ -409,10 +409,29 @@
                     <h5 class="fw-bolder">SET A TRAINING SCHEDULE</h5>
                     <p class="text-secondary">
                         Time management will be an important part of your success. Set some time aside to learn and
-                        master your business. ( 2 BPMs a week!)
+                        master your business. ( 2 Weekly Trainings per week!)
                     </p>
                 </div>
             </div>
+            <!--            <div class="d-flex">-->
+            <!--                <div class="mx-3 map-item">-->
+            <!--                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"-->
+            <!--                         x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" class="brz-icon-svg align-[initial]"-->
+            <!--                         data-type="glyph" data-name="home-search"><g class="nc-icon-wrapper" fill="inherit">-->
+            <!--                            <path fill="inherit"-->
+            <!--                                  d="M12,18c0-3.309,2.691-6,6-6c1.093,0,2.116,0.299,3,0.812V9c0-0.285-0.122-0.558-0.335-0.747l-9-8 c-0.379-0.338-0.95-0.338-1.329,0l-9,8C1.122,8.442,1,8.715,1,9v13c0,0.553,0.448,1,1,1h12.69C13.071,21.924,12,20.086,12,18z"></path>-->
+            <!--                            <path data-color="color-2" fill="inherit"-->
+            <!--                                  d="M23.707,22.293l-2.274-2.274C21.785,19.424,22,18.74,22,18c0-2.206-1.794-4-4-4s-4,1.794-4,4 s1.794,4,4,4c0.74,0,1.424-0.215,2.019-0.567l2.274,2.274L23.707,22.293z M18,20c-1.103,0-2-0.897-2-2s0.897-2,2-2s2,0.897,2,2 S19.103,20,18,20z"></path>-->
+            <!--                        </g></svg>-->
+            <!--                </div>-->
+            <!--                <div>-->
+            <!--                    <h5 class="fw-bolder">COMPLETE YOUR OWN FNA (FINANCIAL NEEDS ANALYSIS & BECOME A CLIENT)</h5>-->
+            <!--                    <p class="text-secondary">-->
+            <!--                        Before you start telling people to get their house in order, start with yours. If your goal is-->
+            <!--                        to improve your financial situation, begin by learning and implementing.-->
+            <!--                    </p>-->
+            <!--                </div>-->
+            <!--            </div>-->
             <div class="d-flex">
                 <div class="mx-3 map-item">
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -491,50 +510,52 @@
                         </g></svg>
                 </div>
                 <div>
-                    <h5 class="fw-bolder">RUN YOUR FAST START APPOINTMENT AND COMPLETE A 1 / 1 / 7</h5>
+                    <h5 class="fw-bolder">ATTEND RACE TO 1000 & ADVANCED PRODUCT TRAINING</h5>
                     <p class="text-secondary">
                         Get your business off to a fast start, identify potential partners needed to build your agency,
                         develop a business plan, & complete the 1 /1 /7 challenge
-                        <strong>TRAINERS USE POWER POINT BELOW TO FAST START NEW LICENSED AGENT</strong>, you can
-                        enlarge by clicking the icon on the lower right corner.
                     </p>
 
                 </div>
             </div>
-            <div class="pt-2 ">
-                <video width="520" height="300" controls class="mw-100">
-                    <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"
-                            type="video/mp4">
-                </video>
-            </div>
-            <div class="d-flex py-4">
-                <div class="mx-3 map-item">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                         x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" class="brz-icon-svg align-[initial]"
-                         data-type="glyph" data-name="contacts-44"><g class="nc-icon-wrapper" fill="inherit">
-                            <path fill="inherit"
-                                  d="M9,12c2.757,0,5-2.243,5-5V5c0-2.757-2.243-5-5-5S4,2.243,4,5v2C4,9.757,6.243,12,9,12z"></path>
-                            <path fill="inherit"
-                                  d="M15.423,15.145C14.042,14.622,11.806,14,9,14s-5.042,0.622-6.424,1.146C1.035,15.729,0,17.233,0,18.886V24 h18v-5.114C18,17.233,16.965,15.729,15.423,15.145z"></path>
-                            <rect data-color="color-2" x="16" y="3" fill="inherit" width="8" height="2"></rect>
-                            <rect data-color="color-2" x="16" y="8" fill="inherit" width="8" height="2"></rect>
-                            <rect data-color="color-2" x="19" y="13" fill="inherit" width="5" height="2"></rect>
-                        </g></svg>
-                </div>
-                <div>
-                    <h5 class="fw-bolder">TARGET MARKET TRAINING </h5>
-                    <p class="text-secondary">
-                        AFTER a successful Virtual Grand Opening run this training with your TRAINER to further develop
-                        your agency and client base
-                    </p>
-                </div>
-            </div>
-            <div class="pt-2 ">
-                <video width="520" height="300" controls class="mw-100">
-                    <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"
-                            type="video/mp4">
-                </video>
-            </div>
+            <!--            <div class="pt-2 ">-->
+            <!--                <video width="520" height="300" controls class="mw-100">-->
+            <!--                    <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"-->
+            <!--                            type="video/mp4">-->
+            <!--                </video>-->
+            <!--            </div>-->
+            <!--            <div>-->
+            <!--                <div class="d-flex py-4">-->
+            <!--                    <div class="mx-3 map-item">-->
+            <!--                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"-->
+            <!--                             x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"-->
+            <!--                             class="brz-icon-svg align-[initial]"-->
+            <!--                             data-type="glyph" data-name="contacts-44"><g class="nc-icon-wrapper" fill="inherit">-->
+            <!--                                <path fill="inherit"-->
+            <!--                                      d="M9,12c2.757,0,5-2.243,5-5V5c0-2.757-2.243-5-5-5S4,2.243,4,5v2C4,9.757,6.243,12,9,12z"></path>-->
+            <!--                                <path fill="inherit"-->
+            <!--                                      d="M15.423,15.145C14.042,14.622,11.806,14,9,14s-5.042,0.622-6.424,1.146C1.035,15.729,0,17.233,0,18.886V24 h18v-5.114C18,17.233,16.965,15.729,15.423,15.145z"></path>-->
+            <!--                                <rect data-color="color-2" x="16" y="3" fill="inherit" width="8" height="2"></rect>-->
+            <!--                                <rect data-color="color-2" x="16" y="8" fill="inherit" width="8" height="2"></rect>-->
+            <!--                                <rect data-color="color-2" x="19" y="13" fill="inherit" width="5" height="2"></rect>-->
+            <!--                            </g></svg>-->
+            <!--                    </div>-->
+            <!--                    <div>-->
+            <!--                        <h5 class="fw-bolder">TARGET MARKET TRAINING </h5>-->
+            <!--                        <p class="text-secondary">-->
+            <!--                            AFTER a successful Virtual Grand Opening run this training with your TRAINER to further-->
+            <!--                            develop-->
+            <!--                            your agency and client base-->
+            <!--                        </p>-->
+            <!--                    </div>-->
+            <!--                </div>-->
+            <!--                <div class="pt-2 ">-->
+            <!--                    <video width="520" height="300" controls class="mw-100">-->
+            <!--                        <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"-->
+            <!--                                type="video/mp4">-->
+            <!--                    </video>-->
+            <!--                </div>-->
+            <!--            </div>-->
         </div>
     </div>
 </section>
@@ -545,6 +566,11 @@
             <div class="col-12 text-center">
                 <h1 class="fw-bolder text-primary"> PHASE 5.</h1>
                 <h1 class="fw-bolder">GET CERTIFIED</h1>
+                <p>It's our priority to get you a level of competence and confidence that will propel you to a
+                    successful career. Field Trainers help us duplicate our efforts quickly and simply. Becoming a Field
+                    Trainer is not easy, but it is simple. Below are some basic requirements and points on what it takes
+                    to become a Producer, Financial Coach & Certified Field Trainer.
+                </p>
             </div>
         </div>
         <div class="row justify-content-center pt-5 ">
@@ -899,7 +925,8 @@
                 <h1 class="fw-bolder">GET PROMOTED</h1>
                 <p>Our system is merit driven. All promotions are earned and never given. So exactly how do you advance
                     within the company? Take a look at some of the ranks below for information on how to earn your next
-                    promotion.</p>
+                    promotion.
+                </p>
             </div>
         </div>
         <div class="row justify-content-center py-3">
@@ -1105,7 +1132,7 @@
             <div class="col-md-6 col-lg-3 py-5">
                 <div class="card  card-wrapper map2" style="min-height: 490px;">
                     <div class="card-body map-item2">
-                        <h4 class="fw-bolder text-center">SR MARKETING DIRECTOR </h4>
+                        <h4 class="fw-bolder text-center">SR MARKETING</h4>
                         <h4 class="fw-bolder text-center">DIRECTOR</h4>
                         <h4 class="text-primary text-center">PROMOTION | 65%</h4>
                         <div class="mt-3 d-flex">
@@ -1133,21 +1160,7 @@
                                     </g></svg>
                             </div>
                             <div>
-                                <p>3 DIRECT RECRUITS</p>
-                            </div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="px-3">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                     xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="glyph"
-                                     data-name="check-2"><g class="nc-icon-wrapper" fill="inherit">
-                                        <path fill="inherit"
-                                              d="M9,20c-0.3,0-0.5-0.1-0.7-0.3l-7-7c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0L9,17.6L21.3,5.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-13,13C9.5,19.9,9.3,20,9,20z"></path>
-                                    </g></svg>
-                            </div>
-                            <div>
-                                <p>3 DIRECT MDS ( THE FORCE STANDARD)</p>
+                                <p>2 DIRECT SA/MD</p>
                             </div>
                         </div>
                         <div class="d-flex">
@@ -1227,8 +1240,8 @@
             <div class="col-12 text-center">
                 <h1 class="fw-bolder text-primary">PHASE 7.</h1>
                 <h1 class="fw-bolder">MASTER OUR SYSTEM</h1>
-                <p>Our business is simple to understand and easy to learn. Here are the three areas to learn and
-                    master. </p>
+                <p>Our business is simple to understand and easy to learn. Here are the three areas to learn and master.
+                </p>
             </div>
         </div>
         <div class="row justify-content-center py-3">
@@ -1333,339 +1346,339 @@
     </div>
 </section>
 
+<!--<section id="phase-8">-->
+<!--    <div class="container py-5">-->
+<!--        <div class="row justify-content-center mx-auto map">-->
+<!--            <div class="col-12 text-center">-->
+<!--                <h1 class="fw-bolder text-primary"> PHASE 8.</h1>-->
+<!--                <h1 class="fw-bolder">TRACK YOUR MILESTONES</h1>-->
+<!--                <p>Simple milestone tracker for keeping track of your progress. The outcome of our training is to-->
+<!--                    produce self sustaining, independent, and confident entrepreneurs. Duplication is key and our focus.-->
+<!--                    If you follow what we do, you will get what we get.</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="row justify-content-center pt-5 ">-->
+<!--            <div class="col-12 col-md-6 col-lg-4 py-3">-->
+<!--                <div class="map2">-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">GET AGENT CODE</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">START YOUR COURSE</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">COMPLETE YOUR 1 / 1 / 7</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">SCHEDULE EXAM</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">GET LICENSED</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">GET CERTIFIED</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">EARN FIRST $1,000</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">GET P of 3 PROMOTION (Licensed Agent)</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">GET P of 10 PROMOTION (Senior Agent)</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">GET PROMOTED TO MD</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="col-12 col-md-6 col-lg-4 py-3">-->
+<!--                <div class="map2">-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder"> EARN $5,000 IN A MONTH</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">EARN $10,000 IN A MONTH</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">10 RECRUITS IN A MONTH (BBC 10)</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">20 RECRUITS IN A MONTH (BBC 20)</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">30 RECRUITS IN A MONTH (BBC 30)</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">EARN $50,000 WATCH</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">GET PROMOTED TO SMD</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">EARN $100,000 RING</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="d-flex">-->
+<!--                        <div class="map-item2 px-2">-->
+<!--                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"-->
+<!--                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+<!--                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"-->
+<!--                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"-->
+<!--                                                                fill="inherit">-->
+<!--                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"-->
+<!--                                          stroke-linecap="square" stroke-miterlimit="10"-->
+<!--                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>-->
+<!--                                </g></svg>-->
+<!--                        </div>-->
+<!--                        <div>-->
+<!--                            <p class="fw-bolder">PROMOTE 1st SMD</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+
 <section id="phase-8">
     <div class="container py-5">
         <div class="row justify-content-center mx-auto map">
             <div class="col-12 text-center">
                 <h1 class="fw-bolder text-primary"> PHASE 8.</h1>
-                <h1 class="fw-bolder">TRACK YOUR MILESTONES</h1>
-                <p>Simple milestone tracker for keeping track of your progress. The outcome of our training is to
-                    produce self sustaining, independent, and confident entrepreneurs. Duplication is key and our focus.
-                    If you follow what we do, you will get what we get.</p>
-            </div>
-        </div>
-        <div class="row justify-content-center pt-5 ">
-            <div class="col-12 col-md-6 col-lg-4 py-3">
-                <div class="map2">
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">GET AGENT CODE</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">START YOUR COURSE</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">COMPLETE YOUR 1 / 1 / 7</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">SCHEDULE EXAM</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">GET LICENSED</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">GET CERTIFIED</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">EARN FIRST $1,000</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">GET P of 3 PROMOTION (Licensed Agent)</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">GET P of 10 PROMOTION (Senior Agent)</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">GET PROMOTED TO MD</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 py-3">
-                <div class="map2">
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder"> EARN $5,000 IN A MONTH</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">EARN $10,000 IN A MONTH</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">10 RECRUITS IN A MONTH (BBC 10)</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">20 RECRUITS IN A MONTH (BBC 20)</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">30 RECRUITS IN A MONTH (BBC 30)</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">EARN $50,000 WATCH</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">GET PROMOTED TO SMD</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">EARN $100,000 RING</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" class="brz-icon-svg align-[initial]" data-type="outline"
-                                 data-name="shape-rectangle"><g transform="translate(0, 0)" class="nc-icon-wrapper"
-                                                                fill="inherit">
-                                    <rect x="2" y="2" width="20" height="20" fill="none" stroke="#e8c45c"
-                                          stroke-linecap="square" stroke-miterlimit="10"
-                                          vector-effect="non-scaling-stroke" stroke-linejoin="miter"></rect>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p class="fw-bolder">PROMOTE 1st SMD</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="phase-9">
-    <div class="container py-5">
-        <div class="row justify-content-center mx-auto map">
-            <div class="col-12 text-center">
-                <h1 class="fw-bolder text-primary"> PHASE 9.</h1>
                 <h1 class="fw-bolder">IGNORE THE CRITICS</h1>
                 <p>
                     Now that you've made a decision to go into the entrepreneurial world, it is important to put
