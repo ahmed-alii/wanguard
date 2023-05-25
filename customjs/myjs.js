@@ -297,7 +297,7 @@ $("#edit_event").submit(function (e){
             // $("#edit_event_modal").modal("hide");
             if (data.trim() == "true") {
                 swal("Success", "Event edit successfully ", "success").then((value) => {
-                   location.reload();
+                    location.reload();
                 });
             }
             else {
@@ -363,6 +363,10 @@ $("#add_team_member").submit(function (e){
     ajax_data.append('youtube_link',$('#youtube_link').val());
     ajax_data.append('appointment_link',$('#appointment_link').val());
     ajax_data.append('image', $('#update_profile_photo')[0].files[0]);
+
+    $("#sub_btn").attr("disabled", true);
+    $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
     $.ajax({
         url: "../serverside/post.php",
         type: "POST",
@@ -381,7 +385,10 @@ $("#add_team_member").submit(function (e){
                 swal("Error", "Failed to add team, please try again ", "error");
 
             }
-        }
+            $("#sub_btn").attr("disabled", false);
+            $("#sub_btn").html('Submit');
+
+        }//success
     });
 });//Add team
 //Edit Team member
@@ -399,6 +406,10 @@ $("#edit_team_member").submit(function (e){
     ajax_data.append('youtube_link',$('#edit_youtube_link').val());
     ajax_data.append('appointment_link',$('#edit_appointment_link').val());
     ajax_data.append('image', $('#edit_update_profile_photo')[0].files[0]);
+
+    $("#sub_btn1").attr("disabled", true);
+    $("#sub_btn1").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
     $.ajax({
         url: "../serverside/post.php",
         type: "POST",
@@ -417,7 +428,9 @@ $("#edit_team_member").submit(function (e){
                 swal("Error", "Failed to edit team member, please try again ", "error");
 
             }
-        }
+            $("#sub_btn1").attr("disabled", false);
+            $("#sub_btn1").html('Submit');
+        }//success
     });
 });//Edit Team member
 //Delete team
@@ -460,5 +473,80 @@ function deleteTeamMember(team_id) {
 
     });
 }//Delete
+//Edit Bio
+$("#edit_bio").submit(function (e){
+    e.preventDefault();
 
+    var bio = tinymce.get("bio").getContent();
 
+    if(bio==""){
+        swal("Bio details are missing","","info");
+        return;
+    }
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '13');
+    ajax_data.append('team_id',$('#team_id1').val());
+    ajax_data.append('bio',bio);
+
+    $("#sub_btn2").attr("disabled", true);
+    $("#sub_btn2").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data:ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Bio edit successfully ", "success").then((value) => {
+                    window.location.href="teams";
+                });
+            }
+            else {
+                swal("Error", "Failed to edit bio, please try again ", "error");
+
+            }
+            $("#sub_btn2").attr("disabled", false);
+            $("#sub_btn2").html('Submit');
+        }//success
+    });
+});//Edit Bio
+
+//Show Bio
+function showBio(team_id) {
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        data: {
+            func: 14,
+            team_id: team_id,
+        },
+        success: function (data) {
+            $("#append_bio").html('')
+            console.log(data);
+            data=JSON.parse(data);
+
+            if (data['status'] == true) {
+                if(data['bio']){
+                    $("#append_bio").html(data['bio']);
+                }else {
+                    $("#append_bio").html(`<p>No bio found </p>`);
+                }
+
+                $("#bio_modal").modal('show');
+            } else {
+                swal({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Failed to find team member, please try again!'
+                });
+            }
+        }//success
+    });//ajax
+
+}//showBio

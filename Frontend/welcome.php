@@ -148,7 +148,7 @@ $level3=$func->getTeamMemberByLevel(3);
                     <h3 class="fw-bolder text-gray"><?=$l1['department']?></h3>
                     <h3 class="fw-bolder text-green">$<?=number_format($l1['earning'])?> + EARNERS </h3>
                     <div class="btn-1 py-3">
-                        <button class="btn px-5 my-2 my-lg-0">BIO
+                        <button  onclick="showBio(`<?=$l1['id']?>`)" class="btn px-5 my-2 my-lg-0">BIO
                             <svg xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
                                  xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
@@ -223,7 +223,7 @@ $level3=$func->getTeamMemberByLevel(3);
                     <p class="fw-bolder text-gray"><?=$l2['department']?></p>
                     <p class="fw-bolder text-green">$<?=number_format($l2['earning'])?> + EARNERS </p>
                     <div class="btn-3 py-3">
-                        <button class="btn px-4 my-2 my-lg-0">BIO
+                        <button  onclick="showBio(`<?=$l2['id']?>`)" class="btn px-4 my-2 my-lg-0">BIO
                             <svg xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
                                  xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
@@ -286,7 +286,7 @@ $level3=$func->getTeamMemberByLevel(3);
                     <p class="fw-bolder text-gray"><?=$l3['department']?></p>
                     <p class="fw-bolder text-green">$<?=number_format($l3['earning'])?> + EARNERS </p>
                     <div class="btn-3 py-3">
-                        <button class="btn px-4 my-2 my-lg-0">BIO
+                        <button onclick="showBio(`<?=$l3['id']?>`)" class="btn px-4 my-2 my-lg-0">BIO
                             <svg xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
                                  xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
@@ -794,7 +794,19 @@ $level3=$func->getTeamMemberByLevel(3);
         </div>
     </div>
 </div>
+<div class="modal fade" id="bio_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body map" id="append_bio">
 
+            </div>
+        </div>
+    </div>
+</div>
 <?php include_once "includes/footer.php" ?>
 
 

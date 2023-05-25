@@ -1,7 +1,12 @@
 <?php
 include_once "includes/dashboard-header.php";
-$team_members=$func->getAllTeamMembers();
+$team_members = $func->getAllTeamMembers();
 ?>
+<style>
+    .mce-notification {
+        display: none;
+    }
+</style>
 <main id="main" class="main">
 
     <!--Page Title -->
@@ -21,7 +26,8 @@ $team_members=$func->getAllTeamMembers();
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <button type="button" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#add_team_modal">
+                            <button type="button" class="btn btn-primary my-2" data-bs-toggle="modal"
+                                    data-bs-target="#add_team_modal">
                                 Add New Team Member
                             </button>
                             <h5 class="card-title">All Team Members</h5>
@@ -45,30 +51,36 @@ $team_members=$func->getAllTeamMembers();
                                 </thead>
                                 <tbody>
                                 <?php
-                                foreach ($team_members as $team_member){
+                                foreach ($team_members as $team_member) {
                                     ?>
                                     <tr>
-                                        <th scope="row"><?=$team_member['id']?></th>
+                                        <th scope="row"><?= $team_member['id'] ?></th>
                                         <td>
                                             <?php
-                                            if($team_member['image_path']!=""){
+                                            if ($team_member['image_path'] != "") {
                                                 ?>
-                                                <img src="<?=$team_member['image_path']?>" height="75" width="75" class="rounded-circle">
+                                                <img src="<?= $team_member['image_path'] ?>" height="75" width="75"
+                                                     class="rounded-circle">
                                                 <?php
                                             }
                                             ?>
                                         </td>
-                                        <td><?=$team_member['name']?></td>
-                                        <td><?=$team_member['level']?></td>
-                                        <td><?=$team_member['rank']?></td>
-                                        <td><?=$team_member['department']?></td>
-                                        <td><?=$team_member['earning']?></td>
-                                        <td><a href="<?=$team_member['youtube_link']?>" target="_blank">YouTube</a></td>
-                                        <td><a href="<?=$team_member['appointment_link']?>" target="_blank">Appointment</a></td>
-                                        <td><?=$team_member['created_date']?></td>
+                                        <td><?= $team_member['name'] ?></td>
+                                        <td><?= $team_member['level'] ?></td>
+                                        <td><?= $team_member['rank'] ?></td>
+                                        <td><?= $team_member['department'] ?></td>
+                                        <td><?= $team_member['earning'] ?></td>
+                                        <td><a href="<?= $team_member['youtube_link'] ?>" target="_blank">YouTube</a>
+                                        </td>
+                                        <td><a href="<?= $team_member['appointment_link'] ?>" target="_blank">Appointment</a>
+                                        </td>
+                                        <td><?= $team_member['created_date'] ?></td>
                                         <td>
-                                            <i class="fa fa-trash p-2 btn btn-danger" onclick="deleteTeamMember(`<?=$team_member['id']?>`)"></i>
-                                            <i class="fa fa-edit p-2 btn btn-primary" onclick="editTeamMember(`<?=$team_member['id']?>`,`<?=$team_member['name']?>`,`<?=$team_member['level']?>`,`<?=$team_member['department']?>`,`<?=$team_member['earning']?>`,`<?=$team_member['youtube_link']?>`,`<?=$team_member['appointment_link']?>`)"></i>
+                                            <a href="add-bio?bio_id=<?=$team_member['id']?>"> <i class="fa fa-plus p-2 btn btn-success" title="Edit Bio"></i></a>
+                                            <i class="fa fa-edit p-2 btn btn-primary" title="Edit team member"
+                                               onclick="editTeamMember(`<?= $team_member['id'] ?>`,`<?= $team_member['name'] ?>`,`<?= $team_member['rank'] ?>`,`<?= $team_member['level'] ?>`,`<?= $team_member['department'] ?>`,`<?= $team_member['earning'] ?>`,`<?= $team_member['youtube_link'] ?>`,`<?= $team_member['appointment_link'] ?>`)"></i>
+                                            <i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"
+                                               onclick="deleteTeamMember(`<?= $team_member['id'] ?>`)"></i>
 
                                         </td>
                                     </tr>
@@ -161,13 +173,12 @@ $team_members=$func->getAllTeamMembers();
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="sub_btn" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
-
 <!-- Edit Team member Modal -->
 <div class="modal fade" id="edit_team_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -189,7 +200,8 @@ $team_members=$func->getAllTeamMembers();
                         <div class="col-md-6 mb-3">
                             <label for="inputText" class="col-sm-12 col-form-label">Level</label>
                             <div class="col-sm-12">
-                                <input type="number" min="1" max="3"  id="edit_level"  required name="" class="form-control">
+                                <input type="number" min="1" max="3" id="edit_level" required name=""
+                                       class="form-control">
                             </div>
                         </div>
                     </div>
@@ -211,14 +223,14 @@ $team_members=$func->getAllTeamMembers();
                         <div class="col-md-6 mb-3">
                             <label for="inputNumber" class="col-sm-12 col-form-label">Rank</label>
                             <div class="col-sm-12">
-                                <input class="form-control"  type="text" id="edit_rank">
+                                <input class="form-control" type="text" id="edit_rank">
                             </div>
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label for="inputNumber" class="col-sm-12 col-form-label">Picture Upload</label>
                             <div class="col-sm-12">
-                                <input class="form-control"  type="file" id="edit_update_profile_photo">
+                                <input class="form-control" type="file" id="edit_update_profile_photo">
                             </div>
                         </div>
 
@@ -242,7 +254,7 @@ $team_members=$func->getAllTeamMembers();
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="sub_btn1" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </div>
@@ -252,10 +264,12 @@ $team_members=$func->getAllTeamMembers();
 <?php include_once "includes/dashboard-footer.php" ?>
 
 <script>
-    function editTeamMember(id,name,level,department,earning,youtube_link,appointment_link){
+
+    function editTeamMember(id, name, rank, level, department, earning, youtube_link, appointment_link) {
 
         $("#team_id").val(id);
         $("#edit_name").val(name);
+        $("#edit_rank").val(rank);
         $("#edit_level").val(level);
         $("#edit_department").val(department);
         $("#edit_earning").val(earning);
@@ -265,4 +279,5 @@ $team_members=$func->getAllTeamMembers();
         $("#edit_team_modal").modal('show');
 
     }
+
 </script>

@@ -67,6 +67,7 @@
 <script src="js/jquery-3.6.3.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/multi-select.js"></script>
+<script src="../customjs/myjs.js"></script>
 
 <script>
     $('.count').each(function () {

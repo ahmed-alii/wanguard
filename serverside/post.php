@@ -372,5 +372,42 @@ else if ($func ==12) {
     }
 }//12
 
+//Add Bio
+else if ($func ==13) {
 
+    $team_id = htmlspecialchars(stripslashes($_POST['team_id']));
+    $team_id = $db->escapeString($team_id);
+
+    $bio=$_POST['bio'];
+    $bio = str_replace("'",'"',$bio);
+
+    $sql="update team_members set bio='$bio' where id= '$team_id'";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    }
+    else {
+        echo "false";
+    }
+}//13
+//Show Bio
+else if ($func ==14) {
+
+    $team_id = htmlspecialchars(stripslashes($_POST['team_id']));
+    $team_id = $db->escapeString($team_id);
+
+    $user=$Functions->getSingleTeamMember($team_id);
+
+    $data = new stdClass();
+    if (!empty($user)) {
+        $data->status=true;
+        $data->bio=$user[0]['bio'];
+    }
+    else {
+        $data->status=false;
+    }
+    echo json_encode($data);
+
+}//14
 ?>

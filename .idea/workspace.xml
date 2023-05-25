@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cb8abc8-bdcc-471f-9303-40e25c2c7bae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Backend/add-bio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/events.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/includes/dashboard-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/includes/dashboard-header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/pages-login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/pages-register.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/includes/dashboard-footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/includes/dashboard-footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/teams.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/users-profile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/includes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Frontend/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/includes/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/welcome.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customjs/myjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/customjs/myjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverside/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverside/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/post.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,7 +20,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/phpmailer/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -82,6 +79,7 @@
       <workItem from="1684406579798" duration="65025000" />
       <workItem from="1684911827795" duration="6801000" />
       <workItem from="1684923973656" duration="3257000" />
+      <workItem from="1684992982675" duration="7904000" />
     </task>
     <servers />
   </component>
