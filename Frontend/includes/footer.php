@@ -57,7 +57,7 @@
             </div>
 
             <div class="py-4 border-top footer-content text-center">
-                <p class="">Copyright © 2022 <strong>VANGUARD Wealth Builder</strong></p>
+                <p class="">Copyright © <?=date('Y')?> <strong>VANGUARD Wealth Builder</strong></p>
             </div>
         </div>
     </div>
