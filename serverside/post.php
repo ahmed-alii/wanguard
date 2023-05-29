@@ -28,7 +28,7 @@ if($func == 1) {
     $password = $db->escapeString($password);
     $hashpass = md5($password);
 
-    $sql = "insert into users (`name`,`email`,`password`) values ('$name','$email','$hashpass')";
+    $sql = "insert into users (`name`,`email`,`password`,`create_date`) values ('$name','$email','$hashpass','$create_date')";
 
     if ($db->sql($sql)) {
 
@@ -66,17 +66,17 @@ if($func == 1.1) {
     $email = htmlspecialchars(stripslashes($_POST['email']));
     $email = $db->escapeString($email);
 
-    $phone = htmlspecialchars(stripslashes($_POST['phone']));
-    $phone = $db->escapeString($phone);
+//    $phone = htmlspecialchars(stripslashes($_POST['phone']));
+//    $phone = $db->escapeString($phone);
+//
+//    $address = htmlspecialchars(stripslashes($_POST['address']));
+//    $address = $db->escapeString($address);
+//
+//
+//    $notes = htmlspecialchars(stripslashes($_POST['notes']));
+//    $notes = $db->escapeString($notes);
 
-    $address = htmlspecialchars(stripslashes($_POST['address']));
-    $address = $db->escapeString($address);
-
-
-    $notes = htmlspecialchars(stripslashes($_POST['notes']));
-    $notes = $db->escapeString($notes);
-
-    $sql = "update users set `name`='$name',`phone`='$phone',`address`='$address',`notes`='$notes',`updated_date`='$create_date' where id='$user_id' ";
+    $sql = "update users set `name`='$name',`email`='$email',`updated_date`='$create_date' where id='$user_id' ";
 
     if($db->sql($sql)){
         echo "true";
@@ -226,6 +226,9 @@ else if($func == 7) {
     $description = htmlspecialchars(stripslashes($_POST['description']));
     $description = $db->escapeString($description);
 
+    $event_link = htmlspecialchars(stripslashes($_POST['event_link']));
+    $event_link = $db->escapeString($event_link);
+
     $location = htmlspecialchars(stripslashes($_POST['location']));
     $location = $db->escapeString($location);
 
@@ -236,8 +239,8 @@ else if($func == 7) {
     $time = $db->escapeString($time);
 
 
-    $sql = "insert into events (`name`,`location`,`date`,`time`,`description`,`created_date`) 
-                      values ('$name','$location','$date','$time','$description','$create_date')";
+    $sql = "insert into events (`event_link`,`name`,`location`,`date`,`time`,`description`,`created_date`) 
+                      values ('$event_link','$name','$location','$date','$time','$description','$create_date')";
 
     if($db->sql($sql)){
         echo "true";
@@ -256,6 +259,9 @@ else if ($func == 8) {
     $name = htmlspecialchars(stripslashes($_POST['name']));
     $name = $db->escapeString($name);
 
+    $event_link = htmlspecialchars(stripslashes($_POST['event_link']));
+    $event_link = $db->escapeString($event_link);
+
     $description = htmlspecialchars(stripslashes($_POST['description']));
     $description = $db->escapeString($description);
 
@@ -269,7 +275,7 @@ else if ($func == 8) {
     $time = $db->escapeString($time);
 
 
-    $sql = "update events set `name`='$name',`location`='$location',`date`='$date',`time`='$time',`description`='$description',`updated_date`='$create_date' ";
+    $sql = "update events set `event_link`='$event_link',`name`='$name',`location`='$location',`date`='$date',`time`='$time',`description`='$description',`updated_date`='$create_date' where id='$event_id'";
 
     if($db->sql($sql)){
         echo "true";

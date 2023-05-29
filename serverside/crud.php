@@ -12,11 +12,12 @@ class Database {
        private $db_pass = "";  // Change as required
        private $db_name = "wanguard"; // Change as required
 
-//
+// Live Craditionals
+
 //    private $db_host = "localhost";  // Change as required
-//    private $db_user = "u474045775_package_mgt";  // Change as required
-//    private $db_pass = "O?w@uSI;2z";  // Change as required
-//    private $db_name = "u474045775_package_mgt"; // Change as required
+//    private $db_user = "u871262381_wealth";  // Change as required
+//    private $db_pass = "xQ1>0HfP~PW>";  // Change as required
+//    private $db_name = "u871262381_wealth"; // Change as required
 
 
     /*

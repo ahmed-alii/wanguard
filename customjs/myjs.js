@@ -15,21 +15,20 @@ $("#signup").submit(function (e){
 
 
     $.ajax({
-        url: "../serverside/post.php",
+        url: "serverside/post.php",
         type: "POST",
         processData: false,
         contentType: false,
         data:ajax_data,
         success: function (data) {
-            console.log(data)
-            $("#edit_employee_modal").modal("hide");
+
             if (data.trim() == "true") {
-                swal("Success", "Employee edit successfully ", "success").then((value) => {
-                    location.reload();
-                });
+                // swal("Success", " edit successfully ", "success").then((value) => {
+                    window.location.href="index";
+                // });
             }
             else {
-                swal("Error", "Failed to edit employee, please try again ", "error");
+                swal("Error", "Failed to register, please try again ", "error");
 
             }
             $("#signup_btn").attr("disabled", false);
@@ -46,9 +45,9 @@ $("#edit_profile").submit(function (e){
     ajax_data.append('user_id',$('#employee_id').val());
     ajax_data.append('name',$('#edit_name').val());
     ajax_data.append('email',$('#edit_email').val());
-    ajax_data.append('phone',$('#edit_phone').val());
-    ajax_data.append('address',$('#edit_address').val());
-    ajax_data.append('notes',$('#edit_notes').val());
+    // ajax_data.append('phone',$('#edit_phone').val());
+    // ajax_data.append('address',$('#edit_address').val());
+    // ajax_data.append('notes',$('#edit_notes').val());
 
     $("#edit_btn").attr("disabled", true);
     $("#edit_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
@@ -61,15 +60,14 @@ $("#edit_profile").submit(function (e){
         contentType: false,
         data:ajax_data,
         success: function (data) {
-            console.log(data)
-            $("#edit_employee_modal").modal("hide");
+
             if (data.trim() == "true") {
-                swal("Success", "Employee edit successfully ", "success").then((value) => {
+                swal("Success", "Profile update successfully ", "success").then((value) => {
                     location.reload();
                 });
             }
             else {
-                swal("Error", "Failed to edit employee, please try again ", "error");
+                swal("Error", "Failed to edit profile, please try again ", "error");
 
             }
             $("#edit_btn").attr("disabled", false);
@@ -77,7 +75,7 @@ $("#edit_profile").submit(function (e){
         }//success
     });
 });//update profile
-//login
+//login Admin
 $("#loginform").submit(function (event) {
     event.preventDefault();
     if($("#email").val() == '' || $("#password").val()=='' ){
@@ -113,6 +111,42 @@ $("#loginform").submit(function (event) {
         }//success
     });
 });
+//login User
+$("#login").submit(function (event) {
+    event.preventDefault();
+    if($("#email").val() == '' || $("#password").val()=='' ){
+        swal("", "Email or password is missing", "info");
+        return;
+    }
+    $("#login_btn").attr("disabled", true);
+    $("#login_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+    $.ajax({
+        url: "serverside/post.php",
+        type: "POST",
+        data: {
+            func: 2,
+            email:$("#email").val(),
+            password:$("#password").val(),
+        },
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                window.location.href="index";
+
+            }else if (data.trim() == "block") {
+
+                swal("Block by admin", "You are block by admin. kindly contact with admin", "error");
+
+            }else {
+                swal("Failed To Sign In", "Incorrect Email/Password", "error");
+            }
+
+            $("#login_btn").attr("disabled", false);
+            $("#login_btn").html("Sign-in");
+        }//success
+    });
+});
 //send forgot email
 $("#forget_password_email").submit(function (event) {
 
@@ -121,7 +155,7 @@ $("#forget_password_email").submit(function (event) {
     $("#email_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
     var email = $('#forgetemail').val();
     $.ajax({
-        url: "../serverside/post.php",
+        url: "serverside/post.php",
         type: "POST",
         data: {
             func: 3,
@@ -164,7 +198,7 @@ $("#recoverPassword").submit(function (event) {
     $("#recoverPass_btn").attr("disabled", true);
     $("#recoverPass_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
     $.ajax({
-        url: "../serverside/post.php",
+        url: "serverside/post.php",
         type: "POST",
         data: {
             func: 4,
@@ -274,6 +308,7 @@ $("#add_event").submit(function (e){
     //append into ajax data
     ajax_data.append("func", '7');
     ajax_data.append('name',$('#name').val());
+    ajax_data.append('event_link',$('#event_link').val());
     ajax_data.append('description',$('#description').val());
     ajax_data.append('location',$('#location').val());
     ajax_data.append('date',$('#date').val());
@@ -314,6 +349,7 @@ $("#edit_event").submit(function (e){
     //append into ajax data
     ajax_data.append("func", '8');
     ajax_data.append('event_id',$('#event_id').val());
+    ajax_data.append('event_link',$('#edit_event_link').val());
     ajax_data.append('name',$('#edit_name').val());
     ajax_data.append('description',$('#edit_description').val());
     ajax_data.append('location',$('#edit_location').val());
@@ -330,8 +366,7 @@ $("#edit_event").submit(function (e){
         contentType: false,
         data:ajax_data,
         success: function (data) {
-            console.log(data)
-            // $("#edit_event_modal").modal("hide");
+
             if (data.trim() == "true") {
                 swal("Success", "Event edit successfully ", "success").then((value) => {
                     location.reload();
@@ -555,7 +590,7 @@ $("#edit_bio").submit(function (e){
 function showBio(team_id) {
 
     $.ajax({
-        url: "../serverside/post.php",
+        url: "serverside/post.php",
         type: "POST",
         data: {
             func: 14,
