@@ -5,26 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cb8abc8-bdcc-471f-9303-40e25c2c7bae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Backend/assets/js/sweetalert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/js/sweetalert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/includes/dashboard-footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/includes/dashboard-footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/compensation.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/compensation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/new-client.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/new-client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/next-steps.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/next-steps.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/overview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/trainers-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/trainers-page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/welcome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customjs/myjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/customjs/myjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverside/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverside/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/wanguard.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/wanguard.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +79,7 @@
       <workItem from="1684911827795" duration="6801000" />
       <workItem from="1684923973656" duration="3257000" />
       <workItem from="1684992982675" duration="9121000" />
-      <workItem from="1685339322021" duration="6596000" />
+      <workItem from="1685339322021" duration="6950000" />
     </task>
     <servers />
   </component>

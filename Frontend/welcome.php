@@ -158,17 +158,25 @@ $level3=$func->getTeamMemberByLevel(3);
                     <h3 class="fw-bolder text-gray"><?=$l1['department']?></h3>
                     <h3 class="fw-bolder text-green">$<?=number_format($l1['earning'])?> + EARNERS </h3>
                     <div class="btn-1 py-3">
-                        <button  onclick="showBio(`<?=$l1['id']?>`)" class="btn px-5 my-2 ">BIO
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                                 width="15px" height="50px">
+                        <?php
+                        if($l1['bio']!=""){
+                            ?>
+                            <button  onclick="showBio(`<?=$l1['id']?>`)" class="btn px-5 my-2 ">BIO
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                                     xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
+                                     width="15px" height="50px">
                                 <g>
                                     <path
                                             d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
                                 </g>
                             </svg>
-                        </button>
+                            </button>
+                            <?php
+                        }
+                        ?>
+
+
                         <a target="_blank" href="<?=$l1['youtube_link']?>">
                             <button  class="btn px-5"><?=$l1['name']?> YOUTUBE
                                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +206,7 @@ $level3=$func->getTeamMemberByLevel(3);
                             </button>
                         </a>
                     </div>
-<br><br>
+                    <br><br>
                     <?php
                 }
                 ?>
@@ -233,17 +241,23 @@ $level3=$func->getTeamMemberByLevel(3);
                     <p class="fw-bolder text-gray"><?=$l2['department']?></p>
                     <p class="fw-bolder text-green">$<?=number_format($l2['earning'])?> + EARNERS </p>
                     <div class="btn-3 py-3">
-                        <button  onclick="showBio(`<?=$l2['id']?>`)" class="btn px-4 my-2 my-lg-0">BIO
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                                 width="15px" height="30px">
+                        <?php
+                        if($l2['bio']!=""){
+                            ?>
+                            <button  onclick="showBio(`<?=$l2['id']?>`)" class="btn px-4 my-2 my-lg-0">BIO
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                                     xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
+                                     width="15px" height="30px">
                                 <g>
                                     <path
                                             d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
                                 </g>
                             </svg>
-                        </button>
+                            </button>
+                            <?php
+                        }
+                        ?>
                     </div>
                     <div class="btn-2">
                         <a target="_blank" href="<?=$l2['appointment_link']?>">
@@ -296,17 +310,23 @@ $level3=$func->getTeamMemberByLevel(3);
                     <p class="fw-bolder text-gray"><?=$l3['department']?></p>
                     <p class="fw-bolder text-green">$<?=number_format($l3['earning'])?> + EARNERS </p>
                     <div class="btn-3 py-3">
-                        <button onclick="showBio(`<?=$l3['id']?>`)" class="btn px-4 my-2 my-lg-0">BIO
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                 xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                                 width="15px" height="30px">
+                        <?php
+                        if($l3['bio']!=""){
+                            ?>
+                            <button onclick="showBio(`<?=$l3['id']?>`)" class="btn px-4 my-2 my-lg-0">BIO
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
+                                     xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
+                                     width="15px" height="30px">
                                 <g>
                                     <path
                                             d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
                                 </g>
                             </svg>
-                        </button>
+                            </button>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
                 <?php
