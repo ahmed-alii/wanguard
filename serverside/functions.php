@@ -57,7 +57,7 @@ class Functions
     function sendrecoveremail($email, $pass)
     {
         include_once "../phpmailer/sendmailfunction.php";
-        $link = '<a href="http://localhost/wanguard/Frontend/resetpassword?resetpsw='. $pass.'">Reset your Password</a>';
+        $link = '<a href="https://www.vwbagency.com/resetpassword?resetpsw='. $pass.'">Reset your Password</a>';
         $to = $email;
         $message = "You have requested to reset the password, please click on below link to reset the password. <br>" . $link . "<br><br> Thank you!";
         $subject = "Password recovery";
