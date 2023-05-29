@@ -1,18 +1,23 @@
-<section class="section-wrapper w-100 py-5 login-section">
-    <div class="container">
-        <div class="card bg-black text-white">
-            <div class="card-body text-center">
-                <img src="assets/images/logo3.png" class="img-fluid px-4">
-                <h2 class="fw-light mt-3">VANGUARD WEALTH BUILDERS</h2>
-                <div>
-                    <p>Logged in as: <span class="text-primary">example@email.com</span></p>
-                    <a href="#" class="text-danger btn btn-link">Logout? </a>
+<?php
+if(isset($_SESSION['user_id'])){
+    ?>
+    <section class="section-wrapper w-100 py-5 login-section">
+        <div class="container">
+            <div class="card bg-black text-white">
+                <div class="card-body text-center">
+                    <img src="assets/images/logo3.png" class="img-fluid px-4">
+                    <h2 class="fw-light mt-3">VANGUARD WEALTH BUILDERS</h2>
+                    <div>
+                        <p>Logged in as: <span class="text-primary"><?= $_SESSION['email']?></span></p>
+                        <a href="logout" class="text-danger btn btn-link">Logout? </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
+    </section>
+<?php
+}
+?>
 
 <footer class="bg-black">
     <div class="container">
@@ -63,11 +68,11 @@
     </div>
 </footer>
 
-
 <script src="js/jquery-3.6.3.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/multi-select.js"></script>
 <script src="../customjs/myjs.js"></script>
+<script src="js/sweetalert.js"></script>
 
 <script>
     $('.count').each(function () {

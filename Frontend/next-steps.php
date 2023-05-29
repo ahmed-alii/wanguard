@@ -1,4 +1,15 @@
-<?php include_once "includes/header.php" ?>
+<?php
+include_once "includes/header.php";
+if (!isset($_SESSION['user_id'])){
+    ?>
+    <script type="text/javascript">
+        window.location.href="logout";
+    </script>
+    <?php
+    exit();
+}
+
+?>
 
 <section class="bg-black">
     <div class="container py-2 py-lg-5 py-md-5">

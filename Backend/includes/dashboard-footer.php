@@ -26,7 +26,7 @@
 <script src="assets/js/main.js"></script>
 <script src="assets/js/tinymce.min.js"></script>
 <script src="../customjs/myjs.js?v=123"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="assets/js/sweetalert.js"></script>
 
 </body>
 

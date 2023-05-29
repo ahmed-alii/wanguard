@@ -1,4 +1,18 @@
-<?php include_once "includes/header.php" ?>
+<?php
+include_once "includes/header.php";
+if (!isset($_SESSION['user_id'])){
+    ?>
+    <script type="text/javascript">
+        window.location.href="logout";
+    </script>
+    <?php
+    exit();
+}
+include_once "../serverside/functions.php";
+$func=new Functions();
+$events=$func->getAllEvents();
+
+?>
     <section class="bg-black hero-section">
         <div class="container py-5">
             <div class="img-wrapper text-center">
@@ -136,8 +150,21 @@
             <div class="row px-5">
                 <div class="col-7">
                     <div class="card h-100 bg-light">
-                        <div class="card-body">
-
+                        <div class="card-header bg-danger">
+                            <h2 class="text-white"><i class="text-dark fa fa-calendar"></i> The Force Agency Calendar</h2>
+                        </div>
+                        <div class="card-body" style="overflow-y: auto">
+                            <?php
+                            foreach ($events as $event){
+                                ?>
+                                <p class="text-danger fw-bold"><?=$event['name']?></p>
+                                <p class=""><?=$event['description']?></p>
+                                <p class=""><i class="fa fa-map-marker"></i> <?=$event['location']?></p>
+                                <p class=""><i class="fa fa-clock-o"></i> <?=date('F d Y',strtotime($event['date'])) ." ".date('H:i A',strtotime($event['time']))?></p>
+                                <hr>
+                                <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

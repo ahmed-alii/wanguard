@@ -1,10 +1,48 @@
+//update profile
+$("#signup").submit(function (e){
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '1');
 
+    ajax_data.append('name',$('#name').val());
+    ajax_data.append('email',$('#email').val());
+    ajax_data.append('password',$('#password').val());
+
+
+    $("#signup_btn").attr("disabled", true);
+    $("#signup_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data:ajax_data,
+        success: function (data) {
+            console.log(data)
+            $("#edit_employee_modal").modal("hide");
+            if (data.trim() == "true") {
+                swal("Success", "Employee edit successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            }
+            else {
+                swal("Error", "Failed to edit employee, please try again ", "error");
+
+            }
+            $("#signup_btn").attr("disabled", false);
+            $("#signup_btn").html('Register Account');
+        }//success
+    });
+});//update profile
 //update profile
 $("#edit_profile").submit(function (e){
     e.preventDefault();
     var ajax_data = new FormData();
     //append into ajax data
-    ajax_data.append("func", '1');
+    ajax_data.append("func", '1.1');
     ajax_data.append('user_id',$('#employee_id').val());
     ajax_data.append('name',$('#edit_name').val());
     ajax_data.append('email',$('#edit_email').val());
@@ -40,7 +78,6 @@ $("#edit_profile").submit(function (e){
     });
 });//update profile
 //login
-
 $("#loginform").submit(function (event) {
     event.preventDefault();
     if($("#email").val() == '' || $("#password").val()=='' ){
@@ -72,7 +109,7 @@ $("#loginform").submit(function (event) {
             }
 
             $("#login_btn").attr("disabled", false);
-            $("#login_btn").html("Login");
+            $("#login_btn").html("Sign-in");
         }//success
     });
 });
@@ -115,7 +152,7 @@ $("#forget_password_email").submit(function (event) {
 $("#recoverPassword").submit(function (event) {
     event.preventDefault();
 
-    var password = $('#pass').val();
+    var password = $('#password').val();
     var c_password = $('#confirm_pass').val();
     var reset_token=$("#reset_Code").val();
 
@@ -147,7 +184,7 @@ $("#recoverPassword").submit(function (event) {
                 swal("Not Updated", "Check your token and try again!", "error");
 
             }
-            $('#recoverPassword').trigger("reset");
+
             $("#recoverPass_btn").attr("disabled", false);
             $("#recoverPass_btn").html("Update");
         }//success
@@ -348,7 +385,6 @@ function deleteEvent(event_id) {
         }
     });
 }//Delete event
-
 //Add team
 $("#add_team_member").submit(function (e){
     e.preventDefault();
@@ -515,7 +551,6 @@ $("#edit_bio").submit(function (e){
         }//success
     });
 });//Edit Bio
-
 //Show Bio
 function showBio(team_id) {
 

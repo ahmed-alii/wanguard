@@ -15,9 +15,47 @@ $Functions = new Functions();
 
 $func = $_POST['func'];
 $create_date=date('Y-m-d H:i:s');
-
-//Update Profile
+//Signup
 if($func == 1) {
+
+    $name = htmlspecialchars(stripslashes($_POST['name']));
+    $name = $db->escapeString($name);
+
+    $email = htmlspecialchars(stripslashes($_POST['email']));
+    $email = $db->escapeString($email);
+
+    $password = htmlspecialchars(stripslashes($_POST['password']));
+    $password = $db->escapeString($password);
+    $hashpass = md5($password);
+
+    $sql = "insert into users (`name`,`email`,`password`) values ('$name','$email','$hashpass')";
+
+    if ($db->sql($sql)) {
+
+
+        $insert_id=$db->insert_id();
+//        also set the session
+        $sql = "SELECT * FROM users WHERE id='$insert_id' ";
+        if ($db->sql($sql)) {
+            $result = $db->getResult();
+            if (!empty($result)) {
+                foreach ($result as $row) {
+                    $_SESSION['user_id'] = $row['id'];
+                    $_SESSION['user_type']=$row['user_type'];
+                    $_SESSION['email']=$row['email'];
+                }
+            }else{
+                echo 'false';
+            }//else
+        }//if
+        echo "true";
+    } else {
+        echo "false";
+    }
+
+}//1
+//Update Profile
+if($func == 1.1) {
 
     $user_id = htmlspecialchars(stripslashes($_POST['user_id']));
     $user_id = $db->escapeString($user_id);
@@ -46,8 +84,8 @@ if($func == 1) {
     else {
         echo "false";
     }
-    $db->getSql();
-}//1
+
+}//1.1
 //login
 else if ($func == 2) {
 
@@ -68,6 +106,7 @@ else if ($func == 2) {
                 if ($row['status'] == 1) {
                     $_SESSION['user_id'] = $row['id'];
                     $_SESSION['user_type'] = $row['user_type'];
+                    $_SESSION['email'] = $row['email'];
                     echo "true";
                 } else {
                     echo "block";

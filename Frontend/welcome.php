@@ -1,5 +1,15 @@
 <?php
 include_once "includes/header.php";
+if (!isset($_SESSION['user_id'])){
+    ?>
+    <script type="text/javascript">
+        window.location.href="logout";
+    </script>
+    <?php
+    exit();
+}
+
+
 include_once "../serverside/functions.php";
 $func=new Functions();
 $level1=$func->getTeamMemberByLevel(1);
@@ -148,7 +158,7 @@ $level3=$func->getTeamMemberByLevel(3);
                     <h3 class="fw-bolder text-gray"><?=$l1['department']?></h3>
                     <h3 class="fw-bolder text-green">$<?=number_format($l1['earning'])?> + EARNERS </h3>
                     <div class="btn-1 py-3">
-                        <button  onclick="showBio(`<?=$l1['id']?>`)" class="btn px-5 my-2 my-lg-0">BIO
+                        <button  onclick="showBio(`<?=$l1['id']?>`)" class="btn px-5 my-2 ">BIO
                             <svg xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
                                  xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
