@@ -140,7 +140,7 @@ if(!empty($users1)){
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link"  href="teams.">
+            <a class="nav-link"  href="teams">
                 <i class="bi bi-bar-chart"></i>
                 <span>Team</span>
             </a>
