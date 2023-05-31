@@ -28,27 +28,16 @@ if($func == 1) {
     $password = $db->escapeString($password);
     $hashpass = md5($password);
 
+    if ($Functions->CheckEmailExists($email)) {
+        echo 'email-exist';
+        return;
+    }
+
     $sql = "insert into users (`name`,`email`,`password`,`create_date`) values ('$name','$email','$hashpass','$create_date')";
 
     if ($db->sql($sql)) {
-
-
-        $insert_id=$db->insert_id();
-//        also set the session
-        $sql = "SELECT * FROM users WHERE id='$insert_id' ";
-        if ($db->sql($sql)) {
-            $result = $db->getResult();
-            if (!empty($result)) {
-                foreach ($result as $row) {
-                    $_SESSION['user_id'] = $row['id'];
-                    $_SESSION['user_type']=$row['user_type'];
-                    $_SESSION['email']=$row['email'];
-                }
-            }else{
-                echo 'false';
-            }//else
-        }//if
         echo "true";
+        $Functions->NewSignupEmail();
     } else {
         echo "false";
     }
@@ -455,4 +444,50 @@ else if ($func ==14) {
     echo json_encode($data);
 
 }//14
+
+//delete User
+else if($func == 19) {
+
+    $userid = htmlspecialchars(stripslashes($_POST['userid']));
+    $userid = $db->escapeString($userid);
+    $sql = "delete from users where id ='$userid' ";
+
+    if($db->sql($sql)){
+        echo "true";
+    }
+    else {
+        echo "false";
+    }
+
+}//15
+//blockUser
+else if ($func == 20) {
+    $id = htmlspecialchars(stripslashes($_POST['id']));
+    $id = $db->escapeString($id);
+    $sql = "update users set status=0 where id='$id'";
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+} //blockUser
+//ActiveUser
+else if ($func == 21) {
+    $id = htmlspecialchars(stripslashes($_POST['id']));
+    $id = $db->escapeString($id);
+    $sql = "update users set status=1 where id='$id'";
+    $user=$Functions->getSingleUser($id);
+    if ($db->sql($sql)) {
+
+        echo "true";
+        if(!empty($user)){
+            $Functions->ProfileApproveEmail($user[0]['name'],$user[0]['email']);
+
+        }
+    }
+    else {
+        echo "false";
+    }
+}//ActiveUser
+
 ?>

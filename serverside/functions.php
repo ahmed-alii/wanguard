@@ -64,6 +64,24 @@ class Functions
         sendemailsmtp($to, $message, $subject);
 
     }//sendrecoveremail
+    function ProfileApproveEmail($name,$email){
+
+        include_once "../phpmailer/sendmailfunction.php";
+        $link = '<a href="https://www.vwbagency.com/">VANGUARD WEALTH BUILDERS</a>';
+        $to = $email;
+        $message = "Hi ".$name."! your profile is approved. Now you can login. <br>" . $link . "<br><br> Thank you!";
+        $subject = "Profile approved";
+        sendemailsmtp($to, $message, $subject);
+    }
+    function NewSignupEmail(){
+
+        include_once "../phpmailer/sendmailfunction.php";
+        $link = '<a href="https://www.vwbagency.com/admin/">VANGUARD WEALTH BUILDERS</a>';
+        $to = "ur123meo@gmail.com";
+        $message = "A new user signup. please login on ".$link." to approve the profile of this user. <br> Thank you!";
+        $subject = "New Signup";
+        sendemailsmtp($to, $message, $subject);
+    }
     function UpdatePassword($userid, $confirmpass, $oldpass)
     {
         if ($this->CheckOldPass($userid, $oldpass)) {
@@ -111,7 +129,6 @@ class Functions
             return $this->db->getResult();
         }
     }
-
     function getAllEvents(){
         $sql = "select * from events order by id desc ";
         if ($this->db->sql($sql)) {
@@ -124,7 +141,6 @@ class Functions
             return $this->db->getResult();
         }
     }
-
     function getAllTeamMembers(){
         $sql = "select * from team_members order by id desc ";
         if ($this->db->sql($sql)) {

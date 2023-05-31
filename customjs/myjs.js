@@ -22,10 +22,15 @@ $("#signup").submit(function (e){
         data:ajax_data,
         success: function (data) {
 
-            if (data.trim() == "true") {
-                // swal("Success", " edit successfully ", "success").then((value) => {
+            if(data.trim() == "email-exist"){
+                swal("Info", "This email is already exist, please login", "info").then((result) => {
+                    window.location.href="login";
+                });
+
+            }else if (data.trim() == "true") {
+                swal("Success", "You are registered, we send you profile approve email soon", "success").then((value) => {
                     window.location.href="index";
-                // });
+                });
             }
             else {
                 swal("Error", "Failed to register, please try again ", "error");
@@ -129,14 +134,13 @@ $("#login").submit(function (event) {
             password:$("#password").val(),
         },
         success: function (data) {
-            console.log(data)
 
             if (data.trim() == "true") {
                 window.location.href="index";
 
             }else if (data.trim() == "block") {
 
-                swal("Block by admin", "You are block by admin. kindly contact with admin", "error");
+                swal("Failed", "Your profile is not approved. please wait until admin approve it", "info");
 
             }else {
                 swal("Failed To Sign In", "Incorrect Email/Password", "error");
@@ -620,3 +624,126 @@ function showBio(team_id) {
     });//ajax
 
 }//showBio
+
+function deleteUser(id) {
+
+    swal({
+        title: 'Are you sure to delete this user?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 19,
+                    userid: id,
+                },
+                success: function (data) {
+
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'success',
+                            text: 'User deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Failed to delete!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
+}//delete user
+function blockUser(id) {
+    swal({
+        title: 'Are you sure to block this user?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 20,
+                    id: id,
+                },
+                success: function (data) {
+
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'success',
+                            text: 'User blocked successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Failed to block!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
+}//block user
+function activeUser(id) {
+    swal({
+        title: 'Are you sure to activate this user?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+
+        $("#approve_btn"+id).attr("disabled", true);
+        $("#approve_btn"+id).html(`<i class="fa fa-spinner fa-spin"></i>`);
+
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 21,
+                    id: id,
+                },
+                success: function (data) {
+
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'success',
+                            text: 'User activated successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Failed to activate user!'
+                        });
+                    }
+                    $("#approve_btn"+id).attr("disabled", false);
+                    $("#approve_btn"+id).html(`<i class="fa fa-check"></i>`);
+                }//success
+            });//ajax
+        }
+
+    });
+}//active user

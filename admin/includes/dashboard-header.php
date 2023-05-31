@@ -39,12 +39,13 @@ if(!empty($users1)){
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Dashboard</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-<!--    <link href="assets/img/favicon.png" rel="icon">-->
-<!--    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <link rel="manifest" href="../assets/images/site.webmanifest">
+    <link rel="mask-icon" href="../assets/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -139,9 +140,15 @@ if(!empty($users1)){
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link"  href="teams.php">
+            <a class="nav-link"  href="teams.">
                 <i class="bi bi-bar-chart"></i>
                 <span>Team</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"  href="users">
+                <i class="bi bi-person"></i>
+                <span>Users</span>
             </a>
         </li>
     </ul>
