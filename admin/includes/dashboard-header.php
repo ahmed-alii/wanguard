@@ -82,17 +82,17 @@ if(!empty($users1)){
             <li class="nav-item dropdown pe-3">
 
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                    <?php
-                    if ($user1['image_path'] !=""){
-                        ?>
-                        <img src="<?=$user1['image_path']?>" class=" myImage rounded-circle" alt="Profile">
-                        <?php
-                    }else{
-                        ?>
-                        <img src="assets/img/profile-img.jpg" alt="Profile" class="myImage rounded-circle">
-                        <?php
-                    }
-                    ?>
+<!--                    --><?php
+//                    if ($user1['image_path'] !=""){
+//                        ?>
+<!--                        <img src="--><?php //=$user1['image_path']?><!--" class=" myImage rounded-circle" alt="Profile">-->
+<!--                        --><?php
+//                    }else{
+//                        ?>
+<!--                        <img src="assets/img/profile-img.jpg" alt="Profile" class="myImage rounded-circle">-->
+<!--                        --><?php
+//                    }
+//                    ?>
 
 
                     <span class="d-none d-md-block dropdown-toggle ps-2"><?=$user1['name']?></span>

@@ -153,7 +153,7 @@ $level3=$func->getTeamMemberByLevel(3);
                     }
                     ?>
 
-                    <h1 class="fw-bolder pt-3"><?=$l1['name']?></h1>
+                    <h1 class="fw-bolder pt-3 text-primary"><?=$l1['name']?></h1>
                     <h3 class="fw-bolder text-gray"><?=$l1['rank']?></h3>
                     <h3 class="fw-bolder text-gray"><?=$l1['department']?></h3>
                     <h3 class="fw-bolder text-green">$<?=number_format($l1['earning'])?> + EARNERS </h3>
@@ -236,10 +236,10 @@ $level3=$func->getTeamMemberByLevel(3);
                     }
                     ?>
 
-                    <h6 class="fw-bolder pt-3"><?=$l2['name']?></h6>
-                    <p class="fw-bolder text-gray"><?=$l2['rank']?></p>
-                    <p class="fw-bolder text-gray"><?=$l2['department']?></p>
-                    <p class="fw-bolder text-green">$<?=number_format($l2['earning'])?> + EARNERS </p>
+                    <h6 class="fw-bolder pt-3 text-primary"><?=$l2['name']?></h6>
+                    <p class="fw-bolder text-gray p-0 m-0"><?=$l2['rank']?></p>
+                    <p class="fw-bolder text-gray p-0 m-0"><?=$l2['department']?></p>
+                    <p class="fw-bolder text-green p-0 m-0">$<?=number_format($l2['earning'])?> + EARNERS </p>
                     <div class="btn-3 py-3">
                         <?php
                         if($l2['bio']!=""){
@@ -305,10 +305,10 @@ $level3=$func->getTeamMemberByLevel(3);
                     ?>
 
 
-                    <h6 class="fw-bolder pt-3"><?=$l3['name']?></h6>
-                    <p class="fw-bolder text-gray"><?=$l3['rank']?></p>
-                    <p class="fw-bolder text-gray"><?=$l3['department']?></p>
-                    <p class="fw-bolder text-green">$<?=number_format($l3['earning'])?> + EARNERS </p>
+                    <h6 class="fw-bolder pt-3 text-primary"><?=$l3['name']?></h6>
+                    <p class="fw-bolder text-gray p-0 m-0"><?=$l3['rank']?></p>
+                    <p class="fw-bolder text-gray p-0 m-0"><?=$l3['department']?></p>
+                    <p class="fw-bolder text-green p-0 m-0 text">$<?=number_format($l3['earning'])?> + EARNERS </p>
                     <div class="btn-3 py-3">
                         <?php
                         if($l3['bio']!=""){

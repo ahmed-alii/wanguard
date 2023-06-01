@@ -64,7 +64,7 @@ h6 {
   font-size: 24px;
   margin-bottom: 0;
   font-weight: 600;
-  color: #012970;
+  /*color: #012970;*/
 }
 
 /*--------------------------------------------------------------
@@ -312,7 +312,7 @@ h6 {
 }
 
 .breadcrumb a {
-  color: #899bbd;
+  color: black;
   transition: 0.3s;
 }
 
@@ -381,7 +381,7 @@ h6 {
   z-index: 997;
   height: 60px;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-  background-color: #fff;
+  background-color: black;
   padding-left: 20px;
   /* Toggle Sidebar Button */
   /* Search Bar */
@@ -391,7 +391,7 @@ h6 {
   font-size: 32px;
   padding-left: 10px;
   cursor: pointer;
-  color: #012970;
+  color: white;
 }
 
 .header .search-bar {
@@ -474,7 +474,7 @@ h6 {
 }
 
 .header-nav .nav-profile {
-  color: #012970;
+  color: white;
 }
 
 .header-nav .nav-profile img {
@@ -684,9 +684,9 @@ h6 {
   align-items: center;
   font-size: 15px;
   font-weight: 600;
-  color: #4154f1;
+  /*color: #4154f1;*/
   transition: 0.3;
-  background: #f6f9ff;
+  background: #EBCC72;
   padding: 10px 15px;
   border-radius: 4px;
 }
@@ -694,7 +694,7 @@ h6 {
 .sidebar-nav .nav-link i {
   font-size: 16px;
   margin-right: 10px;
-  color: #4154f1;
+  /*color: #4154f1;*/
 }
 
 .sidebar-nav .nav-link.collapsed {
@@ -707,12 +707,12 @@ h6 {
 }
 
 .sidebar-nav .nav-link:hover {
-  color: #4154f1;
-  background: #f6f9ff;
+  color: #EBCC72;
+  background: black;
 }
 
 .sidebar-nav .nav-link:hover i {
-  color: #4154f1;
+  color: #EBCC72;
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
@@ -1239,3 +1239,15 @@ h6 {
   content:"2";
   background-color: red;
 }
+
+.btn-primary {
+  background: #EBCC72 !important;
+  color: black;
+  font-weight: 500;
+  border-color: #EBCC72 !important;
+  border-radius: 0 !important;
+}
+.btn-primary:hover{
+   background: black !important;
+   color: #EBCC72 !important;
+ }

@@ -24,9 +24,9 @@ $team_members=$func->getAllTeamMembers();
         <section class="section dashboard">
             <div class="row">
                 <!-- Left side columns -->
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="row">
-                        <div class="col-xxl-4 col-md-6">
+                        <div class="col-xxl-4 col-md-6 ">
                             <div class="card info-card sales-card">
 
                                 <div class="card-body">

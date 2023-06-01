@@ -272,14 +272,14 @@ $("#updatepasswordform").submit(function (event) {
 
 });
 //update profile Photo
-$("#update_profile_photo").change(function (event) {
+$("#update_profile_photo1").change(function (event) {
     event.preventDefault();
 
-    $("#update_profile_photo").attr("disabled", true);
+    $("#update_profile_photo1").attr("disabled", true);
     var ajax_data = new FormData();
     ajax_data.append("func", '6');
     ajax_data.append('user_id',$("#employee_id").val());
-    ajax_data.append('image', $('#update_profile_photo')[0].files[0]);
+    ajax_data.append('image', $('#update_profile_photo1')[0].files[0]);
 
     $.ajax({
         url: "../serverside/post.php",
@@ -300,7 +300,7 @@ $("#update_profile_photo").change(function (event) {
             }
 
 
-            $("#update_profile_photo").attr("disabled", false);
+            $("#update_profile_photo1").attr("disabled", false);
         }//succes
     });//ajax
 

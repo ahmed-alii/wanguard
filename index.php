@@ -148,19 +148,22 @@ $events=$func->getAllEvents();
     <section class="section3-wrapper py-5">
         <div class="container">
             <div class="row px-5">
-                <div class="col-7">
+                <div class="col-lg-7 col-12 py-3">
                     <div class="card h-100 bg-light">
-                        <div class="card-header bg-danger">
-                            <h2 class="text-white"><i class="text-dark fa fa-calendar"></i> The Force Agency Calendar</h2>
+                        <div class="card-header bg-secondary text-center">
+                            <h5 class="text-white">
+<!--                                <i class="text-dark fa fa-calendar px-3"></i>-->
+                                The Vanguard Wealth Builders Calendar</h5>
                         </div>
                         <div class="card-body" style="overflow-y: auto">
                             <?php
                             foreach ($events as $event){
                                 ?>
-                                <a target="" class="text-decoration-none" href="<?=$event['event_link']?>"><p class="text-danger fw-bold"><?=$event['name']?></p></a>
-                                <p class=""><?=$event['description']?></p>
-                                <p class=""><i class="fa fa-map-marker"></i> <?=$event['location']?></p>
-                                <p class=""><i class="fa fa-clock-o"></i> <?=date('F d Y',strtotime($event['date'])) ." ".date('H:i A',strtotime($event['time']))?></p>
+                                <a target="" class="text-decoration-none " href="<?=$event['event_link']?>"><p class="text-primary fw-bold p-0 m-0"><?=$event['name']?></p></a>
+                                <p class="m-0 py-1 calender-location"><i class="fa fa-map-marker"></i> <?=$event['location']?></p>
+                                <p class="m-0 py-1 calender-description"><?=$event['description']?></p>
+                                <p class="m-0 py-1 calender-description"><?=$event['event_link']?></p>
+                                <p class="m-0 py-1 calender-time"><i class="fa fa-clock-o"></i> <?=date('F d Y',strtotime($event['date'])) ." ".date('H:i A',strtotime($event['time']))?></p>
                                 <hr>
                                 <?php
                             }

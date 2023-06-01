@@ -138,7 +138,7 @@ if(!empty($users)){
 
                                                         <label for="update_profile_photo">
                                                             <i class="bi bi-upload"></i>
-                                                    <input class="upload-image" type="file" id="update_profile_photo" >
+                                                    <input class="upload-image" type="file" id="update_profile_photo1" >
 
                                                     </label>
 

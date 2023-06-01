@@ -26,7 +26,7 @@ $team_members = $func->getAllTeamMembers();
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <button type="button" class="btn btn-primary my-2" data-bs-toggle="modal"
+                            <button type="button btn-1" class="btn btn-primary my-2" data-bs-toggle="modal"
                                     data-bs-target="#add_team_modal">
                                 Add New Team Member
                             </button>
