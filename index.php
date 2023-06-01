@@ -151,7 +151,7 @@ $events=$func->getAllEvents();
                 <div class="col-lg-7 col-12 py-3">
                     <div class="card h-100 bg-light">
                         <div class="card-header bg-secondary text-center">
-                            <h5 class="text-white">
+                            <h5 class="text-black">
 <!--                                <i class="text-dark fa fa-calendar px-3"></i>-->
                                 The Vanguard Wealth Builders Calendar</h5>
                         </div>

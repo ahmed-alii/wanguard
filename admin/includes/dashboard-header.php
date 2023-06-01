@@ -82,6 +82,7 @@ if(!empty($users1)){
             <li class="nav-item dropdown pe-3">
 
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+
 <!--                    --><?php
 //                    if ($user1['image_path'] !=""){
 //                        ?>
