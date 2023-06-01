@@ -395,6 +395,11 @@ body {
   color: #2CA872;
 }
 
+.calender-wrapper {
+  max-height: 110vh;
+  height: 96vh;
+}
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .section2-wrapper {
     min-height: 130vh;
@@ -407,8 +412,12 @@ body {
   }
 }
 @media only screen and (min-width: 250px) and (max-width: 575px) {
+  .calender-wrapper {
+    min-height: 91vh;
+    max-height: 15vh;
+  }
   .section2-wrapper {
-    min-height: 130vh;
+    min-height: 110vh;
   }
   .heading1 {
     font-size: 2rem !important;
@@ -423,9 +432,22 @@ body {
     background-color: #15202A !important;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .calender-wrapper {
+    min-height: 75vh;
+    max-height: 15vh;
+  }
   .section2-wrapper {
-    min-height: 60vh;
+    min-height: 55vh;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .calender-wrapper {
+    min-height: 75vh;
+    max-height: 15vh;
+  }
+  .section2-wrapper {
+    min-height: 45vh;
   }
   .heading1 {
     font-size: 2rem !important;

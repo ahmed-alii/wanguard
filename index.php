@@ -149,20 +149,20 @@ $events=$func->getAllEvents();
         <div class="container">
             <div class="row px-5">
                 <div class="col-lg-7 col-12 py-3">
-                    <div class="card h-100 bg-light">
+                    <div class="card h-100 bg-light calender-wrapper">
                         <div class="card-header bg-secondary text-center">
                             <h5 class="text-black">
 <!--                                <i class="text-dark fa fa-calendar px-3"></i>-->
                                 The Vanguard Wealth Builders Calendar</h5>
                         </div>
-                        <div class="card-body" style="overflow-y: auto">
+                        <div class="card-body" style="overflow-y: auto;">
                             <?php
                             foreach ($events as $event){
                                 ?>
                                 <a target="" class="text-decoration-none " href="<?=$event['event_link']?>"><p class="text-primary fw-bold p-0 m-0"><?=$event['name']?></p></a>
                                 <p class="m-0 py-1 calender-location"><i class="fa fa-map-marker"></i> <?=$event['location']?></p>
                                 <p class="m-0 py-1 calender-description"><?=$event['description']?></p>
-                                <p class="m-0 py-1 calender-description"><?=$event['event_link']?></p>
+                                <a class="m-0 py-1 text-decoration-none calender-description" href="<?=$event['event_link']?>"><?=$event['event_link']?></a>
                                 <p class="m-0 py-1 calender-time"><i class="fa fa-clock-o"></i> <?=date('F d Y',strtotime($event['date'])) ." ".date('H:i A',strtotime($event['time']))?></p>
                                 <hr>
                                 <?php
