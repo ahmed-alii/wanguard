@@ -1,9 +1,9 @@
 <?php
 include_once "includes/header.php";
-if (!isset($_SESSION['user_id'])){
+if (!isset($_SESSION['user_id'])) {
     ?>
     <script type="text/javascript">
-        window.location.href="logout";
+        window.location.href = "logout";
     </script>
     <?php
     exit();
@@ -32,7 +32,8 @@ if (!isset($_SESSION['user_id'])){
                                                  viewBox="0 0 24 24"
                                                  xml:space="preserve" class="brz-icon-svg align-[initial]"
                                                  data-type="outline"
-                                                 data-name="b-add"><g transform="translate(0, 0)" class="nc-icon-wrapper"
+                                                 data-name="b-add"><g transform="translate(0, 0)"
+                                                                      class="nc-icon-wrapper"
                                                                       fill="none">
                                                     <path fill="none" stroke="currentColor"
                                                           vector-effect="non-scaling-stroke"
@@ -69,7 +70,8 @@ if (!isset($_SESSION['user_id'])){
                                     RECRUITING TOOLS
                                 </button>
                                 <button class="nav-link text-white" id="nav-profile-tab" data-bs-toggle="tab"
-                                        data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                                        data-bs-target="#nav-profile" type="button" role="tab"
+                                        aria-controls="nav-profile"
                                         aria-selected="false">
                                     <div class="map">
                                         <div class="map-item">
@@ -108,60 +110,101 @@ if (!isset($_SESSION['user_id'])){
                                  aria-labelledby="nav-home-tab">
 
                                 <div class="container text-center">
-                                    <button class="btn btn-primary py-2 mx-3 my-3">FOLLOW UP INTERVIEW KIT</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">TAX OFFICE REFERRAL SHEET</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">SAVING TRACKER</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">100 NAMES LIST</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">TOP 25 LIST</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">MEMORY JOGGER</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">PROMOTION VALIDATION FORM</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">TRAINER CERTIFICATION FORM</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">LAUNCH BUSINESS PLAN</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">THE FORCE SCRIPT MANUEL</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">BREAK THE FLOOR</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">BPM INFORMATION KIT</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">BFS MANUAL</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">NEW RECRUIT FLOWCHART</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">FOLLOW UP INTERVIEW KIT</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">TAX OFFICE REFERRAL SHEET</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">SAVING TRACKER</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">100 NAMES LIST</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">TOP 25 LIST</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">MEMORY JOGGER</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">PROMOTION VALIDATION FORM</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">TRAINER CERTIFICATION FORM</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">LAUNCH BUSINESS PLAN</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">THE FORCE SCRIPT MANUEL</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">BREAK THE FLOOR</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">BPM INFORMATION KIT</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">BFS MANUAL</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">NEW RECRUIT FLOWCHART</button>
                                 </div>
 
                             </div>
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                 aria-labelledby="nav-profile-tab">
                                 <div class="container text-center">
-                                    <a class="text-decoration-none" href="index">
-                                        <button class="btn btn-primary py-2 mx-3 my-3">FNA PHASE 1 PPT</button>
+                                    <a class="text-decoration-none" href="#">
+                                        <button class="btn btn-rounded py-2 mx-3 my-3">FNA PHASE 1 PPT</button>
                                     </a>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">FNA PHASE 2 PPT</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">4 % RULE</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">DEBIT MASTERY TOOL</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">BUDGET BUDDY</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">INCREASING CASH FLOW TOOLS</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">TAX WITHHOLDING TOOL</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">401K DEVELOPER LIST</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">401K VS IUL</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">REFERRAL GREEN CARD</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">FNA SCRIPT FOR ZOOM</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">FNA PREP WORKSHEET</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">FNA DATA FORM</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">NAME GAME REFERRAL CARD</button>
-                                    <button class="btn btn-primary py-2 mx-3 my-3">PORTFOLIO RELIANCE CALCULATOR</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">FNA PHASE 2 PPT</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">4 % RULE</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">DEBIT MASTERY TOOL</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">BUDGET BUDDY</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">INCREASING CASH FLOW TOOLS</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">TAX WITHHOLDING TOOL</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">401K DEVELOPER LIST</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">401K VS IUL</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">REFERRAL GREEN CARD</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">FNA SCRIPT FOR ZOOM</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">FNA PREP WORKSHEET</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">FNA DATA FORM</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">NAME GAME REFERRAL CARD</button>
+                                    <button class="btn btn-rounded py-2 mx-3 my-3">PORTFOLIO RELIANCE CALCULATOR
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="py-5">
-                        <div>
-                            <h2 class="fw-bolder text-center">
-                                FNA PHASE 1 PPT
-                            </h2>
-                        </div>
-                    </div>
-
-
-
-
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="display-5 fw-bolder">BUSINESS FORMAT SYSTEM</h1>
+            </div>
+            <div class="text-center py-3">
+                <h1>STEP CLASSES</h1>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-3 p-2">
+                    <div class="business-img">
+                        <img src="assets/images/img1.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 p-2">
+                    <div class="business-img">
+                        <img src="assets/images/img1.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 p-2">
+                    <div class="business-img">
+                        <img src="assets/images/img1.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 p-2">
+                    <div class="business-img">
+                        <img src="assets/images/img1.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 p-2">
+                    <div class="business-img">
+                        <img src="assets/images/img1.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 p-2">
+                    <div class="business-img">
+                        <img src="assets/images/img1.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 p-2">
+                    <div class="business-img">
+                        <img src="assets/images/img1.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
 <?php include_once "includes/footer.php" ?>

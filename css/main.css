@@ -37,6 +37,18 @@ body {
   color: #EBCC72 !important;
 }
 
+.btn-rounded {
+  background: #EBCC72 !important;
+  color: black;
+  font-weight: 500;
+  border-color: #EBCC72 !important;
+  border-radius: 25px !important;
+}
+.btn-rounded:hover {
+  background: black !important;
+  color: #EBCC72 !important;
+}
+
 .hero-logo {
   max-width: 380px;
 }
@@ -328,11 +340,9 @@ body {
 .nav-tabs {
   font-size: 1.5rem;
   --bs-nav-tabs-border-width: unset !important;
-  --bs-nav-tabs-border-color: red !important;
-  --bs-nav-tabs-border-radius: 25px !important;
   --bs-nav-tabs-link-hover-border-color: unset !important;
-  --bs-nav-tabs-link-active-color: black !important;
-  --bs-nav-tabs-link-active-bg: #EBCC72 !important;
+  --bs-nav-tabs-link-active-color: #EBCC72 !important;
+  --bs-nav-tabs-link-active-bg: black !important;
   --bs-nav-tabs-link-active-border-color: unset !important;
   border-bottom: unset !important;
 }
@@ -460,6 +470,10 @@ body {
     left: 0;
     right: 0;
   }
+}
+.business-img img {
+  height: 200px;
+  width: 200px;
 }
 
 /*# sourceMappingURL=main.css.map */

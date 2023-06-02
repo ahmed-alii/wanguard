@@ -83,7 +83,7 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Store</a>
+                    <a class="nav-link" href="dashboard">Dashboard</a>
                 </li>
             </ul>
         </div>
