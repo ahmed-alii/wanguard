@@ -476,4 +476,31 @@ body {
   width: 200px;
 }
 
+.input-description {
+  font-size: 14px;
+  color: grey;
+}
+
+html {
+  --thumbBG: #EBCC72;
+}
+
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border: 3px solid var(--scrollbarBG);
+}
+
 /*# sourceMappingURL=main.css.map */
