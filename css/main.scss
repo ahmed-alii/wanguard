@@ -569,7 +569,8 @@ body {
     width: 200px;
   }
 }
-.input-description{
+
+.input-description {
   font-size: 14px;
   color: grey;
 }
@@ -578,20 +579,66 @@ html {
   //--scrollbarBG: white;
   --thumbBG: #EBCC72;
 }
+
 body::-webkit-scrollbar {
   width: 14px;
 }
+
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--thumbBG) var(--scrollbarBG);
 }
+
 body::-webkit-scrollbar-track {
   background: var(--scrollbarBG);
 }
+
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG) ;
+  background-color: var(--thumbBG);
   //border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
 }
 
+.form-check-input:checked {
+  background-color: goldenrod;
+  border-color: goldenrod;
+}
 
+.form-check-input:focus {
+  border-color: #EBCC72 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0 goldenrod !important;
+}
+
+input:focus {
+  border-color: #EBCC72 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem goldenrod !important;
+}
+
+textarea {
+  resize: none;
+
+  &:focus {
+    border-color: #EBCC72 !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.15rem goldenrod !important;
+  }
+}
+
+.btn-secondary {
+  border-radius: 0 !important;
+  background-color: black;
+  color: #EBCC72;
+
+  &:hover {
+    background-color: black;
+    color: #EBCC72;
+  }
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: black !important;
+  text-decoration: none;
+  background-color: #EBCC72 !important;
+}

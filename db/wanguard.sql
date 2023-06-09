@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2023 at 11:50 AM
+-- Generation Time: Jun 09, 2023 at 12:01 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -21,6 +21,36 @@ SET time_zone = "+00:00";
 --
 -- Database: `wanguard`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `add_guest`
+--
+
+CREATE TABLE `add_guest` (
+  `id` int(150) NOT NULL,
+  `events` varchar(250) DEFAULT NULL,
+  `guest_name` varchar(250) DEFAULT NULL,
+  `they_are` varchar(250) DEFAULT NULL,
+  `guest_of` varchar(250) DEFAULT NULL,
+  `contact_number` varchar(250) DEFAULT NULL,
+  `guest_mail` varchar(250) DEFAULT NULL,
+  `guest_app_confirm` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `add_guest`
+--
+
+INSERT INTO `add_guest` (`id`, `events`, `guest_name`, `they_are`, `guest_of`, `contact_number`, `guest_mail`, `guest_app_confirm`) VALUES
+(1, '1', 'we', 'undefined', '2', 'we', 'email@gmail.com', 'No'),
+(2, '1', 'qw', 'undefined', '0', 'qw', 'email@gmail.com', 'No'),
+(3, '1', 'we', 'undefined', '1', 'we', 'email@gmail.com', 'No'),
+(4, '2', 'qw', 'undefined', '1', 'qw', 'email@gmail.com', 'No'),
+(5, '1', 'qw', 'undefined', '1', '12', 'email@gmail.com', 'No'),
+(6, '1', 'qw', 'undefined', '2', 'qw', 'email@gmail.com', 'No'),
+(7, '1', 'we', '2', '2', 'we', 'email@gmail.com', 'YES');
 
 -- --------------------------------------------------------
 
@@ -49,7 +79,107 @@ INSERT INTO `events` (`id`, `name`, `location`, `description`, `date`, `time`, `
 (5, 'Legacy Weekly Training', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '2023-06-14', '14:02', 'https://www.google.com/', 1, '2023-06-01 11:01:29', '2023-06-01 11:01:59'),
 (6, 'Legacy Weekly Training', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '2023-06-21', '14:07', 'https://www.google.com/', 1, '2023-06-01 11:03:17', '0000-00-00 00:00:00'),
 (7, 'ALL LEGACY FULL TIMERS - Financial Coaches Only', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2023-07-05', '14:06', 'https://www.google.com/', 1, '2023-06-01 11:03:52', '0000-00-00 00:00:00'),
-(8, 'The Force SMD Weekly Leadership Zoom', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2023-06-20', '14:07', 'https://www.google.com/', 1, '2023-06-01 11:04:34', '0000-00-00 00:00:00');
+(8, 'The Force SMD Weekly Leadership Zoom', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2023-06-20', '14:07', 'https://www.google.com/', 1, '2023-06-01 11:04:34', '0000-00-00 00:00:00'),
+(9, 'ALL LEGACY FULL TIMERS - Financial Coaches Only', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2023-06-20', '17:34', 'https://www.google.com/', 1, '2023-06-01 14:31:25', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `new-appointment`
+--
+
+CREATE TABLE `new-appointment` (
+  `id` int(11) NOT NULL,
+  `traine_appointment` varchar(150) DEFAULT NULL,
+  `appointment_type` varchar(150) DEFAULT NULL,
+  `who_seeing` int(150) DEFAULT NULL,
+  `appointment_date` varchar(30) DEFAULT NULL,
+  `time` varchar(30) DEFAULT NULL,
+  `match_up` varchar(150) DEFAULT NULL,
+  `they_are` varchar(150) DEFAULT NULL,
+  `description` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `new-appointment`
+--
+
+INSERT INTO `new-appointment` (`id`, `traine_appointment`, `appointment_type`, `who_seeing`, `appointment_date`, `time`, `match_up`, `they_are`, `description`) VALUES
+(1, '1', '2', 0, '2023-06-09', '1', NULL, NULL, NULL),
+(2, '1', '1', 0, '2023-06-01', '1', NULL, NULL, NULL),
+(3, '1', '2', 0, '2023-06-05', '2', NULL, '2', ''),
+(4, '1', '1', 0, '2023-05-31', '3', NULL, '2', 'lorem text'),
+(5, '1', '1', 0, '2023-06-07', '1', 'option2', '1', 'we'),
+(6, '0', '0', 0, '', '0', 'Yes', '0', ''),
+(7, '0', '0', 0, '', '0', 'Yes', '0', ''),
+(8, '0', '0', 0, '', '0', 'Yes', '0', ''),
+(9, '0', '0', 0, '', '0', 'Yes', '1', ''),
+(10, '0', '0', 0, '', '0', 'Yes', '0', 'q'),
+(11, '0', '0', 0, '2023-06-09', '0', 'Yes', '0', 'a');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `new-client`
+--
+
+CREATE TABLE `new-client` (
+  `id` int(11) NOT NULL,
+  `f_name` varchar(150) DEFAULT NULL,
+  `l_name` varchar(150) DEFAULT NULL,
+  `policy_name` varchar(150) DEFAULT NULL,
+  `submitted_date` varchar(150) DEFAULT NULL,
+  `coverage` varchar(150) DEFAULT NULL,
+  `estimated_points` varchar(150) DEFAULT NULL,
+  `CWA` varchar(150) DEFAULT NULL,
+  `trainee` varchar(150) DEFAULT NULL,
+  `split_option` varchar(150) DEFAULT NULL,
+  `split_agent` varchar(150) DEFAULT NULL,
+  `agent_policy` varchar(150) DEFAULT NULL,
+  `product` varchar(150) DEFAULT NULL,
+  `provider` varchar(150) DEFAULT NULL,
+  `med_required` varchar(150) DEFAULT NULL,
+  `contact_no` varchar(150) DEFAULT NULL,
+  `email_address` varchar(150) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `new-client`
+--
+
+INSERT INTO `new-client` (`id`, `f_name`, `l_name`, `policy_name`, `submitted_date`, `coverage`, `estimated_points`, `CWA`, `trainee`, `split_option`, `split_agent`, `agent_policy`, `product`, `provider`, `med_required`, `contact_no`, `email_address`) VALUES
+(1, '', '', '', '', '', '', '0', '0', 'YES', '0', '0', '0', '0', '0', '', ''),
+(2, 'aas', 'as', 'as', '2023-06-14', 'qw', 'qw', '1', '1', 'YES', '1', '1', '1', '1', '1', 'a', 'a');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `new-recruit`
+--
+
+CREATE TABLE `new-recruit` (
+  `id` int(250) NOT NULL,
+  `agent_id` varchar(150) DEFAULT NULL,
+  `start_date` varchar(150) DEFAULT NULL,
+  `f_name` text,
+  `l-name` text,
+  `resident_state` varchar(150) DEFAULT NULL,
+  `recruiter` varchar(150) DEFAULT NULL,
+  `direct_MD` varchar(150) DEFAULT NULL,
+  `direct_SMD` varchar(150) DEFAULT NULL,
+  `licensed` varchar(150) DEFAULT NULL,
+  `contact_no` int(100) DEFAULT NULL,
+  `birthdate` varchar(150) DEFAULT NULL,
+  `email_address` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `new-recruit`
+--
+
+INSERT INTO `new-recruit` (`id`, `agent_id`, `start_date`, `f_name`, `l-name`, `resident_state`, `recruiter`, `direct_MD`, `direct_SMD`, `licensed`, `contact_no`, `birthdate`, `email_address`) VALUES
+(1, '', '', '', '0', '0', '0', '0', 'Yes', '', 0, '', ''),
+(2, '12', 'as', 'as', '1', '1', '0', '0', 'Yes', '1212', 2023, '12', '12');
 
 -- --------------------------------------------------------
 
@@ -125,9 +255,33 @@ INSERT INTO `users` (`id`, `user_type`, `name`, `email`, `phone`, `password`, `s
 --
 
 --
+-- Indexes for table `add_guest`
+--
+ALTER TABLE `add_guest`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `events`
 --
 ALTER TABLE `events`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `new-appointment`
+--
+ALTER TABLE `new-appointment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `new-client`
+--
+ALTER TABLE `new-client`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `new-recruit`
+--
+ALTER TABLE `new-recruit`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -147,10 +301,34 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `add_guest`
+--
+ALTER TABLE `add_guest`
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `new-appointment`
+--
+ALTER TABLE `new-appointment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `new-client`
+--
+ALTER TABLE `new-client`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `new-recruit`
+--
+ALTER TABLE `new-recruit`
+  MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `team_members`

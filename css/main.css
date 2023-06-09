@@ -503,4 +503,46 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid var(--scrollbarBG);
 }
 
+.form-check-input:checked {
+  background-color: goldenrod;
+  border-color: goldenrod;
+}
+
+.form-check-input:focus {
+  border-color: #EBCC72 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0 goldenrod !important;
+}
+
+input:focus {
+  border-color: #EBCC72 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem goldenrod !important;
+}
+
+textarea {
+  resize: none;
+}
+textarea:focus {
+  border-color: #EBCC72 !important;
+  outline: 0;
+  box-shadow: 0 0 0 0.15rem goldenrod !important;
+}
+
+.btn-secondary {
+  border-radius: 0 !important;
+  background-color: black;
+  color: #EBCC72;
+}
+.btn-secondary:hover {
+  background-color: black;
+  color: #EBCC72;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: black !important;
+  text-decoration: none;
+  background-color: #EBCC72 !important;
+}
+
 /*# sourceMappingURL=main.css.map */

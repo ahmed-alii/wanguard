@@ -19,29 +19,29 @@ if (!isset($_SESSION['user_id'])) {
                     information so we can help you expedite an approval and get you compensated quickly!</p>
             </div>
             <div class="">
-                <form action="">
+                <form id="new-client1">
                     <div class="row">
                         <div class="col-lg-6">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">First Name
                                 <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" placeholder="" id="f_name" required>
                         </div>
                         <div class="col-lg-6">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Last Name
                                 <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" placeholder="" id="l_name" required>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-6">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Policy Number</label>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" placeholder="" id="policy_name">
                         </div>
                         <div class="col-lg-6">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Submitted
                                 <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="date" class="form-control" placeholder="" id="submitted_date" required>
                         </div>
                     </div>
 
@@ -49,19 +49,19 @@ if (!isset($_SESSION['user_id'])) {
                         <div class="col-lg-6">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Coverage /Rollover
                                 Amount</label>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" placeholder="" id="coverage" required>
                         </div>
                         <div class="col-lg-3">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Estimated Points
                                 <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" placeholder="" id="estimated_points" required>
                         </div>
                         <div class="col-lg-3">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">CWA (Cash w/Application)
                                 <span class="text-danger">*</span></label>
-                            <select name="tab_access" id="tab_access" data-live-search="true"
-                                    class="selectpicker mb-3 w-100"
-                                    aria-label="select example" required>
+                            <select name="tab_access"  data-live-search="true"
+                                    class="selectpicker mb-3 w-100" id="CWA"
+                                    aria-label="select example" required >
                                 <option value="0">Yes</option>
                                 <option value="1">No</option>
                             </select>
@@ -72,8 +72,8 @@ if (!isset($_SESSION['user_id'])) {
                         <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Writing Agent
                             <span class="text-danger">*</span></label>
                         <div class="col-sm-12">
-                            <select name="tab_access" id="tab_access" data-live-search="true"
-                                    class="selectpicker mb-3 w-100"
+                            <select name="tab_access" data-live-search="true"
+                                    class="selectpicker mb-3 w-100" id="writing_agent"
                                     aria-label="select example" required>
                                 <option value="0">1</option>
                                 <option value="1">2</option>
@@ -83,8 +83,8 @@ if (!isset($_SESSION['user_id'])) {
                     <div class="row mb-3">
                         <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Trainee</label>
                         <div class="col-sm-12">
-                            <select name="tab_access" id="tab_access" data-live-search="true"
-                                    class="selectpicker mb-3 w-100"
+                            <select name="tab_access"  data-live-search="true"
+                                    class="selectpicker mb-3 w-100" id="trainee"
                                     aria-label="select example" required>
                                 <option value="0">1</option>
                                 <option value="1">2</option>
@@ -99,36 +99,35 @@ if (!isset($_SESSION['user_id'])) {
                             <div class="col-sm-12">
                                 <div class="d-flex">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios"
-                                               id="gridRadios1" value="option1" checked>
+                                        <input class="form-check-input" type="radio" name="split_option"
+                                               id="split" value="YES" checked>
                                         <label class="form-check-label" for="gridRadios1"> Yes </label>
                                     </div>
                                     <div class="form-check mx-3">
-                                        <input class="form-check-input" type="radio" name="gridRadios"
-                                               id="gridRadios2" value="option2">
+                                        <input class="form-check-input" type="radio" name="split_option"
+                                               id="split" value="NO">
                                         <label class="form-check-label" for="gridRadios2"> No </label>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                         <div class="col-lg-4">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Split Agent
                                 <span class="text-danger">*</span>
                             </label>
-                            <select name="tab_access" id="tab_access" data-live-search="true"
-                                    class="selectpicker mb-3 w-100"
+                            <select name="tab_access"  data-live-search="true"
+                                    class="selectpicker mb-3 w-100" id="split_agent"
                                     aria-label="select example" required>
                                 <option value="0">1</option>
                                 <option value="1">2</option>
                             </select>
                         </div>
                         <div class="col-lg-4">
-                            <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Split
+                            <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Agent Policy
                                 <span class="text-danger">*</span>
                             </label>
-                            <select name="tab_access" id="tab_access" data-live-search="true"
-                                    class="selectpicker mb-3 w-100"
+                            <select name="tab_access"  data-live-search="true"
+                                    class="selectpicker mb-3 w-100" id="agent_policy"
                                     aria-label="select example" required>
                                 <option value="0">1</option>
                                 <option value="1">2</option>
@@ -141,8 +140,8 @@ if (!isset($_SESSION['user_id'])) {
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Product
                                 <span class="text-danger">*</span>
                             </label>
-                            <select name="tab_access" id="tab_access" data-live-search="true"
-                                    class="selectpicker mb-3 w-100"
+                            <select name="tab_access"  data-live-search="true"
+                                    class="selectpicker mb-3 w-100"  id="product"
                                     aria-label="select example" required>
                                 <option value="0">1</option>
                                 <option value="1">2</option>
@@ -152,8 +151,8 @@ if (!isset($_SESSION['user_id'])) {
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Provider
                                 <span class="text-danger">*</span>
                             </label>
-                            <select name="tab_access" id="tab_access" data-live-search="true"
-                                    class="selectpicker mb-3 w-100"
+                            <select name="tab_access"  data-live-search="true"
+                                    class="selectpicker mb-3 w-100" id="provider"
                                     aria-label="select example" required>
                                 <option value="0">1</option>
                                 <option value="1">2</option>
@@ -163,8 +162,8 @@ if (!isset($_SESSION['user_id'])) {
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Med Required?
                                 <span class="text-danger">*</span>
                             </label>
-                            <select name="tab_access" id="tab_access" data-live-search="true"
-                                    class="selectpicker mb-3 w-100"
+                            <select name="tab_access"  data-live-search="true"
+                                    class="selectpicker mb-3 w-100" id="med_required"
                                     aria-label="select example" required>
                                 <option value="0">1</option>
                                 <option value="1">2</option>
@@ -175,17 +174,17 @@ if (!isset($_SESSION['user_id'])) {
                     <div class="row mb-3">
                         <div class="col-lg-6">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Contact #</label>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" placeholder="" id="contact_no" required>
                         </div>
                         <div class="col-lg-6">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Email Address</label>
-                            <input type="text" class="form-control" placeholder="">
+                            <input type="text" class="form-control" placeholder="" id="email_address" required>
                         </div>
                     </div>
 
                     <div class="col-sm-12 text-center">
-                        <button type="button" class="btn btn-secondary px-5 py-2">Add Another +</button>
-                        <button type="submit" class="btn btn-primary px-5 py-2">Submit</button>
+                        <button type="button" class="btn btn-secondary px-5 py-2" onclick="refreshPage()">Add Another +</button>
+                        <button type="submit" class="btn btn-primary px-5 py-2" id="sub_btn">Submit</button>
                     </div>
             </div>
         </div>

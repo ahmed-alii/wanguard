@@ -21,15 +21,14 @@ if (!isset($_SESSION['user_id'])) {
                     you go off on your own.</p>
             </div>
             <div class="">
-                <form action="">
+                <form id="new-appointment">
                     <div class="row mb-3">
                         <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Trainee or Agent scheduling
                             appointment?<span
-                                class="text-danger">*</span></label>
+                                    class="text-danger">*</span></label>
                         <div class="col-sm-12">
-                            <select name="tab_access" id="tab_access" data-live-search="true"
-                                    class="selectpicker mb-3 w-100"
-                                    aria-label="select example" required>
+                            <select name="tab_access" id="traine_appointment" data-live-search="true"
+                                    class="selectpicker mb-3 w-100" aria-label="select example" required>
                                 <option value="0">Select</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -42,7 +41,7 @@ if (!isset($_SESSION['user_id'])) {
                                 <span class="text-danger">*</span>
                             </label>
                             <div class="col-sm-12">
-                                <select name="tab_access" id="tab_access" data-live-search="true"
+                                <select name="tab_access" id="appointment_type" data-live-search="true"
                                         class="selectpicker mb-3 w-100"
                                         aria-label="select example" required>
                                     <option value="0">Select</option>
@@ -60,7 +59,7 @@ if (!isset($_SESSION['user_id'])) {
                                 <span class="text-danger">*</span>
                             </label>
                             <div class="col-sm-12">
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" id="who_seeing" required>
                                 <span class="input-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </span>
                             </div>
                         </div>
@@ -71,17 +70,7 @@ if (!isset($_SESSION['user_id'])) {
                                 <span class="text-danger">*</span>
                             </label>
                             <div class="col-sm-12">
-                                <select name="tab_access" id="tab_access" data-live-search="true"
-                                        class="selectpicker mb-3 w-100"
-                                        aria-label="select example" required>
-                                    <option value="0">Select</option>
-                                    <option value="1">Client</option>
-                                    <option value="2">Friend</option>
-                                    <option value="3">Co-workers</option>
-                                    <option value="4">Prospect</option>
-                                    <option value="5">Relative</option>
-                                    <option value="6">Referral</option>
-                                </select>
+                                <input type="date" class="form-control" id="appointment_date" required>
                             </div>
                         </div>
                         <div class="col-lg-8">
@@ -89,7 +78,7 @@ if (!isset($_SESSION['user_id'])) {
                                 <span class="text-danger">*</span>
                             </label>
                             <div class="col-sm-12">
-                                <select name="tab_access" id="tab_access" data-live-search="true"
+                                <select name="tab_access" id="time" data-live-search="true"
                                         class="selectpicker mb-3 w-100"
                                         aria-label="select example" required>
                                     <option value="0">Select</option>
@@ -109,13 +98,11 @@ if (!isset($_SESSION['user_id'])) {
                         </label>
                         <div class="col-sm-12">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios"
-                                       id="gridRadios1" value="option1" checked>
+                                <input class="form-check-input" type="radio" name="match_up" value="Yes" checked required>
                                 <label class="form-check-label" for="gridRadios1"> Yes </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios"
-                                       id="gridRadios2" value="option2">
+                                <input class="form-check-input" type="radio" name="match_up" value="No" required>
                                 <label class="form-check-label" for="gridRadios2"> No </label>
                             </div>
                         </div>
@@ -127,36 +114,25 @@ if (!isset($_SESSION['user_id'])) {
                             </label>
                             <div class="col-sm-12">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkbox-1">
+                                    <label class="form-check-label" for="flexCheckDefault"> Married </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkbox-2" checked>
+                                    <label class="form-check-label" for="flexCheckChecked"> Age 25+ </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkbox-3">
                                     <label class="form-check-label" for="flexCheckDefault">
-                                        Married
-                                    </label>
+                                        Has dependent children </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                           checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Age 25+
-                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="checkbox-4" checked>
+                                    <label class="form-check-label" for="flexCheckChecked"> Homeowner </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Has dependent children
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                           checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Homeowner
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Employed
-                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="checkbox-5">
+                                    <label class="form-check-label" for="flexCheckDefault"> Employed </label>
                                 </div>
                             </div>
                         </div>
@@ -165,9 +141,8 @@ if (!isset($_SESSION['user_id'])) {
                                 <span class="text-danger">*</span>
                             </label>
                             <div class="col-sm-12">
-                                <select name="tab_access" id="tab_access" data-live-search="true"
-                                        class="selectpicker mb-3 w-100"
-                                        aria-label="select example" required>
+                                <select name="tab_access" id="they_are" data-live-search="true"
+                                        class="selectpicker mb-3 w-100" aria-label="select example" required>
                                     <option value="0">Select</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -180,14 +155,15 @@ if (!isset($_SESSION['user_id'])) {
                         <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Description
                             <span class="text-danger">*</span>
                         </label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                        <textarea class="form-control" id="description" rows="4" required></textarea>
                         <span class="input-description">How did you set this appointment up? What did you say? Anything we should know about
                             them before we meet them?</span>
                     </div>
                     <div class="col-sm-12 text-center">
-                        <button type="button" class="btn btn-secondary px-5 py-2">Add Another +</button>
-                        <button type="submit" class="btn btn-primary px-5 py-2">Submit</button>
+                        <button type="button" class="btn btn-secondary px-5 py-2" onclick="refreshPage()">Add Another +</button>
+                        <button type="submit" class="btn btn-primary px-5 py-2" id="sub-btn">Submit</button>
                     </div>
+
             </div>
         </div>
     </section>

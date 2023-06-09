@@ -263,13 +263,13 @@ $events=$func->getAllEvents();
                 <div class="modal-body map">
                     <p>Enter your Guest's information below.</p>
                     <div class="container">
-                        <form action="">
+                        <form id="add_guests">
                             <div class="row mb-3">
                                 <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Event Attending <span
                                             class="text-danger">*</span></label>
                                 <div class="col-sm-12">
-                                    <select name="tab_access" id="tab_access" data-live-search="true"
-                                            class="selectpicker mb-3 w-100"
+                                    <select name="tab_access" data-live-search="true"
+                                            class="selectpicker mb-3 w-100" id="events"
                                             aria-label="select example" required>
                                         <option value="0">Select</option>
                                         <option value="1">1</option>
@@ -281,15 +281,15 @@ $events=$func->getAllEvents();
                                 <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Enter your guest's
                                     name <span class="text-danger">*</span></label>
                                 <div class="col-sm-12">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" id="guest_name" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">They're a.... <span
                                             class="text-danger">*</span></label>
                                 <div class="col-sm-12">
-                                    <select name="tab_access" id="tab_access" data-live-search="true"
-                                            class="selectpicker mb-3 w-100"
+                                    <select name="tab_access" data-live-search="true"
+                                            class="selectpicker mb-3 w-100" id="they_are"
                                             aria-label="select example" required>
                                         <option value="0">Select</option>
                                         <option value="1">Client</option>
@@ -305,8 +305,8 @@ $events=$func->getAllEvents();
                                 <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Guest of <span
                                             class="text-danger">*</span></label>
                                 <div class="col-sm-12">
-                                    <select name="tab_access" id="tab_access" data-live-search="true"
-                                            class="selectpicker mb-3 w-100"
+                                    <select name="tab_access" data-live-search="true"
+                                            class="selectpicker mb-3 w-100" id="guest_of"
                                             aria-label="select example" required>
                                         <option value="0">Select</option>
                                         <option value="1">1</option>
@@ -322,14 +322,14 @@ $events=$func->getAllEvents();
                                 <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Contact Number <span
                                             class="text-danger">*</span></label>
                                 <div class="col-sm-12">
-                                    <input type="tel" class="form-control">
+                                    <input type="tel" class="form-control" id="contact_number" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Guest's Email <span
                                             class="text-danger">*</span></label>
                                 <div class="col-sm-12">
-                                    <input type="email" class="form-control">
+                                    <input type="email" class="form-control" id="guest_mail" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -337,20 +337,20 @@ $events=$func->getAllEvents();
                                     receive email confirmation? <span class="text-danger">*</span></label>
                                 <div class="col-sm-7">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios"
-                                               id="gridRadios1" value="option1" checked>
+                                        <input class="form-check-input" type="radio" name="guest_app_confirm"
+                                               id="gridRadios1" value="YES">
                                         <label class="form-check-label" for="gridRadios1"> Yes </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="gridRadios"
-                                               id="gridRadios2" value="option2">
+                                        <input class="form-check-input" type="radio" name="guest_app_confirm"
+                                               id="gridRadios2" value="No">
                                         <label class="form-check-label" for="gridRadios2"> No </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-sm-12 text-center">
-                                    <button type="submit" class="btn btn-primary px-5 py-2">Submit</button>
+                                    <button type="submit" class="btn btn-primary px-5 py-2" id="sub_btn">Submit</button>
                                 </div>
                             </div>
                         </form>
