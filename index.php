@@ -90,7 +90,7 @@ $events=$func->getAllEvents();
                                                       height="3"></rect>
                                             </g>
                                         </svg>
-                                        <p class="card-text py-3">Request Match Up</p>
+                                        <p class="card-text py-3">Request Trainer</p>
                                     </div>
 
                                 </div>
@@ -113,7 +113,7 @@ $events=$func->getAllEvents();
                                                 <polygon data-color="color-2" fill="currentColor"
                                                          points="21,16 19,16 19,19 16,19 16,21 19,21 19,24 21,24 21,21 24,21 24,19 21,19 "></polygon>
                                             </g></svg>
-                                        <p class="card-text py-3">New Team Recruit</p>
+                                        <p class="card-text py-3">New Business Partner</p>
                                     </div>
                                 </div>
                             </a>
