@@ -140,8 +140,7 @@ if (!isset($_SESSION['user_id'])) {
                     </div>
 
                     <div class="col-sm-12 text-center">
-                        <button type="button" class="btn btn-secondary px-4 py-2" onclick="refreshPage()">Add Another +</button>
-                        <button type="submit" class="btn btn-primary px-5 py-2" id="sub_btn">Submit</button>
+                        <button type="submit" class="btn btn-primary px-5 py-2" id="sub_btn">New Business Partner</button>
                     </div>
             </div>
         </div>
