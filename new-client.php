@@ -46,10 +46,14 @@ if (!isset($_SESSION['user_id'])) {
                     </div>
 
                     <div class="row">
-                        <div class="col-lg-6">
-                            <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Coverage /Rollover
+                        <div class="col-lg-3">
+                            <label for="Coverage/Rollover" class="col-sm-12 col-form-label fw-bolder">Coverage /Rollover
                                 Amount</label>
-                            <input type="text" class="form-control" placeholder="" id="coverage" required>
+                            <input type="number" class="form-control" placeholder="" id="coverage" required>
+                        </div>
+                        <div class="col-lg-3">
+                            <label for="monthly_saving" class="col-sm-12 col-form-label fw-bolder">Monthly Saving</label>
+                            <input type="number" class="form-control" placeholder="" id="monthly_saving" required>
                         </div>
                         <div class="col-lg-3">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Estimated Points
@@ -129,8 +133,8 @@ if (!isset($_SESSION['user_id'])) {
                             <select name="tab_access"  data-live-search="true"
                                     class="selectpicker mb-3 w-100" id="agent_policy"
                                     aria-label="select example" required>
-                                <option value="0">1</option>
-                                <option value="1">2</option>
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
                             </select>
                         </div>
                     </div>
@@ -143,8 +147,15 @@ if (!isset($_SESSION['user_id'])) {
                             <select name="tab_access"  data-live-search="true"
                                     class="selectpicker mb-3 w-100"  id="product"
                                     aria-label="select example" required>
-                                <option value="0">1</option>
-                                <option value="1">2</option>
+                                <option value="Annuity">Annuity</option>
+                                <option value="Debt">Debt</option>
+                                <option value="Estate">Estate </option>
+                                <option value="Planning">Planning</option>
+                                <option value="Final Expense">Final Expense</option>
+                                <option value="IUL">IUL</option>
+                                <option value="IUL w/LTC">IUL w/LTC</option>
+                                <option value="Term">Term</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         <div class="col-lg-4">
@@ -154,8 +165,14 @@ if (!isset($_SESSION['user_id'])) {
                             <select name="tab_access"  data-live-search="true"
                                     class="selectpicker mb-3 w-100" id="provider"
                                     aria-label="select example" required>
-                                <option value="0">1</option>
-                                <option value="1">2</option>
+                                <option value="Athene">Athene</option>
+                                <option value="Debtmerica">Debtmerica</option>
+                                <option value="Everest">Everest</option>
+                                <option value="LSPN">LSPN</option>
+                                <option value="Nationwide">Nationwide</option>
+                                <option value="Pacific">Pacific</option>
+                                <option value="Transamerica">Transamerica</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         <div class="col-lg-4">

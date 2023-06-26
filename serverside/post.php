@@ -588,6 +588,9 @@ else if ($func == 24) {
     $coverage = htmlspecialchars(stripslashes($_POST['coverage']));
     $coverage = $db->escapeString($coverage);
 
+    $monthly_saving = htmlspecialchars(stripslashes($_POST['monthly_saving']));
+    $monthly_saving = $db->escapeString($monthly_saving);
+
     $estimated_points = htmlspecialchars(stripslashes($_POST['estimated_points']));
     $estimated_points = $db->escapeString($estimated_points);
 
@@ -621,7 +624,7 @@ else if ($func == 24) {
     $email_address = htmlspecialchars(stripslashes($_POST['email_address']));
     $email_address = $db->escapeString($email_address);
 
-    $sql = "INSERT INTO `new-client`(`f_name`, `l_name`, `policy_name`, `submitted_date`, `coverage`, `estimated_points`, `CWA`, `trainee`, `split_option`, `split_agent`, `agent_policy`, `product`, `provider`, `med_required`, `contact_no`, `email_address`) VALUES ('$f_name','$l_name','$policy_name','$submitted_date','$coverage','$estimated_points','$CWA','$trainee','$split_option','$split_agent','$agent_policy','$product','$provider','$med_required','$contact_no','$email_address')";
+    $sql = "INSERT INTO `new-client`(`f_name`, `l_name`, `policy_name`, `submitted_date`, `coverage`, `monthly_saving`, `estimated_points`, `CWA`, `trainee`, `split_option`, `split_agent`, `agent_policy`, `product`, `provider`, `med_required`, `contact_no`, `email_address`) VALUES ('$f_name','$l_name','$policy_name','$submitted_date','$coverage','$monthly_saving','$estimated_points','$CWA','$trainee','$split_option','$split_agent','$agent_policy','$product','$provider','$med_required','$contact_no','$email_address')";
 
     if ($db->sql($sql)) {
 

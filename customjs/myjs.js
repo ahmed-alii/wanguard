@@ -843,6 +843,7 @@ $("#new-client1").submit(function (e) {
     ajax_data.append('policy_name', $('#policy_name').val());
     ajax_data.append('submitted_date', $('#submitted_date').val());
     ajax_data.append('coverage', $('#coverage').val());
+    ajax_data.append('monthly_saving', $('#monthly_saving').val());
     ajax_data.append('estimated_points', $('#estimated_points').val());
     ajax_data.append('CWA', $('#CWA option:selected').val());
     ajax_data.append('trainee', $('#trainee option:selected').val());
