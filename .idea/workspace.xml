@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3cb8abc8-bdcc-471f-9303-40e25c2c7bae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-client.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-recruite.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-recruite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-appointment.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-appointment.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs/spa_finder_new",
+    "last_opened_file_path": "C:/xampp/htdocs/wanguard",
     "list.type.of.created.stylesheet": "SCSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -86,6 +88,8 @@
       <workItem from="1686206710847" duration="14978000" />
       <workItem from="1686229830631" duration="9308000" />
       <workItem from="1687759665086" duration="2572000" />
+      <workItem from="1687772048568" duration="1269000" />
+      <workItem from="1688363117983" duration="652000" />
     </task>
     <servers />
   </component>

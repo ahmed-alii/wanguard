@@ -160,7 +160,7 @@ if (!isset($_SESSION['user_id'])) {
                             them before we meet them?</span>
                     </div>
                     <div class="col-sm-12 text-center">
-                        <button type="button" class="btn btn-secondary px-5 py-2" onclick="refreshPage()">Add Another +</button>
+<!--                        <button type="button" class="btn btn-secondary px-5 py-2" onclick="refreshPage()">Add Another +</button>-->
                         <button type="submit" class="btn btn-primary px-5 py-2" id="sub-btn">Submit</button>
                     </div>
 

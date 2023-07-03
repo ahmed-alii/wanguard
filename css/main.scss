@@ -642,3 +642,8 @@ textarea {
   text-decoration: none;
   background-color: #EBCC72 !important;
 }
+.accordion-button:not(.collapsed) {
+  color: black !important;
+  background-color: #EBCC72 !important;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
