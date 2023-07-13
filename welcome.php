@@ -1,9 +1,9 @@
 <?php
 include_once "includes/header.php";
-if (!isset($_SESSION['user_id'])){
+if (!isset($_SESSION['user_id'])) {
     ?>
     <script type="text/javascript">
-        window.location.href="logout";
+        window.location.href = "logout";
     </script>
     <?php
     exit();
@@ -11,10 +11,10 @@ if (!isset($_SESSION['user_id'])){
 
 
 include_once "serverside/functions.php";
-$func=new Functions();
-$level1=$func->getTeamMemberByLevel(1);
-$level2=$func->getTeamMemberByLevel(2);
-$level3=$func->getTeamMemberByLevel(3);
+$func = new Functions();
+$level1 = $func->getTeamMemberByLevel(1);
+$level2 = $func->getTeamMemberByLevel(2);
+$level3 = $func->getTeamMemberByLevel(3);
 
 ?>
 
@@ -28,14 +28,13 @@ $level3=$func->getTeamMemberByLevel(3);
 
                 <div class="col-12 my-5">
                     <h4 class="text-white fw-light">Welcome To</h4>
-                    <h1 class="display-5 fw-bold text-primary text-uppercase">The VANGUARD</h1>
+                    <h1 class="display-5 fw-bold text-primary text-uppercase">VANGUARD</h1>
                     <br>
                     <p class="w-75 text-white mx-auto">Your decision to come on board is the first step toward helping
-                        you building the life you’ve
-                        always wanted for you and your family. Now, you have the opportunity to provide a valuable
-                        service to many individuals and families who dream of achieving financial independence. You can
-                        help people from all walks of life have better tomorrows, while achieving your goals and dreams
-                        as well.
+                        you building the life you’ve always wanted for you and your family. Now, you have the
+                        opportunity to provide a valuable service to many individuals and families who dream of
+                        achieving financial independence. You can help people from all walks of life have better
+                        tomorrows, while achieving your goals and dreams as well.
                     </p>
                 </div>
             </div>
@@ -116,14 +115,27 @@ $level3=$func->getTeamMemberByLevel(3);
 <section class="section_vision triangle-primary">
     <div class="container">
         <div class="row justify-content-center m-auto">
-            <div class="col-8">
-                <h1 class="text-center fw-bold">OUR VISION</h1>
-                <p class="text-center">Since our founding in 2001, every decision has been guided by our mission to help
-                    individuals
-                    create the life they want to live, while protecting their loved ones and planning their
-                    financial legacy. Offering access to a diverse portfolio of insurance, retirement, savings, and
-                    wealth-building strategies, our licensed agents across North America help guide individuals from
-                    where they are to where they want to be.</p>
+            <div class="col-md-6">
+                <h1 class="text-center fw-bold">Our VISION & VALUES</h1>
+                <p class="text-center pt-3">Our vision is to create massive change in the marketplace, change the
+                    financial
+                    industry for the better, and transform people's lives.
+                </p>
+                <p class="text-center">
+                    Our values to our clients are to provide the knowledge, support, guidance, and confidence to build
+                    their financial future.
+                </p>
+                <p class="text-center">
+                    Our values to our agents are to provide the tools, environment, mentorship, and examples of success
+                    to allow them to flourish.
+                </p>
+                <p class="text-center p-0 m-0 fw-bolder fst-italic">
+                    At Pinnacle, we believe in the 5 F's
+                </p>
+                <p class="text-center p-0 m-0">Faith, Family, Finances, Fitness, and Fun
+                </p>
+                <p class="text-center p-0 m-0">are the key to having a successful business and living a fulfilling life.
+                </p>
             </div>
         </div>
     </div>
@@ -139,29 +151,31 @@ $level3=$func->getTeamMemberByLevel(3);
                 <p class="text-primary pb-5">TOGETHER WE CAN DO SO MUCH</p>
 
                 <?php
-                foreach ($level1 as $l1){
+                foreach ($level1 as $l1) {
                     ?>
                     <?php
-                    if($l1['image_path']!=""){
+                    if ($l1['image_path'] != "") {
                         ?>
-                        <img src="<?=substr($l1['image_path'],3)?>" style="height: 350px; width: 350px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <img src="<?= substr($l1['image_path'], 3) ?>"
+                             style="height: 350px; width: 350px; object-fit: cover" class="img-fluid rounded-circle ">
                         <?php
-                    }else{
+                    } else {
                         ?>
-                        <img src="assets/images/img8.png" style="height: 350px; width: 350px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <img src="assets/images/img8.png" style="height: 350px; width: 350px; object-fit: cover"
+                             class="img-fluid rounded-circle ">
                         <?php
                     }
                     ?>
 
-                    <h1 class="fw-bolder pt-3 text-primary"><?=$l1['name']?></h1>
-                    <h3 class="fw-bolder text-gray"><?=$l1['rank']?></h3>
-                    <h3 class="fw-bolder text-gray"><?=$l1['department']?></h3>
-                    <h3 class="fw-bolder text-green">$<?=number_format($l1['earning'])?> + EARNERS </h3>
-                    <div class="btn-1 py-3">
+                    <h1 class="fw-bolder pt-3 text-primary"><?= $l1['name'] ?></h1>
+                    <h3 class="fw-bolder text-gray"><?= $l1['rank'] ?></h3>
+                    <h3 class="fw-bolder text-gray"><?= $l1['department'] ?></h3>
+                    <h3 class="fw-bolder text-green">$<?= number_format($l1['earning']) ?> + EARNERS </h3>
+                    <div class="btn-1 py-2 d-flex">
                         <?php
-                        if($l1['bio']!=""){
+                        if ($l1['bio'] != "") {
                             ?>
-                            <button  onclick="showBio(`<?=$l1['id']?>`)" class="btn px-5 my-2 ">BIO
+                            <button onclick="showBio(`<?= $l1['id'] ?>`)" class="btn px-5 my-1 ">BIO
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
                                      xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
@@ -177,23 +191,67 @@ $level3=$func->getTeamMemberByLevel(3);
                         ?>
 
 
-                        <a target="_blank" href="<?=$l1['youtube_link']?>">
-                            <button  class="btn px-5"><?=$l1['name']?> YOUTUBE
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                     xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                                     width="15px" height="50px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
-                            </button>
-                        </a>
+                        <!--                        <a target="_blank" href="-->
+                        <?php //= $l1['youtube_link'] ?><!--">-->
+                        <!--                            <button class="btn px-5">-->
+                        <?php //= $l1['name'] ?><!-- YOUTUBE-->
+                        <!--                                <svg xmlns="http://www.w3.org/2000/svg"-->
+                        <!--                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
+                        <!--                                     xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"-->
+                        <!--                                     width="15px" height="50px">-->
+                        <!--                                <g>-->
+                        <!--                                    <path-->
+                        <!--                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>-->
+                        <!--                                </g>-->
+                        <!--                            </svg>-->
+                        <!--                            </button>-->
+                        <!--                        </a>-->
+                        <div class="d-flex px-3 pt-3 text-center">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+                                    <path fill="#3F51B5"
+                                          d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"/>
+                                    <path fill="#FFF"
+                                          d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+                                    <linearGradient id="PgB_UHa29h0TpFV_moJI9a" x1="9.816" x2="41.246" y1="9.871"
+                                                    y2="41.301"
+                                                    gradientUnits="userSpaceOnUse">
+                                        <stop offset="0" stop-color="#f44f5a"/>
+                                        <stop offset=".443" stop-color="#ee3d4a"/>
+                                        <stop offset="1" stop-color="#e52030"/>
+                                    </linearGradient>
+                                    <path fill="url(#PgB_UHa29h0TpFV_moJI9a)"
+                                          d="M45.012,34.56c-0.439,2.24-2.304,3.947-4.608,4.267C36.783,39.36,30.748,40,23.945,40	c-6.693,0-12.728-0.64-16.459-1.173c-2.304-0.32-4.17-2.027-4.608-4.267C2.439,32.107,2,28.48,2,24s0.439-8.107,0.878-10.56	c0.439-2.24,2.304-3.947,4.608-4.267C11.107,8.64,17.142,8,23.945,8s12.728,0.64,16.459,1.173c2.304,0.32,4.17,2.027,4.608,4.267	C45.451,15.893,46,19.52,46,24C45.89,28.48,45.451,32.107,45.012,34.56z"/>
+                                    <path d="M32.352,22.44l-11.436-7.624c-0.577-0.385-1.314-0.421-1.925-0.093C18.38,15.05,18,15.683,18,16.376	v15.248c0,0.693,0.38,1.327,0.991,1.654c0.278,0.149,0.581,0.222,0.884,0.222c0.364,0,0.726-0.106,1.04-0.315l11.436-7.624	c0.523-0.349,0.835-0.932,0.835-1.56C33.187,23.372,32.874,22.789,32.352,22.44z"
+                                          opacity=".05"/>
+                                    <path d="M20.681,15.237l10.79,7.194c0.689,0.495,1.153,0.938,1.153,1.513c0,0.575-0.224,0.976-0.715,1.334	c-0.371,0.27-11.045,7.364-11.045,7.364c-0.901,0.604-2.364,0.476-2.364-1.499V16.744C18.5,14.739,20.084,14.839,20.681,15.237z"
+                                          opacity=".07"/>
+                                    <path fill="#fff"
+                                          d="M19,31.568V16.433c0-0.743,0.828-1.187,1.447-0.774l11.352,7.568c0.553,0.368,0.553,1.18,0,1.549	l-11.352,7.568C19.828,32.755,19,32.312,19,31.568z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
+                                    <path fill="#0078d4"
+                                          d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5	V37z"/>
+                                    <path d="M30,37V26.901c0-1.689-0.819-2.698-2.192-2.698c-0.815,0-1.414,0.459-1.779,1.364	c-0.017,0.064-0.041,0.325-0.031,1.114L26,37h-7V18h7v1.061C27.022,18.356,28.275,18,29.738,18c4.547,0,7.261,3.093,7.261,8.274	L37,37H30z M11,37V18h3.457C12.454,18,11,16.528,11,14.499C11,12.472,12.478,11,14.514,11c2.012,0,3.445,1.431,3.486,3.479	C18,16.523,16.521,18,14.485,18H18v19H11z"
+                                          opacity=".05"/>
+                                    <path d="M30.5,36.5v-9.599c0-1.973-1.031-3.198-2.692-3.198c-1.295,0-1.935,0.912-2.243,1.677	c-0.082,0.199-0.071,0.989-0.067,1.326L25.5,36.5h-6v-18h6v1.638c0.795-0.823,2.075-1.638,4.238-1.638	c4.233,0,6.761,2.906,6.761,7.774L36.5,36.5H30.5z M11.5,36.5v-18h6v18H11.5z M14.457,17.5c-1.713,0-2.957-1.262-2.957-3.001	c0-1.738,1.268-2.999,3.014-2.999c1.724,0,2.951,1.229,2.986,2.989c0,1.749-1.268,3.011-3.015,3.011H14.457z"
+                                          opacity=".07"/>
+                                    <path fill="#fff"
+                                          d="M12,19h5v17h-5V19z M14.485,17h-0.028C12.965,17,12,15.888,12,14.499C12,13.08,12.995,12,14.514,12	c1.521,0,2.458,1.08,2.486,2.499C17,15.887,16.035,17,14.485,17z M36,36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698	c-1.501,0-2.313,1.012-2.707,1.99C24.957,25.543,25,26.511,25,27v9h-5V19h5v2.616C25.721,20.5,26.85,19,29.738,19	c3.578,0,6.261,2.25,6.261,7.274L36,36L36,36z"/>
+                                </svg>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="btn-2">
-                        <a href="<?=$l1['appointment_link']?>" target="_blank">
-                            <button  class="btn px-3 fw-bolder">SET A PERSONAL APPOINTMENT WITH FRANK'S
+                        <a href="<?= $l1['appointment_link'] ?>" target="_blank">
+                            <button class="btn px-3 fw-bolder">SET A PERSONAL APPOINTMENT WITH FRANK'S
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
                                      xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
@@ -220,31 +278,33 @@ $level3=$func->getTeamMemberByLevel(3);
     <div class="container py-5">
         <div class="row mx-auto justify-content-center">
             <?php
-            foreach ($level2 as $l2){
+            foreach ($level2 as $l2) {
                 ?>
                 <div class="col-12 col-lg-6 col-text-center py-3">
 
                     <?php
-                    if($l2['image_path']!=""){
+                    if ($l2['image_path'] != "") {
                         ?>
-                        <img src="<?=substr($l2['image_path'],3)?>" style="height: 300px; width: 300px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <img src="<?= substr($l2['image_path'], 3) ?>"
+                             style="height: 300px; width: 300px; object-fit: cover" class="img-fluid rounded-circle ">
                         <?php
-                    }else{
+                    } else {
                         ?>
-                        <img src="assets/images/img8.png" style="height: 300px; width: 300px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <img src="assets/images/img8.png" style="height: 300px; width: 300px; object-fit: cover"
+                             class="img-fluid rounded-circle ">
                         <?php
                     }
                     ?>
 
-                    <h6 class="fw-bolder pt-3 text-primary"><?=$l2['name']?></h6>
-                    <p class="fw-bolder text-gray p-0 m-0"><?=$l2['rank']?></p>
-                    <p class="fw-bolder text-gray p-0 m-0"><?=$l2['department']?></p>
-                    <p class="fw-bolder text-green p-0 m-0">$<?=number_format($l2['earning'])?> + EARNERS </p>
+                    <h6 class="fw-bolder pt-3 text-primary"><?= $l2['name'] ?></h6>
+                    <p class="fw-bolder text-gray p-0 m-0"><?= $l2['rank'] ?></p>
+                    <p class="fw-bolder text-gray p-0 m-0"><?= $l2['department'] ?></p>
+                    <p class="fw-bolder text-green p-0 m-0">$<?= number_format($l2['earning']) ?> + EARNERS </p>
                     <div class="btn-3 py-3">
                         <?php
-                        if($l2['bio']!=""){
+                        if ($l2['bio'] != "") {
                             ?>
-                            <button  onclick="showBio(`<?=$l2['id']?>`)" class="btn px-4 my-2 my-lg-0">BIO
+                            <button onclick="showBio(`<?= $l2['id'] ?>`)" class="btn px-4 my-2 my-lg-0">BIO
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
                                      xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
@@ -260,7 +320,7 @@ $level3=$func->getTeamMemberByLevel(3);
                         ?>
                     </div>
                     <div class="btn-2">
-                        <a target="_blank" href="<?=$l2['appointment_link']?>">
+                        <a target="_blank" href="<?= $l2['appointment_link'] ?>">
                             <button class="btn px-5 fw-bolder">SET AN APPOINTMENT
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
@@ -288,32 +348,34 @@ $level3=$func->getTeamMemberByLevel(3);
     <div class="container py-5">
         <div class="row mx-auto justify-content-center">
             <?php
-            foreach ($level3 as $l3){
+            foreach ($level3 as $l3) {
                 ?>
                 <div class="col-12 col-lg-4 col-md-6 col-text-center py-3">
 
                     <?php
-                    if($l3['image_path']!=""){
+                    if ($l3['image_path'] != "") {
                         ?>
-                        <img src="<?=substr($l3['image_path'],3)?>" style="height: 200px; width: 200px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <img src="<?= substr($l3['image_path'], 3) ?>"
+                             style="height: 200px; width: 200px; object-fit: cover" class="img-fluid rounded-circle ">
                         <?php
-                    }else{
+                    } else {
                         ?>
-                        <img src="assets/images/img8.png" style="height: 200px; width: 200px; object-fit: cover" class="img-fluid rounded-circle ">
+                        <img src="assets/images/img8.png" style="height: 200px; width: 200px; object-fit: cover"
+                             class="img-fluid rounded-circle ">
                         <?php
                     }
                     ?>
 
 
-                    <h6 class="fw-bolder pt-3 text-primary"><?=$l3['name']?></h6>
-                    <p class="fw-bolder text-gray p-0 m-0"><?=$l3['rank']?></p>
-                    <p class="fw-bolder text-gray p-0 m-0"><?=$l3['department']?></p>
-                    <p class="fw-bolder text-green p-0 m-0 text">$<?=number_format($l3['earning'])?> + EARNERS </p>
+                    <h6 class="fw-bolder pt-3 text-primary"><?= $l3['name'] ?></h6>
+                    <p class="fw-bolder text-gray p-0 m-0"><?= $l3['rank'] ?></p>
+                    <p class="fw-bolder text-gray p-0 m-0"><?= $l3['department'] ?></p>
+                    <p class="fw-bolder text-green p-0 m-0 text">$<?= number_format($l3['earning']) ?> + EARNERS </p>
                     <div class="btn-3 py-3">
                         <?php
-                        if($l3['bio']!=""){
+                        if ($l3['bio'] != "") {
                             ?>
-                            <button onclick="showBio(`<?=$l3['id']?>`)" class="btn px-4 my-2 my-lg-0">BIO
+                            <button onclick="showBio(`<?= $l3['id'] ?>`)" class="btn px-4 my-2 my-lg-0">BIO
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
                                      xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
@@ -417,11 +479,12 @@ $level3=$func->getTeamMemberByLevel(3);
                                     </g></svg>
 
                                 <div>
-                                    <h4 class="fw-bold">FINANCIAL STRATEGIES</h4>
+                                    <h4 class="fw-bold">ESTATE PRESERVATION</h4>
                                     <ul>
-                                        <li>Financial Needs Analysis</li>
-                                        <li>Financial Goal Setting</li>
-                                        <li>Strategies to Pursue Your Goals</li>
+                                        <li>Wills & Trusts</li>
+                                        <li>Charitable Strategies & Trusts</li>
+                                        <li>Life Insurance Trusts</li>
+                                        <li>Wealth Replacement Trusts</li>
                                     </ul>
                                 </div>
                             </div>
@@ -443,11 +506,12 @@ $level3=$func->getTeamMemberByLevel(3);
                                     </g></svg>
 
                                 <div>
-                                    <h4 class="fw-bold">FINANCIAL STRATEGIES</h4>
+                                    <h4 class="fw-bold">BUSINESS STRATEGIES</h4>
                                     <ul>
-                                        <li>Financial Needs Analysis</li>
-                                        <li>Financial Goal Setting</li>
-                                        <li>Strategies to Pursue Your Goals</li>
+                                        <li>Insurance Strategies</li>
+                                        <li>Retirement Strategies</li>
+                                        <li>Executive Compensation</li>
+                                        <li>Executive Compensation</li>
                                     </ul>
                                 </div>
                             </div>
@@ -479,11 +543,11 @@ $level3=$func->getTeamMemberByLevel(3);
                                     </g></svg>
 
                                 <div>
-                                    <h4 class="fw-bold">FINANCIAL STRATEGIES</h4>
+                                    <h4 class="fw-bold">INSURANCE PROTECTION</h4>
                                     <ul>
-                                        <li>Financial Needs Analysis</li>
-                                        <li>Financial Goal Setting</li>
-                                        <li>Strategies to Pursue Your Goals</li>
+                                        <li>Life Insurance</li>
+                                        <li>Disability Insurance</li>
+                                        <li>Long Term Care Insurance</li>
                                     </ul>
                                 </div>
                             </div>
@@ -505,11 +569,12 @@ $level3=$func->getTeamMemberByLevel(3);
                                     </g></svg>
 
                                 <div>
-                                    <h4 class="fw-bold">FINANCIAL STRATEGIES</h4>
+                                    <h4 class="fw-bold">RETIREMENT STRATEGIES</h4>
                                     <ul>
-                                        <li>Financial Needs Analysis</li>
-                                        <li>Financial Goal Setting</li>
-                                        <li>Strategies to Pursue Your Goals</li>
+                                        <li>LIRP/CVLI</li>
+                                        <li>Rollovers</li>
+                                        <li>Annuities (Private Pensions)</li>
+                                        <li>Traditional/ Roth IRA</li>
                                     </ul>
                                 </div>
                             </div>
@@ -536,12 +601,13 @@ $level3=$func->getTeamMemberByLevel(3);
                                     </g></svg>
 
                                 <div>
-                                    <h4 class="fw-bold">FINANCIAL STRATEGIES</h4>
-                                    <ul>
-                                        <li>Financial Needs Analysis</li>
-                                        <li>Financial Goal Setting</li>
-                                        <li>Strategies to Pursue Your Goals</li>
-                                    </ul>
+                                    <h4 class="fw-bold">COLLEGE FUNDING PLANS</h4>
+
+                                    <p>Whether preparing to send a first or
+                                        fifth child to college/university, we can
+                                        help start saving now.
+                                    </p>
+
                                 </div>
                             </div>
                         </div>
@@ -760,7 +826,8 @@ $level3=$func->getTeamMemberByLevel(3);
                                     </g>
                                 </svg>
                                 GO TO NEXT STEP
-                            </button></a>
+                            </button>
+                        </a>
                     </div>
                     <div class="position-absolute dropdown-wrapper justify-content-center align-items-center mx-auto ">
                         <div class="dropdown-inner text-center my-auto">
@@ -802,7 +869,8 @@ $level3=$func->getTeamMemberByLevel(3);
                 <div>
                     <p class="fw-bolder">Pre-Licensing Education Fee</p>
                     <p>$29 - $99 (Costs range based on provider and state)</p>
-                </div><div>
+                </div>
+                <div>
                     <p class="fw-bolder">Exam Fee</p>
                     <p>$100 (approximate cost – varies by state)</p>
                 </div>
@@ -812,7 +880,7 @@ $level3=$func->getTeamMemberByLevel(3);
                 </div>
                 <div>
                     <p class="fw-bolder">E&O Costs for Life Licensed Agents</p>
-                    <p>$520 Annually </p>
+                    <p>130 per quarter</p>
                 </div>
                 <div>
                     <p class="fw-bolder">Platform Fee for Licensed Agents</p>

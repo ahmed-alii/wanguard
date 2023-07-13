@@ -27,8 +27,8 @@ if(isset($_SESSION['user_id'])){
                     <a class="navbar-brand" href="#">
                         <img src="assets/images/Logo.png" style="max-width: 150px; height: 150px;">
                     </a>
-                    <p>"The way to get started is to quit<br> talking and begin doing."</p>
-                    <p> -- Walt Disney</p>
+                    <p>"You Don’t Have To Be Great To Start,<br> But You Have To Start To Be Great."</p>
+                    <p> -- Zig Ziglar</p>
                 </div>
 
                 <div class="col-lg-3 col-md-6 col-4 footer-content">
@@ -37,7 +37,7 @@ if(isset($_SESSION['user_id'])){
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0">New Appointment</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0">New Client</a></li>
                         <li class="nav-item mb-2"><a href="#" class="nav-link p-0">New Recruitment</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">New FNA</a></li>
+                        <li class="nav-item mb-2"><a href="FNF" class="nav-link p-0">New FNA</a></li>
                     </ul>
                 </div>
 

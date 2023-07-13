@@ -74,7 +74,6 @@
                     <span class="fs-2 fw-bold">LITERACY</span>
                     <p class="py-2">Only 6 of the 50 states require a stand alone course in personal finance to graduate
                         from high school.</p>
-
                 </div>
             </div>
         </div>

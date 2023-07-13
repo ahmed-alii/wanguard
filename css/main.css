@@ -551,4 +551,13 @@ textarea:focus {
   box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
 }
 
+.form-control {
+  color: black !important;
+}
+
+.social-icons span {
+  border-radius: 50%;
+  background-color: red;
+}
+
 /*# sourceMappingURL=main.css.map */

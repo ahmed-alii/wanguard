@@ -96,11 +96,11 @@ if(!empty($users1)){
 //                    ?>
 
 
-                    <span class="d-none d-md-block dropdown-toggle ps-2"><?=$user1['name']?></span>
+                    <span class="d-none d-md-block dropdown-toggle ps-2"><?=$user1['fname']?></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                        <h6><?=$user1['name']?></h6>
+                        <h6><?=$user1['fname']?></h6>
 
                     </li>
                     <li>
@@ -144,6 +144,12 @@ if(!empty($users1)){
             <a class="nav-link"  href="teams">
                 <i class="bi bi-bar-chart"></i>
                 <span>Team</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"  href="next_step">
+                <i class="bi bi-bar-chart"></i>
+                <span>Next Step</span>
             </a>
         </li>
         <li class="nav-item">

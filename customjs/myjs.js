@@ -5,10 +5,15 @@ $("#signup").submit(function (e) {
     //append into ajax data
     ajax_data.append("func", '1');
 
-    ajax_data.append('name', $('#name').val());
     ajax_data.append('email', $('#email').val());
     ajax_data.append('password', $('#password').val());
-
+    ajax_data.append('f_name', $('#f_name').val());
+    ajax_data.append('l_name', $('#l_name').val());
+    ajax_data.append('agent_code', $('#agent_code').val());
+    ajax_data.append('phone_no', $('#phone_no').val());
+    ajax_data.append('business_partner', $('#business_partner').val());
+    ajax_data.append('us_states', $('#us_states option:selected').val());
+    ajax_data.append('image', $('#image')[0].files[0]);
 
     $("#signup_btn").attr("disabled", true);
     $("#signup_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);

@@ -18,9 +18,6 @@ $create_date = date('Y-m-d H:i:s');
 //Signup
 if ($func == 1) {
 
-    $name = htmlspecialchars(stripslashes($_POST['name']));
-    $name = $db->escapeString($name);
-
     $email = htmlspecialchars(stripslashes($_POST['email']));
     $email = $db->escapeString($email);
 
@@ -28,16 +25,47 @@ if ($func == 1) {
     $password = $db->escapeString($password);
     $hashpass = md5($password);
 
+    $f_name = htmlspecialchars(stripslashes($_POST['f_name']));
+    $f_name = $db->escapeString($f_name);
+
+    $l_name = htmlspecialchars(stripslashes($_POST['l_name']));
+    $l_name = $db->escapeString($l_name);
+
+    $agent_code = htmlspecialchars(stripslashes($_POST['agent_code']));
+    $agent_code = $db->escapeString($agent_code);
+
+    $phone_no = htmlspecialchars(stripslashes($_POST['phone_no']));
+    $phone_no = $db->escapeString($phone_no);
+
+    $business_partner = htmlspecialchars(stripslashes($_POST['business_partner']));
+    $business_partner = $db->escapeString($business_partner);
+
+    $us_states = htmlspecialchars(stripslashes($_POST['us_states']));
+    $us_states = $db->escapeString($us_states);
+
+    if (!empty($_FILES['image'])) {
+        $image = $_FILES['image'];
+        $filename = $image['name'];
+        $file_tmp = $image['tmp_name'];
+        $target = "../uploads/profile/";
+        $timestamp = time();
+        $file = $timestamp . '-' . $filename;
+        $upload_to = $target . $file;
+        move_uploaded_file($file_tmp, $upload_to);
+    } else {
+        $upload_to = "";
+    }
+
     if ($Functions->CheckEmailExists($email)) {
         echo 'email-exist';
         return;
     }
 
-    $sql = "insert into users (`name`,`email`,`password`,`create_date`) values ('$name','$email','$hashpass','$create_date')";
+    $sql = "INSERT INTO `users`(`fname`, `lname`, `agent_code`, `email`, `phone`, `business_patner`, `us_states`, `password`, `image_path` , `create_date`) VALUES('$f_name','$l_name','$agent_code','$email','$phone_no','$business_partner','$us_states','$hashpass','$upload_to')";
 
     if ($db->sql($sql)) {
         echo "true";
-        $Functions->NewSignupEmail();
+//        $Functions->NewSignupEmail();
     } else {
         echo "false";
     }
@@ -516,9 +544,7 @@ else if ($func == 22) {
     } else {
         echo "false";
     }
-}
-
-//Add new_recruit
+} //Add new_recruit
 else if ($func == 23) {
 
     $agent_id = htmlspecialchars(stripslashes($_POST['agent_id']));
@@ -568,9 +594,7 @@ else if ($func == 23) {
     } else {
         echo "false";
     }
-}
-
-//Add new_recruit
+} //Add new_recruit
 else if ($func == 24) {
 
     $f_name = htmlspecialchars(stripslashes($_POST['f_name']));
@@ -632,9 +656,7 @@ else if ($func == 24) {
     } else {
         echo "false";
     }
-}
-
-//Add guest
+} //Add guest
 else if ($func == 25) {
 
     $events = htmlspecialchars(stripslashes($_POST['events']));

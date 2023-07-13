@@ -1,9 +1,9 @@
 <?php
 include_once "includes/header.php";
-if (!isset($_SESSION['user_id'])){
+if (!isset($_SESSION['user_id'])) {
     ?>
     <script type="text/javascript">
-        window.location.href="logout";
+        window.location.href = "logout";
     </script>
     <?php
     exit();
@@ -399,11 +399,13 @@ if (!isset($_SESSION['user_id'])){
         <div class="row justify-content-center mx-auto map">
             <div class="col-12 text-center">
                 <h1 class="fw-bolder text-primary"> PHASE 3.</h1>
-                <h1 class="fw-bolder">PLAN FOR SUCCESS</h1>
-                <p>Our goal is to help you learn and earn income as soon as possible, The TOP PRIORITY is for you to
-                    <strong class="text-decoration-underline">COMPLETE YOUR 1 / 1 / 7</strong> and start EARNING. Set a
-                    time with your trainer to plan things out.
+                <h1 class="fw-bolder">Strategy for Success - MEET WITH YOUR TRAINER</h1>
+                <p>Our goal is to help you master our system, earn income and become independent as soon as possible.
+                    The
+                    TOP PRIORITY is for us to help you build your business fast by completing your 1-1-7! (MEET WITH YOU
+                    TRAINER)
                 </p>
+
             </div>
             <div class="d-flex">
                 <div class="mx-3 map-item">
@@ -462,9 +464,10 @@ if (!isset($_SESSION['user_id'])){
                         </g></svg>
                 </div>
                 <div>
-                    <h5 class="fw-bolder">RECOMMENDED READING - START THE SELF LEARNING - READ, LISTEN OR WATCH</h5>
+                    <h5 class="fw-bolder">NEED GRAPHIC - START YOUR PERSONAL FINANCIAL EDUCATION</h5>
                     <p class="text-secondary">
-                        Start by getting familiar with the concepts and ideas that the wealthy use and implement.
+                        Financial Literacy Starts at home! Continue learning & Implement Financial Concepts!
+                        Attach the books for download Space better
                     </p>
                 </div>
             </div>
@@ -505,6 +508,9 @@ if (!isset($_SESSION['user_id'])){
             <div class="col-12 text-center">
                 <h1 class="fw-bolder text-primary"> PHASE 4.</h1>
                 <h1 class="fw-bolder">ONCE YOU ARE LICENSED</h1>
+                <p>Get your business off to a fast start, identify potential partners needed to build your agency,
+                    develop a business plan, & with the help of your trainer start PRACTICING!
+                </p>
                 <button class="btn btn-primary mb-4 px-5 py-4" data-bs-toggle="modal"
                         data-bs-target="#once-licensed-modal">
                     CLICK HERE ONCE LICENCED
@@ -521,7 +527,7 @@ if (!isset($_SESSION['user_id'])){
                         </g></svg>
                 </div>
                 <div>
-                    <h5 class="fw-bolder">ATTEND RACE TO 1000 & ADVANCED PRODUCT TRAINING</h5>
+                    <h5 class="fw-bolder">ATTEND RACE TO $1000 LINK ( CRM ) </h5>
                     <p class="text-secondary">
                         Get your business off to a fast start, identify potential partners needed to build your agency,
                         develop a business plan, & complete the 1 /1 /7 challenge
@@ -576,12 +582,13 @@ if (!isset($_SESSION['user_id'])){
         <div class="row justify-content-center mx-auto map">
             <div class="col-12 text-center">
                 <h1 class="fw-bolder text-primary"> PHASE 5.</h1>
-                <h1 class="fw-bolder">GET CERTIFIED</h1>
+                <h1 class="fw-bolder">START PRACTICING - Meet with Mandie on that</h1>
                 <p>It's our priority to get you a level of competence and confidence that will propel you to a
-                    successful career. Field Trainers help us duplicate our efforts quickly and simply. Becoming a Field
-                    Trainer is not easy, but it is simple. Below are some basic requirements and points on what it takes
-                    to become a Producer, Financial Coach & Certified Field Trainer.
+                    successful career. Field Trainers help us duplicate our efforts quickly and simply.
+                    LEVERAGE a field trainer to help you start practicing your craft! Doctors Practice Medicine, Lawyer
+                    Practice Law…. What's your practice? Financial Literacy & Leadership Development!
                 </p>
+                <p>We will provide the 5 Tiles</p>
             </div>
         </div>
         <div class="row justify-content-center pt-5 ">
@@ -935,7 +942,7 @@ if (!isset($_SESSION['user_id'])){
                 <h1 class="fw-bolder text-primary"> PHASE 6.</h1>
                 <h1 class="fw-bolder">GET PROMOTED</h1>
                 <p>Our system is merit driven. All promotions are earned and never given. So exactly how do you advance
-                    within the company? Take a look at some of the ranks below for information on how to earn your next
+                    within the agency? Take a look at some of the ranks below for information on how to earn your next
                     promotion.
                 </p>
             </div>
@@ -944,7 +951,7 @@ if (!isset($_SESSION['user_id'])){
             <div class="col-md-6 col-lg-3 py-5">
                 <div class="card card-wrapper map2" style="min-height: 490px;">
                     <div class="card-body map-item2">
-                        <h4 class="fw-bolder text-center">LICENSED AGENT</h4>
+                        <h4 class="fw-bolder text-center">ASSOCIATE</h4>
                         <h4 class="text-primary text-center">PROMOTION | 35%</h4>
                         <div class="mt-3 d-flex">
                             <div class="px-3">
@@ -1026,7 +1033,7 @@ if (!isset($_SESSION['user_id'])){
             <div class="col-md-6 col-lg-3 py-5">
                 <div class="card card-wrapper map2" style="min-height: 490px;">
                     <div class="card-body map-item2">
-                        <h4 class="fw-bolder text-center">SENIOR AGENT</h4>
+                        <h4 class="fw-bolder text-center">SENIOR ASSOCIATE</h4>
                         <h4 class="text-primary text-center">POWER of 10</h4>
                         <h4 class="text-primary text-center">PROMOTION | 45%</h4>
                         <div class="mt-3 d-flex">
@@ -1290,8 +1297,8 @@ if (!isset($_SESSION['user_id'])){
                             </g></svg>
 
                     </div>
-                    <h3>IDENTIFY TARGET</h3>
-                    <h3 class="text-primary fw-bolder">AUDIENCE</h3>
+                    <h3>Awkward</h3>
+<!--                    <h3 class="text-primary fw-bolder">AUDIENCE</h3>-->
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 py-5">
@@ -1317,8 +1324,8 @@ if (!isset($_SESSION['user_id'])){
                                          stroke-linejoin="miter"></polygon>
                             </g></svg>
                     </div>
-                    <h3>OUTREACH & </h3>
-                    <h3 class="text-primary fw-bolder">MARKETING</h3>
+                    <h3>Mechanical</h3>
+<!--                    <h3 class="text-primary fw-bolder">MARKETING</h3>-->
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 py-5">
@@ -1349,8 +1356,8 @@ if (!isset($_SESSION['user_id'])){
                                       stroke-linejoin="miter"></line>
                             </g></svg>
                     </div>
-                    <h3>PRESENTATION</h3>
-                    <h3 class="text-primary fw-bolder">OVERVIEW</h3>
+                    <h3>Natural</h3>
+<!--                    <h3 class="text-primary fw-bolder">OVERVIEW</h3>-->
                 </div>
             </div>
         </div>

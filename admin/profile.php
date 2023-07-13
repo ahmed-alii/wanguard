@@ -57,7 +57,7 @@ if(!empty($users)){
                                 <?php
                             }
                             ?>
-                            <h2><?=$user['name']?></h2>
+                            <h2><?=$user['fname']?></h2>
 
                         </div>
                     </div>
@@ -91,7 +91,7 @@ if(!empty($users)){
 
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                                        <div class="col-lg-9 col-md-8"><?=$user['name']?></div>
+                                        <div class="col-lg-9 col-md-8"><?=$user['fname']?><?=$user['lname']?></div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 label">Email</div>
@@ -150,7 +150,7 @@ if(!empty($users)){
                                         <div class="row mb-3">
                                             <label for="name" class="col-md-4 col-lg-3 col-form-label">Name</label>
                                             <div class="col-md-8 col-lg-9">
-                                                <input name="name" type="text" class="form-control" id="edit_name" value="<?=$user['name']?>">
+                                                <input name="name" type="text" class="form-control" id="edit_name" value="<?=$user['fname']?>">
                                             </div>
                                         </div>
 

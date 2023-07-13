@@ -63,24 +63,24 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
                     <a class="nav-link" href="overview">Overview</a>
                 </li>
                 <li class="nav-item">
-                    <div class="dropdown">
+<!--                    <div class="dropdown">-->
                     <a class="nav-link dropbtn" href="trainers-page">Tranier Page</a>
-                            <div class="dropdown-content">
-                                <a href="#">Mission Statement</a>
-                                <a href="#">Contests</a>
-                                <a href="#">Chase Down Your Density</a>
-                                <a href="#">Financial Independence</a>
-                                <a href="#">The Vanguard Wealth Overview</a>
-                            </div>
-                        </div>
+<!--                            <div class="dropdown-content">-->
+<!--                                <a href="#">Mission Statement</a>-->
+<!--                                <a href="#">Contests</a>-->
+<!--                                <a href="#">Chase Down Your Density</a>-->
+<!--                                <a href="#">Financial Independence</a>-->
+<!--                                <a href="#">The Vanguard Wealth Overview</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
                 </li>
                 <li class="nav-item">
-                    <div class="dropdown">
+<!--                    <div class="dropdown">-->
                     <a class="nav-link dropbtn" href="#">Education</a>
-                        <div class="dropdown-content">
-                            <a href="#">TNT Audio Training</a>
-                        </div>
-                    </div>
+<!--                        <div class="dropdown-content">-->
+<!--                            <a href="#">TNT Audio Training</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="dashboard">Dashboard</a>

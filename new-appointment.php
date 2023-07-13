@@ -163,10 +163,8 @@ if (!isset($_SESSION['user_id'])) {
 <!--                        <button type="button" class="btn btn-secondary px-5 py-2" onclick="refreshPage()">Add Another +</button>-->
                         <button type="submit" class="btn btn-primary px-5 py-2" id="sub-btn">Submit</button>
                     </div>
-
             </div>
         </div>
     </section>
-
 
 <?php include_once "includes/footer.php" ?>

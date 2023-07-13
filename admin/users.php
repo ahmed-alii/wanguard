@@ -46,7 +46,7 @@ $users = $func->getAllUser();
                                 foreach ($users as $user) {
                                     ?>
                                     <tr>
-                                        <td><?= $user['name'] ?></td>
+                                        <td><?= $user['fname'] ?></td>
                                         <td><?= $user['email'] ?></td>
                                         <td>
                                             <?php
