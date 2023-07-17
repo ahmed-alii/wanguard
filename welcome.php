@@ -171,7 +171,7 @@ $level3 = $func->getTeamMemberByLevel(3);
                     <h3 class="fw-bolder text-gray"><?= $l1['rank'] ?></h3>
                     <h3 class="fw-bolder text-gray"><?= $l1['department'] ?></h3>
                     <h3 class="fw-bolder text-green">$<?= number_format($l1['earning']) ?> + EARNERS </h3>
-                    <div class="btn-1 py-2 d-flex">
+                    <div class="btn-1 py-2 d-flex w-100 justify-content-center">
                         <?php
                         if ($l1['bio'] != "") {
                             ?>
@@ -414,7 +414,6 @@ $level3 = $func->getTeamMemberByLevel(3);
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 

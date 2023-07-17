@@ -61,7 +61,7 @@ if ($func == 1) {
         return;
     }
 
-    $sql = "INSERT INTO `users`(`fname`, `lname`, `agent_code`, `email`, `phone`, `business_patner`, `us_states`, `password`, `image_path` , `create_date`) VALUES('$f_name','$l_name','$agent_code','$email','$phone_no','$business_partner','$us_states','$hashpass','$upload_to')";
+    $sql = "INSERT INTO `users`(`fname`, `lname`, `agent_code`, `email`, `phone`, `business_patner`, `us_states`, `password`, `image_path` , `create_date`) VALUES('$f_name','$l_name','$agent_code','$email','$phone_no','$business_partner','$us_states','$hashpass','$upload_to','$create_date')";
 
     if ($db->sql($sql)) {
         echo "true";
@@ -70,7 +70,8 @@ if ($func == 1) {
         echo "false";
     }
 
-}//1
+}
+//1
 //Update Profile
 if ($func == 1.1) {
 
@@ -648,7 +649,10 @@ else if ($func == 24) {
     $email_address = htmlspecialchars(stripslashes($_POST['email_address']));
     $email_address = $db->escapeString($email_address);
 
-    $sql = "INSERT INTO `new-client`(`f_name`, `l_name`, `policy_name`, `submitted_date`, `coverage`, `monthly_saving`, `estimated_points`, `CWA`, `trainee`, `split_option`, `split_agent`, `agent_policy`, `product`, `provider`, `med_required`, `contact_no`, `email_address`) VALUES ('$f_name','$l_name','$policy_name','$submitted_date','$coverage','$monthly_saving','$estimated_points','$CWA','$trainee','$split_option','$split_agent','$agent_policy','$product','$provider','$med_required','$contact_no','$email_address')";
+    $add_notes = htmlspecialchars(stripslashes($_POST['add_notes']));
+    $add_notes = $db->escapeString($add_notes);
+
+    $sql = "INSERT INTO `new-client`(`f_name`, `l_name`, `policy_name`, `submitted_date`, `coverage`, `monthly_saving`, `estimated_points`, `CWA`, `trainee`, `split_option`, `split_agent`, `agent_policy`, `product`, `provider`, `med_required`, `contact_no`, `email_address` , `add_notes`) VALUES ('$f_name','$l_name','$policy_name','$submitted_date','$coverage','$monthly_saving','$estimated_points','$CWA','$trainee','$split_option','$split_agent','$agent_policy','$product','$provider','$med_required','$contact_no','$email_address','$add_notes')";
 
     if ($db->sql($sql)) {
 
@@ -689,5 +693,32 @@ else if ($func == 25) {
         echo "false";
     }
 }
+
+//Signup
+if ($func == 26) {
+
+    if (!empty($_FILES['video'])) {
+        $video = $_FILES['video'];
+        $filename = $video['name'];
+        $file_tmp = $video['tmp_name'];
+        $target = "../uploads/video_file_uploads/";
+        $timestamp = time();
+        $file = $timestamp . '-' . $filename;
+        $upload_to = $target . $file;
+        move_uploaded_file($file_tmp, $upload_to);
+    } else {
+        $upload_to = "";
+    }
+
+//    $sql = "INSERT INTO `welcome_page_settings`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
+    $sql = "update `welcome_page_settings` set `video_file` = '$upload_to'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+//
 
 ?>

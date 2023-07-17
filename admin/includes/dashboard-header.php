@@ -158,6 +158,12 @@ if(!empty($users1)){
                 <span>Users</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link"  href="welcome">
+                <i class="bi bi-person"></i>
+                <span>Welcome Page Settings</span>
+            </a>
+        </li>
     </ul>
 </aside>
 <!-- End Sidebar-->

@@ -81,13 +81,11 @@ if (!isset($_SESSION['user_id'])) {
                                 <select name="tab_access" id="time" data-live-search="true"
                                         class="selectpicker mb-3 w-100"
                                         aria-label="select example" required>
-                                    <option value="0">Select</option>
-                                    <option value="1">Client</option>
-                                    <option value="2">Friend</option>
-                                    <option value="3">Co-workers</option>
-                                    <option value="4">Prospect</option>
-                                    <option value="5">Relative</option>
-                                    <option value="6">Referral</option>
+                                    <option value="AZ">AZ</option>
+                                    <option value="PST">PST</option>
+                                    <option value="MST">MST</option>
+                                    <option value="CST">CST</option>
+                                    <option value="EST">EST</option>
                                 </select>
                             </div>
                         </div>
@@ -143,9 +141,11 @@ if (!isset($_SESSION['user_id'])) {
                             <div class="col-sm-12">
                                 <select name="tab_access" id="they_are" data-live-search="true"
                                         class="selectpicker mb-3 w-100" aria-label="select example" required>
-                                    <option value="0">Select</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
+                                    <option value="Friend">Friend</option>
+                                    <option value="Guest">Guest</option>
+                                    <option value="Referral">Referral</option>
+                                    <option value="Relative">Relative</option>
+                                    <option value="Prospect">Prospect</option>
                                 </select>
                             </div>
                         </div>

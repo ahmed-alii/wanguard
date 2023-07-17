@@ -1,6 +1,9 @@
-<?php include_once "includes/header.php" ?>
-<?php
-include_once "includes/header.php";
+<?php include_once "includes/header.php";
+
+include_once "./serverside/functions.php";
+$func=new Functions();
+$users = $func->getAllUser();
+
 if (!isset($_SESSION['user_id'])) {
     ?>
     <script type="text/javascript">
@@ -9,7 +12,6 @@ if (!isset($_SESSION['user_id'])) {
     <?php
     exit();
 }
-
 ?>
     <section>
         <div class="container py-5">
@@ -49,16 +51,16 @@ if (!isset($_SESSION['user_id'])) {
                         <div class="col-lg-3">
                             <label for="Coverage/Rollover" class="col-sm-12 col-form-label fw-bolder">Coverage /Rollover
                                 Amount</label>
-                            <input type="number" class="form-control" placeholder="" id="coverage" required>
+                            <input type="text" class="form-control" placeholder="" id="coverage" required>
                         </div>
                         <div class="col-lg-3">
-                            <label for="monthly_saving" class="col-sm-12 col-form-label fw-bolder">Monthly Saving</label>
+                            <label for="monthly_saving" class="col-sm-12 col-form-label fw-bolder">Monthly Savings ($)</label>
                             <input type="number" class="form-control" placeholder="" id="monthly_saving" required>
                         </div>
                         <div class="col-lg-3">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Estimated Points
                                 <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" placeholder="" id="estimated_points" required>
+                            <input type="number" class="form-control" placeholder="" id="estimated_points" required>
                         </div>
                         <div class="col-lg-3">
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">CWA (Cash w/Application)
@@ -79,8 +81,13 @@ if (!isset($_SESSION['user_id'])) {
                             <select name="tab_access" data-live-search="true"
                                     class="selectpicker mb-3 w-100" id="writing_agent"
                                     aria-label="select example" required>
-                                <option value="0">1</option>
-                                <option value="1">2</option>
+                            <?php
+                            foreach ($users as $user) {
+                                ?>
+                                <option value=""> <?= $user['fname'] ?></option>
+                                <?php
+                            }
+                            ?>
                             </select>
                         </div>
                     </div>
@@ -90,8 +97,13 @@ if (!isset($_SESSION['user_id'])) {
                             <select name="tab_access"  data-live-search="true"
                                     class="selectpicker mb-3 w-100" id="trainee"
                                     aria-label="select example" required>
-                                <option value="0">1</option>
-                                <option value="1">2</option>
+                                <?php
+                                foreach ($users as $user) {
+                                    ?>
+                                    <option value=""> <?= $user['fname'] ?></option>
+                                    <?php
+                                }
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -182,8 +194,8 @@ if (!isset($_SESSION['user_id'])) {
                             <select name="tab_access"  data-live-search="true"
                                     class="selectpicker mb-3 w-100" id="med_required"
                                     aria-label="select example" required>
-                                <option value="0">1</option>
-                                <option value="1">2</option>
+                                <option value="YES">Yes</option>
+                                <option value="NO">No</option>
                             </select>
                         </div>
                     </div>
@@ -197,6 +209,13 @@ if (!isset($_SESSION['user_id'])) {
                             <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Email Address</label>
                             <input type="text" class="form-control" placeholder="" id="email_address" required>
                         </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-12">
+                            <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Add Notes</label>
+                            <textarea class="form-control" rows="4" id="add_notes"></textarea>
+                        </div>
+
                     </div>
 
                     <div class="col-sm-12 text-center">

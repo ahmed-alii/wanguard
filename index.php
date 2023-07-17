@@ -30,6 +30,10 @@ $events=$func->getAllEvents();
                                 pursue financial independence.</h4>
                     </div>
                 </div>
+                <video width="620" height="360" controls class="mw-100">
+                    <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"
+                            type="video/mp4">
+                </video>
             </div>
         </div>
     </section>

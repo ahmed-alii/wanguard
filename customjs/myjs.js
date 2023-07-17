@@ -860,6 +860,8 @@ $("#new-client1").submit(function (e) {
     ajax_data.append('med_required', $('#med_required option:selected').val());
     ajax_data.append('contact_no', $('#contact_no').val());
     ajax_data.append('email_address', $('#email_address').val());
+    ajax_data.append('add_notes', $('#add_notes').val());
+
 
     $("#sub_btn").attr("disabled", true);
     $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
@@ -895,7 +897,7 @@ $("#add_guests").submit(function (e) {
     var ajax_data = new FormData();
     //append into ajax data
     ajax_data.append("func", '25');
-    ajax_data.append('events', $('#events option:selected').val());
+    ajax_data.append('events', $('#events').val());
     ajax_data.append('guest_name', $('#guest_name').val());
     ajax_data.append('they_are', $('#they_are option:selected').val());
     ajax_data.append('guest_of', $('#guest_of option:selected').val());
@@ -935,4 +937,41 @@ function refreshPage() {
     location.reload();
 }
 // Reloads the current page
+
+
+$("#welcome-setting-page").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '26');
+    ajax_data.append('video', $('#video')[0].files[0]);
+
+
+    $("#sub_btn").attr("disabled", true);
+    $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Video file Upload Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to Upload Video file, Please try again ", "error");
+            }
+
+            $("#sub_btn").attr("disabled", false);
+            $("#sub_btn").html('Submit');
+
+        }//success
+    });
+});
+//Add new Guest
 

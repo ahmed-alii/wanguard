@@ -337,13 +337,7 @@ if (!isset($_SESSION['user_id'])) {
                                 <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Event Attending <span
                                             class="text-danger">*</span></label>
                                 <div class="col-sm-12">
-                                    <select name="tab_access" data-live-search="true"
-                                            class="selectpicker mb-3 w-100" id="events"
-                                            aria-label="select example" required>
-                                        <option value="0">Select</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
+                                    <input type="text" class="form-control" id="events" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
