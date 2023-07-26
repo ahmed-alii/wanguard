@@ -1,6 +1,8 @@
 <?php
 include_once "includes/dashboard-header.php";
 $users = $func->getAllUser();
+$recruitment_tools = $func->getAllRecruitmetTools();
+$client_tools = $func->getAllClientTools();
 ?>
     <style>
         .mce-notification {
@@ -101,9 +103,9 @@ $users = $func->getAllUser();
                                     <td>Mark</td>
                                     <td>Link</td>
                                     <td>
-                                        <i class="fa fa-trash p-2 btn btn-danger" title="Delete team member">
-                                            <!--                                       onclick="deleteTeamMember(`-->
-                                            <?php //= $team_member['id'] ?><!--`)"-->
+                                        <i class="fa fa-trash p-2 btn btn-danger" title="Delete Recruiting Tools"
+                                           onclick="getAllRecruitmetTools(` <?= $recruitment_tools['id'] ?>`)"
+                                           id="recruitment_tools">
                                         </i>
 
                                     </td>

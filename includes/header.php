@@ -51,7 +51,7 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
         <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
             <ul class="navbar-nav navbar-custom mr-auto w-100 justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" href="index">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="welcome">Welcome</a>

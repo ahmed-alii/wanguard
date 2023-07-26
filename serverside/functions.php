@@ -160,6 +160,19 @@ class Functions
         }
     }
 
+    function getAllRecruitmetTools(){
+        $sql = "select * from recruitment_tool order by id desc ";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
+    function getAllClientTools(){
+        $sql = "select * from client_tool order by id desc ";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
 
 
 }//class
