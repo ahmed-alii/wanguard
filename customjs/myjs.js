@@ -386,6 +386,8 @@ $("#edit_event").submit(function (e) {
         }
     });
 });//Edit event
+
+
 //Delete event
 function deleteEvent(event_id) {
 
@@ -424,7 +426,10 @@ function deleteEvent(event_id) {
             });//ajax
         }
     });
-}//Delete event
+}
+//Delete event
+
+
 //Add team
 $("#add_team_member").submit(function (e) {
     e.preventDefault();
@@ -933,6 +938,9 @@ $("#add_guests").submit(function (e) {
 });
 //Add new Guest
 
+
+
+
 function refreshPage() {
     location.reload();
 }
@@ -973,5 +981,187 @@ $("#welcome-setting-page").submit(function (e) {
         }//success
     });
 });
-//Add new Guest
+//Add video
 
+$("#add_md").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '27');
+    ajax_data.append('add_md_name', $('#add_md_name').val());
+
+    $("#sub_btn").attr("disabled", true);
+    $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "MD Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to Add MD, Please try again ", "error");
+            }
+
+            $("#sub_btn").attr("disabled", false);
+            $("#sub_btn").html('Submit');
+
+        }//success
+    });
+});
+//Add MD
+
+$("#add_smd").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '28');
+    ajax_data.append('add_smd_name', $('#add_smd_name').val());
+
+    $("#sub_btn").attr("disabled", true);
+    $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "SMD Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to Add SMD, Please try again ", "error");
+            }
+
+            $("#sub_btn").attr("disabled", false);
+            $("#sub_btn").html('Submit');
+
+        }//success
+    });
+});
+//Add SMD
+
+
+$("#recruitment_tools").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '29');
+    ajax_data.append('recruiting_tname', $('#recruiting_tname').val());
+    ajax_data.append('recruiting_tlink', $('#recruiting_tlink').val());
+
+    $("#sub_btn").attr("disabled", true);
+    $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Recruiting Tools Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to Add Recruiting Tools, Please try again ", "error");
+            }
+
+            $("#sub_btn").attr("disabled", false);
+            $("#sub_btn").html('Submit');
+
+        }//success
+    });
+});
+//Add recruiting tool
+
+$("#client_tools").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '30');
+    ajax_data.append('client_tname', $('#client_tname').val());
+    ajax_data.append('client_tlink', $('#client_tlink').val());
+
+    $("#sub_btn").attr("disabled", true);
+    $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Client Tools Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to Add Client Tools, Please try again ", "error");
+            }
+
+            $("#sub_btn").attr("disabled", false);
+            $("#sub_btn").html('Submit');
+
+        }//success
+    });
+});
+//Add client tool
+
+//Delete event
+function delete_recruitment_tool(event_id) {
+    swal({
+        text: 'Are you sure to delete this event?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 31,
+                    event_id: event_id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Event deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to delete event, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
+}
+//Delete event

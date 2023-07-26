@@ -1,32 +1,32 @@
 <?php
-if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE) {
+if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE) {
     // session isn't started
     session_start();
 }
 
 include_once "../serverside/functions.php";
 
-if(isset($_SESSION['user_id'])){
+if (isset($_SESSION['user_id'])) {
 
-}else{
+} else {
     //header('Location: sign-in');
     ?>
     <script type="text/javascript">
-        window.location.href="logout";
+        window.location.href = "logout";
     </script>
     <?php
     exit();
 }
 
-$func=new Functions();
-$users1=$func->getSingleUser($_SESSION['user_id']);
-if(!empty($users1)){
-    $user1=$users1[0];
+$func = new Functions();
+$users1 = $func->getSingleUser($_SESSION['user_id']);
+if (!empty($users1)) {
+    $user1 = $users1[0];
 
-}else{
+} else {
     ?>
     <script type="text/javascript">
-        window.location.href="logout";
+        window.location.href = "logout";
     </script>
     <?php
     exit();
@@ -83,24 +83,25 @@ if(!empty($users1)){
 
                 <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
 
-<!--                    --><?php
-//                    if ($user1['image_path'] !=""){
-//                        ?>
-<!--                        <img src="--><?php //=$user1['image_path']?><!--" class=" myImage rounded-circle" alt="Profile">-->
-<!--                        --><?php
-//                    }else{
-//                        ?>
-<!--                        <img src="assets/img/profile-img.jpg" alt="Profile" class="myImage rounded-circle">-->
-<!--                        --><?php
-//                    }
-//                    ?>
+                    <!--                    --><?php
+                    //                    if ($user1['image_path'] !=""){
+                    //                        ?>
+                    <!--                        <img src="-->
+                    <?php //=$user1['image_path']?><!--" class=" myImage rounded-circle" alt="Profile">-->
+                    <!--                        --><?php
+                    //                    }else{
+                    //                        ?>
+                    <!--                        <img src="assets/img/profile-img.jpg" alt="Profile" class="myImage rounded-circle">-->
+                    <!--                        --><?php
+                    //                    }
+                    //                    ?>
 
 
-                    <span class="d-none d-md-block dropdown-toggle ps-2"><?=$user1['fname']?></span>
+                    <span class="d-none d-md-block dropdown-toggle ps-2"><?= $user1['fname'] ?></span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                     <li class="dropdown-header">
-                        <h6><?=$user1['fname']?></h6>
+                        <h6><?= $user1['fname'] ?></h6>
 
                     </li>
                     <li>
@@ -141,27 +142,40 @@ if(!empty($users1)){
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link"  href="teams">
+            <a class="nav-link" href="teams">
                 <i class="bi bi-bar-chart"></i>
                 <span>Team</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link"  href="next_step">
+            <a class="nav-link" href="next_step">
                 <i class="bi bi-bar-chart"></i>
                 <span>Next Step</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link"  href="users">
+            <a class="nav-link" href="users">
                 <i class="bi bi-person"></i>
                 <span>Users</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link"  href="welcome">
+            <a class="nav-link" href="welcome">
                 <i class="bi bi-person"></i>
                 <span>Welcome Page Settings</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="new_business_partner">
+                <i class="bi bi-person"></i>
+                <span>New Business Partner Page Settings</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="trainers_page_setting">
+                <i class="bi bi-person"></i>
+                <span>Trainers Page Settings</span>
             </a>
         </li>
     </ul>

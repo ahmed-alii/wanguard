@@ -694,7 +694,7 @@ else if ($func == 25) {
     }
 }
 
-//Signup
+//add index video
 if ($func == 26) {
 
     if (!empty($_FILES['video'])) {
@@ -712,6 +712,78 @@ if ($func == 26) {
 
 //    $sql = "INSERT INTO `welcome_page_settings`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
     $sql = "update `welcome_page_settings` set `video_file` = '$upload_to'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+//
+
+//add MD
+if ($func == 27) {
+
+    $add_md_name = htmlspecialchars(stripslashes($_POST['add_md_name']));
+    $add_md_name = $db->escapeString($add_md_name);
+
+    $sql = "INSERT INTO `new_business_page_setting`(`md`) VALUES ('$add_md_name')";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+//
+
+//add SMD
+if ($func == 28) {
+
+    $add_smd_name = htmlspecialchars(stripslashes($_POST['add_smd_name']));
+    $add_smd_name = $db->escapeString($add_smd_name);
+
+    $sql = "INSERT INTO `new_business_page_setting`(`smd`) VALUES ('$add_smd_name')";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+//
+
+
+//add Recruitment Tools
+if ($func == 29) {
+
+    $recruiting_tname = htmlspecialchars(stripslashes($_POST['recruiting_tname']));
+    $recruiting_tname = $db->escapeString($recruiting_tname);
+
+    $recruiting_tlink = htmlspecialchars(stripslashes($_POST['recruiting_tlink']));
+    $recruiting_tlink = $db->escapeString($recruiting_tlink);
+
+    $sql = "INSERT INTO `recruitment_tool`(`recruitment_name`,`recruitment_link`) VALUES ('$recruiting_tname' , '$recruiting_tlink')";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+//
+
+
+//add Client Tools
+if ($func == 30) {
+
+    $client_tname = htmlspecialchars(stripslashes($_POST['client_tname']));
+    $client_tname = $db->escapeString($client_tname);
+
+    $client_tlink = htmlspecialchars(stripslashes($_POST['client_tlink']));
+    $client_tlink = $db->escapeString($client_tlink);
+
+    $sql = "INSERT INTO `client_tool`(`client_name`,`client_link`) VALUES ('$client_tname' , '$client_tlink')";
 
     if ($db->sql($sql)) {
         echo "true";
