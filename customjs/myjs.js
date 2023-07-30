@@ -1126,10 +1126,9 @@ $("#client_tools").submit(function (e) {
 });
 //Add client tool
 
-//Delete event
 function delete_recruitment_tool(event_id) {
     swal({
-        text: 'Are you sure to delete this event?',
+        text: 'Are you sure to delete this Recruitment event?',
         icon: 'info',
         buttons: true,
         dangerMode: true,
@@ -1164,4 +1163,43 @@ function delete_recruitment_tool(event_id) {
         }
     });
 }
-//Delete event
+//Delete recruitment tools
+
+function delete_client_tool(client_id) {
+    swal({
+        text: 'Are you sure to delete this Client event?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 32,
+                    client_id: client_id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Event deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to delete event, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
+}
+//Delete client tools

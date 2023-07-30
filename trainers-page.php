@@ -9,6 +9,8 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+$recruitment_tools = $func->getAllRecruitmetTools();
+$client_tools = $func->getAllClientTools();
 ?>
 
     <section class="bg-black" id="section1">
@@ -110,20 +112,35 @@ if (!isset($_SESSION['user_id'])) {
                                  aria-labelledby="nav-home-tab">
 
                                 <div class="container text-center">
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">FOLLOW UP INTERVIEW KIT</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">TAX OFFICE REFERRAL SHEET</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">SAVING TRACKER</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">100 NAMES LIST</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">TOP 25 LIST</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">MEMORY JOGGER</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">PROMOTION VALIDATION FORM</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">TRAINER CERTIFICATION FORM</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">LAUNCH BUSINESS PLAN</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">THE FORCE SCRIPT MANUEL</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">BREAK THE FLOOR</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">BPM INFORMATION KIT</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">BFS MANUAL</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">NEW RECRUIT FLOWCHART</button>
+
+                                    <?php
+                                    foreach ($recruitment_tools as $r_tools) {
+                                        ?>
+
+                                        <a href="<?= $r_tools['recruitment_link'] ?>">
+                                            <button class="btn btn-rounded py-2 mx-3 my-3">
+                                                <?= $r_tools['recruitment_Name'] ?>
+                                            </button>
+                                        </a>
+                                        <?php
+                                    }
+                                    ?>
+
+
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">FOLLOW UP INTERVIEW KIT</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">TAX OFFICE REFERRAL SHEET</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">SAVING TRACKER</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">100 NAMES LIST</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">TOP 25 LIST</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">MEMORY JOGGER</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">PROMOTION VALIDATION FORM</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">TRAINER CERTIFICATION FORM</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">LAUNCH BUSINESS PLAN</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">THE FORCE SCRIPT MANUEL</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">BREAK THE FLOOR</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">BPM INFORMATION KIT</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">BFS MANUAL</button>-->
+<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">NEW RECRUIT FLOWCHART</button>-->
                                 </div>
 
                             </div>

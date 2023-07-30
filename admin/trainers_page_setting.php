@@ -99,28 +99,27 @@ $client_tools = $func->getAllClientTools();
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Mark</td>
-                                    <td>Link</td>
-                                    <td>
-                                        <i class="fa fa-trash p-2 btn btn-danger" title="Delete Recruiting Tools"
-                                           onclick="getAllRecruitmetTools(` <?= $recruitment_tools['id'] ?>`)"
-                                           id="recruitment_tools">
-                                        </i>
+                                <?php
+                                foreach ($recruitment_tools as $r_tools){
+                                    ?>
+                                    <tr>
+                                        <td><?= $r_tools['recruitment_Name'] ?></td>
+                                        <td><?= $r_tools['recruitment_link'] ?></td>
+                                        <td>
+                                            <i class="fa fa-trash p-2 btn btn-danger" title="Delete Recruiting Tools"
+                                               onclick="delete_recruitment_tool(`<?= $r_tools['id'] ?>`)"
+                                               id="recruitment_tools">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                <?php
+                                }
+                                ?>
 
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Jacob</td>
-                                    <td>Link</td>
-                                    <td><i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"> </i></td>
-                                </tr>
-                                <tr>
-                                    <td>Larry</td>
-                                    <td>Link</td>
-                                    <td><i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"> </i></td>
 
-                                </tr>
+
+
+
                                 </tbody>
                             </table>
                         </div>
@@ -140,27 +139,22 @@ $client_tools = $func->getAllClientTools();
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr>
-                                    <td>Mark</td>
-                                    <td>Link</td>
-                                    <td>
-                                        <i class="fa fa-trash p-2 btn btn-danger" title="Delete team member">
-                                            <!--                                       onclick="deleteTeamMember(`-->
-                                            <?php //= $team_member['id'] ?><!--`)"-->
-                                        </i>
-
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Jacob</td>
-                                    <td>Link</td>
-                                    <td><i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"> </i></td>
-                                </tr>
-                                <tr>
-                                    <td>Larry</td>
-                                    <td>Link</td>
-                                    <td><i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"> </i></td>
-                                </tr>
+                                <?php
+                                foreach ($client_tools as $c_tools){
+                                    ?>
+                                    <tr>
+                                        <td><?= $c_tools['client_name'] ?></td>
+                                        <td><?= $c_tools['client_link'] ?></td>
+                                        <td>
+                                            <i class="fa fa-trash p-2 btn btn-danger" title="Delete Recruiting Tools"
+                                               onclick="delete_client_tool(`<?= $c_tools['id'] ?>`)"
+                                               id="recruitment_tools">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <?php
+                                }
+                                ?>
                                 </tbody>
                             </table>
                         </div>

@@ -791,6 +791,35 @@ if ($func == 30) {
         echo "false";
     }
 }
+if ($func == 31) {
+
+    $event_id= htmlspecialchars(stripslashes($_POST['event_id']));
+    $event_id= $db->escapeString($event_id);
+
+    $sql = "delete from recruitment_tool where id= '$event_id'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
 //
+
+if ($func == 32) {
+
+    $client_id= htmlspecialchars(stripslashes($_POST['client_id']));
+    $client_id= $db->escapeString($client_id);
+
+    $sql = "delete from client_tool where id= '$client_id'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+//
+
 
 ?>

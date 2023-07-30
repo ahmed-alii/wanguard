@@ -174,5 +174,20 @@ class Functions
         }
     }
 
+    function getAllMD(){
+        $sql = "select * from client_tool order by id desc ";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+    
+    function getAllSMD(){
+        $sql = "select * from client_tool order by id desc ";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
+
 
 }//class
