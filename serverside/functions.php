@@ -207,6 +207,22 @@ class Functions
         }
     }
 
+    function getWelcomeVideoFilePath()
+    {
+        $sql = "SELECT `video_file` FROM `welcome_page_settings`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
+    function getRecogVideoPath()
+    {
+        $sql = "SELECT `video_file` FROM `recognition_video`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
 
 
 }//class

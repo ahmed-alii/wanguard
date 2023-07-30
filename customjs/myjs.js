@@ -442,6 +442,8 @@ $("#add_team_member").submit(function (e) {
     ajax_data.append('department', $('#department').val());
     ajax_data.append('earning', $('#earning').val());
     ajax_data.append('youtube_link', $('#youtube_link').val());
+    ajax_data.append('linkedin_link', $('#linkedin_link').val());
+    ajax_data.append('twitter_link', $('#twitter_link').val());
     ajax_data.append('appointment_link', $('#appointment_link').val());
     ajax_data.append('image', $('#update_profile_photo')[0].files[0]);
 
@@ -484,6 +486,8 @@ $("#edit_team_member").submit(function (e) {
     ajax_data.append('department', $('#edit_department').val());
     ajax_data.append('earning', $('#edit_earning').val());
     ajax_data.append('youtube_link', $('#edit_youtube_link').val());
+    ajax_data.append('linkedin_link', $('#edit_linkedin_link').val());
+    ajax_data.append('twitter_link', $('#edit_twitter_link').val());
     ajax_data.append('appointment_link', $('#edit_appointment_link').val());
     ajax_data.append('image', $('#edit_update_profile_photo')[0].files[0]);
 
@@ -982,6 +986,41 @@ $("#welcome-setting-page").submit(function (e) {
     });
 });
 //Add video
+
+$("#welcome-setting-page-2").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '266');
+    ajax_data.append('video', $('#video2')[0].files[0]);
+
+
+    $("#sub_btn").attr("disabled", true);
+    $("#sub_btn").html(`Please wait... <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Video file Upload Successfully!! ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to Upload Video file, Please try again ", "error");
+            }
+
+            $("#sub_btn").attr("disabled", false);
+            $("#sub_btn").html('Submit');
+
+        }//success
+    });
+});
 
 $("#add_md").submit(function (e) {
     e.preventDefault();

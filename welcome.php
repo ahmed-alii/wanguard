@@ -15,6 +15,8 @@ $func = new Functions();
 $level1 = $func->getTeamMemberByLevel(1);
 $level2 = $func->getTeamMemberByLevel(2);
 $level3 = $func->getTeamMemberByLevel(3);
+$welcomeVideoPath = $func->getWelcomeVideoFilePath();
+
 
 ?>
 
@@ -175,79 +177,43 @@ $level3 = $func->getTeamMemberByLevel(3);
                         <?php
                         if ($l1['bio'] != "") {
                             ?>
-                            <button onclick="showBio(`<?= $l1['id'] ?>`)" class="btn px-5 my-1 ">BIO
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                     xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                                     width="15px" height="50px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
+                            <button onclick="showBio(`<?= $l1['id'] ?>`)" class="btn px-5 m-1 py-3">BIO
+
                             </button>
                             <?php
                         }
                         ?>
 
+                        <?php
+                        if ($l1['youtube_link'] != "") {
+                            ?>
+                            <button onclick="window.location.href = '<?= $l1['youtube_link'] ?>'"
+                                    class="btn btn-social m-1">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf1JREFUaEPtWIlNAzEQnK0AOgAqCKkA6AAqoIRABUAF0AGUQAckFZAOgA7oYNEgn+RcfNjxE98hWzpFsuP1zs5+tmDiQyauPxqA2gw2BhoDiRZoLpRowOTt/58BVT0FcAbgEMCx+WzLcZ1rMWPp2NTNrQF8iQh/B8cgA6pKZZ8BnMdolnHPC4AHEfl0yXQCMMp/ZFQih6gTF4ghAG8jsHwf9KuIXPUntwAYn3/PYbICMub9mHABuAHwWODwHCJvReTJFuQCwD8scpxWQAaD+d4HgGmMaXOMYyUiG1nRxUAqgAsATH1HBSwQBIDpkzUgaojIr1FUlVQzng6iBLk3rUVk7nMhTTmwA2BAsEIzpq5TZG4obAzUzblcKBuA7hCTmgkkObZsA1H+XgBYQC4NI9HxURWA5VaMjaj4qA7AgLgzAHbuYqsCUFW6EKt8cparEcRUPLk13ysDqkoX6dwlSyYNAfCdUnysQsZ+isVsZz//A2lQJc7RSvAmF+3ntQFkcZUBIUEMTL6dpt8y8MY4gi40fCaZ7pXSVEo+YUT3K4Wo2/J/ZzNnAIyRhfBnFQsEb1azQhYNFbti3zT0Qud9GzW9PBnp8nq/HeB8irtRQXvQffmxoC6jnxZDzVP7f14GaivoO78B8Fmo9HpjoLSFffIbAz4LlV5vDJS2sE/+D8vQtzHIU/lnAAAAAElFTkSuQmCC"/>
+                            </button>
+                            <?php
+                        }
+                        ?>
 
-                        <!--                        <a target="_blank" href="-->
-                        <?php //= $l1['youtube_link'] ?><!--">-->
-                        <!--                            <button class="btn px-5">-->
-                        <?php //= $l1['name'] ?><!-- YOUTUBE-->
-                        <!--                                <svg xmlns="http://www.w3.org/2000/svg"-->
-                        <!--                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"-->
-                        <!--                                     xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"-->
-                        <!--                                     width="15px" height="50px">-->
-                        <!--                                <g>-->
-                        <!--                                    <path-->
-                        <!--                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>-->
-                        <!--                                </g>-->
-                        <!--                            </svg>-->
-                        <!--                            </button>-->
-                        <!--                        </a>-->
-                        <div class="d-flex px-3 pt-3 text-center">
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
-                                    <path fill="#3F51B5"
-                                          d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"/>
-                                    <path fill="#FFF"
-                                          d="M34.368,25H31v13h-5V25h-3v-4h3v-2.41c0.002-3.508,1.459-5.59,5.592-5.59H35v4h-2.287C31.104,17,31,17.6,31,18.723V21h4L34.368,25z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
-                                    <linearGradient id="PgB_UHa29h0TpFV_moJI9a" x1="9.816" x2="41.246" y1="9.871"
-                                                    y2="41.301"
-                                                    gradientUnits="userSpaceOnUse">
-                                        <stop offset="0" stop-color="#f44f5a"/>
-                                        <stop offset=".443" stop-color="#ee3d4a"/>
-                                        <stop offset="1" stop-color="#e52030"/>
-                                    </linearGradient>
-                                    <path fill="url(#PgB_UHa29h0TpFV_moJI9a)"
-                                          d="M45.012,34.56c-0.439,2.24-2.304,3.947-4.608,4.267C36.783,39.36,30.748,40,23.945,40	c-6.693,0-12.728-0.64-16.459-1.173c-2.304-0.32-4.17-2.027-4.608-4.267C2.439,32.107,2,28.48,2,24s0.439-8.107,0.878-10.56	c0.439-2.24,2.304-3.947,4.608-4.267C11.107,8.64,17.142,8,23.945,8s12.728,0.64,16.459,1.173c2.304,0.32,4.17,2.027,4.608,4.267	C45.451,15.893,46,19.52,46,24C45.89,28.48,45.451,32.107,45.012,34.56z"/>
-                                    <path d="M32.352,22.44l-11.436-7.624c-0.577-0.385-1.314-0.421-1.925-0.093C18.38,15.05,18,15.683,18,16.376	v15.248c0,0.693,0.38,1.327,0.991,1.654c0.278,0.149,0.581,0.222,0.884,0.222c0.364,0,0.726-0.106,1.04-0.315l11.436-7.624	c0.523-0.349,0.835-0.932,0.835-1.56C33.187,23.372,32.874,22.789,32.352,22.44z"
-                                          opacity=".05"/>
-                                    <path d="M20.681,15.237l10.79,7.194c0.689,0.495,1.153,0.938,1.153,1.513c0,0.575-0.224,0.976-0.715,1.334	c-0.371,0.27-11.045,7.364-11.045,7.364c-0.901,0.604-2.364,0.476-2.364-1.499V16.744C18.5,14.739,20.084,14.839,20.681,15.237z"
-                                          opacity=".07"/>
-                                    <path fill="#fff"
-                                          d="M19,31.568V16.433c0-0.743,0.828-1.187,1.447-0.774l11.352,7.568c0.553,0.368,0.553,1.18,0,1.549	l-11.352,7.568C19.828,32.755,19,32.312,19,31.568z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
-                                    <path fill="#0078d4"
-                                          d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5	V37z"/>
-                                    <path d="M30,37V26.901c0-1.689-0.819-2.698-2.192-2.698c-0.815,0-1.414,0.459-1.779,1.364	c-0.017,0.064-0.041,0.325-0.031,1.114L26,37h-7V18h7v1.061C27.022,18.356,28.275,18,29.738,18c4.547,0,7.261,3.093,7.261,8.274	L37,37H30z M11,37V18h3.457C12.454,18,11,16.528,11,14.499C11,12.472,12.478,11,14.514,11c2.012,0,3.445,1.431,3.486,3.479	C18,16.523,16.521,18,14.485,18H18v19H11z"
-                                          opacity=".05"/>
-                                    <path d="M30.5,36.5v-9.599c0-1.973-1.031-3.198-2.692-3.198c-1.295,0-1.935,0.912-2.243,1.677	c-0.082,0.199-0.071,0.989-0.067,1.326L25.5,36.5h-6v-18h6v1.638c0.795-0.823,2.075-1.638,4.238-1.638	c4.233,0,6.761,2.906,6.761,7.774L36.5,36.5H30.5z M11.5,36.5v-18h6v18H11.5z M14.457,17.5c-1.713,0-2.957-1.262-2.957-3.001	c0-1.738,1.268-2.999,3.014-2.999c1.724,0,2.951,1.229,2.986,2.989c0,1.749-1.268,3.011-3.015,3.011H14.457z"
-                                          opacity=".07"/>
-                                    <path fill="#fff"
-                                          d="M12,19h5v17h-5V19z M14.485,17h-0.028C12.965,17,12,15.888,12,14.499C12,13.08,12.995,12,14.514,12	c1.521,0,2.458,1.08,2.486,2.499C17,15.887,16.035,17,14.485,17z M36,36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698	c-1.501,0-2.313,1.012-2.707,1.99C24.957,25.543,25,26.511,25,27v9h-5V19h5v2.616C25.721,20.5,26.85,19,29.738,19	c3.578,0,6.261,2.25,6.261,7.274L36,36L36,36z"/>
-                                </svg>
-                            </div>
-                        </div>
+                        <?php
+                        if ($l1['linkedin_link'] != "") {
+                            ?>
+                            <button onclick="window.location.href = '<?= $l1['linkedin_link'] ?>'"
+                                    class="btn btn-social m-1">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf9JREFUaEPtWcFRwzAQ3KsAqAA6IKkAqACoAOgAKgAqgA4IFUAHQAUkFZB0QAfLnJEYx5Esm5EjeUZ6JSNb2r093UqyYORNRo4fhUBqBYsC2SpA8gzALYBJYpBLADci8urC4U0hkl8ADhKDt9PPRWTalwAzAV/BEBFnsNsUKARiKhhLgQWAaxF5V3AkjwE8AjiMCdaZ65FS6MSCt5MYEm+jIOCTkeTg6yVKCo2eAICpiMzr6UJSje5zFCkEQMGfi4i6oy5iNbqXbbh1lBSqRfnb/N4dOvJ2/NgEtoX7b55YBJ4BVOlTa5pGF7X/9w52lwD2AXwY31jqWjIlWN/X/qO2qMQiEPQB10Qk1fhmIjLzgSSpJJ58/akJTJrVywWU5J3Zwm90JyXQdcGQ1KKgKbrTfCcLAqbs6lpY2VLcBEpSDy6n2REg+aAbwRqwK9ea8KVRUgVaNnx7ImI9peJGUkkq2bWWmoBvcQarWmwjC07oKaNaPuteYXEFx8uFgPqAy6gKgb6H+mDEWpy4KOAyxKJAs8aXFPq9qtm45UhtZNmUUbX5tUO9OQ/r5ZZtGsFm037XLXeX8aqxYinQdWcc/blCIHpIew74HwX0ZKSHjxzaQkScX4rajEw/Mek2ePCb50CEVuZGvN8nphzC3gVD+czaJUpDPlMUGDK6XcYevQI/EWKeQDGkBr4AAAAASUVORK5CYII="/>
+                            </button>
+                            <?php
+                        }
+                        ?>
 
+                        <?php
+                        if ($l1['twitter_link'] != "") {
+                        ?>
+                        <button onclick="window.location.href = '<?= $l1['twitter_link'] ?>'"
+                                class="btn btn-social m-1">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAudJREFUaEPtmIFtFEEMRb8rACogVABUAFRAqABSAaECkgpIKiCpAKiApAJIBUAFIRUYPWlWHHczO57duUMnraXT3WlnvP72t8ce056L7bn9WgD87wguEVgiMNMDC4VaHOju9yW9lXQg6Un6XEn6KenSzPi9Iewzs9+5Z8UIuPuBmaG4i7j7c0kfk/ElnQB4NRiLDZJeS3pqZoetAD5LujWzo7kI3P1E0vugnu+SAAJgooS8KEUnG4EU6tu0+WIOiOT5r0Hjc8tOzQwHZKUEAPSrL50EIjniW4U2Y9jeSWI/9HlgZm/WF0cBsI/QHpkZ3yFxd14I7+fKDZTKJXILgMGIEzM7jVjUyP2SSow/LBWUEgCSh9CVhCgA5MsYEHcnGZ9FwBbWFD0/rB8roxj5uPJyyizV6jznoQ4AitUnAoDE+dTgPQDzARTfHDxQbU4EpgPAcHfHuy8bQPReOg1Aqt0PJcHxs3Qa9jYuou9RrRuIVCHoMJyIkZd2W2Nm1WZzLIm9myXTFN2YWdVxYwDmlsBpZv/dRWU7rikZ7UYl/agp2OJzulKKyKiMcqzTSVqzIff8zsyYHapSTZKO/UzVmJUFDDcbjVtOQRVAOg/oTlHIcLELYYAJNY1VAO5OJRgOM35nJ6OOqK7NDIeFJAKAsW6XyRz2PgirABKFLnZEn1DpXA1NFAAVgXOh1p2Gwl5Y9IsTv3T7UFIcApCiAAjq8pzusmTHXZq4QonbHIHVDanRoyKRG73AMKpC02YJR2Bdc7qz+dChKk02PpzEaxGASpwHXHWETssRt84yvgmAu0MXzgDoM9dwEpZBvZnz687YoFDiOMZi5NDOhg+WAInP04VA9q4zsP+fJaWBhgQlqXolKS+9lnTcw+vhKpQSlZ4c6jBitgpUofSe1UbDVsXD+nAVSj0RlIJORAjh/730Gw8jw83EVW9v50CGAUz10Lb3LQC27eGa/iUCNQ9t+/kSgW17uKZ/7yPwB5uu7DGSgT7HAAAAAElFTkSuQmCC"/> <?php
+                            }
+                            ?>
                     </div>
                     <div class="btn-2">
                         <a href="<?= $l1['appointment_link'] ?>" target="_blank">
@@ -407,8 +373,12 @@ $level3 = $func->getTeamMemberByLevel(3);
                 <h1 class="fw-bold">WHY YOU MATTER</h1>
                 <p class="text-primary fw-bold">THE NEED HAS NEVER BEEN BIGGER</p>
                 <div class="pt-5">
+                    <?php
+                    $videoPath = $welcomeVideoPath[0]["video_file"];
+                    $absoluteVideoURL = str_replace('..', '', $videoPath);
+                    ?>
                     <video width="1020" height="540" controls class="mw-100">
-                        <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"
+                        <source src="<?= $absoluteVideoURL ?>"
                                 type="video/mp4">
                     </video>
                 </div>

@@ -34,6 +34,21 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/multi-select.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        .btn-social{
+            height: 57px;
+            width: 57px;
+            border-radius: 50%;
+        }
+        .btn-social img{
+            width: 30px;
+
+        }
+        .btn-social:hover img{
+            filter: invert(100%);
+
+        }
+    </style>
 
 </head>
 <body>

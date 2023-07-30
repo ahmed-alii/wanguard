@@ -37,6 +37,7 @@ if (!isset($_SESSION['user_id'])){
         </div>
     </div>
 </section>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000000" fill-opacity="1" d="M0,128L720,160L1440,0L1440,0L720,0L0,0Z"></path></svg>
 
 <section id="section2">
     <div class="container">
@@ -138,6 +139,7 @@ if (!isset($_SESSION['user_id'])){
     </div>
 </section>
 
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#000000" fill-opacity="1" d="M0,128L720,160L1440,0L1440,320L720,320L0,320Z"></path></svg>
 <section class="bg-black" id="section3">
     <div class="container py-5">
         <div class="row justify-content-center">

@@ -11,6 +11,8 @@ if (!isset($_SESSION['user_id'])){
 include_once "serverside/functions.php";
 $func=new Functions();
 $events=$func->getAllEvents();
+$recogVideoPath = $func->getRecogVideoPath();
+
 
 ?>
     <section class="bg-black hero-section">
@@ -30,8 +32,12 @@ $events=$func->getAllEvents();
                                 pursue financial independence.</h4>
                     </div>
                 </div>
+                <?php
+                $videoPath = $recogVideoPath[0]["video_file"];
+                $absoluteVideoURL = str_replace('..', '', $videoPath);
+                ?>
                 <video width="620" height="360" controls class="mw-100">
-                    <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"
+                    <source src="<?= $absoluteVideoURL ?>"
                             type="video/mp4">
                 </video>
             </div>

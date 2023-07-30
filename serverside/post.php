@@ -332,6 +332,12 @@ else if ($func == 10) {
     $youtube_link = htmlspecialchars(stripslashes($_POST['youtube_link']));
     $youtube_link = $db->escapeString($youtube_link);
 
+    $linkedin_link = htmlspecialchars(stripslashes($_POST['linkedin_link']));
+    $linkedin_link = $db->escapeString($linkedin_link);
+
+    $twitter_link = htmlspecialchars(stripslashes($_POST['twitter_link']));
+    $twitter_link = $db->escapeString($twitter_link);
+
     $appointment_link = htmlspecialchars(stripslashes($_POST['appointment_link']));
     $appointment_link = $db->escapeString($appointment_link);
 
@@ -352,8 +358,8 @@ else if ($func == 10) {
     }
 
 
-    $sql = "insert into team_members (`rank`,`appointment_link`,`name`,`level`,`department`,`earning`,`youtube_link`,`image_path`,created_date) 
-                      values ('$rank','$appointment_link','$name','$level','$department','$earning','$youtube_link','$upload_to','$create_date')";
+    $sql = "insert into team_members (`rank`,`appointment_link`,`name`,`level`,`department`,`earning`,`youtube_link`, `linkedin_link`, `twitter_link`,`image_path`,created_date) 
+                      values ('$rank','$appointment_link','$name','$level','$department','$earning','$youtube_link', '$linkedin_link', '$twitter_link','$upload_to','$create_date')";
 
     if ($db->sql($sql)) {
         echo "true";
@@ -385,6 +391,12 @@ else if ($func == 11) {
     $youtube_link = htmlspecialchars(stripslashes($_POST['youtube_link']));
     $youtube_link = $db->escapeString($youtube_link);
 
+    $linkedin_link = htmlspecialchars(stripslashes($_POST['linkedin_link']));
+    $linkedin_link = $db->escapeString($linkedin_link);
+
+    $twitter_link = htmlspecialchars(stripslashes($_POST['twitter_link']));
+    $twitter_link = $db->escapeString($twitter_link);
+
     $team_id = htmlspecialchars(stripslashes($_POST['team_id']));
     $team_id = $db->escapeString($team_id);
 
@@ -399,11 +411,11 @@ else if ($func == 11) {
         $upload_to = $target . $file;
         move_uploaded_file($file_tmp, $upload_to);
 
-        $sql = "update team_members set `rank`='$rank',`appointment_link`='$appointment_link',`name`='$name',`level`='$level',`department`='$department',`earning`='$earning',`youtube_link`='$youtube_link',`image_path`='$upload_to' where `id`='$team_id' ";
+        $sql = "update team_members set `rank`='$rank',`appointment_link`='$appointment_link',`name`='$name',`level`='$level',`department`='$department',`earning`='$earning',`youtube_link`='$youtube_link',`linkedin_link`='$linkedin_link',`twitter_link`='$twitter_link',`image_path`='$upload_to' where `id`='$team_id' ";
 
     } else {
         $upload_to = "";
-        $sql = "update team_members set `rank`='$rank',`appointment_link`='$appointment_link',`name`='$name',`level`='$level',`department`='$department',`earning`='$earning',`youtube_link`='$youtube_link' where `id`='$team_id' ";
+        $sql = "update team_members set `rank`='$rank',`appointment_link`='$appointment_link',`name`='$name',`level`='$level',`department`='$department',`earning`='$earning',`youtube_link`='$youtube_link',`linkedin_link`='$linkedin_link',`twitter_link`='$twitter_link' where `id`='$team_id' ";
 
     }
     if ($db->sql($sql)) {
@@ -719,6 +731,31 @@ if ($func == 26) {
         echo "false";
     }
 }
+
+//add index video
+if ($func == 266) {
+    if (!empty($_FILES['video'])) {
+
+        $video = $_FILES['video'];
+        $filename = $video['name'];
+        $file_tmp = $video['tmp_name'];
+        $target = "../uploads/video_file_uploads/";
+        $timestamp = time();
+        $file = $timestamp . '-' . $filename;
+        $upload_to = $target . $file;
+        move_uploaded_file($file_tmp, $upload_to);
+    } else {
+        $upload_to = "else";
+    }
+
+    $sql = "update `recognition_video` set `video_file` = '$upload_to'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
 //
 
 //add MD
@@ -793,8 +830,8 @@ if ($func == 30) {
 }
 if ($func == 31) {
 
-    $event_id= htmlspecialchars(stripslashes($_POST['event_id']));
-    $event_id= $db->escapeString($event_id);
+    $event_id = htmlspecialchars(stripslashes($_POST['event_id']));
+    $event_id = $db->escapeString($event_id);
 
     $sql = "delete from recruitment_tool where id= '$event_id'";
 
@@ -808,8 +845,8 @@ if ($func == 31) {
 
 if ($func == 32) {
 
-    $client_id= htmlspecialchars(stripslashes($_POST['client_id']));
-    $client_id= $db->escapeString($client_id);
+    $client_id = htmlspecialchars(stripslashes($_POST['client_id']));
+    $client_id = $db->escapeString($client_id);
 
     $sql = "delete from client_tool where id= '$client_id'";
 
@@ -839,8 +876,8 @@ if ($func == 33) {
 
 if ($func == 34) {
 
-    $section_id= htmlspecialchars(stripslashes($_POST['section_id']));
-    $section_id= $db->escapeString($section_id);
+    $section_id = htmlspecialchars(stripslashes($_POST['section_id']));
+    $section_id = $db->escapeString($section_id);
 
     $sql = "delete from trainer_sections where id= '$section_id'";
 
@@ -850,7 +887,7 @@ if ($func == 34) {
         echo "false";
     }
 }
-if($func == 35){
+if ($func == 35) {
     $sectionid = htmlspecialchars(stripslashes($_POST['sectionid']));
     $sectionid = $db->escapeString($sectionid);
 
@@ -880,7 +917,7 @@ if($func == 35){
     }
 
 }
-if($func ==36){
+if ($func == 36) {
     $imageid = htmlspecialchars(stripslashes($_POST['imageid']));
     $imageid = $db->escapeString($imageid);
 

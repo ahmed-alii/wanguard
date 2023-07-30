@@ -1,4 +1,9 @@
-<?php include_once "includes/dashboard-header.php" ?>
+<?php include_once "includes/dashboard-header.php" ;
+
+$welcomeVideoPath = $func->getWelcomeVideoFilePath();
+$recogVideoPath = $func->getRecogVideoPath();
+
+?>
 
     <main id="main" class="main">
         <div class="pagetitle">
@@ -17,7 +22,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Welcome Page Elements</h5>
+                            <h5 class="card-title">Welcome Page Video</h5>
                             <!-- Form Elements -->
                             <form id="welcome-setting-page">
                                 <div class="row mb-3">
@@ -33,6 +38,32 @@
                                 </div>
                             </form>
                             <!-- End Form Elements -->
+
+                            <video src="<?= $welcomeVideoPath[0]["video_file"] ?>" controls class="img-fluid" style="height: 300px;"></video>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Upload Recognition Video</h5>
+                            <!-- Form Elements -->
+                            <form id="welcome-setting-page-2">
+                                <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-2 col-form-label">Recognition Video</label>
+                                    <div class="col-sm-10">
+                                        <input type="file" class="form-control" id="video2" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-12 text-center pt-3">
+                                        <button type="submit" class="btn btn-primary" id="sub-btn-2">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- End Form Elements -->
+                            <video src="<?= $recogVideoPath[0]["video_file"] ?>" controls class="img-fluid" style="height: 300px;"></video>
+
                         </div>
                     </div>
                 </div>

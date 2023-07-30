@@ -162,7 +162,7 @@ if (!empty($users1)) {
         <li class="nav-item">
             <a class="nav-link" href="welcome">
                 <i class="bi bi-person"></i>
-                <span>Welcome Page Settings</span>
+                <span>Welcome Page & Videos</span>
             </a>
         </li>
 

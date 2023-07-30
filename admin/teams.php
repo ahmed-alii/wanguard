@@ -36,16 +36,16 @@ $team_members = $func->getAllTeamMembers();
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-<!--                                    <th scope="col">#</th>-->
-<!--                                    <th scope="col">Picture</th>-->
+                                    <!--                                    <th scope="col">#</th>-->
+                                    <!--                                    <th scope="col">Picture</th>-->
                                     <th scope="col">Name</th>
                                     <th scope="col">Level</th>
                                     <th scope="col">Rank</th>
                                     <th scope="col">Department</th>
                                     <th scope="col">Earning</th>
-<!--                                    <th scope="col">Youtube Link</th>-->
-<!--                                    <th scope="col">Appointment Link</th>-->
-<!--                                    <th scope="col">Created Date</th>-->
+                                    <!--                                    <th scope="col">Youtube Link</th>-->
+                                    <!--                                    <th scope="col">Appointment Link</th>-->
+                                    <!--                                    <th scope="col">Created Date</th>-->
                                     <th scope="col">Actions</th>
                                 </tr>
                                 </thead>
@@ -54,31 +54,32 @@ $team_members = $func->getAllTeamMembers();
                                 foreach ($team_members as $team_member) {
                                     ?>
                                     <tr>
-<!--                                        <th scope="row"><= $team_member['id'] ?></th>-->
-<!--                                        <td>-->
-<!--                                            <php-->
-<!--                                            if ($team_member['image_path'] != "") {-->
-<!--                                                ?>-->
-<!--                                                <img src="<= $team_member['image_path'] ?>" height="75" width="75"-->
-<!--                                                     class="rounded-circle">-->
-<!--                                                <php-->
-<!--                                            }-->
-<!--                                            ?>-->
-<!--                                        </td>-->
+                                        <!--                                        <th scope="row"><= $team_member['id'] ?></th>-->
+                                        <!--                                        <td>-->
+                                        <!--                                            <php-->
+                                        <!--                                            if ($team_member['image_path'] != "") {-->
+                                        <!--                                                ?>-->
+                                        <!--                                                <img src="<= $team_member['image_path'] ?>" height="75" width="75"-->
+                                        <!--                                                     class="rounded-circle">-->
+                                        <!--                                                <php-->
+                                        <!--                                            }-->
+                                        <!--                                            ?>-->
+                                        <!--                                        </td>-->
                                         <td><?= $team_member['name'] ?></td>
                                         <td><?= $team_member['level'] ?></td>
                                         <td><?= $team_member['rank'] ?></td>
                                         <td><?= $team_member['department'] ?></td>
                                         <td><?= $team_member['earning'] ?></td>
-<!--                                        <td><a href="<= $team_member['youtube_link'] ?>" target="_blank">YouTube</a>-->
-<!--                                        </td>-->
-<!--                                        <td><a href="<= $team_member['appointment_link'] ?>" target="_blank">Appointment</a>-->
-<!--                                        </td>-->
-<!--                                        <td><= $team_member['created_date'] ?></td>-->
+                                        <!--                                        <td><a href="<= $team_member['youtube_link'] ?>" target="_blank">YouTube</a>-->
+                                        <!--                                        </td>-->
+                                        <!--                                        <td><a href="<= $team_member['appointment_link'] ?>" target="_blank">Appointment</a>-->
+                                        <!--                                        </td>-->
+                                        <!--                                        <td><= $team_member['created_date'] ?></td>-->
                                         <td>
-                                            <a href="add-bio?bio_id=<?=$team_member['id']?>"> <i class="fa fa-plus p-2 btn btn-success" title="Edit Bio"></i></a>
+                                            <a href="add-bio?bio_id=<?= $team_member['id'] ?>"> <i
+                                                        class="fa fa-plus p-2 btn btn-success" title="Edit Bio"></i></a>
                                             <i class="fa fa-edit p-2 btn btn-primary" title="Edit team member"
-                                               onclick="editTeamMember(`<?= $team_member['id'] ?>`,`<?= $team_member['name'] ?>`,`<?= $team_member['rank'] ?>`,`<?= $team_member['level'] ?>`,`<?= $team_member['department'] ?>`,`<?= $team_member['earning'] ?>`,`<?= $team_member['youtube_link'] ?>`,`<?= $team_member['appointment_link'] ?>`)"></i>
+                                               onclick="editTeamMember(`<?= $team_member['id'] ?>`,`<?= $team_member['name'] ?>`,`<?= $team_member['rank'] ?>`,`<?= $team_member['level'] ?>`,`<?= $team_member['department'] ?>`,`<?= $team_member['earning'] ?>`,`<?= $team_member['youtube_link'] ?>`, `<?= $team_member['linkedin_link'] ?>`,`<?= $team_member['twitter_link'] ?>`,`<?= $team_member['appointment_link'] ?>`)"></i>
                                             <i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"
                                                onclick="deleteTeamMember(`<?= $team_member['id'] ?>`)"></i>
 
@@ -159,6 +160,18 @@ $team_members = $func->getAllTeamMembers();
                             <label for="inputTime" class="col-sm-12 col-form-label">Youtube Link</label>
                             <div class="col-sm-12">
                                 <input type="text" id="youtube_link" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="inputTime" class="col-sm-12 col-form-label">LinkedIn</label>
+                            <div class="col-sm-12">
+                                <input type="text" id="linkedin_link" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="inputTime" class="col-sm-12 col-form-label">Twitter</label>
+                            <div class="col-sm-12">
+                                <input type="text" id="twitter_link" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
@@ -243,6 +256,18 @@ $team_members = $func->getAllTeamMembers();
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
+                            <label for="inputTime" class="col-sm-12 col-form-label">LinkedIn</label>
+                            <div class="col-sm-12">
+                                <input type="text" id="edit_linkedin_link" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="inputTime" class="col-sm-12 col-form-label">Twitter</label>
+                            <div class="col-sm-12">
+                                <input type="text" id="edit_twitter_link" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
                             <label for="inputTime" class="col-sm-12 col-form-label">Appointment Link</label>
                             <div class="col-sm-12">
                                 <input type="text" id="edit_appointment_link" class="form-control">
@@ -265,7 +290,7 @@ $team_members = $func->getAllTeamMembers();
 
 <script>
 
-    function editTeamMember(id, name, rank, level, department, earning, youtube_link, appointment_link) {
+    function editTeamMember(id, name, rank, level, department, earning, youtube_link, linkedin_link, twitter_link, appointment_link) {
 
         $("#team_id").val(id);
         $("#edit_name").val(name);
@@ -274,6 +299,8 @@ $team_members = $func->getAllTeamMembers();
         $("#edit_department").val(department);
         $("#edit_earning").val(earning);
         $("#edit_youtube_link").val(youtube_link);
+        $("#edit_linkedin_link").val(linkedin_link);
+        $("#edit_twitter_link").val(twitter_link);
         $("#edit_appointment_link").val(appointment_link);
 
         $("#edit_team_modal").modal('show');
