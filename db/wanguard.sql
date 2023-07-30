@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2023 at 12:01 PM
+-- Generation Time: Jul 30, 2023 at 08:27 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -50,7 +50,27 @@ INSERT INTO `add_guest` (`id`, `events`, `guest_name`, `they_are`, `guest_of`, `
 (4, '2', 'qw', 'undefined', '1', 'qw', 'email@gmail.com', 'No'),
 (5, '1', 'qw', 'undefined', '1', '12', 'email@gmail.com', 'No'),
 (6, '1', 'qw', 'undefined', '2', 'qw', 'email@gmail.com', 'No'),
-(7, '1', 'we', '2', '2', 'we', 'email@gmail.com', 'YES');
+(7, '1', 'we', '2', '2', 'we', 'email@gmail.com', 'YES'),
+(8, 'wewe', 'wewe', '5', '3', 'we', 'we@hmg.com', 'No');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `client_tool`
+--
+
+CREATE TABLE `client_tool` (
+  `id` int(150) NOT NULL,
+  `client_name` varchar(500) DEFAULT NULL,
+  `client_link` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `client_tool`
+--
+
+INSERT INTO `client_tool` (`id`, `client_name`, `client_link`) VALUES
+(4, 'sds', 'sdsd');
 
 -- --------------------------------------------------------
 
@@ -79,8 +99,7 @@ INSERT INTO `events` (`id`, `name`, `location`, `description`, `date`, `time`, `
 (5, 'Legacy Weekly Training', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '2023-06-14', '14:02', 'https://www.google.com/', 1, '2023-06-01 11:01:29', '2023-06-01 11:01:59'),
 (6, 'Legacy Weekly Training', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ', '2023-06-21', '14:07', 'https://www.google.com/', 1, '2023-06-01 11:03:17', '0000-00-00 00:00:00'),
 (7, 'ALL LEGACY FULL TIMERS - Financial Coaches Only', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2023-07-05', '14:06', 'https://www.google.com/', 1, '2023-06-01 11:03:52', '0000-00-00 00:00:00'),
-(8, 'The Force SMD Weekly Leadership Zoom', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2023-06-20', '14:07', 'https://www.google.com/', 1, '2023-06-01 11:04:34', '0000-00-00 00:00:00'),
-(9, 'ALL LEGACY FULL TIMERS - Financial Coaches Only', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2023-06-20', '17:34', 'https://www.google.com/', 1, '2023-06-01 14:31:25', '0000-00-00 00:00:00');
+(8, 'The Force SMD Weekly Leadership Zoom', 'MÃ©xico', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2023-06-20', '14:07', 'https://www.google.com/', 1, '2023-06-01 11:04:34', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -130,6 +149,7 @@ CREATE TABLE `new-client` (
   `policy_name` varchar(150) DEFAULT NULL,
   `submitted_date` varchar(150) DEFAULT NULL,
   `coverage` varchar(150) DEFAULT NULL,
+  `monthly_saving` varchar(500) DEFAULT NULL,
   `estimated_points` varchar(150) DEFAULT NULL,
   `CWA` varchar(150) DEFAULT NULL,
   `trainee` varchar(150) DEFAULT NULL,
@@ -140,16 +160,19 @@ CREATE TABLE `new-client` (
   `provider` varchar(150) DEFAULT NULL,
   `med_required` varchar(150) DEFAULT NULL,
   `contact_no` varchar(150) DEFAULT NULL,
-  `email_address` varchar(150) DEFAULT NULL
+  `email_address` varchar(150) DEFAULT NULL,
+  `add_notes` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `new-client`
 --
 
-INSERT INTO `new-client` (`id`, `f_name`, `l_name`, `policy_name`, `submitted_date`, `coverage`, `estimated_points`, `CWA`, `trainee`, `split_option`, `split_agent`, `agent_policy`, `product`, `provider`, `med_required`, `contact_no`, `email_address`) VALUES
-(1, '', '', '', '', '', '', '0', '0', 'YES', '0', '0', '0', '0', '0', '', ''),
-(2, 'aas', 'as', 'as', '2023-06-14', 'qw', 'qw', '1', '1', 'YES', '1', '1', '1', '1', '1', 'a', 'a');
+INSERT INTO `new-client` (`id`, `f_name`, `l_name`, `policy_name`, `submitted_date`, `coverage`, `monthly_saving`, `estimated_points`, `CWA`, `trainee`, `split_option`, `split_agent`, `agent_policy`, `product`, `provider`, `med_required`, `contact_no`, `email_address`, `add_notes`) VALUES
+(1, '', '', '', '', '', NULL, '', '0', '0', 'YES', '0', '0', '0', '0', '0', '', '', NULL),
+(2, 'aas', 'as', 'as', '2023-06-14', 'qw', NULL, 'qw', '1', '1', 'YES', '1', '1', '1', '1', '1', 'a', 'a', NULL),
+(3, 'Zain', 'Hassan', '45544', '5655-06-05', '12', '211212', 'qw', '1', '1', 'NO', '1', 'NO', 'IUL w/LTC', 'Nationwide', '1', '0300000000000', 'abc@gmail.com', NULL),
+(4, 'sds', 'sds', 'sdsd', '2023-07-10', 'sd', '3', '23', '1', '0', 'YES', '0', 'YES', 'Annuity', 'Athene', 'YES', 'sds', 'abc@gmail.com', 'asa');
 
 -- --------------------------------------------------------
 
@@ -180,6 +203,62 @@ CREATE TABLE `new-recruit` (
 INSERT INTO `new-recruit` (`id`, `agent_id`, `start_date`, `f_name`, `l-name`, `resident_state`, `recruiter`, `direct_MD`, `direct_SMD`, `licensed`, `contact_no`, `birthdate`, `email_address`) VALUES
 (1, '', '', '', '0', '0', '0', '0', 'Yes', '', 0, '', ''),
 (2, '12', 'as', 'as', '1', '1', '0', '0', 'Yes', '1212', 2023, '12', '12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `new_business_page_setting`
+--
+
+CREATE TABLE `new_business_page_setting` (
+  `id` int(150) NOT NULL,
+  `md` varchar(500) DEFAULT NULL,
+  `smd` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `new_business_page_setting`
+--
+
+INSERT INTO `new_business_page_setting` (`id`, `md`, `smd`) VALUES
+(1, '', NULL),
+(2, '', NULL),
+(3, '', NULL),
+(4, '', NULL),
+(5, '', NULL),
+(6, '', NULL),
+(7, '', NULL),
+(8, '', NULL),
+(9, 'undefined', NULL),
+(10, 'sd', NULL),
+(11, '', NULL),
+(12, NULL, 'werer'),
+(13, 'reer', NULL),
+(14, NULL, ''),
+(15, 'reer', NULL),
+(16, NULL, ''),
+(17, 'we', NULL),
+(18, NULL, 'wewe'),
+(19, 'sd', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recruitment_tool`
+--
+
+CREATE TABLE `recruitment_tool` (
+  `id` int(150) NOT NULL,
+  `recruitment_Name` varchar(500) DEFAULT NULL,
+  `recruitment_link` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `recruitment_tool`
+--
+
+INSERT INTO `recruitment_tool` (`id`, `recruitment_Name`, `recruitment_link`) VALUES
+(4, 'sdsd', 'sdsd');
 
 -- --------------------------------------------------------
 
@@ -228,9 +307,13 @@ INSERT INTO `team_members` (`id`, `name`, `level`, `rank`, `department`, `earnin
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `user_type` int(11) NOT NULL DEFAULT '0' COMMENT '0=user,1=admin',
-  `name` varchar(50) DEFAULT NULL,
+  `fname` varchar(50) DEFAULT NULL,
+  `lname` varchar(150) DEFAULT NULL,
+  `agent_code` int(150) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `phone` varchar(100) DEFAULT NULL,
+  `business_patner` varchar(150) DEFAULT NULL,
+  `us_states` varchar(150) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT '0' COMMENT '1=active,0=block',
   `reset_token` varchar(10) DEFAULT NULL,
@@ -245,10 +328,29 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_type`, `name`, `email`, `phone`, `password`, `status`, `reset_token`, `image_path`, `notes`, `address`, `create_date`, `updated_date`) VALUES
-(2, 1, 'Admin', 'admin@gmail.com', '+447222555555', '827ccb0eea8a706c4c34a16891f84e7b', 1, NULL, '../uploads/profile/1685605239-IMG_3335.jpg', 'This is testing notes...', 'Lahore, Punjab, Pakistan', '2023-02-07 00:00:00', '2023-05-29 11:45:40'),
-(20, 0, 'Testing', 'ur123meo@gmail.com', NULL, '202cb962ac59075b964b07152d234b70', 0, '', NULL, NULL, NULL, NULL, NULL),
-(23, 0, 'Testing', 'thebuilderforyou@gmail.com', NULL, 'b59c67bf196a4758191e42f76670ceba', 1, NULL, NULL, NULL, NULL, '2023-05-31 13:05:17', NULL);
+INSERT INTO `users` (`id`, `user_type`, `fname`, `lname`, `agent_code`, `email`, `phone`, `business_patner`, `us_states`, `password`, `status`, `reset_token`, `image_path`, `notes`, `address`, `create_date`, `updated_date`) VALUES
+(2, 1, 'Admin', NULL, NULL, 'admin@gmail.com', '+447222555555', NULL, NULL, '827ccb0eea8a706c4c34a16891f84e7b', 1, NULL, '../uploads/profile/1685605239-IMG_3335.jpg', 'This is testing notes...', 'Lahore, Punjab, Pakistan', '2023-02-07 00:00:00', '2023-05-29 11:45:40'),
+(20, 0, 'Testing', NULL, NULL, 'ur123meo@gmail.com', NULL, NULL, NULL, '202cb962ac59075b964b07152d234b70', 1, '', NULL, NULL, NULL, NULL, NULL),
+(23, 0, 'Testing', NULL, NULL, 'thebuilderforyou@gmail.com', NULL, NULL, NULL, 'b59c67bf196a4758191e42f76670ceba', 1, NULL, NULL, NULL, NULL, '2023-05-31 13:05:17', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `welcome_page_settings`
+--
+
+CREATE TABLE `welcome_page_settings` (
+  `id` int(150) NOT NULL,
+  `video_file` varchar(500) DEFAULT NULL,
+  `create_date` varchar(150) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `welcome_page_settings`
+--
+
+INSERT INTO `welcome_page_settings` (`id`, `video_file`, `create_date`) VALUES
+(4, '../uploads/video_file_uploads/1689586625-city.html', '2023-07-17 11:36:14');
 
 --
 -- Indexes for dumped tables
@@ -258,6 +360,12 @@ INSERT INTO `users` (`id`, `user_type`, `name`, `email`, `phone`, `password`, `s
 -- Indexes for table `add_guest`
 --
 ALTER TABLE `add_guest`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `client_tool`
+--
+ALTER TABLE `client_tool`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -285,6 +393,18 @@ ALTER TABLE `new-recruit`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `new_business_page_setting`
+--
+ALTER TABLE `new_business_page_setting`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `recruitment_tool`
+--
+ALTER TABLE `recruitment_tool`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `team_members`
 --
 ALTER TABLE `team_members`
@@ -297,6 +417,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `welcome_page_settings`
+--
+ALTER TABLE `welcome_page_settings`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -304,13 +430,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `add_guest`
 --
 ALTER TABLE `add_guest`
-  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `client_tool`
+--
+ALTER TABLE `client_tool`
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `new-appointment`
@@ -322,13 +454,25 @@ ALTER TABLE `new-appointment`
 -- AUTO_INCREMENT for table `new-client`
 --
 ALTER TABLE `new-client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `new-recruit`
 --
 ALTER TABLE `new-recruit`
   MODIFY `id` int(250) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `new_business_page_setting`
+--
+ALTER TABLE `new_business_page_setting`
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `recruitment_tool`
+--
+ALTER TABLE `recruitment_tool`
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `team_members`
@@ -341,6 +485,12 @@ ALTER TABLE `team_members`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `welcome_page_settings`
+--
+ALTER TABLE `welcome_page_settings`
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
