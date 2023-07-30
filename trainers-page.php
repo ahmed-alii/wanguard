@@ -5,10 +5,13 @@ if (!isset($_SESSION['user_id'])) {
     <script type="text/javascript">
         window.location.href = "logout";
     </script>
+
     <?php
     exit();
 }
 
+include_once "serverside/functions.php";
+$func=new Functions();
 $recruitment_tools = $func->getAllRecruitmetTools();
 $client_tools = $func->getAllClientTools();
 ?>
@@ -117,54 +120,30 @@ $client_tools = $func->getAllClientTools();
                                     foreach ($recruitment_tools as $r_tools) {
                                         ?>
 
-                                        <a href="<?= $r_tools['recruitment_link'] ?>">
-                                            <button class="btn btn-rounded py-2 mx-3 my-3">
-                                                <?= $r_tools['recruitment_Name'] ?>
-                                            </button>
+                                        <a href="<?= $r_tools['recruitment_link'] ?>" class="btn btn-rounded py-2 mx-3 my-3">
+                                           <?= $r_tools['recruitment_Name'] ?>
                                         </a>
                                         <?php
                                     }
                                     ?>
 
 
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">FOLLOW UP INTERVIEW KIT</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">TAX OFFICE REFERRAL SHEET</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">SAVING TRACKER</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">100 NAMES LIST</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">TOP 25 LIST</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">MEMORY JOGGER</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">PROMOTION VALIDATION FORM</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">TRAINER CERTIFICATION FORM</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">LAUNCH BUSINESS PLAN</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">THE FORCE SCRIPT MANUEL</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">BREAK THE FLOOR</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">BPM INFORMATION KIT</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">BFS MANUAL</button>-->
-<!--                                    <button class="btn btn-rounded py-2 mx-3 my-3">NEW RECRUIT FLOWCHART</button>-->
                                 </div>
 
                             </div>
                             <div class="tab-pane fade" id="nav-profile" role="tabpanel"
                                  aria-labelledby="nav-profile-tab">
                                 <div class="container text-center">
-                                    <a class="text-decoration-none" href="#">
-                                        <button class="btn btn-rounded py-2 mx-3 my-3">FNA PHASE 1 PPT</button>
-                                    </a>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">FNA PHASE 2 PPT</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">4 % RULE</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">DEBIT MASTERY TOOL</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">BUDGET BUDDY</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">INCREASING CASH FLOW TOOLS</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">TAX WITHHOLDING TOOL</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">401K DEVELOPER LIST</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">401K VS IUL</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">REFERRAL GREEN CARD</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">FNA SCRIPT FOR ZOOM</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">FNA PREP WORKSHEET</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">FNA DATA FORM</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">NAME GAME REFERRAL CARD</button>
-                                    <button class="btn btn-rounded py-2 mx-3 my-3">PORTFOLIO RELIANCE CALCULATOR
-                                    </button>
+                                    <?php
+                                    foreach ($client_tools as $r_tools) {
+                                        ?>
+
+                                        <a href="<?= $r_tools['client_link'] ?>" class="btn btn-rounded py-2 mx-3 my-3">
+                                             <?= $r_tools['client_name'] ?>
+                                        </a>
+                                        <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>

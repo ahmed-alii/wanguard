@@ -162,6 +162,51 @@ $client_tools = $func->getAllClientTools();
                 </div>
             </div>
         </section>
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">All Recruiting Tools</h5>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Link</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                foreach ($recruitment_tools as $r_tools){
+                                    ?>
+                                    <tr>
+                                        <td><?= $r_tools['recruitment_Name'] ?></td>
+                                        <td><?= $r_tools['recruitment_link'] ?></td>
+                                        <td>
+                                            <i class="fa fa-trash p-2 btn btn-danger" title="Delete Recruiting Tools"
+                                               onclick="delete_recruitment_tool(`<?= $r_tools['id'] ?>`)"
+                                               id="recruitment_tools">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                <?php
+                                }
+                                ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- End #main -->
 
