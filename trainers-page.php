@@ -266,56 +266,46 @@ $client_tools = $func->getAllClientTools();
             </div>
         </div>
     </section>
+<?php 
 
+    $allsections = $func->getAllsections();
+    foreach($allsections as $section){
+        $sectionimages = $func->getsectionimages($section['id']);
+
+ ?>
     <section class="py-5">
         <div class="container">
             <div class="text-center">
-                <h1 class="display-5 fw-bolder">BUSINESS FORMAT SYSTEM</h1>
+                <h1 class="display-5 fw-bolder"><?=$section['main_heading']?></h1>
             </div>
             <div class="text-center py-3">
-                <h1>STEP CLASSES</h1>
+                <h1><?=$section['sub_heading']?></h1>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-12 col-lg-3 p-2">
-                    <div class="business-img">
-                        <img src="assets/images/img1.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 p-2">
-                    <div class="business-img">
-                        <img src="assets/images/img1.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 p-2">
-                    <div class="business-img">
-                        <img src="assets/images/img1.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 p-2">
-                    <div class="business-img">
-                        <img src="assets/images/img1.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 p-2">
-                    <div class="business-img">
-                        <img src="assets/images/img1.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 p-2">
-                    <div class="business-img">
-                        <img src="assets/images/img1.png" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-12 col-lg-3 p-2">
-                    <div class="business-img">
-                        <img src="assets/images/img1.png" alt="" class="img-fluid">
-                    </div>
-                </div>
+                <?php 
+                    foreach($sectionimages as $s_image){
+                        $imagepath = substr($s_image['image_path'], 3);
+                        ?>
+                            <div class="col-12 col-lg-3 p-2">
+                                <div class="business-img">
+                                    <a href="<?=$s_image['image_url']?>" target="_blank"><img src="<?=$imagepath?>" alt="" class="img-fluid">
+                                        </a>
+                                </div>
+                            </div>
+                        <?php
+
+                    }
+
+                 ?>
+                
             </div>
         </div>
     </section>
+<?php 
 
+}
+ ?>
     <!--add-guest Modal -->
     <div class="modal fade" id="add-guest-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
          aria-labelledby="staticBackdropLabel" aria-hidden="true">

@@ -819,7 +819,78 @@ if ($func == 32) {
         echo "false";
     }
 }
-//
 
+if ($func == 33) {
+
+    $main_title = htmlspecialchars(stripslashes($_POST['main_title']));
+    $main_title = $db->escapeString($main_title);
+
+    $sub_title = htmlspecialchars(stripslashes($_POST['sub_title']));
+    $sub_title = $db->escapeString($sub_title);
+
+    $sql = "INSERT INTO `trainer_sections`(`main_heading`,`sub_heading`) VALUES ('$main_title' , '$sub_title')";
+    // echo $sql;
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 34) {
+
+    $section_id= htmlspecialchars(stripslashes($_POST['section_id']));
+    $section_id= $db->escapeString($section_id);
+
+    $sql = "delete from trainer_sections where id= '$section_id'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+if($func == 35){
+    $sectionid = htmlspecialchars(stripslashes($_POST['sectionid']));
+    $sectionid = $db->escapeString($sectionid);
+
+    $url = htmlspecialchars(stripslashes($_POST['url']));
+    $url = $db->escapeString($url);
+
+    if (!empty($_FILES['images'])) {
+        $image = $_FILES['images'];
+        $filename = $image['name'];
+        $file_tmp = $image['tmp_name'];
+        $target = "../uploads/section_images/";
+        $timestamp = time();
+        $file = $timestamp . '-' . $filename;
+        $upload_to = $target . $file;
+        move_uploaded_file($file_tmp, $upload_to);
+    } else {
+        $upload_to = "";
+        echo "image not uploaded";
+        exit();
+    }
+
+    $sql = "INSERT INTO `trainer_images`(`section_id`, `image_path`, `image_url`) VALUES ('$sectionid','$upload_to','$url')";
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+
+}
+if($func ==36){
+    $imageid = htmlspecialchars(stripslashes($_POST['imageid']));
+    $imageid = $db->escapeString($imageid);
+
+    $sql = " delete from trainer_images where id= '$imageid'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
 
 ?>

@@ -167,6 +167,25 @@ class Functions
         }
     }
 
+     function getAllsections(){
+        $sql = "select * from trainer_sections order by id desc ";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+    function getsectionimages($sectionid){
+         $sql = "select * from trainer_images where section_id =  '$sectionid'";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+    function getAllsectionsImages(){
+        $sql = "select tm.id, tm.image_path, ts.main_heading from trainer_images tm join trainer_sections ts on tm.section_id = ts.id";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
     function getAllClientTools(){
         $sql = "select * from client_tool order by id desc ";
         if ($this->db->sql($sql)) {

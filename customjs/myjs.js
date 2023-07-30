@@ -1090,6 +1090,41 @@ $("#recruitment_tools").submit(function (e) {
 });
 //Add recruiting tool
 
+$("#section_form").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '33');
+    ajax_data.append('main_title', $('#main_title').val());
+    ajax_data.append('sub_title', $('#sub_title').val());
+
+    $("#sub_btn").attr("disabled", true);
+    $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Error, Please try again ", "error");
+            }
+
+            $("#sub_btn").attr("disabled", false);
+            $("#sub_btn").html('Submit');
+
+        }//success
+    });
+});
+
 $("#client_tools").submit(function (e) {
     e.preventDefault();
     var ajax_data = new FormData();
@@ -1123,6 +1158,48 @@ $("#client_tools").submit(function (e) {
 
         }//success
     });
+});
+
+
+$("#section_form_image").submit(function(e){
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '35');
+    ajax_data.append("sectionid", $("#sectionid").val());
+    ajax_data.append('url', $('#url').val());
+    // ajax_data.append('images', $('#images').prop('files')[0]);
+    ajax_data.append('images', $('#images')[0].files[0]);
+
+
+    $("#section_imgs_btn").attr("disabled", true);
+    $("#section_imgs_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Image Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed , Please try again ", "error");
+            }
+
+            $("#section_imgs_btn").attr("disabled", false);
+            $("#section_imgs_btn").html(`Submit`);
+
+
+        }//success
+    });
+
+
 });
 //Add client tool
 
@@ -1164,7 +1241,81 @@ function delete_recruitment_tool(event_id) {
     });
 }
 //Delete recruitment tools
+function deleteimage(imageid){
+    swal({
+        text: 'Are you sure to delete this Image?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 36,
+                    imageid: imageid,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Image deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to delete, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
 
+}
+function deletesection(section_id) {
+    swal({
+        text: 'Are you sure to delete this section?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 34,
+                    section_id: section_id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Event deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to delete event, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
+}
 function delete_client_tool(client_id) {
     swal({
         text: 'Are you sure to delete this Client event?',
