@@ -9,7 +9,10 @@ if (!isset($_SESSION['user_id'])) {
     <?php
     exit();
 }
-
+include_once "./serverside/functions.php";
+$func=new Functions();
+$business_partners_MDs = $func->getAllMD();
+$business_partners_SMDs = $func->getAllSMD();
 ?>
     <section>
         <div class="container py-5">
@@ -124,8 +127,13 @@ if (!isset($_SESSION['user_id'])) {
                             <select name="tab_access"  data-live-search="true"
                                     class="selectpicker mb-3 w-100"
                                     aria-label="select example" id="direct_MD" required>
-                                <option value="0">Yes</option>
-                                <option value="1">No</option>
+                                <?php
+                                foreach ($business_partners_MDs as $business_partners_MD) {
+                                    ?>
+                                    <option value="<?= $business_partners_MD['md'] ?>"> <?= $business_partners_MD['md'] ?></option>
+                                    <?php
+                                }
+                                ?>
                             </select>
                         </div>
                         <div class="col-lg-4">
@@ -134,8 +142,13 @@ if (!isset($_SESSION['user_id'])) {
                             <select name="tab_access"  data-live-search="true"
                                     class="selectpicker mb-3 w-100"
                                     aria-label="select example" id="direct_SMD" required>
-                                <option value="0">Yes</option>
-                                <option value="1">No</option>
+                                <?php
+                                foreach ($business_partners_SMDs as $business_partners_SMD) {
+                                    ?>
+                                    <option value="<?= $business_partners_SMD['add_smd'] ?>"> <?= $business_partners_SMD['add_smd'] ?></option>
+                                    <?php
+                                }
+                                ?>
                             </select>
                         </div>
                     </div>

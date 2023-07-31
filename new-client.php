@@ -84,7 +84,7 @@ if (!isset($_SESSION['user_id'])) {
                             <?php
                             foreach ($users as $user) {
                                 ?>
-                                <option value=""> <?= $user['fname'] ?></option>
+                                <option value="<?= $user['fname'] ?>"> <?= $user['fname'] ?></option>
                                 <?php
                             }
                             ?>
@@ -100,7 +100,7 @@ if (!isset($_SESSION['user_id'])) {
                                 <?php
                                 foreach ($users as $user) {
                                     ?>
-                                    <option value=""> <?= $user['fname'] ?></option>
+                                    <option value="<?= $user['fname'] ?>"> <?= $user['fname'] ?></option>
                                     <?php
                                 }
                                 ?>

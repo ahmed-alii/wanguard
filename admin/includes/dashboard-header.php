@@ -178,6 +178,36 @@ if (!empty($users1)) {
                 <span>Trainers Page Settings</span>
             </a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="all_guest">
+                <i class="bi bi-person"></i>
+                <span>All Guests</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="request_trainer">
+                <i class="bi bi-person"></i>
+                <span>All Request Trainers</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="business_partners">
+                <i class="bi bi-person"></i>
+                <span>New Business Partner</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="new_client">
+                <i class="bi bi-person"></i>
+                <span>All New Family/Client </span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="dashboard_page-settings">
+                <i class="bi bi-person"></i>
+                <span>Dashbaord Page Settings</span>
+            </a>
+        </li>
     </ul>
 </aside>
 <!-- End Sidebar-->

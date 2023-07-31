@@ -33,6 +33,8 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
           rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/multi-select.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/main.css">
     <style>
         .btn-social{

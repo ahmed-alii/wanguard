@@ -450,14 +450,25 @@ if (!isset($_SESSION['user_id'])){
 
 <section class="py-5" id="section6">
     <div class="container py-5">
-        <div>
-            <h2>
-                this is slider area
-            </h2>
+        <div class="single-item py-5">
+            <div>
+                <img src="assets/images/slider_img1.png" alt="">
+            </div>
+            <div>
+                <img src="assets/images/slider_img2.png" alt="">
+            </div>
+            <div>
+                <img src="assets/images/slider_img3.png" alt="">
+            </div>
+            <div>
+                <img src="assets/images/slider_img4.png" alt="">
+            </div>
+            <div>
+                <img src="assets/images/slider_img5.png" alt="">
+            </div>
+
         </div>
-
     </div>
-
 </section>
 
 <section class="bg-black my-5 py-5" id="section7">
@@ -1206,3 +1217,12 @@ if (!isset($_SESSION['user_id'])){
 
 
 <?php include_once "includes/footer.php" ?>
+<script>
+    $('.single-item').slick(
+        {
+            arrows: true,
+        }
+    );
+
+</script>
+

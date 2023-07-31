@@ -634,6 +634,9 @@ else if ($func == 24) {
     $CWA = htmlspecialchars(stripslashes($_POST['CWA']));
     $CWA = $db->escapeString($CWA);
 
+    $writing_agent = htmlspecialchars(stripslashes($_POST['writing_agent']));
+    $writing_agent = $db->escapeString($writing_agent);
+
     $trainee = htmlspecialchars(stripslashes($_POST['trainee']));
     $trainee = $db->escapeString($trainee);
 
@@ -664,7 +667,7 @@ else if ($func == 24) {
     $add_notes = htmlspecialchars(stripslashes($_POST['add_notes']));
     $add_notes = $db->escapeString($add_notes);
 
-    $sql = "INSERT INTO `new-client`(`f_name`, `l_name`, `policy_name`, `submitted_date`, `coverage`, `monthly_saving`, `estimated_points`, `CWA`, `trainee`, `split_option`, `split_agent`, `agent_policy`, `product`, `provider`, `med_required`, `contact_no`, `email_address` , `add_notes`) VALUES ('$f_name','$l_name','$policy_name','$submitted_date','$coverage','$monthly_saving','$estimated_points','$CWA','$trainee','$split_option','$split_agent','$agent_policy','$product','$provider','$med_required','$contact_no','$email_address','$add_notes')";
+    $sql = "INSERT INTO `new-client`(`f_name`, `l_name`, `policy_name`, `submitted_date`, `coverage`, `monthly_saving`, `estimated_points`, `CWA`,`writing_agent`, `trainee`,  `split_option`, `split_agent`, `agent_policy`, `product`, `provider`, `med_required`, `contact_no`, `email_address` , `add_notes`) VALUES ('$f_name','$l_name','$policy_name','$submitted_date','$coverage','$monthly_saving','$estimated_points','$CWA','$writing_agent','$trainee','$split_option','$split_agent','$agent_policy','$product','$provider','$med_required','$contact_no','$email_address','$add_notes')";
 
     if ($db->sql($sql)) {
 
@@ -764,7 +767,7 @@ if ($func == 27) {
     $add_md_name = htmlspecialchars(stripslashes($_POST['add_md_name']));
     $add_md_name = $db->escapeString($add_md_name);
 
-    $sql = "INSERT INTO `new_business_page_setting`(`md`) VALUES ('$add_md_name')";
+    $sql = "INSERT INTO `add_md`(`md`) VALUES ('$add_md_name')";
 
     if ($db->sql($sql)) {
         echo "true";
@@ -780,7 +783,7 @@ if ($func == 28) {
     $add_smd_name = htmlspecialchars(stripslashes($_POST['add_smd_name']));
     $add_smd_name = $db->escapeString($add_smd_name);
 
-    $sql = "INSERT INTO `new_business_page_setting`(`smd`) VALUES ('$add_smd_name')";
+    $sql = "INSERT INTO `add_smd`(`add_smd`) VALUES ('$add_smd_name')";
 
     if ($db->sql($sql)) {
         echo "true";
@@ -922,6 +925,86 @@ if ($func == 36) {
     $imageid = $db->escapeString($imageid);
 
     $sql = " delete from trainer_images where id= '$imageid'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 37) {
+
+    $client_id = htmlspecialchars(stripslashes($_POST['client_id']));
+    $client_id = $db->escapeString($client_id);
+
+    $sql = "delete from client_tool where id= '$client_id'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 38) {
+
+    $md_id = htmlspecialchars(stripslashes($_POST['md_id']));
+    $md_id = $db->escapeString($md_id);
+
+    $sql = "delete from add_md where id= '$md_id'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 39) {
+
+    $smd_id = htmlspecialchars(stripslashes($_POST['smd_id']));
+    $smd_id = $db->escapeString($smd_id);
+
+    $sql = "delete from add_smd where id= '$smd_id'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 40) {
+
+
+    $sql = "update `new-recruit` set `status`= '0' ";
+
+
+    if ($db->sql($sql)) {
+        $sql = "update `new-client` set `status`= '0' ";
+        $db->sql($sql);
+
+        $sql = "update `dashboard_stats` set `status`= '0' ";
+        $db->sql($sql);
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+if ($func == 41) {
+
+    $lic = htmlspecialchars(stripslashes($_POST['lic']));
+    $lic = $db->escapeString($lic);
+
+    $net_lic = htmlspecialchars(stripslashes($_POST['net_lic']));
+    $net_lic = $db->escapeString($net_lic);
+
+    $one_300 = htmlspecialchars(stripslashes($_POST['one_300']));
+    $one_300 = $db->escapeString($one_300);
+
+    $sql = "update dashboard_stats set `lic`='$lic', `net_lic`='$net_lic',`one_300`='$one_300' ";
 
     if ($db->sql($sql)) {
         echo "true";

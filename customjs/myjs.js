@@ -860,6 +860,7 @@ $("#new-client1").submit(function (e) {
     ajax_data.append('monthly_saving', $('#monthly_saving').val());
     ajax_data.append('estimated_points', $('#estimated_points').val());
     ajax_data.append('CWA', $('#CWA option:selected').val());
+    ajax_data.append('writing_agent', $('#writing_agent option:selected').val());
     ajax_data.append('trainee', $('#trainee option:selected').val());
     ajax_data.append('split_option', $('input[name="split_option"]:checked').val());
     ajax_data.append('split_agent', $('#split_agent option:selected').val());
@@ -870,7 +871,6 @@ $("#new-client1").submit(function (e) {
     ajax_data.append('contact_no', $('#contact_no').val());
     ajax_data.append('email_address', $('#email_address').val());
     ajax_data.append('add_notes', $('#add_notes').val());
-
 
     $("#sub_btn").attr("disabled", true);
     $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
@@ -1393,3 +1393,156 @@ function delete_client_tool(client_id) {
     });
 }
 //Delete client tools
+
+function delete_business_partner_md(md_id) {
+    swal({
+        text: 'Are you sure to delete this Business Partner MD?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 38,
+                    md_id: md_id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Business Partner MD deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to delete Business partner MD, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
+}
+//Delete business partners MD
+
+function delete_business_partner_smd(smd_id) {
+    swal({
+        text: 'Are you sure to delete this Business Partner SMD?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 39,
+                    smd_id: smd_id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Business Partner SMD deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to delete Business partner SMD, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
+}
+//Delete business partners SMD
+function reset(smd_id) {
+    swal({
+        text: 'Are you sure to reset?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 40,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+
+                            location.reload();
+
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to reset, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
+
+}
+
+$("#dashboard_stats").submit(function(e){
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '41');
+    ajax_data.append("lic", $("#lic").val());
+    ajax_data.append("net_lic", $("#net_lic").val());
+    ajax_data.append("one_300", $("#one_300").val());
+
+
+
+    $("#section_imgs_btn").attr("disabled", true);
+    $("#section_imgs_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Image Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed , Please try again ", "error");
+            }
+
+            $("#section_imgs_btn").attr("disabled", false);
+            $("#section_imgs_btn").html(`Submit`);
+
+
+        }//success
+    });
+
+
+});
+//Add client tool

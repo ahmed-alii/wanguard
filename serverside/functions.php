@@ -194,14 +194,14 @@ class Functions
     }
 
     function getAllMD(){
-        $sql = "select * from client_tool order by id desc ";
+        $sql = "select * from `add_md`";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
     
     function getAllSMD(){
-        $sql = "select * from client_tool order by id desc ";
+        $sql = "select * from `add_smd`";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
@@ -222,6 +222,75 @@ class Functions
             return $this->db->getResult();
         }
     }
+
+    function getAllNewRecruite()
+    {
+        $sql = "select * from `new-recruit`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+    function getAllNewRecruite_count()
+    {
+        $sql = "select * from `new-recruit` where status=1";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+    function getAllFamilyClient()
+    {
+        $sql = "select * from `new-client` ";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+function getDashboardStats(){
+    $sql = "select * from `dashboard_stats` ";
+    if ($this->db->sql($sql)) {
+        return $this->db->getResult();
+    }
+}
+    function getAllFamilyClient_count()
+    {
+        $sql = "select * from `new-client` where status=1 ";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+    function getAllGuests()
+    {
+        $sql = "select * from `add_guest`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+    function getAllAppointments()
+    {
+        $sql = "select * from `new-appointment`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
+    function getAllBusinessPartners()
+    {
+        $sql = "select * from `new-recruit`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+    function getAllClients()
+    {
+        $sql = "select * from `new-client`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
+
+
+
+
 
 
 

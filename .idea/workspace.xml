@@ -5,21 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cb8abc8-bdcc-471f-9303-40e25c2c7bae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/all_guest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/business_partners.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/dashboard_page-settings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/new_client.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/request_trainer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/includes/dashboard-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/dashboard-header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/teams.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/welcome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/new_business_partner.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/new_business_partner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customjs/myjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/customjs/myjs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-client.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new-recruite.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-recruite.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/overview.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverside/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/crud.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverside/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverside/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/video_file_uploads/1689586625-city.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wanguard.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +127,8 @@
       <workItem from="1690565292295" duration="598000" />
       <workItem from="1690649252399" duration="599000" />
       <workItem from="1690734693953" duration="6482000" />
+      <workItem from="1690790703424" duration="8613000" />
+      <workItem from="1690804744004" duration="10774000" />
     </task>
     <servers />
   </component>
@@ -137,5 +145,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/serverside/functions.php</url>
+          <line>191</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/serverside/functions.php</url>
+          <line>189</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

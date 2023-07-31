@@ -1,12 +1,16 @@
 <?php
 include_once "includes/dashboard-header.php";
-$users = $func->getAllUser();
+
+$business_partners_MDs = $func->getAllMD();
+$business_partners_SMDs = $func->getAllSMD();
 ?>
+
 <style>
     .mce-notification {
         display: none;
     }
 </style>
+
 <main id="main" class="main">
 
     <!--Page Title -->
@@ -82,19 +86,20 @@ $users = $func->getAllUser();
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>Mark</td>
-                                <td><i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"> </i></td>
-                            </tr>
-                            <tr>
-                                <td>Jacob</td>
-                                <td><i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"> </i></td>
-
-                            </tr>
-                            <tr>
-                                <td>Larry</td>
-                                <td><i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"> </i></td>
-                            </tr>
+                            <?php
+                            foreach ($business_partners_MDs as $business_partners_MD){
+                                ?>
+                                <tr>
+                                    <td><?= $business_partners_MD['md'] ?></td>
+                                    <td>
+                                        <i class="fa fa-trash p-2 btn btn-danger" title="Delete Business Partner"
+                                           onclick="delete_business_partner_md(`<?= $business_partners_MD['id'] ?>`)">
+                                        </i>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
                             </tbody>
                         </table>
                     </div>
@@ -113,19 +118,20 @@ $users = $func->getAllUser();
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>Mark</td>
-                                <td><i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"> </i></td>
-                            </tr>
-                            <tr>
-                                <td>Jacob</td>
-                                <td><i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"> </i></td>
-
-                            </tr>
-                            <tr>
-                                <td>Larry</td>
-                                <td><i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"> </i></td>
-                            </tr>
+                            <?php
+                            foreach ($business_partners_SMDs as $business_partners_SMD){
+                                ?>
+                                <tr>
+                                    <td><?= $business_partners_SMD['add_smd'] ?></td>
+                                    <td>
+                                        <i class="fa fa-trash p-2 btn btn-danger" title="Delete Business Partner"
+                                           onclick="delete_business_partner_smd(`<?= $business_partners_SMD['id'] ?>`)">
+                                        </i>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
                             </tbody>
                         </table>
                     </div>

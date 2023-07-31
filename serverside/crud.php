@@ -7,9 +7,10 @@ class Database {
      * Database class
      */
 
-       private $db_host = "localhost:8889";  // Change as required
+//       private $db_host = "localhost:8889";  // Change as required
+       private $db_host = "localhost";  // Change as required
        private $db_user = "root";  // Change as required
-       private $db_pass = "root";  // Change as required
+       private $db_pass = "";  // Change as required
        private $db_name = "wanguard"; // Change as required
 
 // Live Craditionals
