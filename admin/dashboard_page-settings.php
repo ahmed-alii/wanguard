@@ -23,18 +23,21 @@ $all_new_clients=$func->getAllClients();
 
         <section class="section">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <div class="card">
-                        <form id="dashboard_stats">
-                        <input type="number" id="lic">
-                        <input type="text" id="net_lic">
-                        <input type="text" id="one_300">
-                            <button class="btn" type="submit" id="section_imgs_btn">Submit</button>
-                        </form>
-
+                        <div class="card-body">
+                            <h4 class="mt-3">Dashboard Page Stats</h4>
+                            <form id="dashboard_stats">
+                                <input type="number" class="form-control mb-2" placeholder="LIC" id="lic">
+                                <input type="text" class="form-control mb-2" placeholder="Net LIC" id="net_lic">
+                                <input type="text" class="form-control mb-2" placeholder="1 / 300" id="one_300">
+                                <button class="btn btn-primary" type="submit" id="section_imgs_btn">Submit</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
+            <button id="reset" class="btn btn-primary" onclick="reset()">Reset</button>
         </section>
     </main>
     <!-- End #main -->

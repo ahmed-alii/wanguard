@@ -1471,7 +1471,7 @@ function delete_business_partner_smd(smd_id) {
     });
 }
 //Delete business partners SMD
-function reset(smd_id) {
+function reset() {
     swal({
         text: 'Are you sure to reset?',
         icon: 'info',
@@ -1529,7 +1529,7 @@ $("#dashboard_stats").submit(function(e){
             console.log(data)
 
             if (data.trim() == "true") {
-                swal("Success", "Image Added Successfully ", "success").then((value) => {
+                swal("Success", "Added Successfully ", "success").then((value) => {
                     location.reload();
                 });
             } else {

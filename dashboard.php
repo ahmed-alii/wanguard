@@ -90,10 +90,6 @@ $dashboard_stats=$func->getDashboardStats();
                         from high school.</p>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <button id="reset" class="btn btn-primary" onclick="reset()">Reset</button>
-
-            </div>
         </div>
     </div>
 
