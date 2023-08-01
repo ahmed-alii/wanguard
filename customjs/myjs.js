@@ -1481,17 +1481,16 @@ function reset() {
         /* Read more about isConfirmed, isDenied below */
         if (result) {
             $.ajax({
-                url: "serverside/post.php",
+                url: "../serverside/post.php",
                 type: "POST",
                 data: {
                     func: 40,
                 },
                 success: function (data) {
                     if (data.trim() == "true") {
-
+                        swal("Success", "Reset Successfully ", "success").then((value) => {
                             location.reload();
-
-                    } else {
+                        });                    } else {
                         swal({
                             icon: 'error',
                             title: 'Error',
@@ -1513,8 +1512,6 @@ $("#dashboard_stats").submit(function(e){
     ajax_data.append("lic", $("#lic").val());
     ajax_data.append("net_lic", $("#net_lic").val());
     ajax_data.append("one_300", $("#one_300").val());
-
-
 
     $("#section_imgs_btn").attr("disabled", true);
     $("#section_imgs_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);

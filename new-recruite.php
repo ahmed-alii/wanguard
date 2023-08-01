@@ -54,7 +54,7 @@ $business_partners_SMDs = $func->getAllSMD();
                             <label for="resident_state" class="col-sm-12 col-form-label fw-bolder">Resident State
                                 <span class="text-danger">*</span>
                             </label>
-                            <select required id="us_states" class="form-control mb-2">
+                            <select required id="resident_state" class="form-control mb-2">
                                 <option value="AL" id="alabama">Alabama</option>
                                 <option value="AK" id="alaska">Alaska</option>
                                 <option value="AZ" id="arizona">Arizona</option>

@@ -120,22 +120,13 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
             <div class="col-md-6">
                 <h1 class="text-center fw-bold">Our VISION & VALUES</h1>
                 <p class="text-center pt-3">Our vision is to create massive change in the marketplace, change the
-                    financial
-                    industry for the better, and transform people's lives.
-                </p>
-                <p class="text-center">
-                    Our values to our clients are to provide the knowledge, support, guidance, and confidence to build
-                    their financial future.
-                </p>
-                <p class="text-center">
-                    Our values to our agents are to provide the tools, environment, mentorship, and examples of success
-                    to allow them to flourish.
-                </p>
-                <p class="text-center p-0 m-0 fw-bolder fst-italic">
-                    At Pinnacle, we believe in the 5 F's
-                </p>
-                <p class="text-center p-0 m-0">Faith, Family, Finances, Fitness, and Fun
-                </p>
+                    financial industry for the better, and transform people's lives. </p>
+                <p class="text-center"> Our values to our clients are to provide the knowledge, support, guidance, and
+                    confidence to build their financial future. </p>
+                <p class="text-center"> Our values to our agents are to provide the tools, environment, mentorship, and
+                    examples of success to allow them to flourish. </p>
+                <p class="text-center p-0 m-0 fw-bolder fst-italic"> At Wanguard, we believe in the 5 F's </p>
+                <p class="text-center p-0 m-0">Faith, Family, Finances, Fitness, and Fun </p>
                 <p class="text-center p-0 m-0">are the key to having a successful business and living a fulfilling life.
                 </p>
             </div>

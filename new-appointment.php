@@ -10,6 +10,10 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+include_once "./serverside/functions.php";
+$func=new Functions();
+$users = $func->getAllUser();
+
 ?>
     <section>
         <div class="container py-5">
@@ -29,9 +33,13 @@ if (!isset($_SESSION['user_id'])) {
                         <div class="col-sm-12">
                             <select name="tab_access" id="traine_appointment" data-live-search="true"
                                     class="selectpicker mb-3 w-100" aria-label="select example" required>
-                                <option value="0">Select</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
+                                <?php
+                                foreach ($users as $user) {
+                                    ?>
+                                    <option value="<?= $user['fname'] ?>"> <?= $user['fname'] ?></option>
+                                    <?php
+                                }
+                                ?>
                             </select>
                         </div>
                     </div>
@@ -44,13 +52,13 @@ if (!isset($_SESSION['user_id'])) {
                                 <select name="tab_access" id="appointment_type" data-live-search="true"
                                         class="selectpicker mb-3 w-100"
                                         aria-label="select example" required>
-                                    <option value="0">Select</option>
-                                    <option value="1">Client</option>
-                                    <option value="2">Friend</option>
-                                    <option value="3">Co-workers</option>
-                                    <option value="4">Prospect</option>
-                                    <option value="5">Relative</option>
-                                    <option value="6">Referral</option>
+                                    <option value="Select">Select</option>
+                                    <option value="Client">Client</option>
+                                    <option value="Friend">Friend</option>
+                                    <option value="Co-workers">Co-workers</option>
+                                    <option value="Prospect">Prospect</option>
+                                    <option value="Relative">Relative</option>
+                                    <option value="Referral">Referral</option>
                                 </select>
                             </div>
                         </div>

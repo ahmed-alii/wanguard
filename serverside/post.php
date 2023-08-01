@@ -599,7 +599,7 @@ else if ($func == 23) {
     $home_address = htmlspecialchars(stripslashes($_POST['home_address']));
     $home_address = $db->escapeString($home_address);
 
-    $sql = "INSERT INTO `new-recruit`(`agent_id`, `start_date` , `f_name`, `l-name`, `resident_state`, `recruiter`, `direct_MD`, `direct_SMD`, `licensed`, `contact_no`, `birthdate`, `email_address`) VALUES ('$agent_id','$f_name','$l_name','$resident_state','$recruiter','$direct_MD','$direct_SMD','$licensed','$contact_no','$birthdate','$email_address','$home_address')";
+    $sql = "INSERT INTO `new-recruit`(`agent_id`, `start_date` , `f_name`, `l_name`, `resident_state`, `recruiter`, `direct_MD`, `direct_SMD`, `licensed`, `contact_no`, `birthdate`, `email_address`) VALUES ('$agent_id', '$start_date','$f_name','$l_name','$resident_state','$recruiter','$direct_MD','$direct_SMD','$licensed','$contact_no','$birthdate','$email_address','$home_address')";
 
     if ($db->sql($sql)) {
 
