@@ -37,12 +37,12 @@ $client_tools = $func->getAllClientTools();
                                     <div class="row">
                                         <div class="col-12 mb-3">
                                             <label for="inputText" class="col col-form-label">Recruiting
-                                            Name</label>
+                                                Name</label>
                                             <input type="text" class="form-control" id="recruiting_tname" required>
                                         </div>
                                         <div class="col-12 mb-3">
                                             <label for="inputText" class="col col-form-label">Recruiting
-                                            Link</label>
+                                                Link</label>
                                             <input type="text" class="form-control" id="recruiting_tlink" required>
                                         </div>
                                     </div>
@@ -117,11 +117,6 @@ $client_tools = $func->getAllClientTools();
                                 <?php
                             }
                             ?>
-
-
-
-
-
                         </tbody>
                     </table>
                 </div>
@@ -130,7 +125,7 @@ $client_tools = $func->getAllClientTools();
 
         <div class="col-lg-6">
             <div class="card">
-                <div class="card-body">
+                <div class="card-body table-responsive">
                     <h5 class="card-title">All Client Tools</h5>
                     <table class="table table-striped">
                         <thead>
@@ -165,46 +160,96 @@ $client_tools = $func->getAllClientTools();
 </div>
 </section>
 
-<section class="section">
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="card">
-                <h1>Create new section</h1>
-                <form id="section_form">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <label for="inputText" class="col col-form-label">
-                            Section Title</label>
-                            <input type="text" class="form-control" id="main_title" required>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="inputText" class="col col-form-label">Sub title</label>
-                            <input type="text" class="form-control" id="sub_title" required>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h5 class="card-title">Create new section</h5>
+                                <!-- Form Elements -->
+                                <form id="section_form">
+                                    <div class="row">
+                                        <div class="col-12 mb-3">
+                                            <label for="inputText" class="col col-form-label">
+                                                Section Title</label>
+                                            <input type="text" class="form-control" id="main_title" required>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="inputText" class="col col-form-label">Sub title</label>
+                                            <input type="text" class="form-control" id="sub_title" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-12 text-center pt-3">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- End Form Elements -->
+                            </div>
+                            <div class="col-lg-6">
+                                <h5 class="card-title">Add Presentations into the section</h5>
+                                <!-- Form Elements -->
+                                <form id="section_form_image" accept="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-12 mb-3">
+                                            <label for="inputText" class="col col-form-label">
+                                                Select Section</label>
+                                            <select class="form-select" id="sectionid">
+                                                <option value="" selected disabled>select section</option>
+                                                <?php
+                                                foreach ($Allsections as $section){
+                                                    ?>
+                                                    <option value="<?=$section['id']?>"><?=$section['main_heading']?></option>
+                                                    <?php
+                                                }
+                                                ?>
+                                            </select>
+
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="inputText" class="col col-form-label">URL</label>
+                                            <input type="url" class="form-control" id="url" required>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="inputText" class="col col-form-label">Upload Thumbnail</label>
+                                            <!-- <input type="file" class="form-control" id="images" required> -->
+                                            <input type="file" required id="images" placeholder="Picture" class="form-control mb-2">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-12 text-center pt-3">
+                                            <button type="submit" class="btn btn-primary" id="section_imgs_btn">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!-- End Form Elements -->
+                            </div>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-sm-12 text-center pt-3">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-        <!-- sections table -->
-        <div class="col-lg-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">All Section</h5>
-                    <table class="table table-striped">
-                        <thead>
+    </section>
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">All Create New Section</h5>
+                        <table class="table table-striped">
+                            <thead>
                             <tr>
                                 <th>id</th>
                                 <th>Main Heading</th>
                                 <th>Sub Heading</th>
                                 <th>Add images</th>
                             </tr>
-                        </thead>
-                        <tbody>
+                            </thead>
+                            <tbody>
                             <?php
                             foreach ($Allsections as $section){
                                 ?>
@@ -212,106 +257,60 @@ $client_tools = $func->getAllClientTools();
                                     <td><?= $section['id'] ?></td>
                                     <td><?= $section['main_heading'] ?></td>
                                     <td><?= $section['sub_heading'] ?></td>
-                                    
+
                                     <td>
                                         <i class="fa fa-trash p-2 btn btn-danger" title="Delete Section"
-                                        onclick="deletesection(`<?= $section['id'] ?>`)"
+                                           onclick="deletesection(`<?= $section['id'] ?>`)"
                                         >
-                                    </i>
-                                </td>
-                            </tr>
-                            <?php
-                        }
-                        ?>
-
-
-
-
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="card">
-                <h3>Add Presentations into the section</h3>
-                <form id="section_form_image" accept="multipart/form-data">
-                    <div class="row">
-                        <div class="col-12 mb-3">
-                            <label for="inputText" class="col col-form-label">
-                            Select Section</label>
-                            <select class="form-select" id="sectionid">
-                                <option value="" selected disabled>select section</option>
+                                        </i>
+                                    </td>
+                                </tr>
                                 <?php
-                                foreach ($Allsections as $section){
-                                    ?>
-                                <option value="<?=$section['id']?>"><?=$section['main_heading']?></option>
-                                <?php 
-                                    }
-                                 ?>
-                            </select>
-                            
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="inputText" class="col col-form-label">URL</label>
-                            <input type="url" class="form-control" id="url" required>
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="inputText" class="col col-form-label">Upload Thumbnail</label>
-                            <!-- <input type="file" class="form-control" id="images" required> -->
-                             <input type="file" required id="images" placeholder="Picture" class="form-control mb-2">
-                        </div>
+                            }
+                            ?>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-sm-12 text-center pt-3">
-                            <button type="submit" class="btn btn-primary" id="section_imgs_btn">Submit</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
-        </div>
-        <!-- sections table -->
-        <div class="col-lg-6">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Section Images</h5>
-                    <table class="table table-striped">
-                        <thead>
+
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body table-responsive">
+                        <h5 class="card-title">All Presentations into the Section Videos</h5>
+                        <table class="table table-striped">
+                            <thead>
                             <tr>
                                 <th>Section Main Heading</th>
                                 <th>Image</th>
                                 <th>Action</th>
                             </tr>
-                        </thead>
-                        <tbody>
+                            </thead>
+                            <tbody>
                             <?php
                             foreach ($AllsectionsImages as $section){
                                 ?>
                                 <tr>
                                     <td><?= $section['main_heading'] ?></td>
                                     <td><img src="<?= $section['image_path'] ?>" style="max-width: 50px;"></td>
-                                    
+
                                     <td>
                                         <i class="fa fa-trash p-2 btn btn-danger" title="Delete Section"
-                                        onclick="deleteimage(`<?= $section['id'] ?>`)"
+                                           onclick="deleteimage(`<?= $section['id'] ?>`)"
                                         >
-                                    </i>
-                                </td>
-                            </tr>
-                            <?php
-                        }
-                        ?>
-                    </tbody>
-                </table>
+                                        </i>
+                                    </td>
+                                </tr>
+                                <?php
+                            }
+                            ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 </main>
 <!-- End #main -->
 

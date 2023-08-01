@@ -134,8 +134,8 @@ if (!isset($_SESSION['user_id'])) {
                             <select name="tab_access"  data-live-search="true"
                                     class="selectpicker mb-3 w-100" id="split_agent"
                                     aria-label="select example" required>
-                                <option value="0">1</option>
-                                <option value="1">2</option>
+                                <option value="YES">Yes</option>
+                                <option value="NO">NO</option>
                             </select>
                         </div>
                         <div class="col-lg-4">

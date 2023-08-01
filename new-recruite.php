@@ -117,8 +117,8 @@ $business_partners_SMDs = $func->getAllSMD();
                             <select name="tab_access"  data-live-search="true"
                                     class="selectpicker mb-3 w-100"
                                     aria-label="select example" id="recruiter" required>
-                                <option value="0">Yes</option>
-                                <option value="1">No</option>
+                                <option value="YES">Yes</option>
+                                <option value="NO">No</option>
                             </select>
                         </div>
                         <div class="col-lg-4">
@@ -193,7 +193,7 @@ $business_partners_SMDs = $func->getAllSMD();
 
                     <div class="row mb-3">
                         <div class="col-lg-12">
-                            <label for="home-adrress" class="col-sm-12 col-form-label fw-bolder">Home Address</label>
+                            <label for="home_address" class="col-sm-12 col-form-label fw-bolder">Home Address</label>
                             <input type="text" class="form-control" placeholder="" id="home_address" required>
                         </div>
                     </div>

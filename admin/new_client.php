@@ -26,7 +26,7 @@ $all_new_clients=$func->getAllClients();
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body table-responsive">
-                            <table class="table table-striped ">
+                            <table class="table table-striped">
                                 <thead>
                                 <tr>
                                     <th>First Name</th>
@@ -39,8 +39,9 @@ $all_new_clients=$func->getAllClients();
                                     <th>CWA</th>
                                     <th>Writing Agent</th>
                                     <th>Trainee</th>
-                                    <th>Split Option</th>
+                                    <th>Split</th>
                                     <th>Split Agent</th>
+                                    <th>Agent Policy</th>
                                     <th>Product</th>
                                     <th>Provider</th>
                                     <th>Med Required</th>
