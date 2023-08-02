@@ -18,7 +18,7 @@ body {
 }
 
 .text-primary {
-  color: #EBCC72 !important;
+  color: #b99c44 !important;
 }
 
 .text-secondary {
@@ -568,6 +568,10 @@ textarea:focus {
   font-family: "slick";
   font-size: 30px !important;
   color: #610f0f !important;
+}
+
+.modal-backdrop {
+  background-color: #d59a06;
 }
 
 /*# sourceMappingURL=main.css.map */

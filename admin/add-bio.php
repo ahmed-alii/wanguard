@@ -48,7 +48,7 @@ if(!empty($users)){
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <form id="edit_bio">
+                            <form id="edit_bio" class="">
                                 <input value="<?=$user['id']?>" id="team_id1" type="hidden">
                                 <div class="modal-body">
                                     <div class="row">
@@ -93,11 +93,11 @@ if(!empty($users)){
         font_formats: "Noto-Nastaliq-Urdu = Noto Nastaliq Urdu; Noto-Sans-Arabic = Noto Sans Arabic;Andale Mono=andale mono,times; Arial=arial,helvetica,sans-serif; Arial Black=arial black,avant garde; Book Antiqua=book antiqua,palatino; Comic Sans MS=comic sans ms,sans-serif; Courier New=courier new,courier; Georgia=georgia,palatino; Helvetica=helvetica; Impact=impact,chicago; Oswald=oswald; Symbol=symbol; Tahoma=tahoma,arial,helvetica,sans-serif; Terminal=terminal,monaco; Times New Roman=times new roman,times; Trebuchet MS=trebuchet ms,geneva; Verdana=verdana,geneva; Webdings=webdings; Wingdings=wingdings,zapf dingbats",
         content_style: "@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap'); body { font-family: Noto-Nastaliq-Urdu; }",
         height: 500,
-        plugins: 'image code media',
+        // plugins: 'image code media',
         // images_upload_url : '../serverside/upload.php',
-        automatic_uploads : true,
-        file_picker_types: 'image',
-        image_title: true,
+        automatic_uploads : false, // true-->false
+        // file_picker_types: 'image',
+        image_title: false,   // true-->false
         image_generaltab:false,
         image_sourcetab:false,
         images_upload_handler : function(blobInfo, success, failure) {

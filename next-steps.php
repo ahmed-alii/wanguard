@@ -527,12 +527,12 @@ if (!isset($_SESSION['user_id'])) {
                         </g></svg>
                 </div>
                 <div>
-                    <h5 class="fw-bolder">ATTEND RACE TO $1000 LINK ( CRM ) </h5>
-                    <p class="text-secondary">
-                        Get your business off to a fast start, identify potential partners needed to build your agency,
-                        develop a business plan, & complete the 1 /1 /7 challenge
-                    </p>
-
+                    <h5 class="fw-bolder">ATTEND RACE TO $1000</h5>
+                    <div class="pt-4">
+                        <button class="btn btn-primary mb-4 px-5 py-2" data-bs-toggle="modal"
+                                data-bs-target="#"> Click to Register
+                        </button>
+                    </div>
                 </div>
             </div>
             <!--            <div class="pt-2 ">-->
@@ -582,13 +582,12 @@ if (!isset($_SESSION['user_id'])) {
         <div class="row justify-content-center mx-auto map">
             <div class="col-12 text-center">
                 <h1 class="fw-bolder text-primary"> PHASE 5.</h1>
-                <h1 class="fw-bolder">START PRACTICING - Meet with Mandie on that</h1>
+                <h1 class="fw-bolder">START PRACTICING</h1>
                 <p>It's our priority to get you a level of competence and confidence that will propel you to a
                     successful career. Field Trainers help us duplicate our efforts quickly and simply.
                     LEVERAGE a field trainer to help you start practicing your craft! Doctors Practice Medicine, Lawyer
                     Practice Law…. What's your practice? Financial Literacy & Leadership Development!
                 </p>
-                <p>We will provide the 5 Tiles</p>
             </div>
         </div>
         <div class="row justify-content-center pt-5 ">
@@ -1148,7 +1147,7 @@ if (!isset($_SESSION['user_id'])) {
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 py-5">
-                <div class="card  card-wrapper map2" style="min-height: 490px;">
+                <div class="card bg-black card-wrapper map2" style="min-height: 490px;">
                     <div class="card-body map-item2">
                         <h4 class="fw-bolder text-center">SR MARKETING</h4>
                         <h4 class="fw-bolder text-center">DIRECTOR</h4>
@@ -1298,7 +1297,7 @@ if (!isset($_SESSION['user_id'])) {
 
                     </div>
                     <h3>Awkward</h3>
-<!--                    <h3 class="text-primary fw-bolder">AUDIENCE</h3>-->
+                    <!--                    <h3 class="text-primary fw-bolder">AUDIENCE</h3>-->
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 py-5">
@@ -1325,7 +1324,7 @@ if (!isset($_SESSION['user_id'])) {
                             </g></svg>
                     </div>
                     <h3>Mechanical</h3>
-<!--                    <h3 class="text-primary fw-bolder">MARKETING</h3>-->
+                    <!--                    <h3 class="text-primary fw-bolder">MARKETING</h3>-->
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 py-5">
@@ -1357,7 +1356,7 @@ if (!isset($_SESSION['user_id'])) {
                             </g></svg>
                     </div>
                     <h3>Natural</h3>
-<!--                    <h3 class="text-primary fw-bolder">OVERVIEW</h3>-->
+                    <!--                    <h3 class="text-primary fw-bolder">OVERVIEW</h3>-->
                 </div>
             </div>
         </div>

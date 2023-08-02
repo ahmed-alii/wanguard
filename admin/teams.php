@@ -27,8 +27,7 @@ $team_members = $func->getAllTeamMembers();
                     <div class="card">
                         <div class="card-body">
                             <button type="button btn-1" class="btn btn-primary my-2" data-bs-toggle="modal"
-                                    data-bs-target="#add_team_modal">
-                                Add New Team Member
+                                    data-bs-target="#add_team_modal"> Add New Team Member
                             </button>
                             <h5 class="card-title">All Team Members</h5>
 
@@ -157,7 +156,7 @@ $team_members = $func->getAllTeamMembers();
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="inputTime" class="col-sm-12 col-form-label">Youtube Link</label>
+                            <label for="inputTime" class="col-sm-12 col-form-label">Facebook Link</label>
                             <div class="col-sm-12">
                                 <input type="text" id="youtube_link" class="form-control">
                             </div>
@@ -169,7 +168,7 @@ $team_members = $func->getAllTeamMembers();
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="inputTime" class="col-sm-12 col-form-label">Twitter</label>
+                            <label for="inputTime" class="col-sm-12 col-form-label">Instagram</label>
                             <div class="col-sm-12">
                                 <input type="text" id="twitter_link" class="form-control">
                             </div>

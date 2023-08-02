@@ -68,7 +68,7 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
         <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
             <ul class="navbar-nav navbar-custom mr-auto w-100 justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="index">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="welcome">Welcome</a>
@@ -93,7 +93,7 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
                 </li>
                 <li class="nav-item">
 <!--                    <div class="dropdown">-->
-                    <a class="nav-link dropbtn" href="#">Education</a>
+                    <a class="nav-link dropbtn" href="education">Education</a>
 <!--                        <div class="dropdown-content">-->
 <!--                            <a href="#">TNT Audio Training</a>-->
 <!--                        </div>-->

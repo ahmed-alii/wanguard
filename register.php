@@ -32,11 +32,11 @@
                                         </div>
                                         <div class="row justify-content-sm-center py-2">
                                             <div class="col-4">
-                                                <input type="number" required id="agent_code" placeholder="Agent Code"
+                                                <input type="text" required id="agent_code" placeholder="Agent Code"
                                                        class="form-control mb-2">
                                             </div>
                                             <div class="col-4">
-                                                <input type="number" required id="phone_no" placeholder="Phone No."
+                                                <input type="tel" required id="phone_no" placeholder="Phone No."
                                                        class="form-control mb-2">
                                             </div>
                                         </div>
@@ -101,8 +101,9 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="row justify-content-sm-center py-2">
-                                            <div class="col-8">
+                                        <div class="row justify-content-center py-2">
+                                            <div class="col-8 text-start">
+                                                <label class="mb-2">Profile Picture</label>
                                                 <input type="file" required id="image" placeholder="Picture"
                                                        class="form-control mb-2">
                                             </div>

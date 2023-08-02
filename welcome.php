@@ -138,10 +138,9 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
     <div class="container py-5">
         <div class="row mx-auto justify-content-center">
             <div class="col-11 col-lg-4 col-text-center">
-                <header class="fs-1 fw-bolder pb-4"> MEET YOUR TEAM</header>
-                <p class="text-primary">ALONE WE CAN DO SO LITTLE,
-                <p>
-                <p class="text-primary pb-5">TOGETHER WE CAN DO SO MUCH</p>
+                <header class="fs-1 fw-bolder pb-4">LeaderShip Team</header>
+                <h5 class="text-primary fw-bolder">ALONE WE CAN DO SO LITTLE,</h5>
+                <h5 class="text-primary fw-bolder pb-5">TOGETHER WE CAN DO SO MUCH</h5>
 
                 <?php
                 foreach ($level1 as $l1) {
@@ -176,33 +175,35 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
                         ?>
 
                         <?php
-                        if ($l1['youtube_link'] != "") {
+                        if ($l1['facebook_link'] != "") {
                             ?>
-                            <button onclick="window.location.href = '<?= $l1['youtube_link'] ?>'"
+                            <button onclick="window.location.href = '<?= $l1['facebook_link'] ?>'"
                                     class="btn btn-social m-1">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf1JREFUaEPtWIlNAzEQnK0AOgAqCKkA6AAqoIRABUAF0AGUQAckFZAOgA7oYNEgn+RcfNjxE98hWzpFsuP1zs5+tmDiQyauPxqA2gw2BhoDiRZoLpRowOTt/58BVT0FcAbgEMCx+WzLcZ1rMWPp2NTNrQF8iQh/B8cgA6pKZZ8BnMdolnHPC4AHEfl0yXQCMMp/ZFQih6gTF4ghAG8jsHwf9KuIXPUntwAYn3/PYbICMub9mHABuAHwWODwHCJvReTJFuQCwD8scpxWQAaD+d4HgGmMaXOMYyUiG1nRxUAqgAsATH1HBSwQBIDpkzUgaojIr1FUlVQzng6iBLk3rUVk7nMhTTmwA2BAsEIzpq5TZG4obAzUzblcKBuA7hCTmgkkObZsA1H+XgBYQC4NI9HxURWA5VaMjaj4qA7AgLgzAHbuYqsCUFW6EKt8cparEcRUPLk13ysDqkoX6dwlSyYNAfCdUnysQsZ+isVsZz//A2lQJc7RSvAmF+3ntQFkcZUBIUEMTL6dpt8y8MY4gi40fCaZ7pXSVEo+YUT3K4Wo2/J/ZzNnAIyRhfBnFQsEb1azQhYNFbti3zT0Qud9GzW9PBnp8nq/HeB8irtRQXvQffmxoC6jnxZDzVP7f14GaivoO78B8Fmo9HpjoLSFffIbAz4LlV5vDJS2sE/+D8vQtzHIU/lnAAAAAElFTkSuQmCC"/>
+                                <i class="fa fa-facebook" aria-hidden="true" style="font-size:25px"></i>
+                                <!--                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf1JREFUaEPtWIlNAzEQnK0AOgAqCKkA6AAqoIRABUAF0AGUQAckFZAOgA7oYNEgn+RcfNjxE98hWzpFsuP1zs5+tmDiQyauPxqA2gw2BhoDiRZoLpRowOTt/58BVT0FcAbgEMCx+WzLcZ1rMWPp2NTNrQF8iQh/B8cgA6pKZZ8BnMdolnHPC4AHEfl0yXQCMMp/ZFQih6gTF4ghAG8jsHwf9KuIXPUntwAYn3/PYbICMub9mHABuAHwWODwHCJvReTJFuQCwD8scpxWQAaD+d4HgGmMaXOMYyUiG1nRxUAqgAsATH1HBSwQBIDpkzUgaojIr1FUlVQzng6iBLk3rUVk7nMhTTmwA2BAsEIzpq5TZG4obAzUzblcKBuA7hCTmgkkObZsA1H+XgBYQC4NI9HxURWA5VaMjaj4qA7AgLgzAHbuYqsCUFW6EKt8cparEcRUPLk13ysDqkoX6dwlSyYNAfCdUnysQsZ+isVsZz//A2lQJc7RSvAmF+3ntQFkcZUBIUEMTL6dpt8y8MY4gi40fCaZ7pXSVEo+YUT3K4Wo2/J/ZzNnAIyRhfBnFQsEb1azQhYNFbti3zT0Qud9GzW9PBnp8nq/HeB8irtRQXvQffmxoC6jnxZDzVP7f14GaivoO78B8Fmo9HpjoLSFffIbAz4LlV5vDJS2sE/+D8vQtzHIU/lnAAAAAElFTkSuQmCC"/>-->
                             </button>
                             <?php
                         }
                         ?>
 
                         <?php
-                        if ($l1['linkedin_link'] != "") {
-                            ?>
-                            <button onclick="window.location.href = '<?= $l1['linkedin_link'] ?>'"
-                                    class="btn btn-social m-1">
-                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf9JREFUaEPtWcFRwzAQ3KsAqAA6IKkAqACoAOgAKgAqgA4IFUAHQAUkFZB0QAfLnJEYx5Esm5EjeUZ6JSNb2r093UqyYORNRo4fhUBqBYsC2SpA8gzALYBJYpBLADci8urC4U0hkl8ADhKDt9PPRWTalwAzAV/BEBFnsNsUKARiKhhLgQWAaxF5V3AkjwE8AjiMCdaZ65FS6MSCt5MYEm+jIOCTkeTg6yVKCo2eAICpiMzr6UJSje5zFCkEQMGfi4i6oy5iNbqXbbh1lBSqRfnb/N4dOvJ2/NgEtoX7b55YBJ4BVOlTa5pGF7X/9w52lwD2AXwY31jqWjIlWN/X/qO2qMQiEPQB10Qk1fhmIjLzgSSpJJ58/akJTJrVywWU5J3Zwm90JyXQdcGQ1KKgKbrTfCcLAqbs6lpY2VLcBEpSDy6n2REg+aAbwRqwK9ea8KVRUgVaNnx7ImI9peJGUkkq2bWWmoBvcQarWmwjC07oKaNaPuteYXEFx8uFgPqAy6gKgb6H+mDEWpy4KOAyxKJAs8aXFPq9qtm45UhtZNmUUbX5tUO9OQ/r5ZZtGsFm037XLXeX8aqxYinQdWcc/blCIHpIew74HwX0ZKSHjxzaQkScX4rajEw/Mek2ePCb50CEVuZGvN8nphzC3gVD+czaJUpDPlMUGDK6XcYevQI/EWKeQDGkBr4AAAAASUVORK5CYII="/>
-                            </button>
-                            <?php
-                        }
+                        if ($l1['instagram_link'] != "") {
                         ?>
-
-                        <?php
-                        if ($l1['twitter_link'] != "") {
-                        ?>
-                        <button onclick="window.location.href = '<?= $l1['twitter_link'] ?>'"
+                        <button onclick="window.location.href = '<?= $l1['instagram_link'] ?>'"
                                 class="btn btn-social m-1">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAudJREFUaEPtmIFtFEEMRb8rACogVABUAFRAqABSAaECkgpIKiCpAKiApAJIBUAFIRUYPWlWHHczO57duUMnraXT3WlnvP72t8ce056L7bn9WgD87wguEVgiMNMDC4VaHOju9yW9lXQg6Un6XEn6KenSzPi9Iewzs9+5Z8UIuPuBmaG4i7j7c0kfk/ElnQB4NRiLDZJeS3pqZoetAD5LujWzo7kI3P1E0vugnu+SAAJgooS8KEUnG4EU6tu0+WIOiOT5r0Hjc8tOzQwHZKUEAPSrL50EIjniW4U2Y9jeSWI/9HlgZm/WF0cBsI/QHpkZ3yFxd14I7+fKDZTKJXILgMGIEzM7jVjUyP2SSow/LBWUEgCSh9CVhCgA5MsYEHcnGZ9FwBbWFD0/rB8roxj5uPJyyizV6jznoQ4AitUnAoDE+dTgPQDzARTfHDxQbU4EpgPAcHfHuy8bQPReOg1Aqt0PJcHxs3Qa9jYuou9RrRuIVCHoMJyIkZd2W2Nm1WZzLIm9myXTFN2YWdVxYwDmlsBpZv/dRWU7rikZ7UYl/agp2OJzulKKyKiMcqzTSVqzIff8zsyYHapSTZKO/UzVmJUFDDcbjVtOQRVAOg/oTlHIcLELYYAJNY1VAO5OJRgOM35nJ6OOqK7NDIeFJAKAsW6XyRz2PgirABKFLnZEn1DpXA1NFAAVgXOh1p2Gwl5Y9IsTv3T7UFIcApCiAAjq8pzusmTHXZq4QonbHIHVDanRoyKRG73AMKpC02YJR2Bdc7qz+dChKk02PpzEaxGASpwHXHWETssRt84yvgmAu0MXzgDoM9dwEpZBvZnz687YoFDiOMZi5NDOhg+WAInP04VA9q4zsP+fJaWBhgQlqXolKS+9lnTcw+vhKpQSlZ4c6jBitgpUofSe1UbDVsXD+nAVSj0RlIJORAjh/730Gw8jw83EVW9v50CGAUz10Lb3LQC27eGa/iUCNQ9t+/kSgW17uKZ/7yPwB5uu7DGSgT7HAAAAAElFTkSuQmCC"/> <?php
+                            <i class="fa fa-instagram" aria-hidden="true" style="font-size:30px"></i>
+                            <!--                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAudJREFUaEPtmIFtFEEMRb8rACogVABUAFRAqABSAaECkgpIKiCpAKiApAJIBUAFIRUYPWlWHHczO57duUMnraXT3WlnvP72t8ce056L7bn9WgD87wguEVgiMNMDC4VaHOju9yW9lXQg6Un6XEn6KenSzPi9Iewzs9+5Z8UIuPuBmaG4i7j7c0kfk/ElnQB4NRiLDZJeS3pqZoetAD5LujWzo7kI3P1E0vugnu+SAAJgooS8KEUnG4EU6tu0+WIOiOT5r0Hjc8tOzQwHZKUEAPSrL50EIjniW4U2Y9jeSWI/9HlgZm/WF0cBsI/QHpkZ3yFxd14I7+fKDZTKJXILgMGIEzM7jVjUyP2SSow/LBWUEgCSh9CVhCgA5MsYEHcnGZ9FwBbWFD0/rB8roxj5uPJyyizV6jznoQ4AitUnAoDE+dTgPQDzARTfHDxQbU4EpgPAcHfHuy8bQPReOg1Aqt0PJcHxs3Qa9jYuou9RrRuIVCHoMJyIkZd2W2Nm1WZzLIm9myXTFN2YWdVxYwDmlsBpZv/dRWU7rikZ7UYl/agp2OJzulKKyKiMcqzTSVqzIff8zsyYHapSTZKO/UzVmJUFDDcbjVtOQRVAOg/oTlHIcLELYYAJNY1VAO5OJRgOM35nJ6OOqK7NDIeFJAKAsW6XyRz2PgirABKFLnZEn1DpXA1NFAAVgXOh1p2Gwl5Y9IsTv3T7UFIcApCiAAjq8pzusmTHXZq4QonbHIHVDanRoyKRG73AMKpC02YJR2Bdc7qz+dChKk02PpzEaxGASpwHXHWETssRt84yvgmAu0MXzgDoM9dwEpZBvZnz687YoFDiOMZi5NDOhg+WAInP04VA9q4zsP+fJaWBhgQlqXolKS+9lnTcw+vhKpQSlZ4c6jBitgpUofSe1UbDVsXD+nAVSj0RlIJORAjh/730Gw8jw83EVW9v50CGAUz10Lb3LQC27eGa/iUCNQ9t+/kSgW17uKZ/7yPwB5uu7DGSgT7HAAAAAElFTkSuQmCC"/> --><?php
+                            }
+                            ?>
+
+                            <?php
+                            if ($l1['linkedin_link'] != "") {
+                                ?>
+                                <button onclick="window.location.href = '<?= $l1['linkedin_link'] ?>'"
+                                        class="btn btn-social m-1">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf9JREFUaEPtWcFRwzAQ3KsAqAA6IKkAqACoAOgAKgAqgA4IFUAHQAUkFZB0QAfLnJEYx5Esm5EjeUZ6JSNb2r093UqyYORNRo4fhUBqBYsC2SpA8gzALYBJYpBLADci8urC4U0hkl8ADhKDt9PPRWTalwAzAV/BEBFnsNsUKARiKhhLgQWAaxF5V3AkjwE8AjiMCdaZ65FS6MSCt5MYEm+jIOCTkeTg6yVKCo2eAICpiMzr6UJSje5zFCkEQMGfi4i6oy5iNbqXbbh1lBSqRfnb/N4dOvJ2/NgEtoX7b55YBJ4BVOlTa5pGF7X/9w52lwD2AXwY31jqWjIlWN/X/qO2qMQiEPQB10Qk1fhmIjLzgSSpJJ58/akJTJrVywWU5J3Zwm90JyXQdcGQ1KKgKbrTfCcLAqbs6lpY2VLcBEpSDy6n2REg+aAbwRqwK9ea8KVRUgVaNnx7ImI9peJGUkkq2bWWmoBvcQarWmwjC07oKaNaPuteYXEFx8uFgPqAy6gKgb6H+mDEWpy4KOAyxKJAs8aXFPq9qtm45UhtZNmUUbX5tUO9OQ/r5ZZtGsFm037XLXeX8aqxYinQdWcc/blCIHpIew74HwX0ZKSHjxzaQkScX4rajEw/Mek2ePCb50CEVuZGvN8nphzC3gVD+czaJUpDPlMUGDK6XcYevQI/EWKeQDGkBr4AAAAASUVORK5CYII="/>
+                                </button>
+                                <?php
                             }
                             ?>
                     </div>
@@ -257,24 +258,49 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
                     <p class="fw-bolder text-gray p-0 m-0"><?= $l2['rank'] ?></p>
                     <p class="fw-bolder text-gray p-0 m-0"><?= $l2['department'] ?></p>
                     <p class="fw-bolder text-green p-0 m-0">$<?= number_format($l2['earning']) ?> + EARNERS </p>
-                    <div class="btn-3 py-3">
+                    <div class="btn-1 py-2 d-flex w-100 justify-content-center">
                         <?php
                         if ($l2['bio'] != "") {
                             ?>
-                            <button onclick="showBio(`<?= $l2['id'] ?>`)" class="btn px-4 my-2 my-lg-0">BIO
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24"
-                                     xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor"
-                                     width="15px" height="30px">
-                                <g>
-                                    <path
-                                            d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
-                                </g>
-                            </svg>
+                            <button onclick="showBio(`<?= $l2['id'] ?>`)" class="btn px-5 m-1 py-3">BIO
+
                             </button>
                             <?php
                         }
                         ?>
+
+                        <?php
+                        if ($l2['facebook_link'] != "") {
+                            ?>
+                            <button onclick="window.location.href = '<?= $l2['facebook_link'] ?>'"
+                                    class="btn btn-social m-1">
+                                <i class="fa fa-facebook" aria-hidden="true" style="font-size:25px"></i>
+                                <!--                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf1JREFUaEPtWIlNAzEQnK0AOgAqCKkA6AAqoIRABUAF0AGUQAckFZAOgA7oYNEgn+RcfNjxE98hWzpFsuP1zs5+tmDiQyauPxqA2gw2BhoDiRZoLpRowOTt/58BVT0FcAbgEMCx+WzLcZ1rMWPp2NTNrQF8iQh/B8cgA6pKZZ8BnMdolnHPC4AHEfl0yXQCMMp/ZFQih6gTF4ghAG8jsHwf9KuIXPUntwAYn3/PYbICMub9mHABuAHwWODwHCJvReTJFuQCwD8scpxWQAaD+d4HgGmMaXOMYyUiG1nRxUAqgAsATH1HBSwQBIDpkzUgaojIr1FUlVQzng6iBLk3rUVk7nMhTTmwA2BAsEIzpq5TZG4obAzUzblcKBuA7hCTmgkkObZsA1H+XgBYQC4NI9HxURWA5VaMjaj4qA7AgLgzAHbuYqsCUFW6EKt8cparEcRUPLk13ysDqkoX6dwlSyYNAfCdUnysQsZ+isVsZz//A2lQJc7RSvAmF+3ntQFkcZUBIUEMTL6dpt8y8MY4gi40fCaZ7pXSVEo+YUT3K4Wo2/J/ZzNnAIyRhfBnFQsEb1azQhYNFbti3zT0Qud9GzW9PBnp8nq/HeB8irtRQXvQffmxoC6jnxZDzVP7f14GaivoO78B8Fmo9HpjoLSFffIbAz4LlV5vDJS2sE/+D8vQtzHIU/lnAAAAAElFTkSuQmCC"/>-->
+                            </button>
+                            <?php
+                        }
+                        ?>
+
+                        <?php
+                        if ($l2['instagram_link'] != "") {
+                        ?>
+                        <button onclick="window.location.href = '<?= $l2['instagram_link'] ?>'"
+                                class="btn btn-social m-1">
+                            <i class="fa fa-instagram" aria-hidden="true" style="font-size:30px"></i>
+                            <!--                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAudJREFUaEPtmIFtFEEMRb8rACogVABUAFRAqABSAaECkgpIKiCpAKiApAJIBUAFIRUYPWlWHHczO57duUMnraXT3WlnvP72t8ce056L7bn9WgD87wguEVgiMNMDC4VaHOju9yW9lXQg6Un6XEn6KenSzPi9Iewzs9+5Z8UIuPuBmaG4i7j7c0kfk/ElnQB4NRiLDZJeS3pqZoetAD5LujWzo7kI3P1E0vugnu+SAAJgooS8KEUnG4EU6tu0+WIOiOT5r0Hjc8tOzQwHZKUEAPSrL50EIjniW4U2Y9jeSWI/9HlgZm/WF0cBsI/QHpkZ3yFxd14I7+fKDZTKJXILgMGIEzM7jVjUyP2SSow/LBWUEgCSh9CVhCgA5MsYEHcnGZ9FwBbWFD0/rB8roxj5uPJyyizV6jznoQ4AitUnAoDE+dTgPQDzARTfHDxQbU4EpgPAcHfHuy8bQPReOg1Aqt0PJcHxs3Qa9jYuou9RrRuIVCHoMJyIkZd2W2Nm1WZzLIm9myXTFN2YWdVxYwDmlsBpZv/dRWU7rikZ7UYl/agp2OJzulKKyKiMcqzTSVqzIff8zsyYHapSTZKO/UzVmJUFDDcbjVtOQRVAOg/oTlHIcLELYYAJNY1VAO5OJRgOM35nJ6OOqK7NDIeFJAKAsW6XyRz2PgirABKFLnZEn1DpXA1NFAAVgXOh1p2Gwl5Y9IsTv3T7UFIcApCiAAjq8pzusmTHXZq4QonbHIHVDanRoyKRG73AMKpC02YJR2Bdc7qz+dChKk02PpzEaxGASpwHXHWETssRt84yvgmAu0MXzgDoM9dwEpZBvZnz687YoFDiOMZi5NDOhg+WAInP04VA9q4zsP+fJaWBhgQlqXolKS+9lnTcw+vhKpQSlZ4c6jBitgpUofSe1UbDVsXD+nAVSj0RlIJORAjh/730Gw8jw83EVW9v50CGAUz10Lb3LQC27eGa/iUCNQ9t+/kSgW17uKZ/7yPwB5uu7DGSgT7HAAAAAElFTkSuQmCC"/> --><?php
+                            }
+                            ?>
+
+                            <?php
+                            if ($l2['linkedin_link'] != "") {
+                                ?>
+                                <button onclick="window.location.href = '<?= $l2['linkedin_link'] ?>'"
+                                        class="btn btn-social m-1">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf9JREFUaEPtWcFRwzAQ3KsAqAA6IKkAqACoAOgAKgAqgA4IFUAHQAUkFZB0QAfLnJEYx5Esm5EjeUZ6JSNb2r093UqyYORNRo4fhUBqBYsC2SpA8gzALYBJYpBLADci8urC4U0hkl8ADhKDt9PPRWTalwAzAV/BEBFnsNsUKARiKhhLgQWAaxF5V3AkjwE8AjiMCdaZ65FS6MSCt5MYEm+jIOCTkeTg6yVKCo2eAICpiMzr6UJSje5zFCkEQMGfi4i6oy5iNbqXbbh1lBSqRfnb/N4dOvJ2/NgEtoX7b55YBJ4BVOlTa5pGF7X/9w52lwD2AXwY31jqWjIlWN/X/qO2qMQiEPQB10Qk1fhmIjLzgSSpJJ58/akJTJrVywWU5J3Zwm90JyXQdcGQ1KKgKbrTfCcLAqbs6lpY2VLcBEpSDy6n2REg+aAbwRqwK9ea8KVRUgVaNnx7ImI9peJGUkkq2bWWmoBvcQarWmwjC07oKaNaPuteYXEFx8uFgPqAy6gKgb6H+mDEWpy4KOAyxKJAs8aXFPq9qtm45UhtZNmUUbX5tUO9OQ/r5ZZtGsFm037XLXeX8aqxYinQdWcc/blCIHpIew74HwX0ZKSHjxzaQkScX4rajEw/Mek2ePCb50CEVuZGvN8nphzC3gVD+czaJUpDPlMUGDK6XcYevQI/EWKeQDGkBr4AAAAASUVORK5CYII="/>
+                                </button>
+                                <?php
+                            }
+                            ?>
                     </div>
                     <div class="btn-2">
                         <a target="_blank" href="<?= $l2['appointment_link'] ?>">
@@ -346,6 +372,40 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
                             <?php
                         }
                         ?>
+
+                        <?php
+                        if ($l3['facebook_link'] != "") {
+                            ?>
+                            <button onclick="window.location.href = '<?= $l3['facebook_link'] ?>'"
+                                    class="btn btn-social m-1">
+                                <i class="fa fa-facebook" aria-hidden="true" style="font-size:25px"></i>
+                                <!--                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf1JREFUaEPtWIlNAzEQnK0AOgAqCKkA6AAqoIRABUAF0AGUQAckFZAOgA7oYNEgn+RcfNjxE98hWzpFsuP1zs5+tmDiQyauPxqA2gw2BhoDiRZoLpRowOTt/58BVT0FcAbgEMCx+WzLcZ1rMWPp2NTNrQF8iQh/B8cgA6pKZZ8BnMdolnHPC4AHEfl0yXQCMMp/ZFQih6gTF4ghAG8jsHwf9KuIXPUntwAYn3/PYbICMub9mHABuAHwWODwHCJvReTJFuQCwD8scpxWQAaD+d4HgGmMaXOMYyUiG1nRxUAqgAsATH1HBSwQBIDpkzUgaojIr1FUlVQzng6iBLk3rUVk7nMhTTmwA2BAsEIzpq5TZG4obAzUzblcKBuA7hCTmgkkObZsA1H+XgBYQC4NI9HxURWA5VaMjaj4qA7AgLgzAHbuYqsCUFW6EKt8cparEcRUPLk13ysDqkoX6dwlSyYNAfCdUnysQsZ+isVsZz//A2lQJc7RSvAmF+3ntQFkcZUBIUEMTL6dpt8y8MY4gi40fCaZ7pXSVEo+YUT3K4Wo2/J/ZzNnAIyRhfBnFQsEb1azQhYNFbti3zT0Qud9GzW9PBnp8nq/HeB8irtRQXvQffmxoC6jnxZDzVP7f14GaivoO78B8Fmo9HpjoLSFffIbAz4LlV5vDJS2sE/+D8vQtzHIU/lnAAAAAElFTkSuQmCC"/>-->
+                            </button>
+                            <?php
+                        }
+                        ?>
+
+                        <?php
+                        if ($l3['instagram_link'] != "") {
+                        ?>
+                        <button onclick="window.location.href = '<?= $l3['instagram_link'] ?>'"
+                                class="btn btn-social m-1">
+                            <i class="fa fa-instagram" aria-hidden="true" style="font-size:30px"></i>
+                            <!--                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAudJREFUaEPtmIFtFEEMRb8rACogVABUAFRAqABSAaECkgpIKiCpAKiApAJIBUAFIRUYPWlWHHczO57duUMnraXT3WlnvP72t8ce056L7bn9WgD87wguEVgiMNMDC4VaHOju9yW9lXQg6Un6XEn6KenSzPi9Iewzs9+5Z8UIuPuBmaG4i7j7c0kfk/ElnQB4NRiLDZJeS3pqZoetAD5LujWzo7kI3P1E0vugnu+SAAJgooS8KEUnG4EU6tu0+WIOiOT5r0Hjc8tOzQwHZKUEAPSrL50EIjniW4U2Y9jeSWI/9HlgZm/WF0cBsI/QHpkZ3yFxd14I7+fKDZTKJXILgMGIEzM7jVjUyP2SSow/LBWUEgCSh9CVhCgA5MsYEHcnGZ9FwBbWFD0/rB8roxj5uPJyyizV6jznoQ4AitUnAoDE+dTgPQDzARTfHDxQbU4EpgPAcHfHuy8bQPReOg1Aqt0PJcHxs3Qa9jYuou9RrRuIVCHoMJyIkZd2W2Nm1WZzLIm9myXTFN2YWdVxYwDmlsBpZv/dRWU7rikZ7UYl/agp2OJzulKKyKiMcqzTSVqzIff8zsyYHapSTZKO/UzVmJUFDDcbjVtOQRVAOg/oTlHIcLELYYAJNY1VAO5OJRgOM35nJ6OOqK7NDIeFJAKAsW6XyRz2PgirABKFLnZEn1DpXA1NFAAVgXOh1p2Gwl5Y9IsTv3T7UFIcApCiAAjq8pzusmTHXZq4QonbHIHVDanRoyKRG73AMKpC02YJR2Bdc7qz+dChKk02PpzEaxGASpwHXHWETssRt84yvgmAu0MXzgDoM9dwEpZBvZnz687YoFDiOMZi5NDOhg+WAInP04VA9q4zsP+fJaWBhgQlqXolKS+9lnTcw+vhKpQSlZ4c6jBitgpUofSe1UbDVsXD+nAVSj0RlIJORAjh/730Gw8jw83EVW9v50CGAUz10Lb3LQC27eGa/iUCNQ9t+/kSgW17uKZ/7yPwB5uu7DGSgT7HAAAAAElFTkSuQmCC"/> --><?php
+                            }
+                            ?>
+
+                            <?php
+                            if ($l3['linkedin_link'] != "") {
+                                ?>
+                                <button onclick="window.location.href = '<?= $l3['linkedin_link'] ?>'"
+                                        class="btn btn-social m-1">
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf9JREFUaEPtWcFRwzAQ3KsAqAA6IKkAqACoAOgAKgAqgA4IFUAHQAUkFZB0QAfLnJEYx5Esm5EjeUZ6JSNb2r093UqyYORNRo4fhUBqBYsC2SpA8gzALYBJYpBLADci8urC4U0hkl8ADhKDt9PPRWTalwAzAV/BEBFnsNsUKARiKhhLgQWAaxF5V3AkjwE8AjiMCdaZ65FS6MSCt5MYEm+jIOCTkeTg6yVKCo2eAICpiMzr6UJSje5zFCkEQMGfi4i6oy5iNbqXbbh1lBSqRfnb/N4dOvJ2/NgEtoX7b55YBJ4BVOlTa5pGF7X/9w52lwD2AXwY31jqWjIlWN/X/qO2qMQiEPQB10Qk1fhmIjLzgSSpJJ58/akJTJrVywWU5J3Zwm90JyXQdcGQ1KKgKbrTfCcLAqbs6lpY2VLcBEpSDy6n2REg+aAbwRqwK9ea8KVRUgVaNnx7ImI9peJGUkkq2bWWmoBvcQarWmwjC07oKaNaPuteYXEFx8uFgPqAy6gKgb6H+mDEWpy4KOAyxKJAs8aXFPq9qtm45UhtZNmUUbX5tUO9OQ/r5ZZtGsFm037XLXeX8aqxYinQdWcc/blCIHpIew74HwX0ZKSHjxzaQkScX4rajEw/Mek2ePCb50CEVuZGvN8nphzC3gVD+czaJUpDPlMUGDK6XcYevQI/EWKeQDGkBr4AAAAASUVORK5CYII="/>
+                                </button>
+                                <?php
+                            }
+                            ?>
+
                     </div>
                 </div>
                 <?php

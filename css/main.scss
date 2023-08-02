@@ -18,7 +18,8 @@ body {
 }
 
 .text-primary {
-  color: #EBCC72 !important;
+  color: #b99c44 !important;
+  //text-shadow: #e0bbbb 1px 0 1px;
 }
 
 .text-secondary {
@@ -674,3 +675,7 @@ textarea {
 //  max-height: 300px;
 //  overflow-y: scroll;
 //}
+
+.modal-backdrop {
+  background-color: #d59a06;
+}
