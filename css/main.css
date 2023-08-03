@@ -574,4 +574,8 @@ textarea:focus {
   background-color: #d59a06;
 }
 
+.links-wrapper li a {
+  font-size: 13px;
+}
+
 /*# sourceMappingURL=main.css.map */

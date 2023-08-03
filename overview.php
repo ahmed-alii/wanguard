@@ -19,7 +19,7 @@ if (!isset($_SESSION['user_id'])){
                     <img src="assets/images/logo3.png" class="img-fluid">
                 </div>
                 <div class="py-3">
-                    <h2 class="py-3">FINANCIAL CHALLENGES</h2>
+                    <h1 class="py-3">FINANCIAL CHALLENGES</h1>
                     <p>CHALLENGES FACING AMERICANS TODAY</p>
                 </div>
                 <div class="map pb-5">
@@ -92,7 +92,7 @@ if (!isset($_SESSION['user_id'])){
         </div>
         <div class="row mx-0">
             <div class="col-lg-12">
-                <ul class="links-wrapper ">
+                <ul class="links-wrapper">
                     <li>
                         <a class="text-decoration-none text-black"
                            href="https://www.forbes.com/sites/zackfriedman/2019/01/11/live-paycheck-to-paycheck-government-shutdown/#1150a024f10b">

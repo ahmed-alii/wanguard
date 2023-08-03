@@ -245,11 +245,17 @@ class Functions
         }
     }
 function getDashboardStats(){
-    $sql = "select * from `dashboard_stats` ";
+    $sql = "select * from `dashboard_stats`";
     if ($this->db->sql($sql)) {
         return $this->db->getResult();
     }
 }
+    function getDashboardAll(){
+        $sql = "select * from `dashboard_stats` ";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
     function getAllFamilyClient_count()
     {
         $sql = "select * from `new-client` where status=1 ";
@@ -286,6 +292,16 @@ function getDashboardStats(){
             return $this->db->getResult();
         }
     }
+
+    function getAllOneThrees()
+    {
+        $sql = "select * from `one_three`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
+
 
 
 

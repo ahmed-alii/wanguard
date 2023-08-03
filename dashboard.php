@@ -6,6 +6,7 @@ $func = new Functions();
 $recruite_users = $func->getAllNewRecruite_count();
 $client_users = $func->getAllFamilyClient_count();
 $dashboard_stats=$func->getDashboardStats();
+$one_threes=$func->getAllOneThrees();
 ?>
 
 
@@ -17,7 +18,7 @@ $dashboard_stats=$func->getDashboardStats();
                     <img src="assets/images/logo3.png" class="img-fluid">
                 </div>
                 <div class="py-3">
-                    <h2 class="py-3">AGENCY DASHBOARD</h2>
+                    <h1 class="py-3">AGENCY DASHBOARD</h1>
                     <!--                    <p>CHALLENGES FACING AMERICANS TODAY</p>-->
                 </div>
                 <div class="map pb-5">
@@ -300,46 +301,40 @@ $dashboard_stats=$func->getDashboardStats();
 <!--</div>-->
 
 <!--Modal-6 -->
-<!--<div class="modal fade" id="modal-6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"-->
-<!--     aria-labelledby="staticBackdropLabel" aria-hidden="true">-->
-<!--    <div class="modal-dialog modal-dialog-centered modal-md">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header">-->
-<!--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--            </div>-->
-<!--            <div class="modal-body">-->
-<!--                <table class="table">-->
-<!--                    <thead>-->
-<!--                    <tr>-->
-<!--                        <th scope="col">#</th>-->
-<!--                        <th scope="col">Name</th>-->
-<!--                        <th scope="col">Users</th>-->
-<!--                    </tr>-->
-<!--                    </thead>-->
-<!--                    <tbody>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">1</th>-->
-<!--                        <td>Mark</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">2</th>-->
-<!--                        <td>Jacob</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!---->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">3</th>-->
-<!--                        <td>Larry the Bird</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!---->
-<!--                    </tr>-->
-<!--                    </tbody>-->
-<!--                </table>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="modal fade" id="modal-6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Numbers</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    foreach ($one_threes as $one_three) {
+                        ?>
+                        <tr>
+                            <th scope="row"><?= $one_three['id'] ?></th>
+                            <td><?= $one_three['name'] ?></td>
+                            <td><?= $one_three['number'] ?></td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <?php include_once "includes/footer.php" ?>

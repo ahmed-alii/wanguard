@@ -81,7 +81,7 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
                 </li>
                 <li class="nav-item">
 <!--                    <div class="dropdown">-->
-                    <a class="nav-link dropbtn" href="trainers-page">Tranier Page</a>
+                    <a class="nav-link dropbtn" href="trainers-page">Traniers</a>
 <!--                            <div class="dropdown-content">-->
 <!--                                <a href="#">Mission Statement</a>-->
 <!--                                <a href="#">Contests</a>-->
@@ -93,7 +93,7 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
                 </li>
                 <li class="nav-item">
 <!--                    <div class="dropdown">-->
-                    <a class="nav-link dropbtn" href="education">Education</a>
+                    <a class="nav-link dropbtn" href="training_center">Training Center</a>
 <!--                        <div class="dropdown-content">-->
 <!--                            <a href="#">TNT Audio Training</a>-->
 <!--                        </div>-->

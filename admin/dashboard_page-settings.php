@@ -31,6 +31,7 @@ $all_new_clients = $func->getAllClients();
                                 <li>NEW BUSINESS PARTNERS</li>
                                 <li>FAMILIES HELPED</li>
                                 <li>TOTAL SAVINGS</li>
+                                <li>1 / $300 (Also Name & Number)</li>
                             </ul>
                             <div class="w-100 text-center">
                                 <button id="reset" class="btn btn-primary" onclick="reset()">Reset All</button>
@@ -48,6 +49,25 @@ $all_new_clients = $func->getAllClients();
                                 <input type="text" class="form-control mb-2" placeholder="1 / 300" id="one_300">
                                 <div class="w-100 text-center">
                                     <button class="btn btn-primary" type="submit" id="section_imgs_btn">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="mt-3">1 / 300</h4>
+                            <form class="py-3" id="one_three">
+                                <input type="text" class="form-control mb-2" placeholder="Name" id="name">
+                                <input type="number" class="form-control mb-2" placeholder="Number" id="number">
+                                <div class="w-100 text-center">
+                                    <button class="btn btn-primary" type="submit" id="one_three_btn">Submit</button>
                                 </div>
                             </form>
                         </div>

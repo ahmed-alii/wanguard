@@ -205,7 +205,13 @@ if (!empty($users1)) {
         <li class="nav-item">
             <a class="nav-link" href="dashboard_page-settings">
                 <i class="bi bi-person"></i>
-                <span>Dashbaord Page Settings</span>
+                <span>Dashboard Page Settings</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="training_center_settings">
+                <i class="bi bi-person"></i>
+                <span>Training Center Settings</span>
             </a>
         </li>
     </ul>

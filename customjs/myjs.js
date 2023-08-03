@@ -1532,14 +1532,47 @@ $("#dashboard_stats").submit(function(e){
             } else {
                 swal("Error", "Failed , Please try again ", "error");
             }
-
             $("#section_imgs_btn").attr("disabled", false);
             $("#section_imgs_btn").html(`Submit`);
 
+        }//success
+    });
+});
+//Add client tool
+
+$("#one_three").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '42');
+    ajax_data.append('name', $('#name').val());
+    ajax_data.append('number', $('#number').val());
+
+
+    $("#one_three_btn").attr("disabled", true);
+    $("#one_three_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+            $("#add_team_modal").modal("hide")
+            if (data.trim() == "true") {
+                swal("Success", "1 / 300 added successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to add 1 / 300, please try again ", "error");
+
+            }
+            $("#one_three_btn").attr("disabled", false);
+            $("#one_three_btn").html('Submit');
 
         }//success
     });
-
-
-});
-//Add client tool
+});//Add team
+//Edit Team member

@@ -978,15 +978,14 @@ if ($func == 39) {
 
 if ($func == 40) {
 
-
     $sql = "update `new-recruit` set `status`= '0' ";
-
 
     if ($db->sql($sql)) {
         $sql = "update `new-client` set `status`= '0' ";
         $db->sql($sql);
 
-        $sql = "update `dashboard_stats` set `status`= '0' ";
+        $sql = "update `dashboard_stats` set `one_300`= '0' ";
+        $sql = "DELETE FROM `one_three` WHERE status= '0' ";
         $db->sql($sql);
 
         echo "true";
@@ -1013,5 +1012,25 @@ if ($func == 41) {
         echo "false";
     }
 }
+
+
+else if ($func == 42) {
+
+    $name = htmlspecialchars(stripslashes($_POST['name']));
+    $name = $db->escapeString($name);
+
+    $number = htmlspecialchars(stripslashes($_POST['number']));
+    $number = $db->escapeString($number);
+
+    $sql = "INSERT INTO `one_three`(`name`, `number`) VALUES ('$name','$number')";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+//42
 
 ?>

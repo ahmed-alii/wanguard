@@ -13,6 +13,7 @@ include_once "./serverside/functions.php";
 $func=new Functions();
 $business_partners_MDs = $func->getAllMD();
 $business_partners_SMDs = $func->getAllSMD();
+$users = $func->getAllUser();
 ?>
     <section>
         <div class="container py-5">
@@ -117,8 +118,13 @@ $business_partners_SMDs = $func->getAllSMD();
                             <select name="tab_access"  data-live-search="true"
                                     class="selectpicker mb-3 w-100"
                                     aria-label="select example" id="recruiter" required>
-                                <option value="YES">Yes</option>
-                                <option value="NO">No</option>
+                                <?php
+                                foreach ($users as $user) {
+                                    ?>
+                                    <option value="<?= $user['fname'] ?>"> <?= $user['fname'] ?></option>
+                                    <?php
+                                }
+                                ?>
                             </select>
                         </div>
                         <div class="col-lg-4">
