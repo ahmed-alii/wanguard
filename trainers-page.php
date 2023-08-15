@@ -268,8 +268,7 @@ $users = $func->getAllUser();
             </div>
         </div>
     </section>
-<?php 
-
+<?php
     $allsections = $func->getAllsections();
     foreach($allsections as $section){
         $sectionimages = $func->getsectionimages($section['id']);

@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cb8abc8-bdcc-471f-9303-40e25c2c7bae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/training_center_settings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/dashboard_page-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/dashboard_page-settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/dashboard-header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/dashboard-header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customjs/myjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/customjs/myjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/education.php" beforeDir="false" afterPath="$PROJECT_DIR$/training_center.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/new-recruite.php" beforeDir="false" afterPath="$PROJECT_DIR$/new-recruite.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/overview.php" beforeDir="false" afterPath="$PROJECT_DIR$/overview.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverside/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverside/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/training_center_settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/training_center_settings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainers-page.php" beforeDir="false" afterPath="$PROJECT_DIR$/trainers-page.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/training_center.php" beforeDir="false" afterPath="$PROJECT_DIR$/training_center.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +120,7 @@
       <workItem from="1691044681405" duration="1200000" />
       <workItem from="1691058906540" duration="3246000" />
       <workItem from="1691062308969" duration="8317000" />
+      <workItem from="1692082072380" duration="4267000" />
     </task>
     <servers />
   </component>
