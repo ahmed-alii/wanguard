@@ -592,342 +592,28 @@ if (!isset($_SESSION['user_id'])) {
         </div>
         <div class="row justify-content-center pt-5 ">
             <div class="col-12 col-md-6 col-lg-4 py-3">
-                <h4>PERSONAL PRODUCER</h4>
-                <div class="map2">
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>COMPLETED YOUR 1 / 1 / 7 </p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>LICENSED, E&O AND PLATFORM IN GOOD ORDER </p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>OBSERVE 5 FIELD TRAINING APPOINTMENTS </p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>OBSERVE AT LEAST 5,000 POINTS OF BUISINESS</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>HAVE A TRAINER OBSERVE YOU COMPLETEING 5 TRAINING APPOINTMENTS</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>COMPLETE CERTIFICATION INTERVIEW WITH SMD</p>
-                        </div>
-                    </div>
+                <div class="card" data-bs-toggle="modal" data-bs-target="#bronze">
+                    <img src="assets/images/phase_5/1.png" alt="">
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 py-3">
-                <h4> FINANCIAL COACH</h4>
-                <div class="map2">
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>ALL REQUIREMENTS FOR PERSONAL PRODUCER</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>COMPETENT RECRUITING ABILITY </p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>CAN EXPLAIN COMPENSATION & PROMOTIONS</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>RUN A COMPETENT FNA PHASE 1 AND 2</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>ABLE TO ARTICULATE THE FUNDEMENTAL WFG RECRUITING STORY</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>KNOW HOW TO GET REFERRALS</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>COMPLETE CERTIFICATION INTERVIEW WITH SMD</p>
-                        </div>
-                    </div>
+                <div class="card" data-bs-toggle="modal" data-bs-target="#silver">
+                    <img src="assets/images/phase_5/2.png" alt="">
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 py-3">
-                <h4>CERTIFIED FIELD TRAINER</h4>
-                <div class="map2">
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>ALL REQUIREMENTS FOR FINANCIAL COACH</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>ARTICULATE A TYPICAL FNA AND THE SOLUTIONS YOU WOULD USE AND REASONS WHY </p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>CAN STRUCTURE & RUN TRAINING</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>OBTAIN SECURITIES LICENSE OR HIT SMD</p>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <div class="map-item2 px-2">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                                 x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve"
-                                 class="brz-icon-svg align-[initial]"
-                                 data-type="glyph" data-name="check-square-11"><g class="nc-icon-wrapper"
-                                                                                  fill="inherit">
-                                    <path fill="inherit"
-                                          d="M11,16c-0.3,0-0.5-0.1-0.7-0.3l-4-4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l3.3,3.3L21.3,3.3c0.4-0.4,1-0.4,1.4,0 s0.4,1,0,1.4l-11,11C11.5,15.9,11.3,16,11,16z"></path>
-                                    <path data-color="color-2" fill="inherit"
-                                          d="M20,24H1c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1s-0.4,1-1,1H2v17h17v-9 c0-0.6,0.4-1,1-1s1,0.4,1,1v10C21,23.6,20.6,24,20,24z"></path>
-                                </g></svg>
-                        </div>
-                        <div>
-                            <p>COMPLETE CERTIFICATION INTERVIEW WITH UPLINE SMD</p>
-                        </div>
-                    </div>
+                <div class="card" data-bs-toggle="modal" data-bs-target="#junior">
+                    <img src="assets/images/phase_5/3.png" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 py-3">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#senior">
+                    <img src="assets/images/phase_5/4.png" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 py-3">
+                <div class="card" data-bs-toggle="modal" data-bs-target="#master">
+                    <img src="assets/images/phase_5/5.png" alt="">
                 </div>
             </div>
         </div>
@@ -2518,6 +2204,92 @@ if (!isset($_SESSION['user_id'])) {
                             </li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--bronze Modal -->
+<div class="modal fade" id="bronze" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body map">
+                <div class="card">
+                    <img src="assets/images/phase_5/Bronze%20Practice%20Rear%202.png" alt="">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--silver Modal -->
+<div class="modal fade" id="silver" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body map">
+                <div class="card">
+                    <img src="assets/images/phase_5/Sliver%20Practice%20Rear%202.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--junior Modal -->
+<div class="modal fade" id="junior" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body map">
+                <div class="card">
+                    <img src="assets/images/phase_5/Junior%20Practice%20Rear%202.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--senior Modal -->
+<div class="modal fade" id="senior" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body map">
+                <div class="card">
+                    <img src="assets/images/phase_5/Senior%20Practice%20Rear%202.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--master Modal -->
+<div class="modal fade" id="master" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body map">
+                <div class="card">
+                    <img src="assets/images/phase_5/Master%20Practice%20Rear%202.png" alt="">
                 </div>
             </div>
         </div>
