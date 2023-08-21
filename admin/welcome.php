@@ -1,8 +1,7 @@
 <?php include_once "includes/dashboard-header.php" ;
-
+$func=new Functions();
 $welcomeVideoPath = $func->getWelcomeVideoFilePath();
 $recogVideoPath = $func->getRecogVideoPath();
-
 ?>
 
     <main id="main" class="main">
@@ -19,15 +18,15 @@ $recogVideoPath = $func->getRecogVideoPath();
 
         <section class="section">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Welcome Page Video</h5>
                             <!-- Form Elements -->
                             <form id="welcome-setting-page">
                                 <div class="row mb-3">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Welcome Video Link</label>
-                                    <div class="col-sm-10">
+                                    <label for="inputText" class="col-sm-12 col-form-label">Welcome Video Link</label>
+                                    <div class="col-sm-12">
                                         <input type="file" class="form-control" id="video" required>
                                     </div>
                                 </div>
@@ -43,15 +42,15 @@ $recogVideoPath = $func->getRecogVideoPath();
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Upload Recognition Video</h5>
                             <!-- Form Elements -->
                             <form id="welcome-setting-page-2">
                                 <div class="row mb-3">
-                                    <label for="inputText" class="col-sm-2 col-form-label">Recognition Video</label>
-                                    <div class="col-sm-10">
+                                    <label for="inputText" class="col-sm-12 col-form-label">Recognition Video</label>
+                                    <div class="col-sm-12">
                                         <input type="file" class="form-control" id="video2" required>
                                     </div>
                                 </div>

@@ -1033,4 +1033,110 @@ else if ($func == 42) {
 }
 //42
 
+
+if ($func == 43) {
+
+    if (!empty($_FILES['w_video_url'])) {
+        $video = $_FILES['w_video_url'];
+        $filename = $video['name'];
+        $file_tmp = $video['tmp_name'];
+        $target = "../uploads/next_page_w_video/";
+        $timestamp = time();
+        $file = $timestamp . '-' . $filename;
+        $upload_to = $target . $file;
+        move_uploaded_file($file_tmp, $upload_to);
+    } else {
+        $upload_to = "";
+    }
+
+    $sql = "INSERT INTO `next_page_w_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
+//    $sql = "update `next_page_w_video` set `video_file` = '$upload_to'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+
+if ($func == 44) {
+
+    if (!empty($_FILES['v_video_url'])) {
+        $video = $_FILES['v_video_url'];
+        $filename = $video['name'];
+        $file_tmp = $video['tmp_name'];
+        $target = "../uploads/next_step_VAN_video/";
+        $timestamp = time();
+        $file = $timestamp . '-' . $filename;
+        $upload_to = $target . $file;
+        move_uploaded_file($file_tmp, $upload_to);
+    } else {
+        $upload_to = "";
+    }
+
+    $sql = "INSERT INTO `next_page_VAN_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
+//    $sql = "update `next_page_w_video` set `video_file` = '$upload_to'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 45) {
+    if (!empty($_FILES['featured_video_url'])) {
+        $video = $_FILES['featured_video_url'];
+        $filename = $video['name'];
+        $file_tmp = $video['tmp_name'];
+        $target = "../uploads/featured_video/";
+        $timestamp = time();
+        $file = $timestamp . '-' . $filename;
+        $upload_to = $target . $file;
+        move_uploaded_file($file_tmp, $upload_to);
+    } else {
+        $upload_to = "";
+    }
+
+    $sql = "INSERT INTO `training_featured_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
+//    $sql = "update `next_page_w_video` set `video_file` = '$upload_to'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+else if ($func == 46) {
+
+    $faith = htmlspecialchars(stripslashes($_POST['faith']));
+    $faith = $db->escapeString($faith);
+
+    $family = htmlspecialchars(stripslashes($_POST['family']));
+    $family = $db->escapeString($family);
+
+    $fitness = htmlspecialchars(stripslashes($_POST['fitness']));
+    $fitness = $db->escapeString($fitness);
+
+    $fun = htmlspecialchars(stripslashes($_POST['fun']));
+    $fun = $db->escapeString($fun);
+
+    $finance = htmlspecialchars(stripslashes($_POST['finance']));
+    $finance = $db->escapeString($finance);
+
+//    $sql = "INSERT INTO `training_featured_btn`(`faith`, `family` , `fitness` , `fun`, `finance`) VALUES ('$faith','$family','$fitness','$fun','$finance')";
+    $sql = "update `training_featured_btn` set `faith` = '$faith' , `family` = '$family'  , `fitness` = '$fitness'  , `fun` = '$fun'  , `finance` = '$finance'";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+
+
 ?>

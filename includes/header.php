@@ -1,5 +1,5 @@
 <?php
-if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE) {
+if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_NONE) {
     // session isn't started
     session_start();
 }
@@ -20,7 +20,7 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
     <link rel="mask-icon" href="assets/images/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -37,16 +37,18 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/main.css">
     <style>
-        .btn-social{
+        .btn-social {
             height: 57px;
             width: 57px;
             border-radius: 50%;
         }
-        .btn-social img{
+
+        .btn-social img {
             width: 30px;
 
         }
-        .btn-social:hover img{
+
+        .btn-social:hover img {
             filter: invert(100%);
 
         }
@@ -67,41 +69,54 @@ if(session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_N
         </button>
         <div class="collapse navbar-collapse px-5" id="navbarSupportedContent">
             <ul class="navbar-nav navbar-custom mr-auto w-100 justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link" href="index">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="welcome">Welcome</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="next-steps">Next Steps</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="overview">Overview</a>
-                </li>
-                <li class="nav-item">
-<!--                    <div class="dropdown">-->
-                    <a class="nav-link dropbtn" href="trainers-page">Traniers</a>
-<!--                            <div class="dropdown-content">-->
-<!--                                <a href="#">Mission Statement</a>-->
-<!--                                <a href="#">Contests</a>-->
-<!--                                <a href="#">Chase Down Your Density</a>-->
-<!--                                <a href="#">Financial Independence</a>-->
-<!--                                <a href="#">The Vanguard Wealth Overview</a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-                </li>
-                <li class="nav-item">
-<!--                    <div class="dropdown">-->
-                    <a class="nav-link dropbtn" href="training_center">Training Center</a>
-<!--                        <div class="dropdown-content">-->
-<!--                            <a href="#">TNT Audio Training</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="dashboard">Dashboard</a>
-                </li>
+
+                <?php
+                if (isset($_SESSION['user_type'])) {
+
+
+                    if ($_SESSION['user_type'] == 1) {
+                        ?>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="welcome">Welcome</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="next-steps">Next Steps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="overview">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropbtn" href="trainers-page">Traniers</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropbtn" href="training_center">Training Center</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard">Dashboard</a>
+                        </li>
+                        <?php
+
+                    } else {
+                        ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="overview">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropbtn" href="trainers-page">Traniers</a>
+                        </li>
+
+                        <?php
+                    }
+                }
+                ?>
+
+
             </ul>
         </div>
     </div>

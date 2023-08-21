@@ -1574,5 +1574,137 @@ $("#one_three").submit(function (e) {
 
         }//success
     });
-});//Add team
-//Edit Team member
+});
+
+$("#welcome_video_url").submit(function(e){
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '43');
+    ajax_data.append('w_video_url', $('#w_video_url')[0].files[0]);
+
+    $("#sub-btn").attr("disabled", true);
+    $("#sub-btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed , Please try again ", "error");
+            }
+            $("#sub-btn").attr("disabled", false);
+            $("#sub-btn").html(`Submit`);
+        }//success
+    });
+});
+
+$("#vanguard_video_url").submit(function(e){
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '44');
+    ajax_data.append('v_video_url', $('#v_video_url')[0].files[0]);
+
+    $("#sub-btn").attr("disabled", true);
+    $("#sub-btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed , Please try again ", "error");
+            }
+            $("#sub-btn").attr("disabled", false);
+            $("#sub-btn").html(`Submit`);
+        }//success
+    });
+});
+$("#featured_video").submit(function(e){
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '45');
+    ajax_data.append('featured_video_url', $('#featured_video_url')[0].files[0]);
+
+    $("#sub_btn").attr("disabled", true);
+    $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed , Please try again ", "error");
+            }
+            $("#sub_btn").attr("disabled", false);
+            $("#sub_btn").html(`Submit`);
+        }//success
+    });
+});
+
+$("#training_btn_links").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '46');
+    ajax_data.append('faith', $('#faith').val());
+    ajax_data.append('family', $('#family').val());
+    ajax_data.append('fitness', $('#fitness').val());
+    ajax_data.append('fun', $('#fun').val());
+    ajax_data.append('finance', $('#finance').val());
+
+
+    $("#sub_btn").attr("disabled", true);
+    $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed , Please try again ", "error");
+            }
+            $("#sub_btn").attr("disabled", false);
+            $("#sub_btn").html(`Submit`);
+        }//success
+    });
+});
+

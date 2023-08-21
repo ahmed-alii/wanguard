@@ -302,6 +302,39 @@ function getDashboardStats(){
     }
 
 
+    function NextPageWelcomeVideo()
+    {
+        $sql = "SELECT `video_file` FROM `next_page_w_video`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
+    function NextPageVANGuardVideo()
+    {
+        $sql = "SELECT `video_file` FROM `next_page_VAN_video`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
+    function FeaturedVideo()
+    {
+        $sql = "SELECT `video_file` FROM `training_featured_video`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
+    function GetALLTrainingPageBtnLinks()
+    {
+        $sql = "SELECT * FROM `training_featured_btn` WHERE 1";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
+
 
 
 

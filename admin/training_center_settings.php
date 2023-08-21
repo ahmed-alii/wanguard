@@ -1,4 +1,7 @@
-<?php include_once "includes/dashboard-header.php"; ?>
+<?php include_once "includes/dashboard-header.php";
+$func=new Functions();
+$welcomeVideoPath = $func->FeaturedVideo();
+?>
 
     <style>
         .mce-notification {
@@ -24,16 +27,18 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Video URL</h5>
-                            <form action="">
+                            <form id="featured_video">
                                 <label for="inputText" class="col col-form-label">URL</label>
-                                <input type="text" class="form-control" id="url" required>
+                                <input type="file" class="form-control" id="featured_video_url" required>
                                 <div class="row">
                                     <div class="col-sm-12 text-center pt-3">
-                                        <button type="submit" class="btn btn-primary" id="sub-btn">Submit
-                                        </button>
+                                        <button type="submit" class="btn btn-primary" id="sub_btn">Submit</button>
                                     </div>
                                 </div>
                             </form>
+                            <div class="pt-3">
+                                <video src="<?= $welcomeVideoPath[0]["video_file"] ?>" controls class="img-fluid" style="height: 300px;"></video>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -41,7 +46,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Button Links</h5>
-                            <form action="">
+                            <form id="training_btn_links">
                                 <label for="inputText" class="col col-form-label">Link</label>
                                 <input type="text" class="form-control mb-2" placeholder="Faith" id="faith">
                                 <input type="text" class="form-control mb-2" placeholder="Family" id="family">
@@ -50,7 +55,7 @@
                                 <input type="text" class="form-control mb-2" placeholder="Finance" id="finance">
                                 <div class="row">
                                     <div class="col-sm-12 text-center pt-3">
-                                        <button type="submit" class="btn btn-primary" id="sub-btn">Submit
+                                        <button type="submit" class="btn btn-primary" id="sub_btn">Submit
                                         </button>
                                     </div>
                                 </div>

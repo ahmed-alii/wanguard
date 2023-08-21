@@ -1,7 +1,16 @@
 <?php
 include_once "includes/header.php";
-
 include_once "serverside/functions.php";
+
+if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] == 0) {
+    ?>
+    <script type="text/javascript">
+        window.location.href = "logout";
+    </script>
+    <?php
+    exit();
+}
+
 $func = new Functions();
 $recruite_users = $func->getAllNewRecruite_count();
 $client_users = $func->getAllFamilyClient_count();
