@@ -52,7 +52,7 @@ if (!isset($_SESSION['user_id'])){
             </div>
             <div class="col-12 col-md-6 col-lg-4 text-center">
                 <div class="py-5  mx-5">
-                    <p class="pt-1 fs-1 fw-bolder text-primary" id="shiva"><span class="count">52</span> %</p>
+                    <p class="pt-1 fs-1 fw-bolder text-primary" id="shiva"><span class="count">77</span> %</p>
                     <span class="fs-2 fw-bold">DEBT</span>
                     <p class="py-2">52% of households in America have credit card debt. Totaling over $998B in credit
                         card debt in 2021.</p>
@@ -60,7 +60,7 @@ if (!isset($_SESSION['user_id'])){
             </div>
             <div class="col-12 col-md-6 col-lg-4 text-center">
                 <div class="py-5 mx-5">
-                    <p class="pt-1 fs-1 fw-bolder text-primary" id="shiva"><span class="count">44</span> %</p>
+                    <p class="pt-1 fs-1 fw-bolder text-primary" id="shiva"><span class="count">67</span> %</p>
                     <span class="fs-2 fw-bold">SAVINGS</span>
                     <p class="py-2">44% of Americans can’t cover a $400 emergency.</p>
                 </div>
