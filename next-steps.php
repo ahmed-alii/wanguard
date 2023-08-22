@@ -1,5 +1,6 @@
 <?php
 include_once "includes/header.php";
+include_once "serverside/functions.php";
 if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] == 0) {
     ?>
     <script type="text/javascript">
@@ -8,6 +9,11 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] == 0) {
     <?php
     exit();
 }
+
+
+$func=new Functions();
+$welcomeVideoPath = $func->NextPageWelcomeVideo();
+$VANGuardVideoPath = $func->NextPageVANGuardVideo();
 
 ?>
 
@@ -231,7 +237,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] == 0) {
             </div>
             <div class="py-3 ">
                 <video width="520" height="300" controls class="mw-100">
-                    <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"
+                    <source src="<?= $welcomeVideoPath[0]["video_file"] ?>"
                             type="video/mp4">
                 </video>
             </div>
@@ -316,7 +322,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] == 0) {
             </div>
             <div>
                 <video width="520" height="300" controls class="mw-100">
-                    <source src="https://www.youtube.com/watch?v=O3DPVlynUM0&ab_channel=GeoNews"
+                    <source src="<?= $VANGuardVideoPath[0]["video_file"] ?>"
                             type="video/mp4">
                 </video>
                 <p>SCHEDULE LAUNCH TO SUCCESS WITH TRAINER, SET UP your next ACTION ITEMS

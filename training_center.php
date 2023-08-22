@@ -55,27 +55,28 @@ $TrainingFeaturedVideo = $func->FeaturedVideo();
 
 <?php
 $allsections = $func->getAllsections();
-foreach($allsections as $section){
+foreach ($allsections as $section) {
     $sectionimages = $func->getsectionimages($section['id']);
 
     ?>
     <section class="py-5">
         <div class="container">
             <div class="text-center">
-                <h1 class="display-5 fw-bolder"><?=$section['main_heading']?></h1>
+                <h1 class="display-5 fw-bolder"><?= $section['main_heading'] ?></h1>
             </div>
             <div class="text-center py-3">
-                <h1><?=$section['sub_heading']?></h1>
+                <h1><?= $section['sub_heading'] ?></h1>
             </div>
 
             <div class="row justify-content-center">
                 <?php
-                foreach($sectionimages as $s_image){
+                foreach ($sectionimages as $s_image) {
                     $imagepath = substr($s_image['image_path'], 3);
                     ?>
                     <div class="col-12 col-lg-3 p-2">
                         <div class="business-img">
-                            <a href="<?=$s_image['image_url']?>" target="_blank"><img src="<?=$imagepath?>" alt="" class="img-fluid">
+                            <a href="<?= $s_image['image_url'] ?>" target="_blank"><img src="<?= $imagepath ?>" alt=""
+                                                                                        class="img-fluid">
                             </a>
                         </div>
                     </div>
@@ -89,7 +90,6 @@ foreach($allsections as $section){
         </div>
     </section>
     <?php
-
 }
 ?>
 
