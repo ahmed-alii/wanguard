@@ -105,6 +105,7 @@ if (!isset($_SESSION['user_id'])){
         </div>
     </div>
 </section>
+
 <section class="bg-black" id="section2">
     <div class="container text-center py-5">
         <div>
@@ -120,6 +121,15 @@ if (!isset($_SESSION['user_id'])){
         <div class="py-2">
             <p>There are many ways to earn income with WFG, but the two most important are personal and team production.</p>
         </div>
+    </div>
+</section>
+
+<section id="section1" class="py-5 my-5">
+    <div class="container py-5">
+        <iframe src="https://app.calconic.com/api/embed/calculator/629126e4290c7d001ed7cf9b"
+                sandbox="allow-same-origin allow-forms allow-scripts allow-top-navigation allow-popups-to-escape-sandbox allow-popups"
+                title="Calconic_ Calculator" name="Calconic_ Calculator" height="2604" scrolling="no"
+                style="width: 100%; border: 0; outline: none;"></iframe>
     </div>
 </section>
 

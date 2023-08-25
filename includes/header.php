@@ -12,7 +12,7 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="title" content="">
     <meta name="description" content="">
-    <title>VanGuard</title>
+    <title>Vanguard</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
@@ -91,7 +91,6 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
                         </li>
                         <li class="nav-item">
                             <a class="nav-link dropbtn" href="trainers-page">Traniers</a>
-
                         </li>
                         <li class="nav-item">
                             <a class="nav-link dropbtn" href="training_center">Training Center</a>
@@ -101,22 +100,30 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
                             <a class="nav-link" href="dashboard">Dashboard</a>
                         </li>
                         <?php
-
-                    } else {
+                    }
+                    else
+                    {
                         ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="overview">Overview</a>
+                            <a class="nav-link" href="index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dropbtn" href="trainers-page">Traniers</a>
+                            <a class="nav-link" href="welcome">Welcome</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="next-steps">Next Steps</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropbtn" href="training_center">Training Center</a>
 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard">Dashboard</a>
+                        </li>
                         <?php
                     }
                 }
                 ?>
-
-
             </ul>
         </div>
     </div>

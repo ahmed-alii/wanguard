@@ -1,11 +1,10 @@
 <?php
 include_once "includes/header.php";
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] == 0) {
     ?>
     <script type="text/javascript">
         window.location.href = "logout";
     </script>
-
     <?php
     exit();
 }

@@ -578,4 +578,39 @@ textarea:focus {
   font-size: 13px;
 }
 
+.custom-shape-divider-top-1692952036 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1692952036 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 67px;
+}
+
+.custom-shape-divider-top-1692952036 .shape-fill {
+  fill: black;
+}
+
+.custom-shape-divider-bottom-1692952200 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1692952200 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 75px;
+}
+
+.custom-shape-divider-bottom-1692952200 .shape-fill {
+  fill: black;
+}
+
 /*# sourceMappingURL=main.css.map */

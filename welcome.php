@@ -1,9 +1,9 @@
 <?php
 include_once "includes/header.php";
-if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] == 0) {
+if (!isset($_SESSION['user_id'])){
     ?>
     <script type="text/javascript">
-        window.location.href = "logout";
+        window.location.href="logout";
     </script>
     <?php
     exit();
@@ -125,7 +125,7 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
                     confidence to build their financial future. </p>
                 <p class="text-center"> Our values to our agents are to provide the tools, environment, mentorship, and
                     examples of success to allow them to flourish. </p>
-                <p class="text-center p-0 m-0 fw-bolder fst-italic"> At Wanguard, we believe in the 5 F's </p>
+                <p class="text-center p-0 m-0 fw-bolder fst-italic"> At Vanguard, we believe in the 5 F's </p>
                 <p class="text-center p-0 m-0">Faith, Family, Finances, Fitness, and Fun </p>
                 <p class="text-center p-0 m-0">are the key to having a successful business and living a fulfilling life.
                 </p>
