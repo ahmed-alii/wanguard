@@ -1,6 +1,7 @@
 <?php
 
 require_once 'crud.php';
+
 //date_default_timezone_set("Asia/Karachi");
 class Functions
 {
@@ -23,6 +24,7 @@ class Functions
             return false;
         }
     }//checkEmail Exist
+
     function checktokenexist($token)
     {
         $sql = "SELECT * from users WHERE reset_token='$token'";
@@ -35,6 +37,7 @@ class Functions
             return false;
         }
     }//checktokenexist
+
     //generat a random password
     function random_Code()
     {
@@ -54,34 +57,40 @@ class Functions
 
 
     }//generat a random password
+
     function sendrecoveremail($email, $pass)
     {
         include_once "../phpmailer/sendmailfunction.php";
-        $link = '<a href="https://www.vwbagency.com/resetpassword?resetpsw='. $pass.'">Reset your Password</a>';
+        $link = '<a href="https://www.vwbagency.com/resetpassword?resetpsw=' . $pass . '">Reset your Password</a>';
         $to = $email;
         $message = "You have requested to reset the password, please click on below link to reset the password. <br>" . $link . "<br><br> Thank you!";
         $subject = "Password recovery";
         sendemailsmtp($to, $message, $subject);
 
     }//sendrecoveremail
-    function ProfileApproveEmail($name,$email){
+
+    function ProfileApproveEmail($name, $email)
+    {
 
         include_once "../phpmailer/sendmailfunction.php";
         $link = '<a href="https://www.vwbagency.com/">VANGUARD WEALTH BUILDERS</a>';
         $to = $email;
-        $message = "Hi ".$name."! your profile is approved. Now you can login. <br>" . $link . "<br><br> Thank you!";
+        $message = "Hi " . $name . "! your profile is approved. Now you can login. <br>" . $link . "<br><br> Thank you!";
         $subject = "Profile approved";
         sendemailsmtp($to, $message, $subject);
     }
-    function NewSignupEmail(){
+
+    function NewSignupEmail()
+    {
 
         include_once "../phpmailer/sendmailfunction.php";
         $link = '<a href="https://www.vwbagency.com/admin/">VANGUARD WEALTH BUILDERS</a>';
         $to = "ur123meo@gmail.com";
-        $message = "A new user signup. please login on ".$link." to approve the profile of this user. <br> Thank you!";
+        $message = "A new user signup. please login on " . $link . " to approve the profile of this user. <br> Thank you!";
         $subject = "New Signup";
         sendemailsmtp($to, $message, $subject);
     }
+
     function UpdatePassword($userid, $confirmpass, $oldpass)
     {
         if ($this->CheckOldPass($userid, $oldpass)) {
@@ -97,6 +106,7 @@ class Functions
             return false;
         }
     }//UpdatePassword
+
     function CheckOldPass($userid, $oldpass)
     {
         $hashPassword = md5($oldpass);
@@ -109,6 +119,7 @@ class Functions
             return false;
         }
     }//CheckOldPass
+
     function getSingleUser($id)
     {
         $sql = "select * from users where id='$id'";
@@ -116,6 +127,7 @@ class Functions
             return $this->db->getResult();
         }
     }//getSingleUser
+
     function getAllUser()
     {
         $sql = "select * from users where user_type=0 order by id desc ";
@@ -123,84 +135,105 @@ class Functions
             return $this->db->getResult();
         }
     }//getAllUser
-    function getAllUserByType($user_type){
+
+    function getAllUserByType($user_type)
+    {
         $sql = "select * from users where user_type='$user_type' order by id desc ";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
-    function getAllEvents(){
+
+    function getAllEvents()
+    {
         $sql = "select * from events order by id desc ";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
-    function getSingleEvent($id){
+
+    function getSingleEvent($id)
+    {
         $sql = "select * from events where id='$id'";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
-    function getAllTeamMembers(){
+
+    function getAllTeamMembers()
+    {
         $sql = "select * from team_members order by id desc ";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
-    function getSingleTeamMember($id){
+
+    function getSingleTeamMember($id)
+    {
         $sql = "select * from team_members where id='$id'";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
-    function getTeamMemberByLevel($level){
+
+    function getTeamMemberByLevel($level)
+    {
         $sql = "select * from team_members where `level`='$level'";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
 
-    function getAllRecruitmetTools(){
+    function getAllRecruitmetTools()
+    {
         $sql = "select * from recruitment_tool order by id desc ";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
 
-     function getAllsections(){
+    function getAllsections()
+    {
         $sql = "select * from trainer_sections order by id desc ";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
-    function getsectionimages($sectionid){
-         $sql = "select * from trainer_images where section_id =  '$sectionid'";
+
+    function getsectionimages($sectionid)
+    {
+        $sql = "select * from trainer_images where section_id =  '$sectionid'";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
-    function getAllsectionsImages(){
+
+    function getAllsectionsImages()
+    {
         $sql = "select tm.id, tm.image_path, ts.main_heading from trainer_images tm join trainer_sections ts on tm.section_id = ts.id";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
 
-    function getAllClientTools(){
+    function getAllClientTools()
+    {
         $sql = "select * from client_tool order by id desc ";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
 
-    function getAllMD(){
+    function getAllMD()
+    {
         $sql = "select * from `add_md`";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
-    
-    function getAllSMD(){
+
+    function getAllSMD()
+    {
         $sql = "select * from `add_smd`";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
@@ -230,6 +263,7 @@ class Functions
             return $this->db->getResult();
         }
     }
+
     function getAllNewRecruite_count()
     {
         $sql = "select * from `new-recruit` where status=1";
@@ -237,6 +271,7 @@ class Functions
             return $this->db->getResult();
         }
     }
+
     function getAllFamilyClient()
     {
         $sql = "select * from `new-client` ";
@@ -244,18 +279,23 @@ class Functions
             return $this->db->getResult();
         }
     }
-function getDashboardStats(){
-    $sql = "select * from `dashboard_stats`";
-    if ($this->db->sql($sql)) {
-        return $this->db->getResult();
+
+    function getDashboardStats()
+    {
+        $sql = "select * from `dashboard_stats`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
     }
-}
-    function getDashboardAll(){
+
+    function getDashboardAll()
+    {
         $sql = "select * from `dashboard_stats` ";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
     }
+
     function getAllFamilyClient_count()
     {
         $sql = "select * from `new-client` where status=1 ";
@@ -263,6 +303,7 @@ function getDashboardStats(){
             return $this->db->getResult();
         }
     }
+
     function getAllGuests()
     {
         $sql = "select * from `add_guest`";
@@ -270,6 +311,7 @@ function getDashboardStats(){
             return $this->db->getResult();
         }
     }
+
     function getAllAppointments()
     {
         $sql = "select * from `new-appointment`";
@@ -285,6 +327,7 @@ function getDashboardStats(){
             return $this->db->getResult();
         }
     }
+
     function getAllClients()
     {
         $sql = "select * from `new-client`";
@@ -334,13 +377,53 @@ function getDashboardStats(){
         }
     }
 
+    function GetALLLicNames()
+    {
+        $sql = "SELECT * FROM `lic_name`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
 
+    function GetALLNetLicNames()
+    {
+        $sql = "SELECT * FROM `net_lic_name`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
 
+    function GetALLOneThreeNames()
+    {
+        $sql = "SELECT * FROM `one_three_name`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
 
+    function getAllSectionsTraining()
+    {
+        $sql = "select * from training_sections order by id desc ";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
 
+    function getAllSectionsTrainingImages()
+    {
+        $sql = "select tm.id, tm.image_path, ts.main_heading from training_images tm join training_sections ts on tm.section_id = ts.id";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
 
-
-
+    function GetTrainingSectionImages($sectionid)
+    {
+        $sql = "select * from training_images where section_id =  '$sectionid'";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
 
 
 }//class

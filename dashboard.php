@@ -17,6 +17,9 @@ $client_users = $func->getAllFamilyClient_count();
 $dashboard_stats=$func->getDashboardStats();
 $one_threes=$func->getAllOneThrees();
 $all_new_clients=$func->getAllClients();
+$Get_ALL_Lic_Names = $func->GetALLLicNames();
+$Get_ALL_Net_Lic_Names = $func->GetALLNetLicNames();
+$Get_ALL_one_three_Names = $func->GetALLOneThreeNames();
 
 ?>
 
@@ -219,88 +222,72 @@ $all_new_clients=$func->getAllClients();
 </div>
 
 <!--Modal-4 -->
-<!--<div class="modal fade" id="modal-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"-->
-<!--     aria-labelledby="staticBackdropLabel" aria-hidden="true">-->
-<!--    <div class="modal-dialog modal-dialog-centered modal-md">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header">-->
-<!--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--            </div>-->
-<!--            <div class="modal-body">-->
-<!--                <table class="table">-->
-<!--                    <thead>-->
-<!--                    <tr>-->
-<!--                        <th scope="col">#</th>-->
-<!--                        <th scope="col">Name</th>-->
-<!--                        <th scope="col">Users</th>-->
-<!--                    </tr>-->
-<!--                    </thead>-->
-<!--                    <tbody>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">1</th>-->
-<!--                        <td>Mark</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">2</th>-->
-<!--                        <td>Jacob</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!---->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">3</th>-->
-<!--                        <td>Larry the Bird</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!---->
-<!--                    </tr>-->
-<!--                    </tbody>-->
-<!--                </table>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="modal fade" id="modal-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    foreach ($Get_ALL_Lic_Names as $Get_ALL_Lic_Name){
+                        ?>
+                        <tr>
+                            <td><?= $Get_ALL_Lic_Name['f_name'] ?></td>
+                            <td>$<?= $Get_ALL_Lic_Name['l_name'] ?></td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--Modal-5 -->
-<!--<div class="modal fade" id="modal-5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"-->
-<!--     aria-labelledby="staticBackdropLabel" aria-hidden="true">-->
-<!--    <div class="modal-dialog modal-dialog-centered modal-md">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header">-->
-<!--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--            </div>-->
-<!--            <div class="modal-body">-->
-<!--                <table class="table">-->
-<!--                    <thead>-->
-<!--                    <tr>-->
-<!--                        <th scope="col">#</th>-->
-<!--                        <th scope="col">Name</th>-->
-<!--                        <th scope="col">Users</th>-->
-<!--                    </tr>-->
-<!--                    </thead>-->
-<!--                    <tbody>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">1</th>-->
-<!--                        <td>Mark</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">2</th>-->
-<!--                        <td>Jacob</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!---->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">3</th>-->
-<!--                        <td>Larry the Bird</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!---->
-<!--                    </tr>-->
-<!--                    </tbody>-->
-<!--                </table>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="modal fade" id="modal-5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    foreach ($Get_ALL_Net_Lic_Names as $Get_ALL_Net_Lic_Name){
+                        ?>
+                        <tr>
+                            <td><?= $Get_ALL_Net_Lic_Name['f_name'] ?></td>
+                            <td><?= $Get_ALL_Net_Lic_Name['l_name'] ?></td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--Modal-6 -->
 <div class="modal fade" id="modal-6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -314,19 +301,17 @@ $all_new_clients=$func->getAllClients();
                 <table class="table">
                     <thead>
                     <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">Numbers</th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-                    foreach ($one_threes as $one_three) {
+                    foreach ($Get_ALL_one_three_Names as $Get_ALL_one_three_Name) {
                         ?>
                         <tr>
-                            <th scope="row"><?= $one_three['id'] ?></th>
-                            <td><?= $one_three['name'] ?></td>
-                            <td><?= $one_three['number'] ?></td>
+                            <td><?= $Get_ALL_one_three_Name['f_name'] ?></td>
+                            <td><?= $Get_ALL_one_three_Name['l_name'] ?></td>
                         </tr>
                         <?php
                     }

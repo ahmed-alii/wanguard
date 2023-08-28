@@ -84,16 +84,6 @@ if ($func == 1.1) {
     $email = htmlspecialchars(stripslashes($_POST['email']));
     $email = $db->escapeString($email);
 
-//    $phone = htmlspecialchars(stripslashes($_POST['phone']));
-//    $phone = $db->escapeString($phone);
-//
-//    $address = htmlspecialchars(stripslashes($_POST['address']));
-//    $address = $db->escapeString($address);
-//
-//
-//    $notes = htmlspecialchars(stripslashes($_POST['notes']));
-//    $notes = $db->escapeString($notes);
-
     $sql = "update users set `name`='$name',`email`='$email',`updated_date`='$create_date' where id='$user_id' ";
 
     if ($db->sql($sql)) {
@@ -317,6 +307,9 @@ else if ($func == 9) {
 //Add team member
 else if ($func == 10) {
 
+    $rank = htmlspecialchars(stripslashes($_POST['rank']));
+    $rank = $db->escapeString($rank);
+
     $name = htmlspecialchars(stripslashes($_POST['name']));
     $name = $db->escapeString($name);
 
@@ -341,11 +334,10 @@ else if ($func == 10) {
     $appointment_link = htmlspecialchars(stripslashes($_POST['appointment_link']));
     $appointment_link = $db->escapeString($appointment_link);
 
-    $rank = htmlspecialchars(stripslashes($_POST['rank']));
-    $rank = $db->escapeString($rank);
 
-    if (!empty($_FILES['image'])) {
-        $image = $_FILES['image'];
+
+    if (!empty($_FILES['image1'])) {
+        $image = $_FILES['image1'];
         $filename = $image['name'];
         $file_tmp = $image['tmp_name'];
         $target = "../uploads/";
@@ -358,7 +350,7 @@ else if ($func == 10) {
     }
 
 
-    $sql = "insert into team_members (`rank`,`appointment_link`,`name`,`level`,`department`,`earning`,`youtube_link`, `linkedin_link`, `twitter_link`,`image_path`,created_date) 
+    $sql = "insert into `team_members` (`rank`,`appointment_link`,`name`,`level`,`department`,`earning`,`youtube_link`, `linkedin_link`, `twitter_link`,`image_path`,created_date) 
                       values ('$rank','$appointment_link','$name','$level','$department','$earning','$youtube_link', '$linkedin_link', '$twitter_link','$upload_to','$create_date')";
 
     if ($db->sql($sql)) {
@@ -366,6 +358,7 @@ else if ($func == 10) {
     } else {
         echo "false";
     }
+//    echo $db->getSql();
 }//10
 //Update team member
 else if ($func == 11) {
@@ -1137,6 +1130,240 @@ else if ($func == 46) {
     }
 }
 
+
+else if ($func == 47) {
+
+    $f_name = htmlspecialchars(stripslashes($_POST['f_name']));
+    $f_name = $db->escapeString($f_name);
+
+    $l_name = htmlspecialchars(stripslashes($_POST['l_name']));
+    $l_name = $db->escapeString($l_name);
+
+    $sql = "INSERT INTO `lic_name`(`f_name`, `l_name`) VALUES ('$f_name','$l_name')";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+
+else if ($func == 48) {
+
+    $f_name = htmlspecialchars(stripslashes($_POST['f_name']));
+    $f_name = $db->escapeString($f_name);
+
+    $l_name = htmlspecialchars(stripslashes($_POST['l_name']));
+    $l_name = $db->escapeString($l_name);
+
+    $sql = "INSERT INTO `net_lic_name`(`f_name`, `l_name`) VALUES ('$f_name','$l_name')";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+else if ($func == 49) {
+
+    $f_name = htmlspecialchars(stripslashes($_POST['f_name']));
+    $f_name = $db->escapeString($f_name);
+
+    $l_name = htmlspecialchars(stripslashes($_POST['l_name']));
+    $l_name = $db->escapeString($l_name);
+
+    $sql = "INSERT INTO `one_three_name`(`f_name`, `l_name`) VALUES ('$f_name','$l_name')";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 50) {
+
+    $main_title = htmlspecialchars(stripslashes($_POST['main_title']));
+    $main_title = $db->escapeString($main_title);
+
+    $sub_title = htmlspecialchars(stripslashes($_POST['sub_title']));
+    $sub_title = $db->escapeString($sub_title);
+
+    $sql = "INSERT INTO `training_sections`(`main_heading`,`sub_heading`) VALUES ('$main_title' , '$sub_title')";
+    // echo $sql;
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 51) {
+    $t_section_id = htmlspecialchars(stripslashes($_POST['t_section_id']));
+    $t_section_id = $db->escapeString($t_section_id);
+
+    $url = htmlspecialchars(stripslashes($_POST['url']));
+    $url = $db->escapeString($url);
+
+    if (!empty($_FILES['images'])) {
+        $image = $_FILES['images'];
+        $filename = $image['name'];
+        $file_tmp = $image['tmp_name'];
+        $target = "../uploads/training_section_images/";
+        $timestamp = time();
+        $file = $timestamp . '-' . $filename;
+        $upload_to = $target . $file;
+        move_uploaded_file($file_tmp, $upload_to);
+    } else {
+        $upload_to = "";
+        echo "image not uploaded";
+        exit();
+    }
+
+    $sql = "INSERT INTO `training_images`(`section_id`, `image_path`, `image_url`) VALUES ('$t_section_id','$upload_to','$url')";
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+
+}
+
+if ($func == 52) {
+
+    $section_id = htmlspecialchars(stripslashes($_POST['section_id']));
+    $section_id = $db->escapeString($section_id);
+
+    $sql = "delete from training_sections where id= '$section_id'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 53) {
+    $Training_Image_Id = htmlspecialchars(stripslashes($_POST['TrainingImageId']));
+    $Training_Image_Id = $db->escapeString($Training_Image_Id);
+
+    $sql = "delete from training_images where id= '$Training_Image_Id'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 54) {
+
+    $section_id = htmlspecialchars(stripslashes($_POST['section_id']));
+    $section_id = $db->escapeString($section_id);
+
+    $tra_f_name = htmlspecialchars(stripslashes($_POST['tra_f_name']));
+    $tra_f_name = $db->escapeString($tra_f_name);
+
+    $tra_l_name = htmlspecialchars(stripslashes($_POST['tra_l_name']));
+    $tra_l_name = $db->escapeString($tra_l_name);
+
+    $sql = "update training_sections set `main_heading`='$tra_f_name',`sub_heading`='$tra_l_name'  where id='$section_id' ";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+
+}
+
+if ($func == 55) {
+
+    $section_id = htmlspecialchars(stripslashes($_POST['section_id']));
+    $section_id = $db->escapeString($section_id);
+
+    if (!empty($_FILES['images'])) {
+        $image = $_FILES['images'];
+        $filename = $image['name'];
+        $file_tmp = $image['tmp_name'];
+        $target = "../uploads/training_section_images/";
+        $timestamp = time();
+        $file = $timestamp . '-' . $filename;
+        $upload_to = $target . $file;
+        move_uploaded_file($file_tmp, $upload_to);
+
+    } else {
+        $upload_to = "";
+        echo "image not uploaded";
+
+    }
+
+
+    $sql = "update training_images set `image_path`='$upload_to'  where id='$section_id' ";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+
+}
+
+if ($func == 56) {
+
+    $section_id = htmlspecialchars(stripslashes($_POST['section_id']));
+    $section_id = $db->escapeString($section_id);
+
+    $trainers_f_name = htmlspecialchars(stripslashes($_POST['trainers_f_name']));
+    $trainers_f_name = $db->escapeString($trainers_f_name);
+
+    $trainers_l_name = htmlspecialchars(stripslashes($_POST['trainers_l_name']));
+    $trainers_l_name = $db->escapeString($trainers_l_name);
+
+    $sql = "update trainer_sections set `main_heading`='$trainers_f_name',`sub_heading`='$trainers_l_name'  where id='$section_id' ";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+
+}
+
+if ($func == 57) {
+
+    $section_id = htmlspecialchars(stripslashes($_POST['section_id']));
+    $section_id = $db->escapeString($section_id);
+
+    if (!empty($_FILES['images1'])) {
+        $image = $_FILES['images1'];
+        $filename = $image['name'];
+        $file_tmp = $image['tmp_name'];
+        $target = "../uploads/section_images/";
+        $timestamp = time();
+        $file = $timestamp . '-' . $filename;
+        $upload_to = $target . $file;
+        move_uploaded_file($file_tmp, $upload_to);
+
+    } else {
+        $upload_to = "";
+        echo "image not uploaded";
+
+    }
+
+    $sql = "update `trainer_images` set `image_path`='$upload_to'  where id='$section_id' ";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
 
 
 ?>

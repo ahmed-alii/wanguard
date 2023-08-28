@@ -26,24 +26,23 @@ $TrainingFeaturedVideo = $func->FeaturedVideo();
                                 type="video/mp4">
                     </video>
                     <div class="text-center pt-5">
-
-                        <a href="<?= $TrainingPageBtnLinks[0]['faith'] ?>">
-                            <button class="btn btn-primary px-5 py-2"> Faith</button>
+                        <a class="text-decoration-none" href="<?= $TrainingPageBtnLinks[0]['faith'] ?>">
+                            <button class="btn btn-primary px-5 py-2">Faith</button>
                         </a>
 
-                        <a href="<?= $TrainingPageBtnLinks[0]['family'] ?>">
+                        <a class="text-decoration-none" href="<?= $TrainingPageBtnLinks[0]['family'] ?>">
                             <button class="btn btn-primary px-5 py-2"> Family</button>
                         </a>
 
-                        <a href="<?= $TrainingPageBtnLinks[0]['fitness'] ?>">
+                        <a class="text-decoration-none" href="<?= $TrainingPageBtnLinks[0]['fitness'] ?>">
                             <button class="btn btn-primary px-5 py-2"> Fitness</button>
                         </a>
 
-                        <a href="<?= $TrainingPageBtnLinks[0]['fun'] ?>">
+                        <a class="text-decoration-none" href="<?= $TrainingPageBtnLinks[0]['fun'] ?>">
                             <button class="btn btn-primary px-5 py-2"> Fun</button>
                         </a>
 
-                        <a href="<?= $TrainingPageBtnLinks[0]['finance'] ?>">
+                        <a class="text-decoration-none" href="<?= $TrainingPageBtnLinks[0]['finance'] ?>">
                             <button class="btn btn-primary px-5 py-2"> Finance</button>
                         </a>
 
@@ -54,9 +53,9 @@ $TrainingFeaturedVideo = $func->FeaturedVideo();
     </section>
 
 <?php
-$allsections = $func->getAllsections();
-foreach ($allsections as $section) {
-    $sectionimages = $func->getsectionimages($section['id']);
+$AllSectionsTraining = $func->getAllSectionsTraining();
+foreach ($AllSectionsTraining as $section) {
+    $TrainingSectionImages = $func->GetTrainingSectionImages($section['id']);
 
     ?>
     <section class="py-5">
@@ -70,7 +69,7 @@ foreach ($allsections as $section) {
 
             <div class="row justify-content-center">
                 <?php
-                foreach ($sectionimages as $s_image) {
+                foreach ($TrainingSectionImages as $s_image) {
                     $imagepath = substr($s_image['image_path'], 3);
                     ?>
                     <div class="col-12 col-lg-3 p-2">

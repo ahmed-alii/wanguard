@@ -1,4 +1,3 @@
-//update profile
 $("#signup").submit(function (e) {
     e.preventDefault();
     var ajax_data = new FormData();
@@ -44,8 +43,9 @@ $("#signup").submit(function (e) {
             $("#signup_btn").html('Register Account');
         }//success
     });
-});//update profile
-//update profile
+});
+//Signup
+
 $("#edit_profile").submit(function (e) {
     e.preventDefault();
     var ajax_data = new FormData();
@@ -82,8 +82,9 @@ $("#edit_profile").submit(function (e) {
             $("#edit_btn").html('Submit');
         }//success
     });
-});//update profile
-//login Admin
+});
+//update profile
+
 $("#loginform").submit(function (event) {
     event.preventDefault();
     if ($("#email").val() == '' || $("#password").val() == '') {
@@ -445,7 +446,7 @@ $("#add_team_member").submit(function (e) {
     ajax_data.append('linkedin_link', $('#linkedin_link').val());
     ajax_data.append('twitter_link', $('#twitter_link').val());
     ajax_data.append('appointment_link', $('#appointment_link').val());
-    ajax_data.append('image', $('#update_profile_photo')[0].files[0]);
+    ajax_data.append('image1', $('#update_profile_photo')[0].files[0]);
 
     $("#sub_btn").attr("disabled", true);
     $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
@@ -1240,7 +1241,7 @@ $("#section_form_image").submit(function(e){
 
 
 });
-//Add client tool
+
 
 function delete_recruitment_tool(event_id) {
     swal({
@@ -1704,6 +1705,394 @@ $("#training_btn_links").submit(function (e) {
             }
             $("#sub_btn").attr("disabled", false);
             $("#sub_btn").html(`Submit`);
+        }//success
+    });
+});
+
+
+$("#lic_name").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '47');
+    ajax_data.append('f_name', $('#f_name_lic').val());
+    ajax_data.append('l_name', $('#l_name_lic').val());
+
+
+    $("#lic_name_btn").attr("disabled", true);
+    $("#lic_name_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed , Please try again ", "error");
+            }
+            $("#lic_name_btn").attr("disabled", false);
+            $("#lic_name_btn").html(`Submit`);
+        }//success
+    });
+});
+
+$("#net_lic_name").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '48');
+    ajax_data.append('f_name', $('#f_name_net').val());
+    ajax_data.append('l_name', $('#l_name_net').val());
+
+
+    $("#net_lic_name_btn").attr("disabled", true);
+    $("#net_lic_name_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed , Please try again ", "error");
+            }
+            $("#net_lic_name_btn").attr("disabled", false);
+            $("#net_lic_name_btn").html(`Submit`);
+        }//success
+    });
+});
+
+
+$("#one_three_name").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '49');
+    ajax_data.append('f_name', $('#f_name_one_three').val());
+    ajax_data.append('l_name', $('#l_name_one_three').val());
+
+
+    $("#one_three_name_btn").attr("disabled", true);
+    $("#one_three_name_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed , Please try again ", "error");
+            }
+            $("#one_three_name_btn").attr("disabled", false);
+            $("#one_three_name_btn").html(`Submit`);
+        }//success
+    });
+});
+
+$("#training_section_form").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '50');
+    ajax_data.append('main_title', $('#training_main_title').val());
+    ajax_data.append('sub_title', $('#training_sub_title').val());
+
+    $("#tra_sec_btn").attr("disabled", true);
+    $("#tra_sec_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Error, Please try again ", "error");
+            }
+
+            $("#tra_sec_btn").attr("disabled", false);
+            $("#tra_sec_btn").html('Submit');
+
+        }//success
+    });
+});
+
+$("#training_section_form_image").submit(function(e){
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '51');
+    ajax_data.append("t_section_id", $("#training_section_id").val());
+    ajax_data.append('url', $('#training_url').val());
+    // ajax_data.append('images', $('#images').prop('files')[0]);
+    ajax_data.append('images', $('#training_images')[0].files[0]);
+
+    $("#_training_section_imgs_btn").attr("disabled", true);
+    $("#_training_section_imgs_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+
+            if (data.trim() == "true") {
+                swal("Success", "Image Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed , Please try again ", "error");
+            }
+            $("#_training_section_imgs_btn").attr("disabled", false);
+            $("#_training_section_imgs_btn").html(`Submit`);
+        }//success
+    });
+});
+
+function DeleteTrainingSection(section_id) {
+    swal({
+        text: 'Are you sure to delete this section?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 52,
+                    section_id: section_id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Event deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to delete event, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
+}
+
+function DeleteTrainingImage(imageid){
+    swal({
+        text: 'Are you sure to delete this Image?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 53,
+                    TrainingImageId: imageid,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Image deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to delete, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
+}
+
+$("#Update_training_section_form").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '54');
+    ajax_data.append('section_id', $('#section_id').val());
+    ajax_data.append('tra_f_name', $('#tra_f_name').val());
+    ajax_data.append('tra_l_name', $('#tra_l_name').val());
+
+    $("#update_tra_sec_btn").attr("disabled", true);
+    $("#update_tra_sec_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+
+            if (data.trim() == "true") {
+                swal("Success", "Profile update successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to edit profile, please try again ", "error");
+
+            }
+            $("#update_tra_sec_btn").attr("disabled", false);
+            $("#update_tra_sec_btn").html('Submit');
+        }//success
+    });
+});
+
+$("#Update_training_section_image").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '55');
+    ajax_data.append('section_id', $('#section_id').val());
+    ajax_data.append('images', $('#training_image')[0].files[0]);
+
+    $("#update_tra_img_btn").attr("disabled", true);
+    $("#update_tra_img_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+            if (data.trim() == "true") {
+                swal("Success", "Profile update successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to edit profile, please try again ", "error");
+
+            }
+            $("#update_tra_img_btn").attr("disabled", false);
+            $("#update_tra_img_btn").html('Submit');
+        }//success
+    });
+});
+
+$("#Update_trainers_section_form").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '56');
+    ajax_data.append('section_id', $('#section_id').val());
+    ajax_data.append('trainers_f_name', $('#trainers_f_name').val());
+    ajax_data.append('trainers_l_name', $('#trainers_l_name').val());
+
+    $("#update_trainers_sec_btn").attr("disabled", true);
+    $("#update_trainers_sec_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+
+            if (data.trim() == "true") {
+                swal("Success", "Update successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to edit, please try again ", "error");
+
+            }
+            $("#update_trainers_sec_btn").attr("disabled", false);
+            $("#update_trainers_sec_btn").html('Submit');
+        }//success
+    });
+});
+
+$("#Update_trainers_section_image").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '57');
+    ajax_data.append('section_id', $('#section_id').val());
+    ajax_data.append('images1', $('#trainers_image')[0].files[0]);
+
+    $("#update_trainers_img_btn").attr("disabled", true);
+    $("#update_trainers_img_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+            if (data.trim() == "true") {
+                swal("Success", "Update successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to edit, please try again ", "error");
+
+            }
+            $("#update_trainers_img_btn").attr("disabled", false);
+            $("#update_trainers_img_btn").html('Submit');
         }//success
     });
 });

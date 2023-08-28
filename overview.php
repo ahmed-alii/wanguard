@@ -471,19 +471,22 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] == 0) {
     <div class="container py-5">
         <div class="single-item py-5">
             <div>
-                <img src="assets/images/slider_img1.png" alt="">
+                <img class="mx-auto img-fluid" src="assets/images/overview_slider/Website%20Copy%201.001.jpeg" alt="">
             </div>
             <div>
-                <img src="assets/images/slider_img2.png" alt="">
+                <img class="mx-auto img-fluid" src="assets/images/overview_slider/Website%20Copy%202.001.jpeg" alt="">
             </div>
             <div>
-                <img src="assets/images/slider_img3.png" alt="">
+                <img class="mx-auto img-fluid" src="assets/images/overview_slider/Website%20Copy%203.001.jpeg" alt="">
             </div>
             <div>
-                <img src="assets/images/slider_img4.png" alt="">
+                <img class="mx-auto img-fluid" src="assets/images/overview_slider/Website%20Copy%204.001.jpeg" alt="">
             </div>
             <div>
-                <img src="assets/images/slider_img5.png" alt="">
+                <img class="mx-auto img-fluid" src="assets/images/overview_slider/Website%20Copy%205.001.jpeg" alt="">
+            </div>
+            <div>
+                <img class="mx-auto img-fluid" src="assets/images/overview_slider/Website%20Copy%206.001.jpeg" alt="">
             </div>
 
         </div>
