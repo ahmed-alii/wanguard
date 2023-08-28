@@ -16,6 +16,8 @@ $recruite_users = $func->getAllNewRecruite_count();
 $client_users = $func->getAllFamilyClient_count();
 $dashboard_stats=$func->getDashboardStats();
 $one_threes=$func->getAllOneThrees();
+$all_new_clients=$func->getAllClients();
+
 ?>
 
 
@@ -148,46 +150,38 @@ $one_threes=$func->getAllOneThrees();
 </div>
 
 <!--Modal-2 -->
-<!--<div class="modal fade" id="modal-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"-->
-<!--     aria-labelledby="staticBackdropLabel" aria-hidden="true">-->
-<!--    <div class="modal-dialog modal-dialog-centered modal-md">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header">-->
-<!--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--            </div>-->
-<!--            <div class="modal-body">-->
-<!--                <table class="table">-->
-<!--                    <thead>-->
-<!--                    <tr>-->
-<!--                        <th scope="col">#</th>-->
-<!--                        <th scope="col">Name</th>-->
-<!--                        <th scope="col">Users</th>-->
-<!--                    </tr>-->
-<!--                    </thead>-->
-<!--                    <tbody>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">1</th>-->
-<!--                        <td>Mark</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">2</th>-->
-<!--                        <td>Jacob</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!---->
-<!--                    </tr>-->
-<!--                    <tr>-->
-<!--                        <th scope="row">3</th>-->
-<!--                        <td>Larry the Bird</td>-->
-<!--                        <td><span class="badge activity-badge bg-black">23</span></td>-->
-<!---->
-<!--                    </tr>-->
-<!--                    </tbody>-->
-<!--                </table>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="modal fade" id="modal-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Agent</th>
+                        <th scope="col">Writing Agent</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    foreach ($all_new_clients as $all_new_client){
+                        ?>
+                        <tr>
+                            <td><?= $all_new_client['f_name'] ?></td>
+                            <td><?= $all_new_client['writing_agent'] ?></td>
+                        </tr>
+                        <?php
+                    }
+                    ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--Modal-3 -->
 <div class="modal fade" id="modal-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -201,21 +195,17 @@ $one_threes=$func->getAllOneThrees();
                 <table class="table">
                     <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Writing Agent</th>
-                        <th scope="col">Trainee</th>
+                        <th scope="col">Name</th>
                         <th scope="col">Monthly Saving</th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-                    foreach ($client_users as $client_user) {
+                    foreach ($all_new_clients as $all_new_client){
                         ?>
                         <tr>
-                            <th scope="row"><?= $client_user['id'] ?></th>
-                            <td><?= $client_user['writing_agent'] ?></td>
-                            <td><?= $client_user['trainee'] ?></td>
-                            <td><?= $client_user['monthly_saving'] ?></td>
+                            <td><?= $all_new_client['f_name'] ?></td>
+                            <td>$<?= $all_new_client['monthly_saving'] ?></td>
                         </tr>
                         <?php
                     }
