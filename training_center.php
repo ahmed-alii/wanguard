@@ -74,10 +74,15 @@ foreach ($AllSectionsTraining as $section) {
                             foreach ($TrainingSectionImages as $s_image) {
                                 $imagepath = substr($s_image['image_path'], 3);
                                 ?>
-                                <div>
-                                    <a href="<?= $s_image['image_url'] ?>" target="_blank">
-                                        <img src="<?= $imagepath ?>" alt="" class="img-fluid slider_image_size mx-auto">
-                                    </a>
+                                <div class="p-2">
+                                    <div class="card border-0" style="max-height: 300px; min-height: 260px; max-width: 240px">
+                                        <div class="card-body">
+                                            <a href="<?= $s_image['image_url'] ?>" target="_blank">
+                                                <img src="<?= $imagepath ?>" alt="" class="img-fluid slider_image_size mx-auto">
+                                            </a>
+                                        </div>
+
+                                    </div>
                                 </div>
 
                                 <?php
@@ -98,8 +103,8 @@ foreach ($AllSectionsTraining as $section) {
     $('.multiple-item').slick(
         {
             infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3
+            slidesToShow: 4,
+            slidesToScroll: 1
         }
     );
 

@@ -2097,3 +2097,100 @@ $("#Update_trainers_section_image").submit(function (e) {
     });
 });
 
+$("#banner_img").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '58');
+    ajax_data.append('banner_img1', $('#banner_img1')[0].files[0]);
+    ajax_data.append('banner_img_url', $('#banner_img_url').val());
+
+    $("#banner_img_btn").attr("disabled", true);
+    $("#banner_img_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+            if (data.trim() == "true") {
+                swal("Success", "Image Added successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to Add Image, please try again ", "error");
+
+            }
+            $("#banner_img_btn").attr("disabled", false);
+            $("#banner_img_btn").html('Submit');
+        }//success
+    });
+});
+
+$("#dashboard_btns").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '59');
+    ajax_data.append('btn_1', $('#btn_1').val());
+    ajax_data.append('btn_2', $('#btn_2').val());
+    ajax_data.append('btn_3', $('#btn_3').val());
+
+    $("#dashboard_btns_sub_btn").attr("disabled", true);
+    $("#dashboard_btns_sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+            if (data.trim() == "true") {
+                swal("Success", "Button Links Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to Add Button Links, Please try again ", "error");
+            }
+            $("#dashboard_btns_sub_btn").attr("disabled", false);
+            $("#dashboard_btns_sub_btn").html('Submit');
+        }//success
+    });
+});
+
+$("#dashboard_table_inputs").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '60');
+    ajax_data.append('f_name', $('#f_name').val());
+    ajax_data.append('l_name', $('#l_name').val());
+    ajax_data.append('agency_team', $('#agency_team').val());
+
+    $("#dashboard_table_inputs_sub_btn").attr("disabled", true);
+    $("#dashboard_table_inputs_sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+            if (data.trim() == "true") {
+                swal("Success", "Button Links Added Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to Add Button Links, Please try again ", "error");
+            }
+            $("#dashboard_table_inputs_sub_btn").attr("disabled", false);
+            $("#dashboard_table_inputs_sub_btn").html('Submit');
+        }//success
+    });
+});
+

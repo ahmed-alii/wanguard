@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 28, 2023 at 03:34 PM
+-- Generation Time: Aug 29, 2023 at 03:53 PM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -117,6 +117,65 @@ INSERT INTO `client_tool` (`id`, `client_name`, `client_link`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `dashboard_banner_image`
+--
+
+CREATE TABLE `dashboard_banner_image` (
+  `id` int(150) NOT NULL,
+  `Image_path` varchar(500) DEFAULT NULL,
+  `image_url` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `dashboard_banner_image`
+--
+
+INSERT INTO `dashboard_banner_image` (`id`, `Image_path`, `image_url`) VALUES
+(1, '../uploads/Banner_Images/1693314374-1.png', 'sadfsdf');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dashboard_inputs`
+--
+
+CREATE TABLE `dashboard_inputs` (
+  `id` int(150) NOT NULL,
+  `f_name` varchar(250) DEFAULT NULL,
+  `l_name` varchar(250) DEFAULT NULL,
+  `agency_team` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `dashboard_inputs`
+--
+
+INSERT INTO `dashboard_inputs` (`id`, `f_name`, `l_name`, `agency_team`) VALUES
+(1, 'sadf', 'sdaf', 'sdaf');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dashboard_page_button_links`
+--
+
+CREATE TABLE `dashboard_page_button_links` (
+  `id` int(150) NOT NULL,
+  `button_one_link` varchar(250) DEFAULT NULL,
+  `button_two_link` varchar(250) DEFAULT NULL,
+  `button_three_link` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `dashboard_page_button_links`
+--
+
+INSERT INTO `dashboard_page_button_links` (`id`, `button_one_link`, `button_two_link`, `button_three_link`) VALUES
+(1, 'asfsafdsdfdf', 'dsafsdf', 'fdsafsdf');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `dashboard_stats`
 --
 
@@ -133,7 +192,7 @@ CREATE TABLE `dashboard_stats` (
 --
 
 INSERT INTO `dashboard_stats` (`id`, `lic`, `net_lic`, `one_300`, `status`) VALUES
-(1, '23', 'ew', '0', 0);
+(1, '12', 'ABC', '123', 0);
 
 -- --------------------------------------------------------
 
@@ -200,7 +259,8 @@ CREATE TABLE `net_lic_name` (
 --
 
 INSERT INTO `net_lic_name` (`id`, `f_name`, `l_name`) VALUES
-(1, 'Net ABC', 'XYZ');
+(1, 'Net ABC', 'XYZ'),
+(2, 'gahdg', 'hbsajdhg');
 
 -- --------------------------------------------------------
 
@@ -484,14 +544,13 @@ INSERT INTO `trainer_images` (`id`, `section_id`, `image_path`, `image_url`, `cr
 (6, 4, '../uploads/section_images/1690745367-Screenshot 2023-07-30 at 12.18.55 PM.png', 'https://docs.google.com/presentation/d/1qTBl_8MYKavzvYn2Mw1GznEspZWSDQIULFoNMR_XlK8/edit#slide=id.p1', '2023-07-30 19:29:27'),
 (7, 12, '../uploads/section_images/1690753470-Screenshot 2023-07-30 at 2.41.50 PM.png', 'https://player.vimeo.com/video/292221833/', '2023-07-30 21:44:30'),
 (8, 15, '../uploads/section_images/1690775724-1 2023-07-30 at 12.03.36 PM.png', 'https://docs.google.com/presentation/d/1qTBl_8MYKavzvYn2Mw1GznEspZWSDQIULFoNMR_XlK8/edit#slide=id.p1', '2023-07-31 03:55:24'),
-(9, 9, '../uploads/section_images/1690776201-1 2023-07-30 at 12.03.36 PM.png', 'https://docs.google.com/presentation/d/1qTBl_8MYKavzvYn2Mw1GznEspZWSDQIULFoNMR_XlK8/edit#slide=id.p1', '2023-07-31 04:03:21'),
 (10, 15, '../uploads/section_images/1693228353-1.png', 'https://docs.google.com/presentation/d/1qTBl_8MYKavzvYn2Mw1GznEspZWSDQIULFoNMR_XlK8/edit#slide=id.p1', '2023-07-31 04:07:33'),
 (11, 15, '../uploads/section_images/1693228389-1.png', 'https://docs.google.com/presentation/d/1qTBl_8MYKavzvYn2Mw1GznEspZWSDQIULFoNMR_XlK8/edit#slide=id.p1', '2023-07-31 04:08:51'),
-(12, 15, '../uploads/section_images/1690776761-Screenshot 2023-07-29 at 9.21.17 AM.png', 'https://docs.google.com/presentation/d/1qTBl_8MYKavzvYn2Mw1GznEspZWSDQIULFoNMR_XlK8/edit#slide=id.p1', '2023-07-31 04:12:41'),
-(13, 15, '../uploads/section_images/1690776785-Screenshot 2023-07-29 at 9.21.17 AM.png', 'https://docs.google.com/presentation/d/1qTBl_8MYKavzvYn2Mw1GznEspZWSDQIULFoNMR_XlK8/edit#slide=id.p1', '2023-07-31 04:13:05'),
 (15, 8, '../uploads/section_images/1690881351-1.png', 'https://www.theforceagency.us/', '2023-08-01 09:15:51'),
-(16, 15, '../uploads/section_images/1692966114-1.png', 'https://www.google.com/', '2023-08-25 12:21:54'),
-(17, 15, '../uploads/section_images/1692966136-1.png', 'https://www.google.com/', '2023-08-25 12:22:16');
+(18, 13, '../uploads/section_images/1693299944-1.png', 'https://www.google.com/', '2023-08-29 09:05:44'),
+(19, 13, '../uploads/section_images/1693299954-Screenshot 2023-06-09 130640.png', 'https://www.google.com/', '2023-08-29 09:05:54'),
+(20, 13, '../uploads/section_images/1693299960-1.png', 'https://www.google.com/', '2023-08-29 09:06:00'),
+(21, 13, '../uploads/section_images/1693300118-1.png', 'https://www.google.com/', '2023-08-29 09:08:38');
 
 -- --------------------------------------------------------
 
@@ -511,14 +570,7 @@ CREATE TABLE `trainer_sections` (
 --
 
 INSERT INTO `trainer_sections` (`id`, `main_heading`, `sub_heading`, `created_at`) VALUES
-(7, 'REFERRAL PARTNERS', ' ', '2023-07-30 20:05:07'),
-(8, 'PODCAST/BOOKS', ' ', '2023-07-30 20:07:01'),
-(9, 'SPECIAL PRESENTATIONS', ' ', '2023-07-30 20:07:27'),
-(11, 'FINANCIAL LITERACY &amp; ENTREPRENEURSHIP ', ' ', '2023-07-30 20:08:16'),
-(12, 'PRODUCT TRAINING', ' ', '2023-07-30 20:10:10'),
-(13, 'VANGUARD SYSTEM	', 'TRAINING CLASSES	', '2023-07-30 20:10:30'),
-(14, 'LEADERSHIP MINDSET', ' ', '2023-07-30 20:10:52'),
-(15, 'PRESENTATIONS', ' ', '2023-07-30 20:11:59');
+(13, 'VANGUARD SYSTEM	', 'TRAINING CLASSES	', '2023-07-30 20:10:30');
 
 -- --------------------------------------------------------
 
@@ -588,8 +640,12 @@ INSERT INTO `training_images` (`id`, `section_id`, `image_path`, `image_url`, `c
 (10, 8, '../uploads/training_section_images/1693224402-1.png', 'https://www.google.com/', '2023-08-28 12:06:42'),
 (11, 7, '../uploads/training_section_images/1693224411-1.png', 'https://www.google.com/', '2023-08-28 12:06:51'),
 (12, 6, '../uploads/training_section_images/1693224426-1.png', 'https://www.google.com/', '2023-08-28 12:07:06'),
-(13, 5, '../uploads/training_section_images/1693227207-Screenshot 2023-06-09 130640.png', 'https://www.google.com/', '2023-08-28 12:07:16'),
-(14, 4, '../uploads/training_section_images/1693224446-1.png', 'https://www.google.com/', '2023-08-28 12:07:26');
+(14, 4, '../uploads/training_section_images/1693224446-1.png', 'https://www.google.com/', '2023-08-28 12:07:26'),
+(15, 5, '../uploads/training_section_images/1693299758-7a21aee7ed60e4d3dedfc21db48557e8.png', 'https://www.google.com/', '2023-08-29 09:02:38'),
+(16, 5, '../uploads/training_section_images/1693299769-1.png', 'https://www.google.com/', '2023-08-29 09:02:49'),
+(17, 5, '../uploads/training_section_images/1693299780-Screenshot 2023-06-09 130715.png', 'https://www.google.com/', '2023-08-29 09:03:00'),
+(18, 5, '../uploads/training_section_images/1693299840-1.png', 'https://www.google.com/', '2023-08-29 09:04:00'),
+(19, 5, '../uploads/training_section_images/1693302476-Screenshot 2023-06-09 130640.png', 'https://www.google.com/', '2023-08-29 09:47:56');
 
 -- --------------------------------------------------------
 
@@ -609,14 +665,7 @@ CREATE TABLE `training_sections` (
 --
 
 INSERT INTO `training_sections` (`id`, `main_heading`, `sub_heading`, `create_date`) VALUES
-(4, 'PRESENTATIONS', '', '2023-08-28 12:04:15'),
-(5, 'LEADERSHIP MINDSET', '', '2023-08-28 12:04:27'),
-(6, 'VANGUARD SYSTEM', 'TRAINING CLASSES', '2023-08-28 12:04:47'),
-(7, 'PRODUCT TRAINING', '', '2023-08-28 12:05:16'),
-(8, 'FINANCIAL LITERACY &amp; ENTREPRENEURSHIP', '', '2023-08-28 12:05:24'),
-(9, 'SPECIAL PRESENTATIONS', '', '2023-08-28 12:05:30'),
-(10, 'PODCAST/BOOKS', '', '2023-08-28 12:05:36'),
-(11, 'REFERRAL PARTNERS', '', '2023-08-28 12:05:42');
+(5, 'LEADERSHIP MINDSET', '', '2023-08-28 12:04:27');
 
 -- --------------------------------------------------------
 
@@ -700,6 +749,24 @@ ALTER TABLE `add_smd`
 -- Indexes for table `client_tool`
 --
 ALTER TABLE `client_tool`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `dashboard_banner_image`
+--
+ALTER TABLE `dashboard_banner_image`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `dashboard_inputs`
+--
+ALTER TABLE `dashboard_inputs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `dashboard_page_button_links`
+--
+ALTER TABLE `dashboard_page_button_links`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -863,6 +930,24 @@ ALTER TABLE `client_tool`
   MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
+-- AUTO_INCREMENT for table `dashboard_banner_image`
+--
+ALTER TABLE `dashboard_banner_image`
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `dashboard_inputs`
+--
+ALTER TABLE `dashboard_inputs`
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `dashboard_page_button_links`
+--
+ALTER TABLE `dashboard_page_button_links`
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `dashboard_stats`
 --
 ALTER TABLE `dashboard_stats`
@@ -884,7 +969,7 @@ ALTER TABLE `lic_name`
 -- AUTO_INCREMENT for table `net_lic_name`
 --
 ALTER TABLE `net_lic_name`
-  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `new-appointment`
@@ -944,19 +1029,19 @@ ALTER TABLE `recruitment_tool`
 -- AUTO_INCREMENT for table `team_members`
 --
 ALTER TABLE `team_members`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `trainer_images`
 --
 ALTER TABLE `trainer_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `trainer_sections`
 --
 ALTER TABLE `trainer_sections`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `training_featured_btn`
@@ -974,13 +1059,13 @@ ALTER TABLE `training_featured_video`
 -- AUTO_INCREMENT for table `training_images`
 --
 ALTER TABLE `training_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `training_sections`
 --
 ALTER TABLE `training_sections`
-  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`

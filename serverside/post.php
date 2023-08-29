@@ -335,7 +335,6 @@ else if ($func == 10) {
     $appointment_link = $db->escapeString($appointment_link);
 
 
-
     if (!empty($_FILES['image1'])) {
         $image = $_FILES['image1'];
         $filename = $image['name'];
@@ -1004,10 +1003,7 @@ if ($func == 41) {
     } else {
         echo "false";
     }
-}
-
-
-else if ($func == 42) {
+} else if ($func == 42) {
 
     $name = htmlspecialchars(stripslashes($_POST['name']));
     $name = $db->escapeString($name);
@@ -1100,9 +1096,7 @@ if ($func == 45) {
     } else {
         echo "false";
     }
-}
-
-else if ($func == 46) {
+} else if ($func == 46) {
 
     $faith = htmlspecialchars(stripslashes($_POST['faith']));
     $faith = $db->escapeString($faith);
@@ -1128,10 +1122,7 @@ else if ($func == 46) {
     } else {
         echo "false";
     }
-}
-
-
-else if ($func == 47) {
+} else if ($func == 47) {
 
     $f_name = htmlspecialchars(stripslashes($_POST['f_name']));
     $f_name = $db->escapeString($f_name);
@@ -1147,10 +1138,7 @@ else if ($func == 47) {
     } else {
         echo "false";
     }
-}
-
-
-else if ($func == 48) {
+} else if ($func == 48) {
 
     $f_name = htmlspecialchars(stripslashes($_POST['f_name']));
     $f_name = $db->escapeString($f_name);
@@ -1166,9 +1154,7 @@ else if ($func == 48) {
     } else {
         echo "false";
     }
-}
-
-else if ($func == 49) {
+} else if ($func == 49) {
 
     $f_name = htmlspecialchars(stripslashes($_POST['f_name']));
     $f_name = $db->escapeString($f_name);
@@ -1357,6 +1343,78 @@ if ($func == 57) {
     }
 
     $sql = "update `trainer_images` set `image_path`='$upload_to'  where id='$section_id' ";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 58) {
+
+    if (!empty($_FILES['banner_img1'])) {
+        $image = $_FILES['banner_img1'];
+        $filename = $image['name'];
+        $file_tmp = $image['tmp_name'];
+        $target = "../uploads/Banner_Images/";
+        $timestamp = time();
+        $file = $timestamp . '-' . $filename;
+        $upload_to = $target . $file;
+        move_uploaded_file($file_tmp, $upload_to);
+
+    } else {
+        $upload_to = "";
+        echo "image not uploaded";
+
+    }
+
+    $banner_img_url = htmlspecialchars(stripslashes($_POST['banner_img_url']));
+    $banner_img_url = $db->escapeString($banner_img_url);
+
+//    $sql = "INSERT INTO `dashboard_banner_image`(`Image_path`, `image_url`) VALUES ('$upload_to','$banner_img_url')";
+    $sql = "update `dashboard_banner_image` set `Image_path`='$upload_to',`image_url`='$banner_img_url'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 59) {
+
+    $btn_1 = htmlspecialchars(stripslashes($_POST['btn_1']));
+    $btn_1 = $db->escapeString($btn_1);
+
+    $btn_2 = htmlspecialchars(stripslashes($_POST['btn_2']));
+    $btn_2 = $db->escapeString($btn_2);
+
+    $btn_3 = htmlspecialchars(stripslashes($_POST['btn_3']));
+    $btn_3 = $db->escapeString($btn_3);
+
+//    $sql = "INSERT INTO `dashboard_page_button_links`(`button_one_link`, `button_two_link` , `button_three_link`) VALUES ('$btn_1','$btn_2','$btn_3')";
+    $sql = "update `dashboard_page_button_links` set `button_one_link`='$btn_1',`button_two_link`='$btn_2',`button_three_link`='$btn_3'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+if ($func == 60) {
+
+    $f_name = htmlspecialchars(stripslashes($_POST['f_name']));
+    $f_name = $db->escapeString($f_name);
+
+    $l_name = htmlspecialchars(stripslashes($_POST['l_name']));
+    $l_name = $db->escapeString($l_name);
+
+    $agency_team = htmlspecialchars(stripslashes($_POST['agency_team']));
+    $agency_team = $db->escapeString($agency_team);
+
+    $sql = "INSERT INTO `dashboard_inputs` ( `f_name`, `l_name`, `agency_team`) VALUES ('$f_name','$l_name','$agency_team')";
 
     if ($db->sql($sql)) {
         echo "true";

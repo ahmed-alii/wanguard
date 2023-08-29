@@ -425,5 +425,20 @@ class Functions
         }
     }
 
+    function GetBannerImage()
+    {
+        $sql = "SELECT * FROM `dashboard_banner_image`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+    function GetDashboardButtonLinks()
+    {
+        $sql = "SELECT * FROM `dashboard_page_button_links`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
 
 }//class
