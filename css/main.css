@@ -613,4 +613,9 @@ textarea:focus {
   fill: black;
 }
 
+.slider_image_size {
+  max-width: 200px;
+  height: 250px;
+}
+
 /*# sourceMappingURL=main.css.map */

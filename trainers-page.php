@@ -282,36 +282,35 @@ foreach ($allsections as $section) {
             <div class="text-center py-3">
                 <h1><?= $section['sub_heading'] ?></h1>
             </div>
-
             <div class="row justify-content-center">
-                <?php
-                foreach ($sectionimages as $s_image) {
-                    $imagepath = substr($s_image['image_path'], 3);
-                    ?>
-                    <div class="col-12 col-lg-4 p-2">
-                        <div class="business-img ">
-                            <div class="multiple-items">
-                                <div>
-                                    <a href="<?= $s_image['image_url'] ?>" target="_blank">
-                                        <img src="<?= $imagepath ?>" alt="" class="img-fluid">
-                                    </a>
-                                </div>
-                            </div>
+                <div class="py-5">
+                    <div class="container py-5">
+                        <div class="multiple-item py-5">
+                            <?php
+                            foreach ($sectionimages as $s_image) {
+                                $imagepath = substr($s_image['image_path'], 3);
+                                ?>
+
+                                    <div>
+                                        <a href="<?= $s_image['image_url'] ?>" target="_blank">
+                                            <img src="<?= $imagepath ?>" alt="" class="img-fluid mx-auto slider_image_size">
+                                        </a>
+                                    </div>
+
+                                <?php
+                            }
+                            ?>
                         </div>
                     </div>
-                    <?php
-
-                }
-
-                ?>
-
+                </div>
             </div>
         </div>
     </section>
     <?php
-
 }
 ?>
+
+
 <!--add-guest Modal -->
 <div class="modal fade" id="add-guest-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
      aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -419,18 +418,12 @@ foreach ($allsections as $section) {
 <?php include_once "includes/footer.php" ?>
 
 <script>
-    // $('.multiple-items').slick({
-    //     infinite: true,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 3
-    // });
-
-
-
-
-    $('.multiple-items').slick(
+    $('.multiple-item').slick(
         {
-            arrows: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
         }
     );
+
 </script>
