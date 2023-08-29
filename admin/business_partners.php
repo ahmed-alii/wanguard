@@ -26,7 +26,10 @@ $all_business_partners=$func->getAllBusinessPartners();
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <table class="table table-striped">
+                            <div class="text-center">
+                                <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
+                            </div>
+                            <table id="business_partner" class="table table-striped" style="width:100%">
                                 <thead>
                                 <tr>
                                     <th>Agent Id</th>
@@ -65,6 +68,29 @@ $all_business_partners=$func->getAllBusinessPartners();
                                 }
                                 ?>
                                 </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>Agent Id</th>
+                                    <th>Start Date</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Resident State</th>
+                                    <th>Recruiter</th>
+                                    <th>Direct MD</th>
+                                    <th>Direct SMD</th>
+                                    <th>Licensed</th>
+                                    <th>Contact No</th>
+                                    <th>Date of Birth</th>
+                                    <th>Email Address</th>
+                                </tr>
+                                </tfoot>
+                            </table>
+
+                            <table class="table table-striped">
+                                <thead>
+
+                                </thead>
+
                             </table>
                         </div>
                     </div>
@@ -75,3 +101,49 @@ $all_business_partners=$func->getAllBusinessPartners();
     <!-- End #main -->
 
 <?php include_once "includes/dashboard-footer.php" ?>
+<script>
+    $(document).ready(function() {
+        // Initialize DataTable
+        var table = $('#business_partner').DataTable({
+            // DataTable options
+        });
+
+        // Add event listener to the "Download CSV" button
+        $('#download_csv').on('click', function() {
+            // Get the data from the DataTable
+            var data = table.data().toArray();
+
+            // Convert the data to CSV format
+            var csvContent = "data:text/csv;charset=utf-8,";
+
+            // Add headers
+            var headers = table.columns().header().toArray();
+            var headerRow = headers.map(function(header) {
+                return '"' + $(header).text() + '"';
+            }).join(",");
+            csvContent += headerRow + "\n";
+
+            // Add data rows
+            data.forEach(function(row) {
+                var csvRow = row.map(function(cell) {
+                    return '"' + cell + '"';
+                }).join(",");
+                csvContent += csvRow + "\n";
+            });
+
+            // Create a temporary link to trigger the download
+            var encodedUri = encodeURI(csvContent);
+            var link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "team_members.csv");
+            document.body.appendChild(link);
+
+            // Click the link to trigger the download
+            link.click();
+
+            // Clean up
+            document.body.removeChild(link);
+        });
+    });
+
+</script>

@@ -26,7 +26,10 @@ $all_guests=$func->getAllGuests();
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <table class="table table-striped">
+                            <div class="text-center">
+                                <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
+                            </div>
+                            <table id="all_guests" class="table table-striped" style="width:100%">
                                 <thead>
                                 <tr>
                                     <th>Events</th>
@@ -55,6 +58,17 @@ $all_guests=$func->getAllGuests();
                                 }
                                 ?>
                                 </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>Events</th>
+                                    <th>Guest Name</th>
+                                    <th>They are</th>
+                                    <th>Guest of</th>
+                                    <th>Contact Number</th>
+                                    <th>Guest Mail</th>
+                                    <th>Guest App Confirmation</th>
+                                </tr>
+                                </tfoot>
                             </table>
                         </div>
                     </div>
@@ -65,3 +79,49 @@ $all_guests=$func->getAllGuests();
     <!-- End #main -->
 
 <?php include_once "includes/dashboard-footer.php" ?>
+<script>
+    $(document).ready(function() {
+        // Initialize DataTable
+        var table = $('#all_guests').DataTable({
+            // DataTable options
+        });
+
+        // Add event listener to the "Download CSV" button
+        $('#download_csv').on('click', function() {
+            // Get the data from the DataTable
+            var data = table.data().toArray();
+
+            // Convert the data to CSV format
+            var csvContent = "data:text/csv;charset=utf-8,";
+
+            // Add headers
+            var headers = table.columns().header().toArray();
+            var headerRow = headers.map(function(header) {
+                return '"' + $(header).text() + '"';
+            }).join(",");
+            csvContent += headerRow + "\n";
+
+            // Add data rows
+            data.forEach(function(row) {
+                var csvRow = row.map(function(cell) {
+                    return '"' + cell + '"';
+                }).join(",");
+                csvContent += csvRow + "\n";
+            });
+
+            // Create a temporary link to trigger the download
+            var encodedUri = encodeURI(csvContent);
+            var link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "team_members.csv");
+            document.body.appendChild(link);
+
+            // Click the link to trigger the download
+            link.click();
+
+            // Clean up
+            document.body.removeChild(link);
+        });
+    });
+
+</script>

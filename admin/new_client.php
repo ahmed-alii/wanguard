@@ -26,7 +26,10 @@ $all_new_clients=$func->getAllClients();
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body table-responsive">
-                            <table class="table table-striped">
+                            <div class="text-center">
+                                <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
+                            </div>
+                            <table id="new_clients" class="table table-striped" style="width:100%">
                                 <thead>
                                 <tr>
                                     <th>First Name</th>
@@ -80,6 +83,29 @@ $all_new_clients=$func->getAllClients();
                                 }
                                 ?>
                                 </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Policy Name</th>
+                                    <th>Submitted Date</th>
+                                    <th>Coverage</th>
+                                    <th>Monthly Saving</th>
+                                    <th>Estimated Points</th>
+                                    <th>CWA</th>
+                                    <th>Writing Agent</th>
+                                    <th>Trainee</th>
+                                    <th>Split</th>
+                                    <th>Split Agent</th>
+                                    <th>Agent Policy</th>
+                                    <th>Product</th>
+                                    <th>Provider</th>
+                                    <th>Med Required</th>
+                                    <th>Contact No</th>
+                                    <th>Email Address</th>
+                                    <th>Add Notes</th>
+                                </tr>
+                                </tfoot>
                             </table>
                         </div>
                     </div>
@@ -90,3 +116,49 @@ $all_new_clients=$func->getAllClients();
     <!-- End #main -->
 
 <?php include_once "includes/dashboard-footer.php" ?>
+<script>
+    $(document).ready(function() {
+        // Initialize DataTable
+        var table = $('#new_clients').DataTable({
+            // DataTable options
+        });
+
+        // Add event listener to the "Download CSV" button
+        $('#download_csv').on('click', function() {
+            // Get the data from the DataTable
+            var data = table.data().toArray();
+
+            // Convert the data to CSV format
+            var csvContent = "data:text/csv;charset=utf-8,";
+
+            // Add headers
+            var headers = table.columns().header().toArray();
+            var headerRow = headers.map(function(header) {
+                return '"' + $(header).text() + '"';
+            }).join(",");
+            csvContent += headerRow + "\n";
+
+            // Add data rows
+            data.forEach(function(row) {
+                var csvRow = row.map(function(cell) {
+                    return '"' + cell + '"';
+                }).join(",");
+                csvContent += csvRow + "\n";
+            });
+
+            // Create a temporary link to trigger the download
+            var encodedUri = encodeURI(csvContent);
+            var link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "team_members.csv");
+            document.body.appendChild(link);
+
+            // Click the link to trigger the download
+            link.click();
+
+            // Clean up
+            document.body.removeChild(link);
+        });
+    });
+
+</script>

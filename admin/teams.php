@@ -32,19 +32,17 @@ $team_members = $func->getAllTeamMembers();
                             <h5 class="card-title">All Team Members</h5>
 
                             <!-- Event Table rows -->
-                            <table class="table table-striped">
+                            <div class="text-center">
+                                <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
+                            </div>
+                            <table id="team_members" class="table table-striped" style="width:100%">
                                 <thead>
                                 <tr>
-                                    <!--                                    <th scope="col">#</th>-->
-                                    <!--                                    <th scope="col">Picture</th>-->
                                     <th scope="col">Name</th>
                                     <th scope="col">Level</th>
                                     <th scope="col">Rank</th>
                                     <th scope="col">Department</th>
                                     <th scope="col">Earning</th>
-                                    <!--                                    <th scope="col">Youtube Link</th>-->
-                                    <!--                                    <th scope="col">Appointment Link</th>-->
-                                    <!--                                    <th scope="col">Created Date</th>-->
                                     <th scope="col">Actions</th>
                                 </tr>
                                 </thead>
@@ -53,27 +51,11 @@ $team_members = $func->getAllTeamMembers();
                                 foreach ($team_members as $team_member) {
                                     ?>
                                     <tr>
-                                        <!--                                        <th scope="row"><= $team_member['id'] ?></th>-->
-                                        <!--                                        <td>-->
-                                        <!--                                            <php-->
-                                        <!--                                            if ($team_member['image_path'] != "") {-->
-                                        <!--                                                ?>-->
-                                        <!--                                                <img src="<= $team_member['image_path'] ?>" height="75" width="75"-->
-                                        <!--                                                     class="rounded-circle">-->
-                                        <!--                                                <php-->
-                                        <!--                                            }-->
-                                        <!--                                            ?>-->
-                                        <!--                                        </td>-->
                                         <td><?= $team_member['name'] ?></td>
                                         <td><?= $team_member['level'] ?></td>
                                         <td><?= $team_member['rank'] ?></td>
                                         <td><?= $team_member['department'] ?></td>
                                         <td><?= $team_member['earning'] ?></td>
-                                        <!--                                        <td><a href="<= $team_member['youtube_link'] ?>" target="_blank">YouTube</a>-->
-                                        <!--                                        </td>-->
-                                        <!--                                        <td><a href="<= $team_member['appointment_link'] ?>" target="_blank">Appointment</a>-->
-                                        <!--                                        </td>-->
-                                        <!--                                        <td><= $team_member['created_date'] ?></td>-->
                                         <td>
                                             <a href="add-bio?bio_id=<?= $team_member['id'] ?>"> <i
                                                         class="fa fa-plus p-2 btn btn-success" title="Edit Bio"></i></a>
@@ -89,6 +71,16 @@ $team_members = $func->getAllTeamMembers();
                                 ?>
 
                                 </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Level</th>
+                                    <th scope="col">Rank</th>
+                                    <th scope="col">Department</th>
+                                    <th scope="col">Earning</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                                </tfoot>
                             </table>
                             <!-- End Event Table rows -->
                         </div>
@@ -306,4 +298,50 @@ $team_members = $func->getAllTeamMembers();
 
     }
 
+</script>
+<script>
+    var table = $('#team_members').DataTable({
+        // DataTable options
+    });
+    $(document).ready(function() {
+        // Add event listener to the "Download CSV" button
+        $('#download_csv').on('click', function() {
+            // Prepare the CSV content
+            var csvContent = "";
+
+            // Get the header row
+            var headerRow = [];
+            $('#team_members thead tr th').each(function(index) {
+                if (index !== $('#team_members thead tr th').length - 1) {
+                    headerRow.push('"' + $(this).text() + '"');
+                }
+            });
+            csvContent += headerRow.join(',') + "\n";
+
+            // Get the data rows
+            $('#team_members tbody tr').each(function() {
+                var rowData = [];
+                $(this).find('td').each(function(index) {
+                    if (index !== $('#team_members thead tr th').length - 1) {
+                        rowData.push('"' + $(this).text() + '"');
+                    }
+                });
+                csvContent += rowData.join(',') + "\n";
+            });
+
+            // Create a Blob object and a download link
+            var blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            var link = document.createElement("a");
+            link.setAttribute("href", URL.createObjectURL(blob));
+            link.setAttribute("download", "team_members.csv");
+            link.style.display = "none";
+            document.body.appendChild(link);
+
+            // Click the link to trigger the download
+            link.click();
+
+            // Clean up
+            document.body.removeChild(link);
+        });
+    });
 </script>

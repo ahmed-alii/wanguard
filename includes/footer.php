@@ -76,6 +76,7 @@ if(isset($_SESSION['user_id'])){
 <script src="js/slick.js"></script>
 <script src="js/jquery-migrate-1.2.1.min.js"></script>
 
+
 <script>
     $('.count').each(function () {
         $(this).prop('Counter', 0).animate({
