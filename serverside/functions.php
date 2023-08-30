@@ -440,5 +440,13 @@ class Functions
         }
     }
 
+    function GetDashboardTableDataInputs()
+    {
+        $sql = "SELECT * FROM `dashboard_inputs`";
+        if ($this->db->sql($sql)) {
+            return $this->db->getResult();
+        }
+    }
+
 
 }//class

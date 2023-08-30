@@ -36,6 +36,8 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
+
     <style>
         .btn-social {
             height: 57px;
@@ -94,7 +96,6 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
                         </li>
                         <li class="nav-item">
                             <a class="nav-link dropbtn" href="training_center">Training Center</a>
-
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="dashboard">Dashboard</a>
@@ -113,7 +114,6 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
                         </li>
                         <li class="nav-item">
                             <a class="nav-link dropbtn" href="training_center">Training Center</a>
-
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="dashboard">Dashboard</a>

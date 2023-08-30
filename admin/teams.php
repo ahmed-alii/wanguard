@@ -183,6 +183,7 @@ $team_members = $func->getAllTeamMembers();
         </div>
     </div>
 </div>
+
 <!-- Edit Team member Modal -->
 <div class="modal fade" id="edit_team_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

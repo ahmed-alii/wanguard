@@ -1423,5 +1423,43 @@ if ($func == 60) {
     }
 }
 
+if ($func == 61) {
+
+    $input_id = htmlspecialchars(stripslashes($_POST['input_id']));
+    $input_id = $db->escapeString($input_id);
+
+    $edit_f_name = htmlspecialchars(stripslashes($_POST['edit_f_name']));
+    $edit_f_name = $db->escapeString($edit_f_name);
+
+    $edit_l_name = htmlspecialchars(stripslashes($_POST['edit_l_name']));
+    $edit_l_name = $db->escapeString($edit_l_name);
+
+    $edit_agency_team = htmlspecialchars(stripslashes($_POST['edit_agency_team']));
+    $edit_agency_team = $db->escapeString($edit_agency_team);
+
+//    $sql = "INSERT INTO `dashboard_inputs` ( `f_name`, `l_name`, `agency_team`) VALUES ('$f_name','$l_name','$agency_team')";
+    $sql = "update `dashboard_inputs` set `f_name`='$edit_f_name', `l_name`='$edit_l_name', `agency_team`='$edit_agency_team'  where id='$input_id'";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+else if ($func == 62) {
+
+    $input_id = htmlspecialchars(stripslashes($_POST['input_id']));
+    $input_id = $db->escapeString($input_id);
+
+    $sql = " delete from dashboard_inputs where id= '$input_id'";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
 
 ?>

@@ -2193,4 +2193,75 @@ $("#dashboard_table_inputs").submit(function (e) {
         }//success
     });
 });
+$("#dashboard_input").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '61');
+    ajax_data.append('input_id', $('#dashboard_input_id').val());
+    ajax_data.append('edit_f_name', $('#edit_f_name').val());
+    ajax_data.append('edit_l_name', $('#edit_l_name').val());
+    ajax_data.append('edit_agency_team', $('#edit_agency_team').val());
 
+    $("#sub_btn").attr("disabled", true);
+    $("#sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+            if (data.trim() == "true") {
+                swal("Success", "Table Data Updated Successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to Table Data Updated, Please try again ", "error");
+            }
+            $("#sub_btn").attr("disabled", false);
+            $("#sub_btn").html('Submit');
+        }//success
+    });
+});
+
+function deleteDashboardInputs(input_id) {
+
+    swal({
+        text: 'Are you sure to delete this Input?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 62,
+                    input_id: input_id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to Delete, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+
+    });
+}//Delete
