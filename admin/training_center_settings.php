@@ -3,7 +3,7 @@ $func = new Functions();
 $welcomeVideoPath = $func->FeaturedVideo();
 $AllSectionsTraining = $func->getAllSectionsTraining();
 $AllSectionsTrainingImages = $func->getAllSectionsTrainingImages();
-
+$TrainingPageBtnLinks = $func->GetALLTrainingPageBtnLinks();
 ?>
 
 <style>
@@ -32,7 +32,7 @@ $AllSectionsTrainingImages = $func->getAllSectionsTrainingImages();
                         <h5 class="card-title">Featured Video URL</h5>
                         <form id="featured_video">
                             <label for="inputText" class="col col-form-label">URL</label>
-                            <input type="file" class="form-control" id="featured_video_url" required>
+                            <input type="file" class="form-control" id="featured_video_url" name="featured_video_url"required>
                             <div class="row">
                                 <div class="col-sm-12 text-center pt-3">
                                     <button type="submit" class="btn btn-primary" id="sub_btn">Submit</button>
@@ -40,7 +40,7 @@ $AllSectionsTrainingImages = $func->getAllSectionsTrainingImages();
                             </div>
                         </form>
                         <div class="pt-3">
-                            <video src="<?= $welcomeVideoPath[0]["video_file"] ?>" controls class="img-fluid"
+                            <video autoplay controls src="<?= $welcomeVideoPath[0]["video_file"] ?>" controls class="img-fluid"
                                    style="height: 300px;"></video>
                         </div>
                     </div>
@@ -52,11 +52,11 @@ $AllSectionsTrainingImages = $func->getAllSectionsTrainingImages();
                         <h5 class="card-title">Button Links</h5>
                         <form id="training_btn_links">
                             <label for="inputText" class="col col-form-label">Link</label>
-                            <input type="text" class="form-control mb-2" placeholder="Faith" id="faith">
-                            <input type="text" class="form-control mb-2" placeholder="Family" id="family">
-                            <input type="text" class="form-control mb-2" placeholder="Fitness" id="fitness">
-                            <input type="text" class="form-control mb-2" placeholder="Fun" id="fun">
-                            <input type="text" class="form-control mb-2" placeholder="Finance" id="finance">
+                            <input type="text" class="form-control mb-2" placeholder="<?= $TrainingPageBtnLinks[0]['faith'] ?>"  id="faith">
+                            <input type="text" class="form-control mb-2" placeholder="<?= $TrainingPageBtnLinks[0]['family'] ?>" id="family">
+                            <input type="text" class="form-control mb-2" placeholder="<?= $TrainingPageBtnLinks[0]['fitness'] ?>" id="fitness">
+                            <input type="text" class="form-control mb-2" placeholder="<?= $TrainingPageBtnLinks[0]['fun'] ?>" id="fun">
+                            <input type="text" class="form-control mb-2" placeholder="<?= $TrainingPageBtnLinks[0]['finance'] ?>" id="finance">
                             <div class="row">
                                 <div class="col-sm-12 text-center pt-3">
                                     <button type="submit" class="btn btn-primary" id="sub_btn">Submit</button>

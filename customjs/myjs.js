@@ -2135,9 +2135,12 @@ $("#dashboard_btns").submit(function (e) {
     var ajax_data = new FormData();
     //append into ajax data
     ajax_data.append("func", '59');
-    ajax_data.append('btn_1', $('#btn_1').val());
-    ajax_data.append('btn_2', $('#btn_2').val());
-    ajax_data.append('btn_3', $('#btn_3').val());
+    ajax_data.append('btn_1_name', $('#btn_1_name').val());
+    ajax_data.append('btn_1_url', $('#btn_1_url').val());
+    ajax_data.append('btn_2_name', $('#btn_2_name').val());
+    ajax_data.append('btn_2_url', $('#btn_2_url').val());
+    ajax_data.append('btn_3_name', $('#btn_3_name').val());
+    ajax_data.append('btn_3_url', $('#btn_3_url').val());
 
     $("#dashboard_btns_sub_btn").attr("disabled", true);
     $("#dashboard_btns_sub_btn").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
@@ -2264,4 +2267,164 @@ function deleteDashboardInputs(input_id) {
         }
 
     });
-}//Delete
+}
+
+function deleteOneThreeInputNames(input_id) {
+
+    swal({
+        text: 'Are you sure to delete this Input?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 63,
+                    input_id: input_id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to Delete, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+
+    });
+}
+
+function deleteLICInputNames(id) {
+
+    swal({
+        text: 'Are you sure to delete this Input?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 64,
+                    input_id: id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to Delete, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+
+    });
+}
+
+function deleteNetLICInputNames(id) {
+
+    swal({
+        text: 'Are you sure to delete this Input?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 65,
+                    input_id: id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to Delete, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+
+    });
+}
+
+function deleteOneThreeInputNames(id) {
+
+    swal({
+        text: 'Are you sure to delete this Input?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 66,
+                    input_id: id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'Deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to Delete, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+
+    });
+}

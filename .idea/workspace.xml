@@ -7,11 +7,10 @@
     <list default="true" id="3cb8abc8-bdcc-471f-9303-40e25c2c7bae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/dashboard_page-settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/dashboard_page-settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/teams.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/teams.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/training_center_settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/training_center_settings.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customjs/myjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/customjs/myjs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/wanguard (2).sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/serverside/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/serverside/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/post.php" afterDir="false" />
     </list>
@@ -143,7 +142,10 @@
       <workItem from="1693292778392" duration="803000" />
       <workItem from="1693299440598" duration="7937000" />
       <workItem from="1693308671426" duration="6794000" />
-      <workItem from="1693391642704" duration="6513000" />
+      <workItem from="1693391642704" duration="11540000" />
+      <workItem from="1693419562133" duration="1211000" />
+      <workItem from="1693463857673" duration="7641000" />
+      <workItem from="1693473406679" duration="1642000" />
     </task>
     <servers />
   </component>

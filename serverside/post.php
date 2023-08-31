@@ -709,7 +709,7 @@ if ($func == 26) {
         $video = $_FILES['video'];
         $filename = $video['name'];
         $file_tmp = $video['tmp_name'];
-        $target = "../uploads/video_file_uploads/";
+        $target = "../uploads/next_step_VAN_video/";
         $timestamp = time();
         $file = $timestamp . '-' . $filename;
         $upload_to = $target . $file;
@@ -717,6 +717,7 @@ if ($func == 26) {
     } else {
         $upload_to = "";
     }
+
 
 //    $sql = "INSERT INTO `welcome_page_settings`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
     $sql = "update `welcome_page_settings` set `video_file` = '$upload_to'";
@@ -730,6 +731,7 @@ if ($func == 26) {
 
 //add index video
 if ($func == 266) {
+
     if (!empty($_FILES['video'])) {
 
         $video = $_FILES['video'];
@@ -1025,7 +1027,9 @@ if ($func == 41) {
 
 if ($func == 43) {
 
+
     if (!empty($_FILES['w_video_url'])) {
+
         $video = $_FILES['w_video_url'];
         $filename = $video['name'];
         $file_tmp = $video['tmp_name'];
@@ -1035,11 +1039,11 @@ if ($func == 43) {
         $upload_to = $target . $file;
         move_uploaded_file($file_tmp, $upload_to);
     } else {
-        $upload_to = "";
+        $upload_to = "else";
     }
 
-    $sql = "INSERT INTO `next_page_w_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
-//    $sql = "update `next_page_w_video` set `video_file` = '$upload_to'";
+//    $sql = "INSERT INTO `next_page_w_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
+    $sql = "update `next_page_w_video` set `video_file` = '$upload_to' , `create_date` = '$create_date'";
 
     if ($db->sql($sql)) {
         echo "true";
@@ -1052,20 +1056,21 @@ if ($func == 43) {
 if ($func == 44) {
 
     if (!empty($_FILES['v_video_url'])) {
+
         $video = $_FILES['v_video_url'];
         $filename = $video['name'];
         $file_tmp = $video['tmp_name'];
-        $target = "../uploads/next_step_VAN_video/";
+        $target = "../uploads/next_page_vanguard_video/";
         $timestamp = time();
         $file = $timestamp . '-' . $filename;
         $upload_to = $target . $file;
         move_uploaded_file($file_tmp, $upload_to);
     } else {
-        $upload_to = "";
+        $upload_to = "else";
     }
 
-    $sql = "INSERT INTO `next_page_VAN_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
-//    $sql = "update `next_page_w_video` set `video_file` = '$upload_to'";
+//    $sql = "INSERT INTO `next_page_attend_vanguard_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
+    $sql = "update `next_page_attend_vanguard_video` set `video_file` = '$upload_to' , `create_date` = '$create_date'";
 
     if ($db->sql($sql)) {
         echo "true";
@@ -1075,6 +1080,7 @@ if ($func == 44) {
 }
 
 if ($func == 45) {
+
     if (!empty($_FILES['featured_video_url'])) {
         $video = $_FILES['featured_video_url'];
         $filename = $video['name'];
@@ -1084,19 +1090,22 @@ if ($func == 45) {
         $file = $timestamp . '-' . $filename;
         $upload_to = $target . $file;
         move_uploaded_file($file_tmp, $upload_to);
+
     } else {
         $upload_to = "";
     }
 
-    $sql = "INSERT INTO `training_featured_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
-//    $sql = "update `next_page_w_video` set `video_file` = '$upload_to'";
+//    $sql = "INSERT INTO `training_featured_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
+    $sql = "update `training_featured_video` set `video_file` = '$upload_to' ,`create_date` = '$create_date'";
 
     if ($db->sql($sql)) {
         echo "true";
     } else {
         echo "false";
     }
-} else if ($func == 46) {
+}
+
+else if ($func == 46) {
 
     $faith = htmlspecialchars(stripslashes($_POST['faith']));
     $faith = $db->escapeString($faith);
@@ -1384,23 +1393,33 @@ if ($func == 58) {
 
 if ($func == 59) {
 
-    $btn_1 = htmlspecialchars(stripslashes($_POST['btn_1']));
-    $btn_1 = $db->escapeString($btn_1);
+    $btn_1_name = htmlspecialchars(stripslashes($_POST['btn_1_name']));
+    $btn_1_name = $db->escapeString($btn_1_name);
 
-    $btn_2 = htmlspecialchars(stripslashes($_POST['btn_2']));
-    $btn_2 = $db->escapeString($btn_2);
+    $btn_1_url = htmlspecialchars(stripslashes($_POST['btn_1_url']));
+    $btn_1_url = $db->escapeString($btn_1_url);
 
-    $btn_3 = htmlspecialchars(stripslashes($_POST['btn_3']));
-    $btn_3 = $db->escapeString($btn_3);
+    $btn_2_name = htmlspecialchars(stripslashes($_POST['btn_2_name']));
+    $btn_2_name = $db->escapeString($btn_2_name);
+
+    $btn_2_url = htmlspecialchars(stripslashes($_POST['btn_2_url']));
+    $btn_2_url = $db->escapeString($btn_2_url);
+
+    $btn_3_name = htmlspecialchars(stripslashes($_POST['btn_3_name']));
+    $btn_3_name = $db->escapeString($btn_3_name);
+
+    $btn_3_url = htmlspecialchars(stripslashes($_POST['btn_3_url']));
+    $btn_3_url = $db->escapeString($btn_3_url);
 
 //    $sql = "INSERT INTO `dashboard_page_button_links`(`button_one_link`, `button_two_link` , `button_three_link`) VALUES ('$btn_1','$btn_2','$btn_3')";
-    $sql = "update `dashboard_page_button_links` set `button_one_link`='$btn_1',`button_two_link`='$btn_2',`button_three_link`='$btn_3'";
+    $sql = "update `dashboard_page_button_links` set `button_one_name`='$btn_1_name',`button_one_url`='$btn_1_url',`button_two_name`='$btn_2_name',`button_two_url`='$btn_2_url',`button_three_name`='$btn_3_name',`button_three_url`='$btn_3_url'";
 
     if ($db->sql($sql)) {
         echo "true";
     } else {
         echo "false";
     }
+//    echo $db->getSql();
 }
 
 if ($func == 60) {
@@ -1453,6 +1472,66 @@ else if ($func == 62) {
     $input_id = $db->escapeString($input_id);
 
     $sql = " delete from dashboard_inputs where id= '$input_id'";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+else if ($func == 63) {
+
+    $input_id = htmlspecialchars(stripslashes($_POST['input_id']));
+    $input_id = $db->escapeString($input_id);
+
+    $sql = " delete from one_three where id= '$input_id'";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+else if ($func == 64) {
+
+    $input_id = htmlspecialchars(stripslashes($_POST['input_id']));
+    $input_id = $db->escapeString($input_id);
+
+    $sql = " delete from lic_name where id= '$input_id'";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+else if ($func == 65) {
+
+    $input_id = htmlspecialchars(stripslashes($_POST['input_id']));
+    $input_id = $db->escapeString($input_id);
+
+    $sql = " delete from net_lic_name where id= '$input_id'";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+else if ($func == 66) {
+
+    $input_id = htmlspecialchars(stripslashes($_POST['input_id']));
+    $input_id = $db->escapeString($input_id);
+
+    $sql = " delete from one_three_name where id= '$input_id'";
 
     if ($db->sql($sql)) {
 

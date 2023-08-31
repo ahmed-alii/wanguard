@@ -355,7 +355,7 @@ class Functions
 
     function NextPageVANGuardVideo()
     {
-        $sql = "SELECT `video_file` FROM `next_page_VAN_video`";
+        $sql = "SELECT `video_file` FROM `next_page_attend_vanguard_video`";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }

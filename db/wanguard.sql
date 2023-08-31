@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 29, 2023 at 03:53 PM
+-- Generation Time: Aug 31, 2023 at 11:45 AM
 -- Server version: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -151,7 +151,8 @@ CREATE TABLE `dashboard_inputs` (
 --
 
 INSERT INTO `dashboard_inputs` (`id`, `f_name`, `l_name`, `agency_team`) VALUES
-(1, 'sadf', 'sdaf', 'sdaf');
+(2, 'asdfsdf', 'sadfsdf', 'dsfsadfsd'),
+(4, 'sdaf', 'xzd', 'sdfsdfasd');
 
 -- --------------------------------------------------------
 
@@ -161,17 +162,20 @@ INSERT INTO `dashboard_inputs` (`id`, `f_name`, `l_name`, `agency_team`) VALUES
 
 CREATE TABLE `dashboard_page_button_links` (
   `id` int(150) NOT NULL,
-  `button_one_link` varchar(250) DEFAULT NULL,
-  `button_two_link` varchar(250) DEFAULT NULL,
-  `button_three_link` varchar(250) DEFAULT NULL
+  `button_one_name` varchar(500) DEFAULT NULL,
+  `button_one_url` varchar(250) DEFAULT NULL,
+  `button_two_name` varchar(500) DEFAULT NULL,
+  `button_two_url` varchar(250) DEFAULT NULL,
+  `button_three_name` varchar(500) DEFAULT NULL,
+  `button_three_url` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `dashboard_page_button_links`
 --
 
-INSERT INTO `dashboard_page_button_links` (`id`, `button_one_link`, `button_two_link`, `button_three_link`) VALUES
-(1, 'asfsafdsdfdf', 'dsafsdf', 'fdsafsdf');
+INSERT INTO `dashboard_page_button_links` (`id`, `button_one_name`, `button_one_url`, `button_two_name`, `button_two_url`, `button_three_name`, `button_three_url`) VALUES
+(1, 'button1', 'www.google.com1', 'button2', 'www.google.com2', 'button3', 'www.google.com3');
 
 -- --------------------------------------------------------
 
@@ -192,7 +196,7 @@ CREATE TABLE `dashboard_stats` (
 --
 
 INSERT INTO `dashboard_stats` (`id`, `lic`, `net_lic`, `one_300`, `status`) VALUES
-(1, '12', 'ABC', '123', 0);
+(1, '824876239458723453287', 'Qwerty', '3456789', 0);
 
 -- --------------------------------------------------------
 
@@ -240,7 +244,8 @@ CREATE TABLE `lic_name` (
 --
 
 INSERT INTO `lic_name` (`id`, `f_name`, `l_name`) VALUES
-(1, 'Abc', 'Xyz');
+(1, 'Abc', 'Xyz'),
+(4, 'ABC', 'DEF');
 
 -- --------------------------------------------------------
 
@@ -259,8 +264,7 @@ CREATE TABLE `net_lic_name` (
 --
 
 INSERT INTO `net_lic_name` (`id`, `f_name`, `l_name`) VALUES
-(1, 'Net ABC', 'XYZ'),
-(2, 'gahdg', 'hbsajdhg');
+(1, 'Net ABC', 'XYZ');
 
 -- --------------------------------------------------------
 
@@ -358,6 +362,26 @@ INSERT INTO `new-recruit` (`id`, `agent_id`, `start_date`, `f_name`, `l_name`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `next_page_attend_vanguard_video`
+--
+
+CREATE TABLE `next_page_attend_vanguard_video` (
+  `id` int(11) NOT NULL,
+  `video_file` varchar(500) DEFAULT NULL,
+  `create_date` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `next_page_attend_vanguard_video`
+--
+
+INSERT INTO `next_page_attend_vanguard_video` (`id`, `video_file`, `create_date`) VALUES
+(0, '../uploads/next_page_vanguard_video/1693403797-30 Second Demo.mp4', '2023-08-30 15:56:37'),
+(0, '../uploads/next_page_vanguard_video/1693403797-30 Second Demo.mp4', '2023-08-30 15:56:37');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `next_page_van_video`
 --
 
@@ -392,10 +416,7 @@ CREATE TABLE `next_page_w_video` (
 --
 
 INSERT INTO `next_page_w_video` (`id`, `video_file`, `create_date`) VALUES
-(1, '../uploads/next_page_w_video/1692604066-30 Second Demo.mp4', '2023-08-21 09:47:46'),
-(2, '../uploads/next_page_w_video/1692604188-30 Second Demo.mp4', '2023-08-21 09:49:48'),
-(3, '../uploads/next_page_w_video/1692604212-Red and Black Photo-centric Independence Day Instagram Post.jpg', '2023-08-21 09:50:12'),
-(4, '../uploads/next_page_w_video/1692604232-30 Second Demo.mp4', '2023-08-21 09:50:32');
+(7, '../uploads/next_page_w_video/1693403330-30 Second Demo.mp4', '2023-08-30 15:48:33');
 
 -- --------------------------------------------------------
 
@@ -415,8 +436,8 @@ CREATE TABLE `one_three` (
 --
 
 INSERT INTO `one_three` (`id`, `name`, `number`, `status`) VALUES
-(1, '', 0, 0),
-(2, '', 0, 0);
+(5, 'Profit Hive Premier', 45678, 0),
+(7, 'Nora', 34567, 0);
 
 -- --------------------------------------------------------
 
@@ -435,8 +456,7 @@ CREATE TABLE `one_three_name` (
 --
 
 INSERT INTO `one_three_name` (`id`, `f_name`, `l_name`) VALUES
-(1, 'ABC', 'XYZ'),
-(2, '1212', '121212');
+(1, 'ABC', 'XYZ');
 
 -- --------------------------------------------------------
 
@@ -455,7 +475,7 @@ CREATE TABLE `recognition_video` (
 --
 
 INSERT INTO `recognition_video` (`id`, `video_file`, `create_date`) VALUES
-(4, '../uploads/video_file_uploads/1690865982-2Recognition 2023-07-31 at 9.08.24 PM.mov', '2023-07-17 11:36:14');
+(4, '../uploads/video_file_uploads/1693402973-30 Second Demo.mp4', '2023-07-17 11:36:14');
 
 -- --------------------------------------------------------
 
@@ -592,7 +612,7 @@ CREATE TABLE `training_featured_btn` (
 --
 
 INSERT INTO `training_featured_btn` (`id`, `faith`, `family`, `fitness`, `fun`, `finance`) VALUES
-(1, 'https://www.google.com/', 'sdfsd', 'https://www.google.com/', '', '');
+(1, 'https://www.google.com/', 'https://www.google.com/', 'https://www.google.com/', 'https://www.google.com/', 'https://www.google.com/');
 
 -- --------------------------------------------------------
 
@@ -611,7 +631,7 @@ CREATE TABLE `training_featured_video` (
 --
 
 INSERT INTO `training_featured_video` (`id`, `video_file`, `create_date`) VALUES
-(1, '../uploads/featured_video/1692606093-Red and Black Photo-centric Independence Day Instagram Post.jpg', '2023-08-21 10:21:33');
+(1, '../uploads/featured_video/1693402707-30 Second Demo.mp4', '2023-08-30 15:38:27');
 
 -- --------------------------------------------------------
 
@@ -721,7 +741,7 @@ CREATE TABLE `welcome_page_settings` (
 --
 
 INSERT INTO `welcome_page_settings` (`id`, `video_file`, `create_date`) VALUES
-(4, '../uploads/video_file_uploads/1690743512-Final.mp4', '2023-07-17 11:36:14');
+(4, '../uploads/next_step_VAN_video/1693402842-30 Second Demo.mp4', '2023-07-17 11:36:14');
 
 --
 -- Indexes for dumped tables
@@ -939,7 +959,7 @@ ALTER TABLE `dashboard_banner_image`
 -- AUTO_INCREMENT for table `dashboard_inputs`
 --
 ALTER TABLE `dashboard_inputs`
-  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `dashboard_page_button_links`
@@ -963,13 +983,13 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `lic_name`
 --
 ALTER TABLE `lic_name`
-  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `net_lic_name`
 --
 ALTER TABLE `net_lic_name`
-  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `new-appointment`
@@ -999,19 +1019,19 @@ ALTER TABLE `next_page_van_video`
 -- AUTO_INCREMENT for table `next_page_w_video`
 --
 ALTER TABLE `next_page_w_video`
-  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `one_three`
 --
 ALTER TABLE `one_three`
-  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `one_three_name`
 --
 ALTER TABLE `one_three_name`
-  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `recognition_video`

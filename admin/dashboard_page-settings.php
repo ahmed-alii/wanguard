@@ -55,12 +55,17 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                     <div class="card-body">
                         <h4 class="mt-3">Dashboard Page Stats</h4>
                         <form id="dashboard_stats">
-                            <input type="number" class="form-control mb-2"
-                                   placeholder="<?= count($recruite_users) ?>" id="lic">
-                            <input type="text" class="form-control mb-2"
-                                   placeholder="<?= $dashboard_stats[0]['net_lic'] ?>" id="net_lic">
-                            <input type="text" class="form-control mb-2"
-                                   placeholder="<?= $dashboard_stats[0]['one_300'] ?>" id="one_300">
+                            <label for="inputText" class="col-lg-12 col-form-label">LIC</label>
+                            <input type="number" class="form-control mb-2" value="<?= $dashboard_stats[0]['lic'] ?>"
+                                   placeholder="LIC" id="lic">
+
+                            <label for="inputText" class="col-lg-12 col-form-label">Net LIC</label>
+                            <input type="text" class="form-control mb-2" value="<?= $dashboard_stats[0]['net_lic'] ?>"
+                                   placeholder="Net LIC" id="net_lic">
+
+                            <label for="inputText" class="col-lg-12 col-form-label">1 / 300</label>
+                            <input type="text" class="form-control mb-2" value="<?= $dashboard_stats[0]['one_300'] ?>"
+                                   placeholder="1 / 300" id="one_300">
                             <div class="w-100 text-center">
                                 <button class="btn btn-primary" type="submit" id="section_imgs_btn">Submit</button>
                             </div>
@@ -93,7 +98,7 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                         <h4 class="mt-3">LIC Name</h4>
                         <form class="py-3" id="lic_name">
                             <input type="text" class="form-control mb-2" placeholder="First Name" id="f_name_lic">
-                            <input type="text" class="form-control mb-2" placeholder="Last Name" id="l_name-lic">
+                            <input type="text" class="form-control mb-2" placeholder="Last Name" id="l_name_lic">
                             <div class="w-100 text-center">
                                 <button class="btn btn-primary" type="submit" id="lic_name_btn">Submit</button>
                             </div>
@@ -115,6 +120,7 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                             <tr>
                                 <th scope="col">Name</th>
                                 <th scope="col">Numbers</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -124,6 +130,10 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                                 <tr>
                                     <td><?= $one_three['name'] ?></td>
                                     <td>$<?= $one_three['number'] ?></td>
+                                    <td>
+                                        <i class="fa fa-trash p-2 btn btn-danger" title="Delete Names"
+                                           onclick="deleteOneThreeInputNames(`<?= $one_three['id'] ?>`)"></i>
+                                    </td>
                                 </tr>
                                 <?php
                             }
@@ -142,6 +152,7 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                             <tr>
                                 <th scope="col">First Name</th>
                                 <th scope="col">Last Name</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -151,6 +162,10 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                                 <tr>
                                     <td><?= $Get_ALL_Lic_Name['f_name'] ?></td>
                                     <td>$<?= $Get_ALL_Lic_Name['l_name'] ?></td>
+                                    <td>
+                                        <i class="fa fa-trash p-2 btn btn-danger" title="Delete Names"
+                                           onclick="deleteLICInputNames(`<?= $Get_ALL_Lic_Name['id'] ?>`)"></i>
+                                    </td>
                                 </tr>
                                 <?php
                             }
@@ -210,6 +225,7 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                             <tr>
                                 <th scope="col">First Name</th>
                                 <th scope="col">Last Name</th>
+                                <th scope="col">Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -219,6 +235,10 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                                 <tr>
                                     <td><?= $Get_ALL_Net_Lic_Name['f_name'] ?></td>
                                     <td><?= $Get_ALL_Net_Lic_Name['l_name'] ?></td>
+                                    <td>
+                                        <i class="fa fa-trash p-2 btn btn-danger" title="Delete Names"
+                                           onclick="deleteNetLICInputNames(`<?= $Get_ALL_Net_Lic_Name['id'] ?>`)"></i>
+                                    </td>
                                 </tr>
                                 <?php
                             }
@@ -246,6 +266,10 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                                 <tr>
                                     <td><?= $Get_ALL_one_three_Name['f_name'] ?></td>
                                     <td><?= $Get_ALL_one_three_Name['l_name'] ?></td>
+                                    <td>
+                                        <i class="fa fa-trash p-2 btn btn-danger" title="Delete Names"
+                                           onclick="deleteOneThreeInputNames(`<?= $Get_ALL_one_three_Name['id'] ?>`)"></i>
+                                    </td>
                                 </tr>
                                 <?php
                             }
@@ -300,17 +324,61 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
 
     <section class="section">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="mt-3">Dashboard Button Link</h4>
                         <form id="dashboard_btns">
-                            <input type="text" class="form-control mb-2"
-                                   placeholder="<?= $Dashboard_Button_Links[0]['button_one_link'] ?>" id="btn_1">
-                            <input type="text" class="form-control mb-2"
-                                   placeholder="<?= $Dashboard_Button_Links[0]['button_two_link'] ?>" id="btn_2">
-                            <input type="text" class="form-control mb-2"
-                                   placeholder="<?= $Dashboard_Button_Links[0]['button_three_link'] ?>" id="btn_3">
+                            <div class="row">
+                                <h5 class="fw-bold m-0 pt-3">Button ONE</h5>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="inputText" class="col-lg-12 col-form-label">Button Name</label>
+                                    <input type="text" class="form-control mb-2"
+                                           value="<?= $Dashboard_Button_Links[0]['button_one_name'] ?>"
+                                           placeholder="Button ONE" id="btn_1_name">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="inputText" class="col-lg-12 col-form-label">URL</label>
+                                    <input type="text" class="form-control mb-2"
+                                           value="<?= $Dashboard_Button_Links[0]['button_one_url'] ?>"
+                                           placeholder="URL"
+                                           id="btn_1_url">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <h5 class="fw-bold m-0 pt-3">Button TWO</h5>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="inputText" class="col-lg-12 col-form-label">Button Name</label>
+                                    <input type="text" class="form-control mb-2"
+                                           value="<?= $Dashboard_Button_Links[0]['button_two_name'] ?>"
+                                           placeholder="Button Name" id="btn_2_name">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="inputText" class="col-lg-12 col-form-label">URL</label>
+                                    <input type="text" class="form-control mb-2"
+                                           value="<?= $Dashboard_Button_Links[0]['button_two_url'] ?>"
+                                           placeholder="URL" id="btn_2_url">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <h5 class="fw-bold m-0 pt-3">Button THREE</h5>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="inputText" class="col-lg-12 col-form-label">Button Name</label>
+                                    <input type="text" class="form-control mb-2"
+                                           value="<?= $Dashboard_Button_Links[0]['button_three_name'] ?>"
+                                           placeholder="Button Name" id="btn_3_name">
+                                </div>
+                                <div class="col-lg-6 mb-3">
+                                    <label for="inputText" class="col-lg-12 col-form-label">URL</label>
+                                    <input type="text" class="form-control mb-2"
+                                           value="<?= $Dashboard_Button_Links[0]['button_three_url'] ?>"
+                                           placeholder="URL" id="btn_3_url">
+                                </div>
+                            </div>
+
+
                             <div class="w-100 text-center">
                                 <button class="btn btn-primary" type="submit" id="dashboard_btns_sub_btn">Submit
                                 </button>

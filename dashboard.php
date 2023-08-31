@@ -138,14 +138,14 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
             </div>
 
             <div class="text-center pt-4">
-                <a class="text-decoration-none" href="<?= $Dashboard_Button_Links[0]['button_one_link'] ?>">
-                    <button class="btn btn-primary px-5 py-2">Button 1</button>
+                <a class="text-decoration-none" href="<?= $Dashboard_Button_Links[0]['button_one_url'] ?>">
+                    <button class="btn btn-primary px-5 py-2"><?= $Dashboard_Button_Links[0]['button_one_name'] ?></button>
                 </a>
-                <a class="text-decoration-none" href="<?= $Dashboard_Button_Links[0]['button_one_link'] ?>">
-                    <button class="btn btn-primary px-5 py-2">Button 2</button>
+                <a class="text-decoration-none" href="<?= $Dashboard_Button_Links[0]['button_two_url'] ?>">
+                    <button class="btn btn-primary px-5 py-2"><?= $Dashboard_Button_Links[0]['button_two_name'] ?></button>
                 </a>
-                <a class="text-decoration-none" href="<?= $Dashboard_Button_Links[0]['button_one_link'] ?>">
-                    <button class="btn btn-primary px-5 py-2">Button 3</button>
+                <a class="text-decoration-none" href="<?= $Dashboard_Button_Links[0]['button_three_url'] ?>">
+                    <button class="btn btn-primary px-5 py-2"><?= $Dashboard_Button_Links[0]['button_three_name'] ?></button>
                 </a>
             </div>
         </div>
