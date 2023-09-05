@@ -7,14 +7,13 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
 include_once "../serverside/functions.php";
 
 if (isset($_SESSION['user_id'])) {
-
 } else {
     //header('Location: sign-in');
-    ?>
+?>
     <script type="text/javascript">
         window.location.href = "logout";
     </script>
-    <?php
+<?php
     exit();
 }
 
@@ -22,13 +21,12 @@ $func = new Functions();
 $users1 = $func->getSingleUser($_SESSION['user_id']);
 if (!empty($users1)) {
     $user1 = $users1[0];
-
 } else {
-    ?>
+?>
     <script type="text/javascript">
         window.location.href = "logout";
     </script>
-    <?php
+<?php
     exit();
 }
 ?>
@@ -49,8 +47,7 @@ if (!empty($users1)) {
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -66,156 +63,162 @@ if (!empty($users1)) {
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
 
 </head>
+
 <body>
 
-<!-- ======= Header ======= -->
-<header id="header" class="header fixed-top d-flex align-items-center">
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
 
-    <div class="d-flex align-items-center justify-content-between">
-        <a href="index" class="logo d-flex align-items-center">
-            <img src="./assets/img/logo.png" alt="">
-            <span class="d-none d-lg-block">Vanguard Wealth Builder</span>
-        </a>
-        <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End Logo -->
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="index" class="logo d-flex align-items-center">
+                <img src="./assets/img/logo.png" alt="">
+                <span class="d-none d-lg-block">Vanguard Wealth Builder</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div><!-- End Logo -->
 
-    <nav class="header-nav ms-auto">
-        <ul class="d-flex align-items-center">
-            <li class="nav-item dropdown pe-3">
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+                <li class="nav-item dropdown pe-3">
 
-                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
 
-                    <!--                    --><?php
-                    //                    if ($user1['image_path'] !=""){
-                    //                        ?>
-                    <!--                        <img src="-->
-                    <?php //=$user1['image_path']?><!--" class=" myImage rounded-circle" alt="Profile">-->
-                    <!--                        --><?php
-                    //                    }else{
-                    //                        ?>
-                    <!--                        <img src="assets/img/profile-img.jpg" alt="Profile" class="myImage rounded-circle">-->
-                    <!--                        --><?php
-                    //                    }
-                    //                    ?>
+                        <!--                    --><?php
+                                                    //                    if ($user1['image_path'] !=""){
+                                                    //                        
+                                                    ?>
+                        <!--                        <img src="-->
+                        <?php //=$user1['image_path']
+                        ?><!--" class=" myImage rounded-circle" alt="Profile">-->
+                        <!--                        --><?php
+                                                        //                    }else{
+                                                        //                        
+                                                        ?>
+                        <!--                        <img src="assets/img/profile-img.jpg" alt="Profile" class="myImage rounded-circle">-->
+                        <!--                        --><?php
+                                                        //                    }
+                                                        //                    
+                                                        ?>
 
 
-                    <span class="d-none d-md-block dropdown-toggle ps-2"><?= $user1['fname'] ?></span>
+                        <span class="d-none d-md-block dropdown-toggle ps-2"><?= $user1['fname'] ?></span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6><?= $user1['fname'] ?></h6>
+
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="profile">
+                                <i class="bi bi-person"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="logout">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ======= End Header ======= -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+        <ul class="sidebar-nav" id="sidebar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index">
+                    <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-                    <li class="dropdown-header">
-                        <h6><?= $user1['fname'] ?></h6>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="events">
+                    <i class="bi bi-menu-button-wide"></i>
+                    <span>Events</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="users">
+                    <i class="bi bi-person"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="teams">
+                    <i class="bi bi-people"></i>
+                    <span>Team</span>
+                </a>
+            </li>
 
-                    </li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    <li>
-                        <a class="dropdown-item d-flex align-items-center" href="profile">
-                            <i class="bi bi-person"></i>
-                            <span>My Profile</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item d-flex align-items-center" href="logout">
-                            <i class="bi bi-box-arrow-right"></i>
-                            <span>Sign Out</span>
-                        </a>
-                    </li>
-                </ul>
+            <li class="nav-item">
+                <a class="nav-link" href="next_step">
+                    <i class="bi bi-bar-chart-steps"></i>
+                    <span>Next Step</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="welcome">
+                    <i class="bi bi-film"></i>
+                    <span>Welcome Page & Videos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="business_partners">
+                    <i class="bi bi-person"></i>
+                    <span>New Business Partner</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="all_guest">
+                    <i class="bi bi-person"></i>
+                    <span>All Guests</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="request_trainer">
+                    <i class="bi bi-person"></i>
+                    <span>All Request Trainers</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_client">
+                    <i class="bi bi-person"></i>
+                    <span>All New Family/Client </span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="dashboard_page-settings">
+                    <i class="bi bi-gear"></i>
+                    <span>Dashboard Page Settings</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="new_business_partner">
+                    <i class="bi bi-person"></i>
+                    <span>New Business Partner Page Settings</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="training_center_settings">
+                    <i class="bi bi-person"></i>
+                    <span>Training Center Settings</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="trainers_page_setting">
+                    <i class="bi bi-person"></i>
+                    <span>Trainers Page Settings</span>
+                </a>
             </li>
         </ul>
-    </nav>
-</header>
-<!-- ======= End Header ======= -->
-
-<!-- ======= Sidebar ======= -->
-<aside id="sidebar" class="sidebar">
-    <ul class="sidebar-nav" id="sidebar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="index">
-                <i class="bi bi-grid"></i>
-                <span>Dashboard</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="events">
-                <i class="bi bi-menu-button-wide"></i>
-                <span>Events</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="teams">
-                <i class="bi bi-bar-chart"></i>
-                <span>Team</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="next_step">
-                <i class="bi bi-bar-chart"></i>
-                <span>Next Step</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="users">
-                <i class="bi bi-person"></i>
-                <span>Users</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="welcome">
-                <i class="bi bi-person"></i>
-                <span>Welcome Page & Videos</span>
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="new_business_partner">
-                <i class="bi bi-person"></i>
-                <span>New Business Partner Page Settings</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="trainers_page_setting">
-                <i class="bi bi-person"></i>
-                <span>Trainers Page Settings</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="all_guest">
-                <i class="bi bi-person"></i>
-                <span>All Guests</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="request_trainer">
-                <i class="bi bi-person"></i>
-                <span>All Request Trainers</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="business_partners">
-                <i class="bi bi-person"></i>
-                <span>New Business Partner</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="new_client">
-                <i class="bi bi-person"></i>
-                <span>All New Family/Client </span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="dashboard_page-settings">
-                <i class="bi bi-person"></i>
-                <span>Dashboard Page Settings</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="training_center_settings">
-                <i class="bi bi-person"></i>
-                <span>Training Center Settings</span>
-            </a>
-        </li>
-    </ul>
-</aside>
-<!-- End Sidebar-->
+    </aside>
+    <!-- End Sidebar-->

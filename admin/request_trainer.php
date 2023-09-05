@@ -1,36 +1,36 @@
 <?php
 include_once "includes/dashboard-header.php";
-$func=new Functions();
-$all_appointments=$func->getAllAppointments();
+$func = new Functions();
+$all_appointments = $func->getAllAppointments();
 ?>
-    <style>
-        .mce-notification {
-            display: none;
-        }
-    </style>
-    <main id="main" class="main">
+<style>
+    .mce-notification {
+        display: none;
+    }
+</style>
+<main id="main" class="main">
 
-        <!--Page Title -->
-        <div class="pagetitle">
-            <h1>All Request Trainer</h1>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index">Home</a></li>
-                    <li class="breadcrumb-item active">All Request Trainer</li>
-                </ol>
-            </nav>
-        </div>
+    <!--Page Title -->
+    <div class="pagetitle">
+        <h1>All Request Trainer</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index">Home</a></li>
+                <li class="breadcrumb-item active">All Request Trainer</li>
+            </ol>
+        </nav>
+    </div>
 
-        <section class="section">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
-                            </div>
-                            <table id="request_trainers" class="table table-striped" style="width:100%">
-                                <thead>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
+                        </div>
+                        <table id="request_trainers" class="table table-striped" style="width:100%">
+                            <thead>
                                 <tr>
                                     <th>Trainee or Agent scheduling appointment</th>
                                     <th>Appointment Type</th>
@@ -41,11 +41,11 @@ $all_appointments=$func->getAllAppointments();
                                     <th>They are</th>
                                     <th>Description</th>
                                 </tr>
-                                </thead>
-                                <tbody>
+                            </thead>
+                            <tbody>
                                 <?php
-                                foreach ($all_appointments as $all_appointment){
-                                    ?>
+                                foreach ($all_appointments as $all_appointment) {
+                                ?>
                                     <tr>
                                         <td><?= $all_appointment['traine_appointment'] ?></td>
                                         <td><?= $all_appointment['appointment_type'] ?></td>
@@ -56,11 +56,11 @@ $all_appointments=$func->getAllAppointments();
                                         <td><?= $all_appointment['they_are'] ?></td>
                                         <td><?= $all_appointment['description'] ?></td>
                                     </tr>
-                                    <?php
+                                <?php
                                 }
                                 ?>
-                                </tbody>
-                                <tfoot>
+                            </tbody>
+                            <tfoot>
                                 <tr>
                                     <th>Trainee or Agent scheduling appointment</th>
                                     <th>Appointment Type</th>
@@ -71,25 +71,25 @@ $all_appointments=$func->getAllAppointments();
                                     <th>They are</th>
                                     <th>Description</th>
                                 </tr>
-                                </tfoot>
-                            </table>
+                            </tfoot>
+                        </table>
 
 
 
 
-                            <table class="table table-striped">
-                                <thead>
+                        <table class="table table-striped">
+                            <thead>
 
-                                </thead>
+                            </thead>
 
-                            </table>
-                        </div>
+                        </table>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <!-- End #main -->
+        </div>
+    </section>
+</main>
+<!-- End #main -->
 
 <?php include_once "includes/dashboard-footer.php" ?>
 <script>
@@ -126,7 +126,7 @@ $all_appointments=$func->getAllAppointments();
             var encodedUri = encodeURI(csvContent);
             var link = document.createElement("a");
             link.setAttribute("href", encodedUri);
-            link.setAttribute("download", "team_members.csv");
+            link.setAttribute("download", "all_request_trainers.csv");
             document.body.appendChild(link);
 
             // Click the link to trigger the download
@@ -136,5 +136,4 @@ $all_appointments=$func->getAllAppointments();
             document.body.removeChild(link);
         });
     });
-
 </script>

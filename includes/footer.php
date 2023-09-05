@@ -1,6 +1,6 @@
 <?php
-if(isset($_SESSION['user_id'])){
-    ?>
+if (isset($_SESSION['user_id'])) {
+?>
     <section class="section-wrapper w-100 py-5 login-section">
         <div class="container">
             <div class="card bg-black text-white">
@@ -8,7 +8,7 @@ if(isset($_SESSION['user_id'])){
                     <img src="assets/images/logo3.png" class="img-fluid px-4">
                     <h2 class="fw-light mt-3">VANGUARD WEALTH BUILDERS</h2>
                     <div>
-                        <p>Logged in as: <span class="text-primary"><?= $_SESSION['email']?></span></p>
+                        <p>Logged in as: <span class="text-primary"><?= $_SESSION['email'] ?></span></p>
                         <a href="logout" class="text-danger btn btn-link">Logout? </a>
                     </div>
                 </div>
@@ -62,7 +62,7 @@ if(isset($_SESSION['user_id'])){
             </div>
 
             <div class="py-4 border-top footer-content text-center">
-                <p class="">Copyright © <?=date('Y')?> <strong>VANGUARD Wealth Builder</strong></p>
+                <p class="">Copyright © <?= date('Y') ?> <strong>VANGUARD Wealth Builder</strong></p>
             </div>
         </div>
     </div>
@@ -76,22 +76,25 @@ if(isset($_SESSION['user_id'])){
 <script src="js/slick.js"></script>
 <script src="js/jquery-migrate-1.2.1.min.js"></script>
 
-
+<!--DataTables-->
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+<!--FancyBox-->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 <script>
-    $('.count').each(function () {
+    $('.count').each(function() {
         $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
         }, {
             duration: 4000,
             easing: 'swing',
-            step: function (now) {
+            step: function(now) {
                 $(this).text(Math.ceil(now));
             }
         });
     });
 </script>
 </body>
+
 </html>

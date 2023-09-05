@@ -1,36 +1,37 @@
 <?php
 include_once "includes/dashboard-header.php";
-$func=new Functions();
-$all_business_partners=$func->getAllBusinessPartners();
+$func = new Functions();
+$all_business_partners = $func->getAllBusinessPartners();
 ?>
-    <style>
-        .mce-notification {
-            display: none;
-        }
-    </style>
-    <main id="main" class="main">
+<style>
+    .mce-notification {
+        display: none;
+    }
+</style>
+<main id="main" class="main">
 
-        <!--Page Title -->
-        <div class="pagetitle">
-            <h1>All Request Trainer</h1>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index">Home</a></li>
-                    <li class="breadcrumb-item active">All Request Trainer</li>
-                </ol>
-            </nav>
-        </div>
+    <!--Page Title -->
+    <div class="pagetitle">
+        <!-- <h1>All Request Trainer</h1> -->
+        <h1>All Business Partners</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index">Home</a></li>
+                <li class="breadcrumb-item active">All Business Partners</li>
+            </ol>
+        </nav>
+    </div>
 
-        <section class="section">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
-                            </div>
-                            <table id="business_partner" class="table table-striped" style="width:100%">
-                                <thead>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
+                        </div>
+                        <table id="business_partner" class="table table-striped" style="width:100%">
+                            <thead>
                                 <tr>
                                     <th>Agent Id</th>
                                     <th>Start Date</th>
@@ -45,11 +46,11 @@ $all_business_partners=$func->getAllBusinessPartners();
                                     <th>Date of Birth</th>
                                     <th>Email Address</th>
                                 </tr>
-                                </thead>
-                                <tbody>
+                            </thead>
+                            <tbody>
                                 <?php
-                                foreach ($all_business_partners as $all_business_partner){
-                                    ?>
+                                foreach ($all_business_partners as $all_business_partner) {
+                                ?>
                                     <tr>
                                         <td><?= $all_business_partner['agent_id'] ?></td>
                                         <td><?= $all_business_partner['start_date'] ?></td>
@@ -64,11 +65,11 @@ $all_business_partners=$func->getAllBusinessPartners();
                                         <td><?= $all_business_partner['birthdate'] ?></td>
                                         <td><?= $all_business_partner['email_address'] ?></td>
                                     </tr>
-                                    <?php
+                                <?php
                                 }
                                 ?>
-                                </tbody>
-                                <tfoot>
+                            </tbody>
+                            <tfoot>
                                 <tr>
                                     <th>Agent Id</th>
                                     <th>Start Date</th>
@@ -83,22 +84,22 @@ $all_business_partners=$func->getAllBusinessPartners();
                                     <th>Date of Birth</th>
                                     <th>Email Address</th>
                                 </tr>
-                                </tfoot>
-                            </table>
+                            </tfoot>
+                        </table>
 
-                            <table class="table table-striped">
-                                <thead>
+                        <table class="table table-striped">
+                            <thead>
 
-                                </thead>
+                            </thead>
 
-                            </table>
-                        </div>
+                        </table>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <!-- End #main -->
+        </div>
+    </section>
+</main>
+<!-- End #main -->
 
 <?php include_once "includes/dashboard-footer.php" ?>
 <script>
@@ -135,7 +136,7 @@ $all_business_partners=$func->getAllBusinessPartners();
             var encodedUri = encodeURI(csvContent);
             var link = document.createElement("a");
             link.setAttribute("href", encodedUri);
-            link.setAttribute("download", "team_members.csv");
+            link.setAttribute("download", "all_business_partners.csv");
             document.body.appendChild(link);
 
             // Click the link to trigger the download
@@ -145,5 +146,4 @@ $all_business_partners=$func->getAllBusinessPartners();
             document.body.removeChild(link);
         });
     });
-
 </script>
