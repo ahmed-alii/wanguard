@@ -1541,4 +1541,34 @@ else if ($func == 66) {
     }
 }
 
+else if ($func == 67) {
+
+    $id = htmlspecialchars(stripslashes($_POST['id']));
+    $id = $db->escapeString($id);
+
+    $sql = " update users set user_type = 2 where id= '$id'";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
+else if ($func == 68) {
+
+    $id = htmlspecialchars(stripslashes($_POST['id']));
+    $id = $db->escapeString($id);
+
+    $sql = " update users set user_type = 0 where id= '$id'";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+}
+
 ?>

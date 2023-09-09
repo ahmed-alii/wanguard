@@ -7,3 +7,6 @@ ALTER TABLE `users` CHANGE `status` `status` INT(11) NOT NULL DEFAULT '0' COMMEN
 CREATE TABLE `wanguard`.`trainer_sections` ( `id` INT NOT NULL AUTO_INCREMENT , `main_heading` INT NOT NULL , `sub_heading` INT NOT NULL , `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
 
 CREATE TABLE `wanguard`.`trainer_images` ( `id` INT NOT NULL AUTO_INCREMENT , `section_id` INT NOT NULL , `image_path` INT NOT NULL , `image_url` INT NOT NULL , `created_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+9/9/2023
+ALTER TABLE `users` CHANGE `user_type` `user_type` INT(11) NOT NULL DEFAULT '0' COMMENT '0=user,2=trainer,1=admin';

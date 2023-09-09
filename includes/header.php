@@ -101,8 +101,9 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
                             <a class="nav-link" href="dashboard">Dashboard</a>
                         </li>
                         <?php
-                    } else {
+                    }if ($_SESSION['user_type'] == 2) {
                         ?>
+
                         <li class="nav-item">
                             <a class="nav-link" href="index">Home</a>
                         </li>
@@ -113,7 +114,28 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
                             <a class="nav-link" href="next-steps">Next Steps</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="overview">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropbtn" href="trainers-page">Traniers</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link dropbtn" href="training_center">Training Center</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dashboard">Dashboard</a>
+                        </li>
+                        <?php
+                    } else if($_SESSION['user_type']==0 )  {
+                        ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="welcome">Welcome</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="next-steps">Next Steps</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="dashboard">Dashboard</a>

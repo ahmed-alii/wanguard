@@ -756,7 +756,6 @@ function activeUser(id) {
     });
 }//active user
 
-
 $("#new-appointment").submit(function (e) {
     e.preventDefault();
     var ajax_data = new FormData();
@@ -2425,6 +2424,89 @@ function deleteOneThreeInputNames(id) {
                 }//success
             });//ajax
         }
-
     });
 }
+
+function markastrainer(id) {
+    swal({
+        title: 'Are you sure to mark this user as a trainer?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 67,
+                    id: id,
+                },
+                success: function (data) {
+
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'success',
+                            text: 'User marked as trainer successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Failed to mark this as a trainer!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+    });
+}//markastrainer
+function removefromtrainer(id) {
+    swal({
+        title: 'Are you sure to remove this user from trainer?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+
+        // $("#approve_btn" + id).attr("disabled", true);
+        // $("#approve_btn" + id).html(`<i class="fa fa-spinner fa-spin"></i>`);
+
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 68,
+                    id: id,
+                },
+                success: function (data) {
+
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'success',
+                            text: 'User removed from trainer successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Failed to remove this user from trainer!'
+                        });
+                    }
+                    // $("#approve_btn" + id).attr("disabled", false);
+                    // $("#approve_btn" + id).html(`<i class="fa fa-check"></i>`);
+                }//success
+            });//ajax
+        }
+
+    });
+}//removefromtrainer

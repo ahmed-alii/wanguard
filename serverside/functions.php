@@ -130,7 +130,7 @@ class Functions
 
     function getAllUser()
     {
-        $sql = "select * from users where user_type=0 order by id desc ";
+        $sql = "select * from users where user_type !=1 order by id desc ";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
