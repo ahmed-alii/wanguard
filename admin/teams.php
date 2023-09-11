@@ -26,8 +26,7 @@ $team_members = $func->getAllTeamMembers();
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <button type="button btn-1" class="btn btn-primary my-2" data-bs-toggle="modal"
-                                    data-bs-target="#add_team_modal"> Add New Team Member
+                            <button type="button btn-1" class="btn btn-primary my-2" data-bs-toggle="modal" data-bs-target="#add_team_modal"> Add New Team Member
                             </button>
                             <h5 class="card-title">All Team Members</h5>
 
@@ -37,49 +36,46 @@ $team_members = $func->getAllTeamMembers();
                             </div>
                             <table id="team_members" class="table table-striped" style="width:100%">
                                 <thead>
-                                <tr>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Level</th>
-                                    <th scope="col">Rank</th>
-                                    <th scope="col">Department</th>
-                                    <th scope="col">Earning</th>
-                                    <th scope="col">Actions</th>
-                                </tr>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Level</th>
+                                        <th scope="col">Rank</th>
+                                        <th scope="col">Department</th>
+                                        <th scope="col">Earning</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                <?php
-                                foreach ($team_members as $team_member) {
-                                    ?>
-                                    <tr>
-                                        <td><?= $team_member['name'] ?></td>
-                                        <td><?= $team_member['level'] ?></td>
-                                        <td><?= $team_member['rank'] ?></td>
-                                        <td><?= $team_member['department'] ?></td>
-                                        <td><?= $team_member['earning'] ?></td>
-                                        <td>
-                                            <a href="add-bio?bio_id=<?= $team_member['id'] ?>"> <i
-                                                        class="fa fa-plus p-2 btn btn-success" title="Edit Bio"></i></a>
-                                            <i class="fa fa-edit p-2 btn btn-primary" title="Edit team member"
-                                               onclick="editTeamMember(`<?= $team_member['id'] ?>`,`<?= $team_member['name'] ?>`,`<?= $team_member['rank'] ?>`,`<?= $team_member['level'] ?>`,`<?= $team_member['department'] ?>`,`<?= $team_member['earning'] ?>`,`<?= $team_member['youtube_link'] ?>`, `<?= $team_member['linkedin_link'] ?>`,`<?= $team_member['twitter_link'] ?>`,`<?= $team_member['appointment_link'] ?>`)"></i>
-                                            <i class="fa fa-trash p-2 btn btn-danger" title="Delete team member"
-                                               onclick="deleteTeamMember(`<?= $team_member['id'] ?>`)"></i>
-
-                                        </td>
-                                    </tr>
                                     <?php
-                                }
-                                ?>
+                                    foreach ($team_members as $team_member) {
+                                    ?>
+                                        <tr>
+                                            <td><?= $team_member['name'] ?></td>
+                                            <td><?= $team_member['level'] ?></td>
+                                            <td><?= $team_member['rank'] ?></td>
+                                            <td><?= $team_member['department'] ?></td>
+                                            <td><?= $team_member['earning'] ?></td>
+                                            <td>
+                                                <a href="add-bio?bio_id=<?= $team_member['id'] ?>"> <i class="fa fa-plus p-2 btn btn-success" title="Edit Bio"></i></a>
+                                                <i class="fa fa-edit p-2 btn btn-primary" title="Edit team member" onclick="editTeamMember(`<?= $team_member['id'] ?>`,`<?= $team_member['name'] ?>`,`<?= $team_member['rank'] ?>`,`<?= $team_member['level'] ?>`,`<?= $team_member['department'] ?>`,`<?= $team_member['earning'] ?>`,`<?= $team_member['youtube_link'] ?>`, `<?= $team_member['linkedin_link'] ?>`,`<?= $team_member['twitter_link'] ?>`,`<?= $team_member['appointment_link'] ?>`)"></i>
+                                                <i class="fa fa-trash p-2 btn btn-danger" title="Delete team member" onclick="deleteTeamMember(`<?= $team_member['id'] ?>`)"></i>
+
+                                            </td>
+                                        </tr>
+                                    <?php
+                                    }
+                                    ?>
 
                                 </tbody>
                                 <tfoot>
-                                <tr>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Level</th>
-                                    <th scope="col">Rank</th>
-                                    <th scope="col">Department</th>
-                                    <th scope="col">Earning</th>
-                                    <th scope="col">Actions</th>
-                                </tr>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Level</th>
+                                        <th scope="col">Rank</th>
+                                        <th scope="col">Department</th>
+                                        <th scope="col">Earning</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
                                 </tfoot>
                             </table>
                             <!-- End Event Table rows -->
@@ -205,8 +201,7 @@ $team_members = $func->getAllTeamMembers();
                         <div class="col-md-6 mb-3">
                             <label for="inputText" class="col-sm-12 col-form-label">Level</label>
                             <div class="col-sm-12">
-                                <input type="number" min="1" max="3" id="edit_level" required name=""
-                                       class="form-control">
+                                <input type="number" min="1" max="3" id="edit_level" required name="" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -220,7 +215,7 @@ $team_members = $func->getAllTeamMembers();
                         <div class="col-md-6 mb-3">
                             <label for="inputTime" class="col-sm-12 col-form-label">Earning</label>
                             <div class="col-sm-12">
-                                <input type="number" id="edit_earning" min="1" class="form-control">
+                                <input type="number" id="edit_earning" min="0" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -281,7 +276,6 @@ $team_members = $func->getAllTeamMembers();
 <?php include_once "includes/dashboard-footer.php" ?>
 
 <script>
-
     function editTeamMember(id, name, rank, level, department, earning, youtube_link, linkedin_link, twitter_link, appointment_link) {
 
         $("#team_id").val(id);
@@ -298,7 +292,6 @@ $team_members = $func->getAllTeamMembers();
         $("#edit_team_modal").modal('show');
 
     }
-
 </script>
 <script>
     var table = $('#team_members').DataTable({
@@ -331,7 +324,9 @@ $team_members = $func->getAllTeamMembers();
             });
 
             // Create a Blob object and a download link
-            var blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            var blob = new Blob([csvContent], {
+                type: "text/csv;charset=utf-8;"
+            });
             var link = document.createElement("a");
             link.setAttribute("href", URL.createObjectURL(blob));
             link.setAttribute("download", "team_members.csv");

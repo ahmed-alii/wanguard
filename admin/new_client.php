@@ -1,36 +1,36 @@
 <?php
 include_once "includes/dashboard-header.php";
-$func=new Functions();
-$all_new_clients=$func->getAllClients();
+$func = new Functions();
+$all_new_clients = $func->getAllClients();
 ?>
-    <style>
-        .mce-notification {
-            display: none;
-        }
-    </style>
-    <main id="main" class="main">
+<style>
+    .mce-notification {
+        display: none;
+    }
+</style>
+<main id="main" class="main">
 
-        <!--Page Title -->
-        <div class="pagetitle">
-            <h1>All Request Trainer</h1>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index">Home</a></li>
-                    <li class="breadcrumb-item active">New Client</li>
-                </ol>
-            </nav>
-        </div>
+    <!--Page Title -->
+    <div class="pagetitle">
+        <h1>All New Client</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index">Home</a></li>
+                <li class="breadcrumb-item active">New Client</li>
+            </ol>
+        </nav>
+    </div>
 
-        <section class="section">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body table-responsive">
-                            <div class="text-center">
-                                <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
-                            </div>
-                            <table id="new_clients" class="table table-striped" style="width:100%">
-                                <thead>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body table-responsive">
+                        <div class="text-center">
+                            <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
+                        </div>
+                        <table id="new_clients" class="table table-striped" style="width:100%">
+                            <thead>
                                 <tr>
                                     <th>First Name</th>
                                     <th>Last Name</th>
@@ -52,11 +52,11 @@ $all_new_clients=$func->getAllClients();
                                     <th>Email Address</th>
                                     <th>Add Notes</th>
                                 </tr>
-                                </thead>
-                                <tbody>
+                            </thead>
+                            <tbody>
                                 <?php
-                                foreach ($all_new_clients as $all_new_client){
-                                    ?>
+                                foreach ($all_new_clients as $all_new_client) {
+                                ?>
                                     <tr>
 
                                         <td><?= $all_new_client['f_name'] ?></td>
@@ -79,11 +79,11 @@ $all_new_clients=$func->getAllClients();
                                         <td><?= $all_new_client['email_address'] ?></td>
                                         <td><?= $all_new_client['add_notes'] ?></td>
                                     </tr>
-                                    <?php
+                                <?php
                                 }
                                 ?>
-                                </tbody>
-                                <tfoot>
+                            </tbody>
+                            <tfoot>
                                 <tr>
                                     <th>First Name</th>
                                     <th>Last Name</th>
@@ -105,15 +105,15 @@ $all_new_clients=$func->getAllClients();
                                     <th>Email Address</th>
                                     <th>Add Notes</th>
                                 </tr>
-                                </tfoot>
-                            </table>
-                        </div>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <!-- End #main -->
+        </div>
+    </section>
+</main>
+<!-- End #main -->
 
 <?php include_once "includes/dashboard-footer.php" ?>
 <script>
@@ -150,7 +150,7 @@ $all_new_clients=$func->getAllClients();
             var encodedUri = encodeURI(csvContent);
             var link = document.createElement("a");
             link.setAttribute("href", encodedUri);
-            link.setAttribute("download", "team_members.csv");
+            link.setAttribute("download", "new_client.csv");
             document.body.appendChild(link);
 
             // Click the link to trigger the download
@@ -160,5 +160,4 @@ $all_new_clients=$func->getAllClients();
             document.body.removeChild(link);
         });
     });
-
 </script>

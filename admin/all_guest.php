@@ -1,36 +1,36 @@
 <?php
 include_once "includes/dashboard-header.php";
-$func=new Functions();
-$all_guests=$func->getAllGuests();
+$func = new Functions();
+$all_guests = $func->getAllGuests();
 ?>
-    <style>
-        .mce-notification {
-            display: none;
-        }
-    </style>
-    <main id="main" class="main">
+<style>
+    .mce-notification {
+        display: none;
+    }
+</style>
+<main id="main" class="main">
 
-        <!--Page Title -->
-        <div class="pagetitle">
-            <h1>Guests</h1>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index">Home</a></li>
-                    <li class="breadcrumb-item active">All Guests</li>
-                </ol>
-            </nav>
-        </div>
+    <!--Page Title -->
+    <div class="pagetitle">
+        <h1>Guests</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index">Home</a></li>
+                <li class="breadcrumb-item active">All Guests</li>
+            </ol>
+        </nav>
+    </div>
 
-        <section class="section">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
-                            </div>
-                            <table id="all_guests" class="table table-striped" style="width:100%">
-                                <thead>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <button class="btn btn-secondary my-3" id="download_csv">Download CSV</button>
+                        </div>
+                        <table id="all_guests" class="table table-striped" style="width:100%">
+                            <thead>
                                 <tr>
                                     <th>Events</th>
                                     <th>Guest Name</th>
@@ -39,12 +39,13 @@ $all_guests=$func->getAllGuests();
                                     <th>Contact Number</th>
                                     <th>Guest Mail</th>
                                     <th>Guest App Confirmation</th>
+                                    <th>Action</th>
                                 </tr>
-                                </thead>
-                                <tbody>
+                            </thead>
+                            <tbody>
                                 <?php
-                                foreach ($all_guests as $all_guest){
-                                    ?>
+                                foreach ($all_guests as $all_guest) {
+                                ?>
                                     <tr>
                                         <td><?= $all_guest['events'] ?></td>
                                         <td><?= $all_guest['guest_name'] ?></td>
@@ -53,12 +54,13 @@ $all_guests=$func->getAllGuests();
                                         <td><?= $all_guest['contact_number'] ?></td>
                                         <td><?= $all_guest['guest_mail'] ?></td>
                                         <td><?= $all_guest['guest_app_confirm'] ?></td>
+                                        <td> <i class="fa fa-trash p-2 btn btn-danger" title="Delete team member" onclick="deleteTeamMember(`<?= $team_member['id'] ?>`)"></i> </td>
                                     </tr>
-                                    <?php
+                                <?php
                                 }
                                 ?>
-                                </tbody>
-                                <tfoot>
+                            </tbody>
+                            <tfoot>
                                 <tr>
                                     <th>Events</th>
                                     <th>Guest Name</th>
@@ -67,16 +69,17 @@ $all_guests=$func->getAllGuests();
                                     <th>Contact Number</th>
                                     <th>Guest Mail</th>
                                     <th>Guest App Confirmation</th>
+                                    <th>Action</th>
                                 </tr>
-                                </tfoot>
-                            </table>
-                        </div>
+                            </tfoot>
+                        </table>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-    <!-- End #main -->
+        </div>
+    </section>
+</main>
+<!-- End #main -->
 
 <?php include_once "includes/dashboard-footer.php" ?>
 <script>
@@ -113,7 +116,7 @@ $all_guests=$func->getAllGuests();
             var encodedUri = encodeURI(csvContent);
             var link = document.createElement("a");
             link.setAttribute("href", encodedUri);
-            link.setAttribute("download", "team_members.csv");
+            link.setAttribute("download", "All_guests.csv");
             document.body.appendChild(link);
 
             // Click the link to trigger the download
@@ -123,5 +126,4 @@ $all_guests=$func->getAllGuests();
             document.body.removeChild(link);
         });
     });
-
 </script>

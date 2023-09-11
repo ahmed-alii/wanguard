@@ -23,7 +23,7 @@ class Functions
         } else {
             return false;
         }
-    }//checkEmail Exist
+    } //checkEmail Exist
 
     function checktokenexist($token)
     {
@@ -36,7 +36,7 @@ class Functions
         } else {
             return false;
         }
-    }//checktokenexist
+    } //checktokenexist
 
     //generat a random password
     function random_Code()
@@ -48,15 +48,13 @@ class Functions
             $n = rand(0, $alphaLength);
             $pass[] = $alphabet[$n];
         }
-        $pass1 = implode($pass);//turn the array into a string
+        $pass1 = implode($pass); //turn the array into a string
         if ($this->checktokenexist($pass1)) {
             random_Code();
         } else {
             return $pass1;
         }
-
-
-    }//generat a random password
+    } //generat a random password
 
     function sendrecoveremail($email, $pass)
     {
@@ -66,8 +64,7 @@ class Functions
         $message = "You have requested to reset the password, please click on below link to reset the password. <br>" . $link . "<br><br> Thank you!";
         $subject = "Password recovery";
         sendemailsmtp($to, $message, $subject);
-
-    }//sendrecoveremail
+    } //sendrecoveremail
 
     function ProfileApproveEmail($name, $email)
     {
@@ -105,7 +102,7 @@ class Functions
         } else {
             return false;
         }
-    }//UpdatePassword
+    } //UpdatePassword
 
     function CheckOldPass($userid, $oldpass)
     {
@@ -118,7 +115,7 @@ class Functions
         } else {
             return false;
         }
-    }//CheckOldPass
+    } //CheckOldPass
 
     function getSingleUser($id)
     {
@@ -126,7 +123,7 @@ class Functions
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
-    }//getSingleUser
+    } //getSingleUser
 
     function getAllUser()
     {
@@ -134,7 +131,7 @@ class Functions
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
-    }//getAllUser
+    } //getAllUser
 
     function getAllUserByType($user_type)
     {
@@ -447,6 +444,4 @@ class Functions
             return $this->db->getResult();
         }
     }
-
-
 }//class
