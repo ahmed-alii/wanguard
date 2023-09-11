@@ -6,7 +6,7 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
 
 include_once "../serverside/functions.php";
 
-if (isset($_SESSION['user_id'])) {
+if (isset($_SESSION['user_id']) && $_SESSION['user_type'] == 1 ) {
 
 } else {
     //header('Location: sign-in');
