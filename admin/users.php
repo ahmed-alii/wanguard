@@ -37,6 +37,7 @@ $users = $func->getAllUser();
                                     <th scope="col">Name</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Status</th>
+                                    <th scope="col">Type</th>
                                     <th>Register date</th>
                                     <th scope="col">Actions</th>
                                 </tr>
@@ -62,8 +63,33 @@ $users = $func->getAllUser();
                                             }
                                             ?>
                                         </td>
+                                        <td>
+                                            <?php
+                                            if($user['user_type']==0){
+                                                ?>
+                                                <span class="badge rounded-pill bg-success">User</span>
+
+                                                <?php
+                                            }else if($user['user_type']==2){
+                                                ?>
+                                                <span class="badge rounded-pill bg-secondary">Trainer</span>
+                                                <?php
+                                            }
+                                            ?>
+                                        </td>
                                         <td><?=date('d F, Y',strtotime($user['create_date']))?></td>
                                         <td>
+                                            <?php
+                                            if($user['user_type']==0){
+                                                ?>
+                                                <a class="btn btn-sm btn-success  my-1 " onclick="markastrainer(this.id)" id="<?=$user['id']?>" title="Mark as trainer"><i class="fa fa-check"></i></a>
+                                                <?php
+                                            }else if($user['user_type']==2){
+                                                ?>
+                                                <a class="btn btn-sm btn-secondary my-1 " onclick="removefromtrainer(`<?=$user['id']?>`)"  title="Remove from trainer"><i class="fa fa-times"></i></a>
+                                                <?php
+                                            }
+                                            ?>
                                             <?php
                                             if($user['status']==1){
                                                 ?>

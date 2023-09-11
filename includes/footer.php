@@ -71,7 +71,7 @@ if (isset($_SESSION['user_id'])) {
 <script src="js/jquery-3.6.3.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/multi-select.js"></script>
-<script src="customjs/myjs.js?v=11"></script>
+<script src="customjs/myjs.js?v=1890"></script>
 <script src="js/sweetalert.js"></script>
 <script src="js/slick.js"></script>
 <script src="js/jquery-migrate-1.2.1.min.js"></script>

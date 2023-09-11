@@ -23,7 +23,7 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 <script src="assets/js/tinymce.min.js"></script>
-<script src="../customjs/myjs.js?v=12"></script>
+<script src="../customjs/myjs.js?v=76"></script>
 <script src="assets/js/sweetalert.js"></script>
 
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
