@@ -730,8 +730,11 @@ textarea {
 
 .slider_image_size{
   width: 80%;
-  height: 500px;
+  height: 250px;
   object-fit: cover;
+}
+.slider_image_size1{
+  height: 500px;
 }
 .fancybox-caption{
   opacity: 0 !important;

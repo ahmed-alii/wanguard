@@ -128,7 +128,7 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                 ?>
                 <div class="text-center">
                     <a href="<?= $Banner_Image[0]['image_url'] ?>" target="_blank">
-                        <img src="<?= $image_path ?>" alt="" class="img-fluid slider_image_size mx-auto">
+                        <img src="<?= $image_path ?>" alt="" class="img-fluid slider_image_size slider_image_size1 mx-auto">
                     </a>
                 </div>
             </div>
