@@ -138,6 +138,9 @@ if (session_id() == '' || !isset($_SESSION) || session_status() === PHP_SESSION_
                             <a class="nav-link" href="next-steps">Next Steps</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="overview">Overview</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="dashboard">Dashboard</a>
                         </li>
                         <?php
