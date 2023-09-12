@@ -8,8 +8,6 @@ if (!isset($_SESSION['user_id'])) {
 <?php
     exit();
 }
-
-
 include_once "serverside/functions.php";
 $func = new Functions();
 $level1 = $func->getTeamMemberByLevel(1);
@@ -144,47 +142,39 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
                     <h1 class="fw-bolder pt-3 text-primary"><?= $l1['name'] ?></h1>
                     <h3 class="fw-bolder text-gray"><?= $l1['rank'] ?></h3>
                     <h3 class="fw-bolder text-gray"><?= $l1['department'] ?></h3>
-                    <h3 class="fw-bolder text-green">$<?= number_format($l1['earning']) ?> + EARNERS </h3>
+                    <!-- <h3 class="fw-bolder text-green">$<?= number_format($l1['earning']) ?> + EARNERS </h3> -->
+                    <?php if ($l1['earning'] > 0) : ?>
+                        <h3 class="fw-bolder text-green">$<?= number_format($l1['earning']) ?> + EARNERS </h3>
+                    <?php endif; ?>
                     <div class="btn-1 py-2 d-flex w-100 justify-content-center">
                         <?php
                         if ($l1['bio'] != "") {
                         ?>
-                            <button onclick="showBio(`<?= $l1['id'] ?>`)" class="btn px-5 m-1 py-3">BIO
-
-                            </button>
+                            <button onclick="showBio(`<?= $l1['id'] ?>`)" class="btn px-5 m-1 py-3">BIO</button>
                         <?php
                         }
-                        ?>
-
-                        <?php
                         if ($l1['facebook_link'] != "") {
                         ?>
                             <button onclick="window.location.href = '<?= $l1['facebook_link'] ?>'" class="btn btn-social m-1">
                                 <i class="fa fa-facebook" aria-hidden="true" style="font-size:25px"></i>
-                                <!--                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf1JREFUaEPtWIlNAzEQnK0AOgAqCKkA6AAqoIRABUAF0AGUQAckFZAOgA7oYNEgn+RcfNjxE98hWzpFsuP1zs5+tmDiQyauPxqA2gw2BhoDiRZoLpRowOTt/58BVT0FcAbgEMCx+WzLcZ1rMWPp2NTNrQF8iQh/B8cgA6pKZZ8BnMdolnHPC4AHEfl0yXQCMMp/ZFQih6gTF4ghAG8jsHwf9KuIXPUntwAYn3/PYbICMub9mHABuAHwWODwHCJvReTJFuQCwD8scpxWQAaD+d4HgGmMaXOMYyUiG1nRxUAqgAsATH1HBSwQBIDpkzUgaojIr1FUlVQzng6iBLk3rUVk7nMhTTmwA2BAsEIzpq5TZG4obAzUzblcKBuA7hCTmgkkObZsA1H+XgBYQC4NI9HxURWA5VaMjaj4qA7AgLgzAHbuYqsCUFW6EKt8cparEcRUPLk13ysDqkoX6dwlSyYNAfCdUnysQsZ+isVsZz//A2lQJc7RSvAmF+3ntQFkcZUBIUEMTL6dpt8y8MY4gi40fCaZ7pXSVEo+YUT3K4Wo2/J/ZzNnAIyRhfBnFQsEb1azQhYNFbti3zT0Qud9GzW9PBnp8nq/HeB8irtRQXvQffmxoC6jnxZDzVP7f14GaivoO78B8Fmo9HpjoLSFffIbAz4LlV5vDJS2sE/+D8vQtzHIU/lnAAAAAElFTkSuQmCC"/>-->
                             </button>
                         <?php
                         }
-                        ?>
-
-                        <?php
                         if ($l1['instagram_link'] != "") {
                         ?>
                             <button onclick="window.location.href = '<?= $l1['instagram_link'] ?>'" class="btn btn-social m-1">
                                 <i class="fa fa-instagram" aria-hidden="true" style="font-size:30px"></i>
-                                <!--                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAudJREFUaEPtmIFtFEEMRb8rACogVABUAFRAqABSAaECkgpIKiCpAKiApAJIBUAFIRUYPWlWHHczO57duUMnraXT3WlnvP72t8ce056L7bn9WgD87wguEVgiMNMDC4VaHOju9yW9lXQg6Un6XEn6KenSzPi9Iewzs9+5Z8UIuPuBmaG4i7j7c0kfk/ElnQB4NRiLDZJeS3pqZoetAD5LujWzo7kI3P1E0vugnu+SAAJgooS8KEUnG4EU6tu0+WIOiOT5r0Hjc8tOzQwHZKUEAPSrL50EIjniW4U2Y9jeSWI/9HlgZm/WF0cBsI/QHpkZ3yFxd14I7+fKDZTKJXILgMGIEzM7jVjUyP2SSow/LBWUEgCSh9CVhCgA5MsYEHcnGZ9FwBbWFD0/rB8roxj5uPJyyizV6jznoQ4AitUnAoDE+dTgPQDzARTfHDxQbU4EpgPAcHfHuy8bQPReOg1Aqt0PJcHxs3Qa9jYuou9RrRuIVCHoMJyIkZd2W2Nm1WZzLIm9myXTFN2YWdVxYwDmlsBpZv/dRWU7rikZ7UYl/agp2OJzulKKyKiMcqzTSVqzIff8zsyYHapSTZKO/UzVmJUFDDcbjVtOQRVAOg/oTlHIcLELYYAJNY1VAO5OJRgOM35nJ6OOqK7NDIeFJAKAsW6XyRz2PgirABKFLnZEn1DpXA1NFAAVgXOh1p2Gwl5Y9IsTv3T7UFIcApCiAAjq8pzusmTHXZq4QonbHIHVDanRoyKRG73AMKpC02YJR2Bdc7qz+dChKk02PpzEaxGASpwHXHWETssRt84yvgmAu0MXzgDoM9dwEpZBvZnz687YoFDiOMZi5NDOhg+WAInP04VA9q4zsP+fJaWBhgQlqXolKS+9lnTcw+vhKpQSlZ4c6jBitgpUofSe1UbDVsXD+nAVSj0RlIJORAjh/730Gw8jw83EVW9v50CGAUz10Lb3LQC27eGa/iUCNQ9t+/kSgW17uKZ/7yPwB5uu7DGSgT7HAAAAAElFTkSuQmCC"/> --><?php
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ?>
-
-                            <?php
-                            if ($l1['linkedin_link'] != "") {
-                            ?>
-                                <button onclick="window.location.href = '<?= $l1['linkedin_link'] ?>'" class="btn btn-social m-1">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf9JREFUaEPtWcFRwzAQ3KsAqAA6IKkAqACoAOgAKgAqgA4IFUAHQAUkFZB0QAfLnJEYx5Esm5EjeUZ6JSNb2r093UqyYORNRo4fhUBqBYsC2SpA8gzALYBJYpBLADci8urC4U0hkl8ADhKDt9PPRWTalwAzAV/BEBFnsNsUKARiKhhLgQWAaxF5V3AkjwE8AjiMCdaZ65FS6MSCt5MYEm+jIOCTkeTg6yVKCo2eAICpiMzr6UJSje5zFCkEQMGfi4i6oy5iNbqXbbh1lBSqRfnb/N4dOvJ2/NgEtoX7b55YBJ4BVOlTa5pGF7X/9w52lwD2AXwY31jqWjIlWN/X/qO2qMQiEPQB10Qk1fhmIjLzgSSpJJ58/akJTJrVywWU5J3Zwm90JyXQdcGQ1KKgKbrTfCcLAqbs6lpY2VLcBEpSDy6n2REg+aAbwRqwK9ea8KVRUgVaNnx7ImI9peJGUkkq2bWWmoBvcQarWmwjC07oKaNaPuteYXEFx8uFgPqAy6gKgb6H+mDEWpy4KOAyxKJAs8aXFPq9qtm45UhtZNmUUbX5tUO9OQ/r5ZZtGsFm037XLXeX8aqxYinQdWcc/blCIHpIew74HwX0ZKSHjxzaQkScX4rajEw/Mek2ePCb50CEVuZGvN8nphzC3gVD+czaJUpDPlMUGDK6XcYevQI/EWKeQDGkBr4AAAAASUVORK5CYII=" />
-                                </button>
-                            <?php
-                            }
-                            ?>
+                            </button>
+                        <?php
+                        }
+                        if ($l1['linkedin_link'] != "") {
+                        ?>
+                            <button onclick="window.location.href = '<?= $l1['linkedin_link'] ?>'" class="btn btn-social m-1">
+                                <i class="fa fa-linkedin" aria-hidden="true" style="font-size:30px"></i>
+                            </button>
+                        <?php
+                        }
+                        ?>
                     </div>
                     <div class="btn-2">
                         <a href="<?= $l1['appointment_link'] ?>" target="_blank">
@@ -235,21 +225,11 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
                         <p class="fw-bolder text-green p-0 m-0">$<?= number_format($l2['earning']) ?> + EARNERS</p>
                     <?php endif; ?>
 
-
-
-
                     <div class="btn-1 py-2 d-flex w-100 justify-content-center align-items-center">
 
                         <button onclick="showBio(`<?= $l2['id'] ?>`)" class="btn px-5 m-1 py-3">BIO</button>
 
                         <?php
-                        if ($l2['youtube_link'] != "") {
-                        ?>
-                            <button onclick="window.location.href = '<?= $l2['youtube_link'] ?>'" class="btn btn-social m-1">
-                                <i class="fa fa-youtube" aria-hidden="true" style="font-size:30px"></i>
-                            </button>
-                        <?php
-                        }
                         if ($l2['linkedin_link'] != "") {
                         ?>
                             <button onclick="window.location.href = '<?= $l2['linkedin_link'] ?>'" class="btn btn-social m-1">
@@ -314,12 +294,14 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
                     <?php
                     }
                     ?>
-
-
                     <h6 class="fw-bolder pt-3 text-primary"><?= $l3['name'] ?></h6>
                     <p class="fw-bolder text-gray p-0 m-0"><?= $l3['rank'] ?></p>
                     <p class="fw-bolder text-gray p-0 m-0"><?= $l3['department'] ?></p>
-                    <p class="fw-bolder text-green p-0 m-0 text">$<?= number_format($l3['earning']) ?> + EARNERS </p>
+
+                    <?php if ($l3['earning'] > 0) : ?>
+                        <p class="fw-bolder text-green p-0 m-0 text">$<?= number_format($l3['earning']) ?> + EARNERS </p>
+                    <?php endif; ?>
+
                     <div class="btn-3 py-3">
                         <?php
                         if ($l3['bio'] != "") {
@@ -333,45 +315,33 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
                             </button>
                         <?php
                         }
-                        ?>
-
-                        <?php
                         if ($l3['facebook_link'] != "") {
                         ?>
                             <button onclick="window.location.href = '<?= $l3['facebook_link'] ?>'" class="btn btn-social m-1">
                                 <i class="fa fa-facebook" aria-hidden="true" style="font-size:25px"></i>
-                                <!--                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf1JREFUaEPtWIlNAzEQnK0AOgAqCKkA6AAqoIRABUAF0AGUQAckFZAOgA7oYNEgn+RcfNjxE98hWzpFsuP1zs5+tmDiQyauPxqA2gw2BhoDiRZoLpRowOTt/58BVT0FcAbgEMCx+WzLcZ1rMWPp2NTNrQF8iQh/B8cgA6pKZZ8BnMdolnHPC4AHEfl0yXQCMMp/ZFQih6gTF4ghAG8jsHwf9KuIXPUntwAYn3/PYbICMub9mHABuAHwWODwHCJvReTJFuQCwD8scpxWQAaD+d4HgGmMaXOMYyUiG1nRxUAqgAsATH1HBSwQBIDpkzUgaojIr1FUlVQzng6iBLk3rUVk7nMhTTmwA2BAsEIzpq5TZG4obAzUzblcKBuA7hCTmgkkObZsA1H+XgBYQC4NI9HxURWA5VaMjaj4qA7AgLgzAHbuYqsCUFW6EKt8cparEcRUPLk13ysDqkoX6dwlSyYNAfCdUnysQsZ+isVsZz//A2lQJc7RSvAmF+3ntQFkcZUBIUEMTL6dpt8y8MY4gi40fCaZ7pXSVEo+YUT3K4Wo2/J/ZzNnAIyRhfBnFQsEb1azQhYNFbti3zT0Qud9GzW9PBnp8nq/HeB8irtRQXvQffmxoC6jnxZDzVP7f14GaivoO78B8Fmo9HpjoLSFffIbAz4LlV5vDJS2sE/+D8vQtzHIU/lnAAAAAElFTkSuQmCC"/>-->
                             </button>
                         <?php
                         }
-                        ?>
-
-                        <?php
                         if ($l3['instagram_link'] != "") {
                         ?>
                             <button onclick="window.location.href = '<?= $l3['instagram_link'] ?>'" class="btn btn-social m-1">
                                 <i class="fa fa-instagram" aria-hidden="true" style="font-size:30px"></i>
-                                <!--                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAudJREFUaEPtmIFtFEEMRb8rACogVABUAFRAqABSAaECkgpIKiCpAKiApAJIBUAFIRUYPWlWHHczO57duUMnraXT3WlnvP72t8ce056L7bn9WgD87wguEVgiMNMDC4VaHOju9yW9lXQg6Un6XEn6KenSzPi9Iewzs9+5Z8UIuPuBmaG4i7j7c0kfk/ElnQB4NRiLDZJeS3pqZoetAD5LujWzo7kI3P1E0vugnu+SAAJgooS8KEUnG4EU6tu0+WIOiOT5r0Hjc8tOzQwHZKUEAPSrL50EIjniW4U2Y9jeSWI/9HlgZm/WF0cBsI/QHpkZ3yFxd14I7+fKDZTKJXILgMGIEzM7jVjUyP2SSow/LBWUEgCSh9CVhCgA5MsYEHcnGZ9FwBbWFD0/rB8roxj5uPJyyizV6jznoQ4AitUnAoDE+dTgPQDzARTfHDxQbU4EpgPAcHfHuy8bQPReOg1Aqt0PJcHxs3Qa9jYuou9RrRuIVCHoMJyIkZd2W2Nm1WZzLIm9myXTFN2YWdVxYwDmlsBpZv/dRWU7rikZ7UYl/agp2OJzulKKyKiMcqzTSVqzIff8zsyYHapSTZKO/UzVmJUFDDcbjVtOQRVAOg/oTlHIcLELYYAJNY1VAO5OJRgOM35nJ6OOqK7NDIeFJAKAsW6XyRz2PgirABKFLnZEn1DpXA1NFAAVgXOh1p2Gwl5Y9IsTv3T7UFIcApCiAAjq8pzusmTHXZq4QonbHIHVDanRoyKRG73AMKpC02YJR2Bdc7qz+dChKk02PpzEaxGASpwHXHWETssRt84yvgmAu0MXzgDoM9dwEpZBvZnz687YoFDiOMZi5NDOhg+WAInP04VA9q4zsP+fJaWBhgQlqXolKS+9lnTcw+vhKpQSlZ4c6jBitgpUofSe1UbDVsXD+nAVSj0RlIJORAjh/730Gw8jw83EVW9v50CGAUz10Lb3LQC27eGa/iUCNQ9t+/kSgW17uKZ/7yPwB5uu7DGSgT7HAAAAAElFTkSuQmCC"/> --><?php
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ?>
-
-                            <?php
-                            if ($l3['linkedin_link'] != "") {
-                            ?>
-                                <button onclick="window.location.href = '<?= $l3['linkedin_link'] ?>'" class="btn btn-social m-1">
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAf9JREFUaEPtWcFRwzAQ3KsAqAA6IKkAqACoAOgAKgAqgA4IFUAHQAUkFZB0QAfLnJEYx5Esm5EjeUZ6JSNb2r093UqyYORNRo4fhUBqBYsC2SpA8gzALYBJYpBLADci8urC4U0hkl8ADhKDt9PPRWTalwAzAV/BEBFnsNsUKARiKhhLgQWAaxF5V3AkjwE8AjiMCdaZ65FS6MSCt5MYEm+jIOCTkeTg6yVKCo2eAICpiMzr6UJSje5zFCkEQMGfi4i6oy5iNbqXbbh1lBSqRfnb/N4dOvJ2/NgEtoX7b55YBJ4BVOlTa5pGF7X/9w52lwD2AXwY31jqWjIlWN/X/qO2qMQiEPQB10Qk1fhmIjLzgSSpJJ58/akJTJrVywWU5J3Zwm90JyXQdcGQ1KKgKbrTfCcLAqbs6lpY2VLcBEpSDy6n2REg+aAbwRqwK9ea8KVRUgVaNnx7ImI9peJGUkkq2bWWmoBvcQarWmwjC07oKaNaPuteYXEFx8uFgPqAy6gKgb6H+mDEWpy4KOAyxKJAs8aXFPq9qtm45UhtZNmUUbX5tUO9OQ/r5ZZtGsFm037XLXeX8aqxYinQdWcc/blCIHpIew74HwX0ZKSHjxzaQkScX4rajEw/Mek2ePCb50CEVuZGvN8nphzC3gVD+czaJUpDPlMUGDK6XcYevQI/EWKeQDGkBr4AAAAASUVORK5CYII=" />
-                                </button>
-                            <?php
-                            }
-                            ?>
-
+                            </button>
+                        <?php
+                        }
+                        if ($l3['linkedin_link'] != "") {
+                        ?>
+                            <button onclick="window.location.href = '<?= $l3['linkedin_link'] ?>'" class="btn btn-social m-1">
+                                <i class="fa fa-linkedin" aria-hidden="true" style="font-size:30px"></i>
+                            </button>
+                        <?php
+                        }
+                        ?>
                     </div>
                 </div>
             <?php
             }
             ?>
-
-
         </div>
     </div>
 </section>

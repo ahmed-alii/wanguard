@@ -65,11 +65,10 @@ if ($func == 1) {
 
     if ($db->sql($sql)) {
         echo "true";
-//        $Functions->NewSignupEmail();
+        //        $Functions->NewSignupEmail();
     } else {
         echo "false";
     }
-
 }
 //1
 //Update Profile
@@ -91,8 +90,7 @@ if ($func == 1.1) {
     } else {
         echo "false";
     }
-
-}//1.1
+} //1.1
 //login
 else if ($func == 2) {
 
@@ -121,8 +119,8 @@ else if ($func == 2) {
             }
         } else {
             echo 'false';
-        }//else
-    }//outerif
+        } //else
+    } //outerif
 } //2
 //Send recover password email
 else if ($func == 3) {
@@ -132,7 +130,6 @@ else if ($func == 3) {
 
     if (!$Functions->CheckEmailExists($email)) {
         echo 'not-exist';
-
     } else {
 
         $pass = $Functions->random_Code();
@@ -141,13 +138,11 @@ else if ($func == 3) {
         if ($db->sql($sql)) {
             $Functions->sendrecoveremail($email, $pass);
             echo "true";
-
         } else {
             echo "false";
         }
     }
-
-}//3
+} //3
 //recover password
 else if ($func == 4) {
 
@@ -163,7 +158,6 @@ else if ($func == 4) {
     $c = count($db->getResult());
     if ($c != 1) {
         echo "token-not-found";
-
     } else {
         $sql = "UPDATE `users` SET `password`='$password1',`reset_token`='' WHERE 
      reset_token='$reset_token'";
@@ -171,13 +165,11 @@ else if ($func == 4) {
         if ($db->sql($sql)) {
 
             echo "true";
-
         } else {
             echo "false";
         }
-
     }
-}//4
+} //4
 //update password
 else if ($func == 5) {
     $oldpass = htmlspecialchars(stripslashes($_POST['oldpass']));
@@ -196,7 +188,7 @@ else if ($func == 5) {
             echo "false";
         }
     }
-}//5
+} //5
 //update Profile Photo
 else if ($func == 6) {
     $user_id = htmlspecialchars(stripslashes($_POST['user_id']));
@@ -222,8 +214,8 @@ else if ($func == 6) {
     } else {
         echo "false";
     }
-//    echo $db->getSql();
-}//6
+    //    echo $db->getSql();
+} //6
 //Add Event
 else if ($func == 7) {
 
@@ -254,8 +246,7 @@ else if ($func == 7) {
     } else {
         echo "false";
     }
-
-}//7
+} //7
 //Update Event
 else if ($func == 8) {
 
@@ -288,8 +279,7 @@ else if ($func == 8) {
     } else {
         echo "false";
     }
-
-}//8
+} //8
 //Delete Event
 else if ($func == 9) {
 
@@ -303,7 +293,7 @@ else if ($func == 9) {
     } else {
         echo "false";
     }
-}//9
+} //9
 //Add team member
 else if ($func == 10) {
 
@@ -357,8 +347,8 @@ else if ($func == 10) {
     } else {
         echo "false";
     }
-//    echo $db->getSql();
-}//10
+    //    echo $db->getSql();
+} //10
 //Update team member
 else if ($func == 11) {
 
@@ -380,14 +370,14 @@ else if ($func == 11) {
     $earning = htmlspecialchars(stripslashes($_POST['earning']));
     $earning = $db->escapeString($earning);
 
-    $youtube_link = htmlspecialchars(stripslashes($_POST['youtube_link']));
-    $youtube_link = $db->escapeString($youtube_link);
+    $facebook_link = htmlspecialchars(stripslashes($_POST['facebook_link']));
+    $facebook_link = $db->escapeString($facebook_link);
 
     $linkedin_link = htmlspecialchars(stripslashes($_POST['linkedin_link']));
     $linkedin_link = $db->escapeString($linkedin_link);
 
-    $twitter_link = htmlspecialchars(stripslashes($_POST['twitter_link']));
-    $twitter_link = $db->escapeString($twitter_link);
+    $instagram_link = htmlspecialchars(stripslashes($_POST['instagram_link']));
+    $instagram_link = $db->escapeString($instagram_link);
 
     $team_id = htmlspecialchars(stripslashes($_POST['team_id']));
     $team_id = $db->escapeString($team_id);
@@ -403,20 +393,17 @@ else if ($func == 11) {
         $upload_to = $target . $file;
         move_uploaded_file($file_tmp, $upload_to);
 
-        $sql = "update team_members set `rank`='$rank',`appointment_link`='$appointment_link',`name`='$name',`level`='$level',`department`='$department',`earning`='$earning',`youtube_link`='$youtube_link',`linkedin_link`='$linkedin_link',`twitter_link`='$twitter_link',`image_path`='$upload_to' where `id`='$team_id' ";
-
+        $sql = "update team_members set `rank`='$rank',`appointment_link`='$appointment_link',`name`='$name',`level`='$level',`department`='$department',`earning`='$earning',`facebook_link`='$facebook_link',`linkedin_link`='$linkedin_link',`instagram_link`='$instagram_link',`image_path`='$upload_to' where `id`='$team_id' ";
     } else {
         $upload_to = "";
-        $sql = "update team_members set `rank`='$rank',`appointment_link`='$appointment_link',`name`='$name',`level`='$level',`department`='$department',`earning`='$earning',`youtube_link`='$youtube_link',`linkedin_link`='$linkedin_link',`twitter_link`='$twitter_link' where `id`='$team_id' ";
-
+        $sql = "update team_members set `rank`='$rank',`appointment_link`='$appointment_link',`name`='$name',`level`='$level',`department`='$department',`earning`='$earning',`facebook_link`='$facebook_link',`linkedin_link`='$linkedin_link',`instagram_link`='$instagram_link' where `id`='$team_id' ";
     }
     if ($db->sql($sql)) {
         echo "true";
     } else {
         echo "false";
     }
-
-}//11
+} //11
 //Delete team member
 else if ($func == 12) {
 
@@ -431,7 +418,7 @@ else if ($func == 12) {
     } else {
         echo "false";
     }
-}//12
+} //12
 
 //Add Bio
 else if ($func == 13) {
@@ -450,7 +437,7 @@ else if ($func == 13) {
     } else {
         echo "false";
     }
-}//13
+} //13
 //Show Bio
 else if ($func == 14) {
 
@@ -467,8 +454,7 @@ else if ($func == 14) {
         $data->status = false;
     }
     echo json_encode($data);
-
-}//14
+} //14
 
 //delete User
 else if ($func == 19) {
@@ -482,8 +468,7 @@ else if ($func == 19) {
     } else {
         echo "false";
     }
-
-}//15
+} //15
 //blockUser
 else if ($func == 20) {
     $id = htmlspecialchars(stripslashes($_POST['id']));
@@ -506,12 +491,11 @@ else if ($func == 21) {
         echo "true";
         if (!empty($user)) {
             $Functions->ProfileApproveEmail($user[0]['name'], $user[0]['email']);
-
         }
     } else {
         echo "false";
     }
-}//ActiveUser
+} //ActiveUser
 
 //Add new_appointment
 else if ($func == 22) {
@@ -599,7 +583,7 @@ else if ($func == 23) {
     } else {
         echo "false";
     }
-//    echo $db->getSql();
+    //    echo $db->getSql();
 } //Add new_recruit
 else if ($func == 24) {
 
@@ -719,7 +703,7 @@ if ($func == 26) {
     }
 
 
-//    $sql = "INSERT INTO `welcome_page_settings`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
+    //    $sql = "INSERT INTO `welcome_page_settings`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
     $sql = "update `welcome_page_settings` set `video_file` = '$upload_to'";
 
     if ($db->sql($sql)) {
@@ -913,7 +897,6 @@ if ($func == 35) {
     } else {
         echo "false";
     }
-
 }
 if ($func == 36) {
     $imageid = htmlspecialchars(stripslashes($_POST['imageid']));
@@ -1042,7 +1025,7 @@ if ($func == 43) {
         $upload_to = "else";
     }
 
-//    $sql = "INSERT INTO `next_page_w_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
+    //    $sql = "INSERT INTO `next_page_w_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
     $sql = "update `next_page_w_video` set `video_file` = '$upload_to' , `create_date` = '$create_date'";
 
     if ($db->sql($sql)) {
@@ -1069,7 +1052,7 @@ if ($func == 44) {
         $upload_to = "else";
     }
 
-//    $sql = "INSERT INTO `next_page_attend_vanguard_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
+    //    $sql = "INSERT INTO `next_page_attend_vanguard_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
     $sql = "update `next_page_attend_vanguard_video` set `video_file` = '$upload_to' , `create_date` = '$create_date'";
 
     if ($db->sql($sql)) {
@@ -1090,12 +1073,11 @@ if ($func == 45) {
         $file = $timestamp . '-' . $filename;
         $upload_to = $target . $file;
         move_uploaded_file($file_tmp, $upload_to);
-
     } else {
         $upload_to = "";
     }
 
-//    $sql = "INSERT INTO `training_featured_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
+    //    $sql = "INSERT INTO `training_featured_video`(`video_file`,`create_date`) VALUES ('$upload_to' , '$create_date')";
     $sql = "update `training_featured_video` set `video_file` = '$upload_to' ,`create_date` = '$create_date'";
 
     if ($db->sql($sql)) {
@@ -1103,9 +1085,7 @@ if ($func == 45) {
     } else {
         echo "false";
     }
-}
-
-else if ($func == 46) {
+} else if ($func == 46) {
 
     $faith = htmlspecialchars(stripslashes($_POST['faith']));
     $faith = $db->escapeString($faith);
@@ -1122,7 +1102,7 @@ else if ($func == 46) {
     $finance = htmlspecialchars(stripslashes($_POST['finance']));
     $finance = $db->escapeString($finance);
 
-//    $sql = "INSERT INTO `training_featured_btn`(`faith`, `family` , `fitness` , `fun`, `finance`) VALUES ('$faith','$family','$fitness','$fun','$finance')";
+    //    $sql = "INSERT INTO `training_featured_btn`(`faith`, `family` , `fitness` , `fun`, `finance`) VALUES ('$faith','$family','$fitness','$fun','$finance')";
     $sql = "update `training_featured_btn` set `faith` = '$faith' , `family` = '$family'  , `fitness` = '$fitness'  , `fun` = '$fun'  , `finance` = '$finance'";
 
     if ($db->sql($sql)) {
@@ -1226,7 +1206,6 @@ if ($func == 51) {
     } else {
         echo "false";
     }
-
 }
 
 if ($func == 52) {
@@ -1274,7 +1253,6 @@ if ($func == 54) {
     } else {
         echo "false";
     }
-
 }
 
 if ($func == 55) {
@@ -1291,11 +1269,9 @@ if ($func == 55) {
         $file = $timestamp . '-' . $filename;
         $upload_to = $target . $file;
         move_uploaded_file($file_tmp, $upload_to);
-
     } else {
         $upload_to = "";
         echo "image not uploaded";
-
     }
 
 
@@ -1306,7 +1282,6 @@ if ($func == 55) {
     } else {
         echo "false";
     }
-
 }
 
 if ($func == 56) {
@@ -1327,7 +1302,6 @@ if ($func == 56) {
     } else {
         echo "false";
     }
-
 }
 
 if ($func == 57) {
@@ -1344,11 +1318,9 @@ if ($func == 57) {
         $file = $timestamp . '-' . $filename;
         $upload_to = $target . $file;
         move_uploaded_file($file_tmp, $upload_to);
-
     } else {
         $upload_to = "";
         echo "image not uploaded";
-
     }
 
     $sql = "update `trainer_images` set `image_path`='$upload_to'  where id='$section_id' ";
@@ -1371,17 +1343,15 @@ if ($func == 58) {
         $file = $timestamp . '-' . $filename;
         $upload_to = $target . $file;
         move_uploaded_file($file_tmp, $upload_to);
-
     } else {
         $upload_to = "";
         echo "image not uploaded";
-
     }
 
     $banner_img_url = htmlspecialchars(stripslashes($_POST['banner_img_url']));
     $banner_img_url = $db->escapeString($banner_img_url);
 
-//    $sql = "INSERT INTO `dashboard_banner_image`(`Image_path`, `image_url`) VALUES ('$upload_to','$banner_img_url')";
+    //    $sql = "INSERT INTO `dashboard_banner_image`(`Image_path`, `image_url`) VALUES ('$upload_to','$banner_img_url')";
     $sql = "update `dashboard_banner_image` set `Image_path`='$upload_to',`image_url`='$banner_img_url'";
 
     if ($db->sql($sql)) {
@@ -1411,7 +1381,7 @@ if ($func == 59) {
     $btn_3_url = htmlspecialchars(stripslashes($_POST['btn_3_url']));
     $btn_3_url = $db->escapeString($btn_3_url);
 
-//    $sql = "INSERT INTO `dashboard_page_button_links`(`button_one_link`, `button_two_link` , `button_three_link`) VALUES ('$btn_1','$btn_2','$btn_3')";
+    //    $sql = "INSERT INTO `dashboard_page_button_links`(`button_one_link`, `button_two_link` , `button_three_link`) VALUES ('$btn_1','$btn_2','$btn_3')";
     $sql = "update `dashboard_page_button_links` set `button_one_name`='$btn_1_name',`button_one_url`='$btn_1_url',`button_two_name`='$btn_2_name',`button_two_url`='$btn_2_url',`button_three_name`='$btn_3_name',`button_three_url`='$btn_3_url'";
 
     if ($db->sql($sql)) {
@@ -1419,7 +1389,7 @@ if ($func == 59) {
     } else {
         echo "false";
     }
-//    echo $db->getSql();
+    //    echo $db->getSql();
 }
 
 if ($func == 60) {
@@ -1456,7 +1426,7 @@ if ($func == 61) {
     $edit_agency_team = htmlspecialchars(stripslashes($_POST['edit_agency_team']));
     $edit_agency_team = $db->escapeString($edit_agency_team);
 
-//    $sql = "INSERT INTO `dashboard_inputs` ( `f_name`, `l_name`, `agency_team`) VALUES ('$f_name','$l_name','$agency_team')";
+    //    $sql = "INSERT INTO `dashboard_inputs` ( `f_name`, `l_name`, `agency_team`) VALUES ('$f_name','$l_name','$agency_team')";
     $sql = "update `dashboard_inputs` set `f_name`='$edit_f_name', `l_name`='$edit_l_name', `agency_team`='$edit_agency_team'  where id='$input_id'";
 
     if ($db->sql($sql)) {
@@ -1464,9 +1434,7 @@ if ($func == 61) {
     } else {
         echo "false";
     }
-}
-
-else if ($func == 62) {
+} else if ($func == 62) {
 
     $input_id = htmlspecialchars(stripslashes($_POST['input_id']));
     $input_id = $db->escapeString($input_id);
@@ -1479,9 +1447,7 @@ else if ($func == 62) {
     } else {
         echo "false";
     }
-}
-
-else if ($func == 63) {
+} else if ($func == 63) {
 
     $input_id = htmlspecialchars(stripslashes($_POST['input_id']));
     $input_id = $db->escapeString($input_id);
@@ -1494,9 +1460,7 @@ else if ($func == 63) {
     } else {
         echo "false";
     }
-}
-
-else if ($func == 64) {
+} else if ($func == 64) {
 
     $input_id = htmlspecialchars(stripslashes($_POST['input_id']));
     $input_id = $db->escapeString($input_id);
@@ -1509,9 +1473,7 @@ else if ($func == 64) {
     } else {
         echo "false";
     }
-}
-
-else if ($func == 65) {
+} else if ($func == 65) {
 
     $input_id = htmlspecialchars(stripslashes($_POST['input_id']));
     $input_id = $db->escapeString($input_id);
@@ -1524,9 +1486,7 @@ else if ($func == 65) {
     } else {
         echo "false";
     }
-}
-
-else if ($func == 66) {
+} else if ($func == 66) {
 
     $input_id = htmlspecialchars(stripslashes($_POST['input_id']));
     $input_id = $db->escapeString($input_id);
@@ -1539,9 +1499,7 @@ else if ($func == 66) {
     } else {
         echo "false";
     }
-}
-
-else if ($func == 67) {
+} else if ($func == 67) {
 
     $id = htmlspecialchars(stripslashes($_POST['id']));
     $id = $db->escapeString($id);
@@ -1554,9 +1512,7 @@ else if ($func == 67) {
     } else {
         echo "false";
     }
-}
-
-else if ($func == 68) {
+} else if ($func == 68) {
 
     $id = htmlspecialchars(stripslashes($_POST['id']));
     $id = $db->escapeString($id);
@@ -1570,5 +1526,3 @@ else if ($func == 68) {
         echo "false";
     }
 }
-
-?>

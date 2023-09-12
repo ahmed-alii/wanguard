@@ -69,7 +69,7 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                     <p class="pt-1 fs-1 fw-bolder text-primary" id="shiva">
                         <span class="count"> <?= count($recruite_users) ?> </span>
                     </p>
-                    <span class="fs-2 fw-bold">THE RECRUITER NAME</span>
+                    <span class="fs-2 fw-bold">BUSINESS PARTNERS</span>
                     <p class="py-2">Agency Expansion for the current month! Our goal is always a minimum of 20</p>
                 </div>
             </div>
@@ -100,14 +100,14 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
             </div>
             <div class="col-12 col-md-6 col-lg-4 text-center">
                 <div class="py-5 mx-5" data-bs-toggle="modal" data-bs-target="#modal-5">
-                    <p class="pt-1 fs-1 fw-bolder text-primary" id="shiva"><?= $dashboard_stats[0]['net_lic'] ?></p>
+                    <p class="pt-1 fs-1 fw-bolder text-primary" id="shiva"> <span class="count2"><?= $dashboard_stats[0]['net_lic'] ?></span></p>
                     <span class="fs-2 fw-bold">NET LIC.</span>
                     <p class="py-2">Current number of agents who earned $1000</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 text-center">
                 <div class="py-5 mx-5" data-bs-toggle="modal" data-bs-target="#modal-6">
-                    <p class="pt-1 fs-1 fw-bolder text-primary" id="shiva"><?= $dashboard_stats[0]['one_300'] ?></p>
+                    <p class="pt-1 fs-1 fw-bolder text-primary" id="shiva"><span class="count3"><?= $dashboard_stats[0]['one_300'] ?></span></p>
                     <span class="fs-2 fw-bold">1-$300</span>
                     <p class="py-2">Key metric in our business that drives activity & profitability!</p>
                 </div>
@@ -121,7 +121,7 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
         <div class="row">
             <div class="col-lg-12">
                 <div class="py-4 text-center">
-                    <h3 class="mt-3 fw-bolder">Banner Image</h3>
+                    <!-- <h3 class="mt-3 fw-bolder">Banner Image</h3> -->
                 </div>
                 <?php
                 $image_path = substr($Banner_Image[0]['Image_path'], 3);
@@ -153,7 +153,7 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
         <div class="row">
             <div class="col-lg-12">
                 <div class="py-4 text-center">
-                    <h3 class="mt-3 fw-bolder">Table Data</h3>
+                    <!-- <h3 class="mt-3 fw-bolder">Table Data</h3> -->
                 </div>
                 <div class="card">
                     <div class="card-body">
@@ -210,7 +210,7 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <!-- <th scope="col">#</th> -->
                             <th scope="col">Name</th>
                         </tr>
                     </thead>
@@ -219,7 +219,7 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                         foreach ($recruite_users as $recruite_user) {
                         ?>
                             <tr>
-                                <th scope="row"><?= $recruite_user['id'] ?></th>
+                                <!-- <th scope="row"><?= $recruite_user['id'] ?></th> -->
 
 
                                 <td><?= $recruite_user['f_name'] ?></td>
@@ -238,7 +238,7 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
 
 <!--Modal-2 -->
 <div class="modal fade" id="modal-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -247,8 +247,9 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">Agent</th>
+                            <th scope="col">Split Agent</th>
                             <th scope="col">Writing Agent</th>
+                            <th scope="col">Families Helped</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -256,12 +257,14 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                         foreach ($all_new_clients as $all_new_client) {
                         ?>
                             <tr>
-                                <td><?= $all_new_client['f_name'] ?></td>
+                                <td><?= $all_new_client['trainee'] ?></td>
                                 <td><?= $all_new_client['writing_agent'] ?></td>
+                                <td><?= $all_new_client['count'] ?></td>
                             </tr>
                         <?php
                         }
                         ?>
+
                     </tbody>
                 </table>
             </div>
@@ -285,18 +288,39 @@ $Dashboard_Table_Data_Inputs = $func->GetDashboardTableDataInputs();
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        foreach ($all_new_clients as $all_new_client) {
-                        ?>
+                        <!-- <?php
+                                foreach ($all_new_clients as $all_new_client) {
+                                ?>
                             <tr>
-                                <td><?= $all_new_client['f_name'] ?></td>
+                                <td><?= $all_new_client['writing_agent'] ?></td>
                                 <td>$<?= $all_new_client['monthly_saving'] ?></td>
+                            </tr><?php } ?> -->
+
+
+
+                        <?php
+                        $uniqueNames = array();
+
+                        foreach ($all_new_clients as $all_new_client) {
+                            $name = $all_new_client['writing_agent'];
+                            $monthlySaving = (float)str_replace('$', '', $all_new_client['monthly_saving']);
+
+                            if (array_key_exists($name, $uniqueNames)) {
+                                $uniqueNames[$name] += $monthlySaving;
+                            } else {
+                                $uniqueNames[$name] = $monthlySaving;
+                            }
+                        }
+                        ?>
+                        <?php foreach ($uniqueNames as $name => $totalSaving) { ?>
+                            <tr>
+                                <td><?= $name ?></td>
+                                <td>$<?= number_format($totalSaving, 2) ?></td>
                             </tr>
                         <?php
                         }
                         ?>
                     </tbody>
-
                 </table>
             </div>
         </div>

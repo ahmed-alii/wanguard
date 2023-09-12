@@ -83,7 +83,32 @@ if (isset($_SESSION['user_id'])) {
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 
 <script>
+    // count 1 (LIC)
     $('.count').each(function() {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function(now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+    //count2 (NET LIC.)
+    $('.count2').each(function() {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function(now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+    //count 3 (1-$300)
+    $('.count3').each(function() {
         $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
         }, {

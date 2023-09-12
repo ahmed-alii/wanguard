@@ -486,9 +486,9 @@ $("#edit_team_member").submit(function (e) {
     ajax_data.append('level', $('#edit_level').val());
     ajax_data.append('department', $('#edit_department').val());
     ajax_data.append('earning', $('#edit_earning').val());
-    ajax_data.append('youtube_link', $('#edit_youtube_link').val());
+    ajax_data.append('facebook_link', $('#edit_facebook_link').val());
     ajax_data.append('linkedin_link', $('#edit_linkedin_link').val());
-    ajax_data.append('twitter_link', $('#edit_twitter_link').val());
+    ajax_data.append('instagram_link', $('#edit_instagram_link').val());
     ajax_data.append('appointment_link', $('#edit_appointment_link').val());
     ajax_data.append('image', $('#edit_update_profile_photo')[0].files[0]);
 

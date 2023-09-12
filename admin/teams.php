@@ -237,9 +237,9 @@ $team_members = $func->getAllTeamMembers();
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
-                            <label for="inputTime" class="col-sm-12 col-form-label">Youtube Link</label>
+                            <label for="inputTime" class="col-sm-12 col-form-label">Facebook Link</label>
                             <div class="col-sm-12">
-                                <input type="text" id="edit_youtube_link" class="form-control">
+                                <input type="text" id="edit_facebook_link" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
@@ -249,9 +249,9 @@ $team_members = $func->getAllTeamMembers();
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
-                            <label for="inputTime" class="col-sm-12 col-form-label">Twitter</label>
+                            <label for="inputTime" class="col-sm-12 col-form-label">Instagram</label>
                             <div class="col-sm-12">
-                                <input type="text" id="edit_twitter_link" class="form-control">
+                                <input type="text" id="edit_instagram_link" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">

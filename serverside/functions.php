@@ -327,7 +327,11 @@ class Functions
 
     function getAllClients()
     {
-        $sql = "select * from `new-client`";
+        $sql = "SELECT *, 
+            (CASE WHEN trainee = writing_agent THEN 1 ELSE 1 + 
+            (SELECT COUNT(*) FROM `new-client` AS inner_nc WHERE 
+            (inner_nc.writing_agent = nc.trainee) ) END) AS `count` 
+            FROM `new-client` AS nc";
         if ($this->db->sql($sql)) {
             return $this->db->getResult();
         }
