@@ -153,31 +153,26 @@ $recogVideoPath = $func->getRecogVideoPath();
 <?php include_once "includes/footer.php" ?>
 <script>
     window.addEventListener('DOMContentLoaded', function () {
-        var table = document.getElementById('myTable');
+        
+        
         var container = document.querySelector('.table-container');
+        var scrollSpeed = 100;
+        var containerHeight = 800; // Set the container height in pixels
 
-        // Set the desired scroll speed (in pixels per second)
-        var scrollSpeed = 50;
-
-        // Set the scroll direction ('up' or 'down')
-        var scrollDirection = 'down';
+        container.style.height = containerHeight + "px"; // Set the container height using JavaScript
 
         var scrollInterval;
 
         function startScroll() {
             scrollInterval = setInterval(function () {
-                var scrollAmount = scrollSpeed / 60; // Divide by 60 to get per-frame scroll amount
+                var scrollAmount = scrollSpeed / 60;
+                container.scrollTop += scrollAmount;
+                
+                  //console.log("scroll: ", scrollAmount);
+                  //console.log("scrollTop: ", container.scrollTop);
 
-                if (scrollDirection === 'up') {
-                    container.scrollTop -= scrollAmount;
-                } else {
-                    container.scrollTop += scrollAmount;
-                }
-
-                // Check if we have reached the top or bottom of the container
-                if (scrollDirection === 'up' && container.scrollTop <= 0) {
-                    container.scrollTop = container.scrollHeight;
-                } else if (scrollDirection === 'down' && container.scrollTop + container.clientHeight >= container.scrollHeight) {
+                // Check if we have reached the bottom of the container
+                if (container.scrollTop + container.clientHeight >= container.scrollHeight) {
                     container.scrollTop = 0;
                 }
             }, 1000 / 60); // Run the scroll every frame (60 frames per second)
@@ -185,8 +180,8 @@ $recogVideoPath = $func->getRecogVideoPath();
 
         // Start the initial scroll
         startScroll();
-
-        // Stop the scroll when the user hovers over the container
+        
+         // Stop the scroll when the user hovers over the container
         container.addEventListener('mouseover', function () {
             clearInterval(scrollInterval);
         });
@@ -195,6 +190,8 @@ $recogVideoPath = $func->getRecogVideoPath();
         container.addEventListener('mouseout', function () {
             startScroll();
         });
+
+       
     });
 
 
