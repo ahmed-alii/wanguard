@@ -91,6 +91,7 @@ if (!isset($_SESSION['user_id'])) {
                     <label for="inputEmail" class="col-sm-12 col-form-label fw-bolder">Trainee</label>
                     <div class="col-sm-12">
                         <select name="tab_access" data-live-search="true" class="selectpicker mb-3 w-100" id="trainee" aria-label="select example" required>
+                            <option value="">Empty</option>
                             <?php
                             foreach ($users as $user) {
                             ?>

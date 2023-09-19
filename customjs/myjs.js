@@ -517,6 +517,43 @@ $("#edit_team_member").submit(function (e) {
         }//success
     });
 });//Edit Team member
+
+//Edit new Client
+$("#edit_new_client").submit(function (e) {
+    e.preventDefault();
+    var ajax_data = new FormData();
+    //append into ajax data
+    ajax_data.append("func", '11.5');
+    ajax_data.append('user_id', $('#user_id').val());
+    ajax_data.append('fname', $('#edit_fname').val());
+
+
+    $("#sub_btn1").attr("disabled", true);
+    $("#sub_btn1").html(`Please wait...<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>`);
+
+    $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        processData: false,
+        contentType: false,
+        data: ajax_data,
+        success: function (data) {
+            console.log(data)
+            $("#edit_client_modal").modal("hide");
+            if (data.trim() == "true") {
+                swal("Success", "User edit successfully ", "success").then((value) => {
+                    location.reload();
+                });
+            } else {
+                swal("Error", "Failed to edit User, please try again ", "error");
+
+            }
+            $("#sub_btn1").attr("disabled", false);
+            $("#sub_btn1").html('Submit');
+        }//success
+    });
+});//Edit New Client
+
 //Delete team
 function deleteTeamMember(team_id) {
 
@@ -557,6 +594,50 @@ function deleteTeamMember(team_id) {
 
     });
 }//Delete
+
+
+//Delete team
+function delete_new_clinet(user_id) {
+
+    swal({
+        text: 'Are you sure to delete this User?',
+        icon: 'info',
+        buttons: true,
+        dangerMode: true,
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result) {
+            $.ajax({
+                url: "../serverside/post.php",
+                type: "POST",
+                data: {
+                    func: 12.5,
+                    user_id: user_id,
+                },
+                success: function (data) {
+                    if (data.trim() == "true") {
+                        swal({
+                            icon: 'success',
+                            title: 'Success',
+                            text: 'User deleted successfully!',
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    } else {
+                        swal({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Failed to delete User, please try again!'
+                        });
+                    }
+                }//success
+            });//ajax
+        }
+
+    });
+}//Delete
+
+
 //Edit Bio
 $("#edit_bio").submit(function (e) {
     e.preventDefault();
@@ -2268,45 +2349,45 @@ function deleteDashboardInputs(input_id) {
     });
 }
 
-function deleteOneThreeInputNames(input_id) {
+// function deleteOneThreeInputNames(input_id) {
 
-    swal({
-        text: 'Are you sure to delete this Input?',
-        icon: 'info',
-        buttons: true,
-        dangerMode: true,
-    }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
-        if (result) {
-            $.ajax({
-                url: "../serverside/post.php",
-                type: "POST",
-                data: {
-                    func: 63,
-                    input_id: input_id,
-                },
-                success: function (data) {
-                    if (data.trim() == "true") {
-                        swal({
-                            icon: 'success',
-                            title: 'Success',
-                            text: 'Deleted successfully!',
-                        }).then((result) => {
-                            location.reload();
-                        });
-                    } else {
-                        swal({
-                            icon: 'error',
-                            title: 'Error',
-                            text: 'Failed to Delete, please try again!'
-                        });
-                    }
-                }//success
-            });//ajax
-        }
+//     swal({
+//         text: 'Are you sure to delete this Input?',
+//         icon: 'info',
+//         buttons: true,
+//         dangerMode: true,
+//     }).then((result) => {
+//         /* Read more about isConfirmed, isDenied below */
+//         if (result) {
+//             $.ajax({
+//                 url: "../serverside/post.php",
+//                 type: "POST",
+//                 data: {
+//                     func: 63,
+//                     input_id: input_id,
+//                 },
+//                 success: function (data) {
+//                     if (data.trim() == "true") {
+//                         swal({
+//                             icon: 'success',
+//                             title: 'Success',
+//                             text: 'Deleted successfully!',
+//                         }).then((result) => {
+//                             location.reload();
+//                         });
+//                     } else {
+//                         swal({
+//                             icon: 'error',
+//                             title: 'Error',
+//                             text: 'Failed to Delete, please try again!'
+//                         });
+//                     }
+//                 }//success
+//             });//ajax
+//         }
 
-    });
-}
+//     });
+// }
 
 function deleteLICInputNames(id) {
 

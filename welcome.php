@@ -178,7 +178,7 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
                     </div>
                     <div class="btn-2">
                         <a href="<?= $l1['appointment_link'] ?>" target="_blank">
-                            <button class="btn px-3 fw-bolder">SET A PERSONAL APPOINTMENT WITH FRANK'S
+                            <button class="btn px-3 fw-bolder">SET A PERSONAL APPOINTMENT
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor" width="15px" height="50px">
                                     <g>
                                         <path d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
@@ -338,6 +338,26 @@ $welcomeVideoPath = $func->getWelcomeVideoFilePath();
                         }
                         ?>
                     </div>
+
+                    <div class="btn-2">
+                        <?php
+
+                        if ($l3['appointment_link'] != "") {
+                        ?>
+                            <a target="_blank" href="<?= $l3['appointment_link'] ?>">
+                                <button class="btn px-3 py-0 fw-bolder">SET APPOINTMENT
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" data-type="glyph" data-name="active-40" fill="currentColor" width="15px" height="40px">
+                                        <g>
+                                            <path d="M18.12762,9.47772L10,8V3.10699c0-0.99628-0.68073-1.91962-1.66406-2.07965C7.08289,0.82355,6,1.78522,6,3 v11H5v-3H4c-1.10455,0-2,0.89539-2,2v2.89532c0,1.36243,0.46368,2.68433,1.31482,3.74823L6,23h13l1.55609-10.1145 C20.80316,11.27936,19.7265,9.76843,18.12762,9.47772z"></path>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </a>
+                        <?php
+                        }
+                        ?>
+                    </div>
+
                 </div>
             <?php
             }

@@ -404,6 +404,26 @@ else if ($func == 11) {
         echo "false";
     }
 } //11
+
+//Update team member
+else if ($func == 11.5) {
+
+    $fname = htmlspecialchars(stripslashes($_POST['fname']));
+    $fname = $db->escapeString($fname);
+
+    $user_id = htmlspecialchars(stripslashes($_POST['user_id']));
+    $user_id = $db->escapeString($user_id);
+
+
+    $sql = "UPDATE `new-client` set `f_name`='$fname' where `id`='$user_id' ";
+
+    if ($db->sql($sql)) {
+        echo "true";
+    } else {
+        echo "false";
+    }
+} //11.5
+
 //Delete team member
 else if ($func == 12) {
 
@@ -419,6 +439,21 @@ else if ($func == 12) {
         echo "false";
     }
 } //12
+
+else if ($func == 12.5) {
+
+    $user_id = htmlspecialchars(stripslashes($_POST['user_id']));
+    $user_id = $db->escapeString($user_id);
+
+    $sql = "DELETE from `new-client` where id= '$user_id'";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+} //12.5
 
 //Add Bio
 else if ($func == 13) {

@@ -51,6 +51,7 @@ $all_new_clients = $func->getAllClients();
                                     <th>Contact No</th>
                                     <th>Email Address</th>
                                     <th>Add Notes</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -58,7 +59,6 @@ $all_new_clients = $func->getAllClients();
                                 foreach ($all_new_clients as $all_new_client) {
                                 ?>
                                     <tr>
-
                                         <td><?= $all_new_client['f_name'] ?></td>
                                         <td><?= $all_new_client['l_name'] ?></td>
                                         <td><?= $all_new_client['policy_name'] ?></td>
@@ -78,6 +78,10 @@ $all_new_clients = $func->getAllClients();
                                         <td><?= $all_new_client['contact_no'] ?></td>
                                         <td><?= $all_new_client['email_address'] ?></td>
                                         <td><?= $all_new_client['add_notes'] ?></td>
+                                        <td>
+                                            <i class="fa px-2 fa-trash btn btn-danger" onclick="delete_new_clinet(`<?= $all_new_client['id'] ?>`);"></i>
+                                            <!-- <i class="fa px-2 fa-pencil-square-o btn btn-warning" onclick="edit_client(`<?= $all_new_client['id'] ?>`,`<?= $all_new_client['f_name'] ?>`);"></i> -->
+                                        </td>
                                     </tr>
                                 <?php
                                 }
@@ -104,6 +108,7 @@ $all_new_clients = $func->getAllClients();
                                     <th>Contact No</th>
                                     <th>Email Address</th>
                                     <th>Add Notes</th>
+                                    <th>Action</th>
                                 </tr>
                             </tfoot>
                         </table>
@@ -114,8 +119,50 @@ $all_new_clients = $func->getAllClients();
     </section>
 </main>
 <!-- End #main -->
+<div class="modal fade" id="edit_client_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit team member</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form id="edit_new_client">
+                <input name="" id="user_id" type="hidden">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="inputText" class="col-sm-12 col-form-label">First Name</label>
+                            <div class="col-sm-12">
+                                <input type="text" id="edit_fname" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="inputText" class="col-sm-12 col-form-label">Last Name</label>
+                            <div class="col-sm-12">
+                                <input type="number" id="edit_lname" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" id="sub_btn1" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 
 <?php include_once "includes/dashboard-footer.php" ?>
+<script>
+    function edit_client(id, fname) {
+        $("#user_id").val(id);
+        $("#edit_fname").val(fname);
+
+        $("#edit_client_modal").modal('show');
+    }
+</script>
 <script>
     $(document).ready(function() {
         // Initialize DataTable
