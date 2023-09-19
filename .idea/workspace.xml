@@ -4,18 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cb8abc8-bdcc-471f-9303-40e25c2c7bae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/includes/dashboard-footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/includes/dashboard-footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/users.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/users.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customjs/myjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/customjs/myjs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/SQL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/db/SQL.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverside/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/serverside/post.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training_center.php" beforeDir="false" afterPath="$PROJECT_DIR$/training_center.php" afterDir="false" />
+    <list default="true" id="3cb8abc8-bdcc-471f-9303-40e25c2c7bae" name="Changes" comment="Prod">
+      <change afterPath="$PROJECT_DIR$/admin/dashboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/myjs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dashboard_page-settings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myjs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693489363-png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693551626-Angelina Ruvalcaba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693587962-MJWilliams.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693587980-Angelina Ruvalcaba.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693587991-Jasmine Crunk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693588004-Timothy Ply.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693588020-Timothy Ply.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693588049-IMG_0873.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693588086-Jasmine Crunk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693588104-IMG_5161 2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693642088-MJ.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/1693937537-365895935_6886877684679354_7765957109781470061_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/Banner_Images/1693466265-png (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/Banner_Images/1693489076-png (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/Banner_Images/1693512758-Image 8-31-23 at 1.11 PM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/Banner_Images/1693553510-SYSTEM 2023 final.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/Banner_Images/1693553532-12 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/featured_video/1693489126-video (540p).mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/next_step_VAN_video/1693786891-2Recognition 2023-07-31 at 9.08.24 PM.mov" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/next_step_VAN_video/1693807904-WFG Final.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/profile/1693554001-Step 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/profile/1693882471-WFG Vegas.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/profile/1693882497-54374610_1738170162950758_369512159782109184_n.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/profile/1693882552-image (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/profile/1693882567-5BC71068-B301-4EFC-9D32-F1427B2EA1E1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/profile/1693882745-IMG_6624.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/profile/1693882777-naomi123.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/profile/1693884415-Headshot.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/profile/1693886641-PIC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/profile/1693963792-3D7211A5-2261-4E42-AD35-D3FACDB3D912.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/profile/1694096261-76511.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/training_section_images/1693489198-png (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/training_section_images/1693517895-Image 8-31-23 at 1.11 PM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/training_section_images/1693555622-Image 8-31-23 at 1.11 PM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/training_section_images/1693555806-IMG_3239.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/training_section_images/1693555819-Image 8-31-23 at 1.11 PM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/training_section_images/1693555830-Image 8-9-23 at 7.30 PM.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/video_file_uploads/1693786925-2Recognition 2023-07-31 at 9.08.24 PM.mov" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/video_file_uploads/1693786927-2Recognition 2023-07-31 at 9.08.24 PM.mov" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/video_file_uploads/1693786948-2Recognition 2023-07-31 at 9.08.24 PM.mov" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1note.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next-steps.php" beforeDir="false" afterPath="$PROJECT_DIR$/next-steps.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/serverside/crud.php" beforeDir="false" afterPath="$PROJECT_DIR$/serverside/crud.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,20 +91,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/xampp/htdocs/wanguard",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/wanguard&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\wanguard\Frontend" />
@@ -150,7 +190,16 @@
       <workItem from="1693463857673" duration="7641000" />
       <workItem from="1693473406679" duration="1642000" />
       <workItem from="1694276859410" duration="2119000" />
+      <workItem from="1695109338189" duration="372000" />
     </task>
+    <task id="LOCAL-00001" summary="Prod">
+      <created>1695109651921</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695109651921</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,5 +215,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="Prod" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prod" />
   </component>
 </project>
