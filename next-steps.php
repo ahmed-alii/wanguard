@@ -1726,9 +1726,9 @@ $VANGuardVideoPath = $func->NextPageVANGuardVideo();
             </div>
             <div class="modal-body map">
                 <h3 class="px-2">
-                    EVERYONE starts off, in the awkward phase, this is new for you! People quit during this
-                    phase because This phase people because they think they "can't do it". They just don't like
-                    the awkward feeling! HANG TOUGH! You've got it, it's easier than you think!
+                    EVERYONE starts off, in the awkward phase, this is new for you! <br><br> People quit during this
+                    phase because This phase people because they think they "can't do it". <br><br> They just don't like
+                    the awkward feeling! <br><br> HANG TOUGH! You've got it, it's easier than you think!
                 </h3>
             </div>
         </div>
@@ -1745,6 +1745,7 @@ $VANGuardVideoPath = $func->NextPageVANGuardVideo();
             <div class="modal-body map">
                 <h3 class="px-2">
                     After you've seen 3 - 5 and done 3 - 5 appointments it feels a little mechanical, repetitions.
+                    <br><br>
                     Good you're getting the hang of it! It's about duplication!
                 </h3>
             </div>
@@ -1762,7 +1763,9 @@ $VANGuardVideoPath = $func->NextPageVANGuardVideo();
             <div class="modal-body map">
                 <div class="py-2">
                     <h3 class="px-2">
-                        After about 2 months, you know what you're doing and it just feels natural. You start to
+                        After about 2 months, you know what you're doing and it just feels natural.
+                        <br><br>
+                        You start to
                         realized that duplication is powerful!
                     </h3>
                 </div>
