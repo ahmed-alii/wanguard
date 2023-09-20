@@ -455,6 +455,21 @@ else if ($func == 12.5) {
     }
 } //12.5
 
+else if ($func == 12.6) {
+
+    $user_id = htmlspecialchars(stripslashes($_POST['user_id']));
+    $user_id = $db->escapeString($user_id);
+
+    $sql = "DELETE from `new-recruit` where id= '$user_id'";
+
+    if ($db->sql($sql)) {
+
+        echo "true";
+    } else {
+        echo "false";
+    }
+} //12.5
+
 //Add Bio
 else if ($func == 13) {
 

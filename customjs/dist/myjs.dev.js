@@ -559,7 +559,7 @@ function deleteTeamMember(team_id) {
     }
   });
 } //Delete
-//Delete team
+//Delete team member
 
 
 function delete_new_clinet(user_id) {
@@ -592,6 +592,47 @@ function delete_new_clinet(user_id) {
               icon: 'error',
               title: 'Error',
               text: 'Failed to delete User, please try again!'
+            });
+          }
+        } //success
+
+      }); //ajax
+    }
+  });
+} //Delete
+//Delete partner
+
+
+function delete_business_partner(user_id) {
+  swal({
+    text: 'Are you sure to delete this Partner?',
+    icon: 'info',
+    buttons: true,
+    dangerMode: true
+  }).then(function (result) {
+    /* Read more about isConfirmed, isDenied below */
+    if (result) {
+      $.ajax({
+        url: "../serverside/post.php",
+        type: "POST",
+        data: {
+          func: 12.6,
+          user_id: user_id
+        },
+        success: function success(data) {
+          if (data.trim() == "true") {
+            swal({
+              icon: 'success',
+              title: 'Success',
+              text: 'User deleted successfully!'
+            }).then(function (result) {
+              location.reload();
+            });
+          } else {
+            swal({
+              icon: 'error',
+              title: 'Error',
+              text: 'Failed to delete Partner, please try again!'
             });
           }
         } //success

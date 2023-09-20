@@ -46,6 +46,7 @@ $all_business_partners = $func->getAllBusinessPartners();
                                     <th>Contact No</th>
                                     <th>Date of Birth</th>
                                     <th>Email Address</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -65,6 +66,9 @@ $all_business_partners = $func->getAllBusinessPartners();
                                         <td><?= $all_business_partner['contact_no'] ?></td>
                                         <td><?= $all_business_partner['birthdate'] ?></td>
                                         <td><?= $all_business_partner['email_address'] ?></td>
+                                        <td>
+                                            <i class="fa px-2 fa-trash btn btn-danger" onclick="delete_business_partner(`<?= $all_business_partner['id'] ?>`);"></i>
+                                        </td>
                                     </tr>
                                 <?php
                                 }
