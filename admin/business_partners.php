@@ -88,6 +88,7 @@ $all_business_partners = $func->getAllBusinessPartners();
                                     <th>Contact No</th>
                                     <th>Date of Birth</th>
                                     <th>Email Address</th>
+                                    <th>Action</th>
                                 </tr>
                             </tfoot>
                         </table>
